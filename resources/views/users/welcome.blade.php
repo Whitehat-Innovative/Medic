@@ -961,33 +961,36 @@ style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin
        <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title">Appointment</span>
            <h5 class="pq-section-title pq-text-white">Apply for free treatments</h5>
        </div>
-       <form action="#" class="pq-applyform mt-5" novalidate>
-           <div class="row">
-               <div class="col-md-6">
-                   <input type="text" name="your-name" id="first-name" class="pq-bg-transparent name-field"
-                       placeholder="Your Name" required>
-               </div>
-               <div class="col-md-6">
-                   <input type="email" name="your-email" id="e-mail" class="pq-bg-transparent e-mail-field"
-                       placeholder="Your Email" required>
-               </div>
-               <div class="col-md-6">
-                   <input type="text" name="your-doctor-name" id="doctor-name"
-                       class="pq-bg-transparent doctor-name-field" placeholder="Your Doctor Name" required>
-               </div>
-               <div class="col-md-6">
-                   <input type="text" name="your-disease" id="disease-name"
-                       class="pq-bg-transparent disease-name-field" placeholder="Your Disease Name" required>
-               </div>
-               <div class="col-md-12">
-                   <a class="pq-button pq-button-bg-white form-btn">
-                       <div class="pq-button-block">
-                           <span class="pq-button-text-dark me-0">send message</span>
-                       </div>
-                   </a>
-               </div>
-           </div>
-       </form>
+       <form action="{{route('make.appointment')}}"  method="POST" class="pq-applyform mt-5" novalidate> @csrf
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" name="your-name" id="first-name" class="pq-bg-transparent name-field"
+                    placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6">
+                <input type="email" name="your-email" id="e-mail" class="pq-bg-transparent e-mail-field"
+                    placeholder="Your Email" required>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="your-phone" id="phone"
+                    class="pq-bg-transparent phone-field" placeholder="Your Phone Number" required>
+            </div>
+
+            <div class="col-md-12">
+                {{-- <input type="text" name="your-disease" id="disease-name"
+                    class="pq-bg-transparent disease-name-field" placeholder="Your Disease Name"
+                    required> --}}
+                    <textarea name="appointment_name" class="form-control" id="" placeholder="Appointment Note" cols="30" rows="10"></textarea>
+            </div>
+            <div class="col-md-12">
+                <button class="pq-button pq-button-bg-white form-btn" type="button">
+                    <div class="pq-button-block">
+                        <span class="pq-button-text-dark me-0">send message</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </form>
    </div>
 </div>
 </div>

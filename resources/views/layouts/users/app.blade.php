@@ -90,231 +90,34 @@
                              <div id="pq-menu-contain" class="pq-menu-contain">
                                 <ul id="pq-main-menu" class="navbar-nav ml-auto">
                                    <li class="menu-item current-menu-item">
-                                      <a href="/assets/#">Home</a><i class="fa fa-chevron-down pq-submenu-icon"></i>
-                                      <ul class="sub-menu">
-                                         <li class="menu-item current-menu-item">
-                                            <a href="/assets/index.html">Home 1</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/index-2.html">Home
-                                            2</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/index-3.html">Home
-                                            3</a>
-                                         </li>
-                                         <li class="menu-item">
-                                            <a href="/assets/index-4.html" aria-current="page">Home 4</a>
-                                         </li>
-                                         <li class="menu-item">
-                                            <a href="/assets/index-5.html">Home 5</a>
-                                         </li>
-                                         <li class="menu-item">
-                                            <a href="/assets/index-6.html">Home 6</a>
-                                         </li>
-                                      </ul>
+                                      <a href="{{route('welcome')}}">Home</a>
+
                                    </li>
                                    <li class="menu-item ">
-                                      <a href="/assets/#">Pages</a><i class="fa fa-chevron-down pq-submenu-icon"></i>
-                                      <ul class="sub-menu">
-                                         <li class="menu-item ">
-                                            <a href="/assets/about-us.html">About
-                                            Us</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/our-services.html">Our
-                                            Services</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/our-process.html">Our
-                                            Process</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/our-plan.html">Our
-                                            Plans</a>
-                                         </li>
-                                         <li class="menu-item-has-children">
-                                            <a href="/assets/#">Our Doctors</a><i
-                                            class="fa fa-chevron-down pq-submenu-icon"></i>
-                                            <ul class="sub-menu">
-                                               <li class="menu-item ">
-                                                  <a href="/assets/doctor-1.html">Doctors
-                                                  1</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/our-doctor.html">Our
-                                                  Doctor Details</a>
-                                               </li>
-                                            </ul>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/make-appoinment.html">Make
-                                            Appointments</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/faq.html">FAQ</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/404.html">404</a>
-                                         </li>
-                                      </ul>
+                                      <a href="{{route('about')}}">About</a>
+
                                    </li>
                                    <li class="menu-item ">
-                                      <a href="/assets/#">Services</a><i class="fa fa-chevron-down pq-submenu-icon"></i>
-                                      <ul class="sub-menu">
-                                         <li class="menu-item ">
-                                            <a href="/assets/angioplasty-services.html">Angioplasty
-                                            Services</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/cardiology-services.html">Cardiology
-                                            Services</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/dental-services.html">Dental
-                                            Services</a>
-                                         </li>
-                                         <li class="menu-item">
-                                            <a href="/assets/endocrinology-services.html">Endocrinology
-                                            Services</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/eye-care-services.html">Eye
-                                            Care Services</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/nurology-service.html">Neurology
-                                            Services</a>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/orthopaedics-services.html">Orthopaedics
-                                            Services</a>
-                                         </li>
-                                         <li class="menu-item">
-                                            <a href="/assets/rmi-services.html">RMI
-                                            Services</a>
-                                         </li>
-                                      </ul>
+                                      <a href="{{route('services')}}">Services</a>
+
                                    </li>
                                    <li class="menu-item ">
-                                      <a href="/assets/#">Projects</a><i class="fa fa-chevron-down pq-submenu-icon"></i>
-                                      <ul class="sub-menu">
-                                         <li class="menu-item-has-children">
-                                            <a href="/assets/#">Types</a><i
-                                            class="fa fa-chevron-down pq-submenu-icon"></i>
-                                            <ul class="sub-menu">
-                                               <li class="menu-item ">
-                                                  <a href="/assets/standard.html">Standard</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/masonry.html">Masonry</a>
-                                               </li>
-                                            </ul>
-                                         </li>
-                                         <li class="menu-item-has-children">
-                                            <a href="/assets/#">Columns</a><i
-                                            class="fa fa-chevron-down pq-submenu-icon"></i>
-                                            <ul class="sub-menu">
-                                               <li class="menu-item ">
-                                                  <a href="/assets/2-column.html">2
-                                                  Column</a>
-                                               </li>
-                                               <li class="menu-item">
-                                                  <a href="/assets/3-column.html">3
-                                                  Column</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/3-column-wide.html">3
-                                                  Column Wide</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/4-column-wide.html">4
-                                                  Column Wide</a>
-                                               </li>
-                                            </ul>
-                                         </li>
-                                         <li class="menu-item-has-children">
-                                            <a href="/assets/#">Slider</a><i
-                                            class="fa fa-chevron-down pq-submenu-icon"></i>
-                                            <ul class="sub-menu">
-                                               <li class="menu-item ">
-                                                  <a href="/assets/2-column-slider.html">2
-                                                  Column Slider</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/3-column-slider.html">3
-                                                  Column Slider</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/3-column-slider-wide.html">3
-                                                  Column Slider Wide</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/4-column-slider.html">4
-                                                  Column Slider</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/4-column-slider-wide.html">4
-                                                  Column Slider Wide</a>
-                                               </li>
-                                            </ul>
-                                         </li>
-                                         <li class="menu-item">
-                                            <a href="/assets/home-visit.html">Projects
-                                            Details</a>
-                                         </li>
-                                      </ul>
+                                      <a href="{{route('project')}}">Projects</a>
+
                                    </li>
                                    <li class="menu-item ">
-                                      <a href="/assets/#">Blog</a><i class="fa fa-chevron-down pq-submenu-icon"></i>
-                                      <ul class="sub-menu">
-                                         <li class="menu-item-has-children ">
-                                            <a href="/assets/#">Grid Style</a><i
-                                            class="fa fa-chevron-down pq-submenu-icon"></i>
-                                            <ul class="sub-menu">
-                                               <li class="menu-item ">
-                                                  <a href="/assets/1-column-blog.html">1
-                                                  Column Blog</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/2-column-blog.html">2
-                                                  Column Blog</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/3-column-blog.html">3
-                                                  Column Blog</a>
-                                               </li>
-                                            </ul>
-                                         </li>
-                                         <li class="menu-item-has-children">
-                                            <a href="/assets/#">Blog Sidebar</a><i
-                                            class="fa fa-chevron-down pq-submenu-icon"></i>
-                                            <ul class="sub-menu">
-                                               <li class="menu-item ">
-                                                  <a href="/assets/left-sidebar.html">Left
-                                                  Sidebar</a>
-                                               </li>
-                                               <li class="menu-item ">
-                                                  <a href="/assets/right-sidebar.html">Right
-                                                  Sidebar</a>
-                                               </li>
-                                            </ul>
-                                         </li>
-                                         <li class="menu-item ">
-                                            <a href="/assets/get-the-exercise-limited-mobility.html">Blog
-                                            Single</a>
-                                         </li>
-                                      </ul>
+                                      <a href="{{route('blog')}}">Blog</a>
+
                                    </li>
                                    <li class="menu-item ">
-                                      <a href="/assets/contact-us.html">Contact
+                                      <a href="{{route('contact')}}">Contact
                                       Us</a>
                                    </li>
                                 </ul>
                              </div>
                           </div>
                           <div class="pq-menu-search-block">
-                             <a href="/assets/javascript:void(0)" id="pq-seacrh-btn"><i class="ti-search"></i></a>
+                             <a href="javascript:void(0)" id="pq-seacrh-btn"><i class="ti-search"></i></a>
                              <div class="pq-search-form">
                                 <form role="search" method="get" class="search-form" action="https://peacefulqode.com/themes/medicate/.html">
                                    <label>
@@ -327,7 +130,7 @@
                                    </form>
                                 </div>
                              </div>
-                             <a href="/assets/make-appoinment.html" class="pq-button">
+                             <a href="{{route('appointment')}}" class="pq-button">
                                 <div class="pq-button-block">
                                    <span class="pq-button-text">Appointments</span>
                                    <i class="ion ion-plus-round"></i>
