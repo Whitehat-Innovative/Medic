@@ -16,14 +16,14 @@
                                    <span>Register a new membership</span>
                                </div>
                                <div class="header">
-                                  
-                                  
-                                   <span>    
+
+
+                                   <span>
                                         <!-- Validation Errors -->
                                        <x-auth-validation-errors class="mb-4" :errors="$errors" />
                                    </span>
                                </div>
-                               <div class="content">                                                
+                               <div class="content">
                                    <div class="input-group">
                                        <input type="text" class="form-control"  required name="name"  placeholder="Enter User Name">
                                        <span class="input-group-addon">
@@ -41,13 +41,13 @@
                                        <span class="input-group-addon">
                                            <i class="zmdi zmdi-lock"></i>
                                        </span>
-                                   </div>                        
+                                   </div>
                                    <div class="input-group">
                                        <input type="password" placeholder="Confirm Password"  required name="password_confirmation" class="form-control" />
                                        <span class="input-group-addon">
                                            <i class="zmdi zmdi-lock"></i>
                                        </span>
-                                   </div>                        
+                                   </div>
                                </div>
                                <div class="checkbox">
                                        <input id="terms" type="checkbox">
@@ -83,10 +83,9 @@
                    </div>
                </footer>
            </div>
-           
-                
+
+
        </x-slot>
-   
-   
+
+
    </x-guest-layout>
-   
