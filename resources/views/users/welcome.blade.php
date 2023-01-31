@@ -151,7 +151,7 @@
                     <div class="pq-info-box-right-icon"> <i class=" flaticon-doctor"></i> </div>
                     <div class="pq-info-box-icon"><i class=" flaticon-doctor"></i></div>
                     <h5 class="pq-info-title">Donate to Someone</h5>
-                    <p class="pq-infobox-description">Your donations can help someone get a medication, treatment or surgery. </p>
+                    <p class="pq-infobox-description">Your donations can go a long way in helping someone get a medication, a treatment or a surgery. </p>
                     <a class="pq-button pq-button-flat" href="{{route('donate')}}">
                         <div class="pq-button-block"> <span class="pq-button-text"> Make a Donation</span> <i
                                 class="ion ion-plus-round"></i> </div>
