@@ -1,99 +1,56 @@
 <x-guest-layout>
-   
-    
+    <x-auth-card>
+        <x-slot name="logo">
+            <a href="/">
+                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            </a>
+        </x-slot>
 
+        <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <!-- End Navbar -->
-    <x-slot name="slot">
+        <!-- Validation Errors -->
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-    
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
 
-        <div class="page-header">
-            <div class="page-header-image" style="background-image:url(../adminassets/images/login.jpg)"></div>
-            <div class="container">
-                <div class="col-md-12 content-center">
-                    <div class="card-plain">
-                        <form class="form" method="POST" action="{{route('login')}}">
-                            @csrf
-                            <div class="header">
-                                <div class="logo-container">
-                                    <img src="/adminassets/logo/demo2.png" alt="">
-                                </div>
-                                <h5>Sign in</h5>
-                                <span>Login a member</span>
-                            </div>
-                            <div class="header">
-                               
-                               
-                                <span> 
-                                      <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />   
-                                     <!-- Validation Errors -->
-                                    <x-auth-validation-errors class="mb-4" :errors="$errors" />
-                                </span>
-                            </div>
-                            <div class="content">                                                
-                                <div class="input-group">
-                                    <input type="text" class="form-control"  required name="name"  placeholder="Enter User Name">
-                                    <span class="input-group-addon">
-                                        <i class="zmdi zmdi-account-circle"></i>
-                                    </span>
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" class="form-control"  required name="email" placeholder="Enter Email">
-                                    <span class="input-group-addon">
-                                        <i class="zmdi zmdi-email"></i>
-                                    </span>
-                                </div>
-                                <div class="input-group">
-                                    <input type="password" placeholder="Password"  required name="password" class="form-control" />
-                                    <span class="input-group-addon">
-                                        <i class="zmdi zmdi-lock"></i>
-                                    </span>
-                                </div>                        
-                                                     
-                            </div>
-                            <div class="checkbox">
-                                    <input id="terms" type="checkbox">
-                                    <label for="terms">
-                                            I read and agree to the <a href="javascript:void(0);">terms of usage</a>
-                                    </label>
-                                </div>
-                            <div class="footer text-center">
-                                <button class="btn btn-primary btn-round btn-block  waves-effect waves-light" type="submit"> Sign In</button>
-                                {{-- <a href="{{route('register')}}" class="btn btn-primary btn-round btn-block  waves-effect waves-light">SIGN UP</a> --}}
-                                <h5><a class="link" href="{{route('register')}}">You dont have membership?</a></h5>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <!-- Email Address -->
+            <div>
+                <x-label for="email" :value="__('Email')" />
+
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
-            <footer class="footer">
-                <div class="container">
-                    <nav>
-                        <ul>
-                            <li><a href="http://thememakker.com/contact/" target="_blank">Contact Us</a></li>
-                            <li><a href="http://thememakker.com/about/" target="_blank">About Us</a></li>
-                            <li><a href="javascript:void(0);">FAQ</a></li>
-                        </ul>
-                    </nav>
-                    <div class="copyright">
-                        &copy;
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script>,
-                        <span>Designed by <a href="http://thememakker.com/" target="_blank">Whitehat Innovatives</a></span>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        
-             
-    </x-slot>
 
+            <!-- Password -->
+            <div class="mt-4">
+                <x-label for="password" :value="__('Password')" />
 
+                <x-input id="password" class="block mt-1 w-full"
+                                type="password"
+                                name="password"
+                                required autocomplete="current-password" />
+            </div>
+
+            <!-- Remember Me -->
+            <div class="block mt-4">
+                <label for="remember_me" class="inline-flex items-center">
+                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                </label>
+            </div>
+
+            <div class="flex items-center justify-end mt-4">
+                @if (Route::has('password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                        {{ __('Forgot your password?') }}
+                    </a>
+                @endif
+
+                <x-button class="ml-3">
+                    {{ __('Log in') }}
+                </x-button>
+            </div>
+        </form>
+    </x-auth-card>
 </x-guest-layout>
-
-
-
-
