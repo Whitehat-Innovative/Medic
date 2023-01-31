@@ -144,64 +144,23 @@
                             alt="Images"> </div>
                     <div class="pq-fancy-box-icon"> <i class="flaticon-healthcare"></i> </div>
                     <div class="pq-fancy-box-info left">
-                        <h5 class="pq-fancy-box-title">Angioplasty</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab.There
-                            are many variations of pas of Lorem Ipsum availab.</p>
-                        <a class="pq-button pq-button-link" href="angioplasty-services.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
+                        <h5 class="pq-fancy-box-title">Codes of Ethics</h5>
+                        <p class="pq-fancybox-description">As with the medical practicioners, below are a few of our ethical codes <br>
+                        (1) We are dedicated to providing competent medical care with compassion and respect for human right and dignity. <br>
+                    (2)We uphold the standards of professionalism, with honesty in all professional interactions devoid of any form of fraud or deception <br>
+                (3) We duly respect the rights of patients, colleagues and other health professionals. <br>
+            (4) We respect the rights of patients and safeguard their confidence and privacy within the constraints of the law <br>
+        (5) We continue to study, apply and advance scientific knowledge, maintain commitment to medical education, make relevant information available to patients, colleagues amd the public and as well as are open to advice and constructive criticism. <br>
+    (6) We recognize a responsibility to participate in activities contributing to the improvement of the health of the community and the betterment of the public health. <br>
+(7) We while caring for the patient, regard responsibilty to the patient as paramount. <br>
+(8) We support access to medical care for all people. <br>
+(9) We associate freely with non-medically qualified bodies where necessary as long as it is relevant for the care of the patients. <br>
+(10) We believe and practice that a good Doctor is one who recognizes his abilities and limits.</p>
+
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-md-6  mt-4">
-                <div class="pq-fancy-box pq-style-3">
-                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/services/2.jpg" class="img-fluid"
-                            alt="Images"> </div>
-                    <div class="pq-fancy-box-icon"> <i class="  flaticon-ct-scan"></i> </div>
-                    <div class="pq-fancy-box-info left">
-                        <h5 class="pq-fancy-box-title">Eye Care</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab.There
-                            are many variations of pas of Lorem Ipsum availab.</p>
-                        <a class="pq-button pq-button-link" href="eye-care-services.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-6 mt-4">
-                <div class="pq-fancy-box pq-style-3">
-                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/services/3.jpg" class="img-fluid"
-                            alt="Images"> </div>
-                    <div class="pq-fancy-box-icon"> <i class=" flaticon-x-ray-1"></i> </div>
-                    <div class="pq-fancy-box-info left">
-                        <h5 class="pq-fancy-box-title">Neurology</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab.There
-                            are many variations of pas of Lorem Ipsum availab.</p>
-                        <a class="pq-button pq-button-link" href="nurology-service.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-md-12 mt-4">
-                <div class="pq-fancy-box pq-style-3">
-                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/services/1.jpg" class="img-fluid"
-                            alt="Images"> </div>
-                    <div class="pq-fancy-box-icon"> <i class=" flaticon-health-insurance"></i> </div>
-                    <div class="pq-fancy-box-info left">
-                        <h5 class="pq-fancy-box-title">Orthopaedics</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab.There
-                            are many variations of pas of Lorem Ipsum availab.</p>
-                        <a class="pq-button pq-button-link" href="orthopaedics-services.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
 </section>

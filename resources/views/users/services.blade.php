@@ -7,11 +7,11 @@
                   <div class="col-lg-12">
                      <nav aria-label="breadcrumb">
                         <div class="pq-breadcrumb-title">
-                           <h2>Cardiology services</h2> </div>
+                           <h2>Our Services</h2> </div>
                         <div class="pq-breadcrumb-container mt-2">
                            <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home mr-2"></i>Home</a></li>
-                              <li class="breadcrumb-item active">Cardiology Services</li>
+                              <li class="breadcrumb-item"><a href="{{route('welcome')}}"><i class="fas fa-home mr-2"></i>Home</a></li>
+                              <li class="breadcrumb-item active">Our Services</li>
                            </ol>
                         </div>
                      </nav>
@@ -34,14 +34,14 @@
                         <div class="pq-widget pq-widget-port p-0">
                            <div class="menu-service-menu-container">
                               <ul id="menu-service-menu" class="menu">
-                                 <li> <a href="angioplasty-services.html" aria-current="page">Angioplasty Services</a> </li>
-                                 <li class=" current-menu-item"><a href="cardiology-services.html">Cardiology Services </a> </li>
-                                 <li><a href="dental-services.html">Dental Services</a> </li>
-                                 <li><a href="endocrinology-services.html">Endocrinology Services</a> </li>
-                                 <li> <a href="eye-care-services.html">Eye Care Services</a> </li>
-                                 <li> <a href="nurology-service.html">Neurology Services</a> </li>
-                                 <li> <a href="orthopaedics-services.html">Orthopaedics Services</a> </li>
-                                 <li> <a href="rmi-services.html">RMI Services</a> </li>
+                                 <li class=" current-menu-item"> <a href="#" aria-current="page">Angioplasty Services</a> </li>
+                                 <li class=" current-menu-item"><a href="#">Cardiology Services </a> </li>
+                                 <li class=" current-menu-item"><a href="#">Dental Services</a> </li>
+                                 <li class=" current-menu-item"><a href="#">Endocrinology Services</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">Eye Care Services</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">Neurology Services</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">Orthopaedics Services</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">RMI Services</a> </li>
                               </ul>
                            </div>
                         </div>
@@ -84,10 +84,12 @@
                                  <div class="pq-section-description"> Medicate is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since </div>
                               </div>
                            </div>
+
                            <div class="row mt-4">
                               <div class="col-lg-6 col-md-12"> <img src="/assets/images/services/1.jpg" class="img-fluid" alt=""> </div>
                               <div class="col-lg-6 col-md-12 mt-lg-0 mt-4"> <img src="/assets/images/services/2.jpg" class="img-fluid" alt=""> </div>
                            </div>
+                           
                            <div class="row">
                               <div class="pq-section-title-box pq-section-title-style-2 pt-4">
                                  <h4 class="pq-section-title">Health Tips & Info</h4>
@@ -95,6 +97,7 @@
                                     <p>Medicate is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                  </div>
                               </div>
+
                               <div class="pq-accordion-block ">
                                  <div class="pq-accordion-box  1">
                                     <div class="pq-ad-title">
@@ -150,3 +153,4 @@
          </section>
          <!--=================================
                all services end-->
+
