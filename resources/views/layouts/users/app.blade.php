@@ -86,6 +86,9 @@
                           <a class="navbar-brand" href="/assets/index.html">
                              <img class="img-fluid logo" src="/assets/images/logo.png" alt="medicate">
                           </a>
+                          <a class="navbar-brand" href="{{route('login')}}">ADMIN
+                             {{-- <img class="img-fluid logo" src="/assets/images/logo.png" alt="medicate"> --}}
+                          </a>
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
                              <div id="pq-menu-contain" class="pq-menu-contain">
                                 <ul id="pq-main-menu" class="navbar-nav ml-auto">
