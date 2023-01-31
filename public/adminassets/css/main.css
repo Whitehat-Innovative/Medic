@@ -5388,7 +5388,8 @@ img {
     position: absolute;
     background-size: cover;
     background-position: center center;
-    width: 100%;
+    left: 22%;
+    width: 50%;
     height: 100%;
     z-index: -1
 }
@@ -5408,8 +5409,8 @@ img {
 
 .page-header .container>.content-center {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 55%;
+    left: 45.8%;
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);

@@ -85,53 +85,55 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="/assets/index.html">
-                                <img class="img-fluid logo" src="/assets/images/logo.png" alt="medicate">
-                            </a>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <div id="pq-menu-contain" class="pq-menu-contain">
-                                    <ul id="pq-main-menu" class="navbar-nav ml-auto">
-                                        <li class="menu-item current-menu-item">
-                                            <a href="{{route('welcome')}}">Home</a>
+                       <nav class="navbar navbar-expand-lg navbar-light">
+                          <a class="navbar-brand" href="/assets/index.html">
+                             <img class="img-fluid logo" src="/assets/images/logo.png" alt="medicate">
+                          </a>
+                          <a class="navbar-brand" href="{{route('login')}}">ADMIN
+                             {{-- <img class="img-fluid logo" src="/assets/images/logo.png" alt="medicate"> --}}
+                          </a>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                             <div id="pq-menu-contain" class="pq-menu-contain">
+                                <ul id="pq-main-menu" class="navbar-nav ml-auto">
+                                   <li class="menu-item current-menu-item">
+                                      <a href="{{route('welcome')}}">Home</a>
 
-                                        </li>
-                                        <li class="menu-item ">
-                                            <a href="{{route('about')}}">About</a>
+                                   </li>
+                                   <li class="menu-item ">
+                                      <a href="{{route('about')}}">About</a>
 
-                                        </li>
-                                        <li class="menu-item ">
-                                            <a href="{{route('services')}}">Services</a>
+                                   </li>
+                                   <li class="menu-item ">
+                                      <a href="{{route('services')}}">Services</a>
 
-                                        </li>
-                                        <li class="menu-item ">
-                                            <a href="{{route('project')}}">Projects</a>
+                                   </li>
+                                   <li class="menu-item ">
+                                      <a href="{{route('project')}}">Projects</a>
 
-                                        </li>
-                                        <li class="menu-item ">
-                                            <a href="{{route('blog')}}">Blog</a>
+                                   </li>
+                                   <li class="menu-item ">
+                                      <a href="{{route('blog')}}">Blog</a>
 
-                                        </li>
-                                        <li class="menu-item ">
-                                            <a href="{{route('contact')}}">Contact
-                                                Us</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pq-menu-search-block">
-                                <a href="javascript:void(0)" id="pq-seacrh-btn"><i class="ti-search"></i></a>
-                                <div class="pq-search-form">
-                                    <form role="search" method="get" class="search-form"
-                                        action="https://peacefulqode.com/themes/medicate/.html">
-                                        <label>
-                                            <span class="screen-reader-text">Search for:</span>
-                                            <input type="search" class="search-field" placeholder="Search …" value=""
-                                                name="s">
-                                        </label>
-                                        <button type="submit" class="search-submit"><span
-                                                class="screen-reader-text">Search</span></button>
-                                    </form>
+                                   </li>
+                                   <li class="menu-item ">
+                                      <a href="{{route('contact')}}">Contact
+                                      Us</a>
+                                   </li>
+                                </ul>
+                             </div>
+                          </div>
+                          <div class="pq-menu-search-block">
+                             <a href="javascript:void(0)" id="pq-seacrh-btn"><i class="ti-search"></i></a>
+                             <div class="pq-search-form">
+                                <form role="search" method="get" class="search-form" action="https://peacefulqode.com/themes/medicate/.html">
+                                   <label>
+                                      <span class="screen-reader-text">Search for:</span>
+                                      <input type="search" class="search-field" placeholder="Search …" value=""
+                                      name="s">
+                                   </label>
+                                   <button type="submit" class="search-submit"><span
+                                      class="screen-reader-text">Search</span></button>
+                                   </form>
                                 </div>
                             </div>
                             <a href="{{route('appointment')}}" class="pq-button">

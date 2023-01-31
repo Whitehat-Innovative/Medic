@@ -2,7 +2,7 @@
     <!-- End Navbar -->
        <x-slot name="slot">
            <div class="page-header">
-               <div class="page-header-image" style="background-image:url(../adminassets/images/login.jpg)"></div>
+               <div class="page-header-image" style="background-image:url(../assets/images/logo.png)" ></div>
                <div class="container">
                    <div class="col-md-12 content-center">
                        <div class="card-plain">
@@ -10,7 +10,7 @@
                                @csrf
                                <div class="header">
                                    <div class="logo-container">
-                                       <img src="/adminassets/logo/demo2.png" alt="">
+                                       <img src="/assets/images/logo.png" alt="">
                                    </div>
                                    <h5>Sign Up</h5>
                                    <span>Register a new membership</span>
@@ -56,7 +56,7 @@
                                        </label>
                                    </div>
                                <div class="footer text-center">
-                                   <button class="btn btn-primary btn-round btn-block  waves-effect waves-light" type="submit"> Sign Up</button>
+                                   <button class="btn btn-round btn-block  waves-effect waves-light" type="submit"> Sign Up</button>
                                    {{-- <a href="{{route('register')}}" class="btn btn-primary btn-round btn-block  waves-effect waves-light">SIGN UP</a> --}}
                                    <h5><a class="link" href="{{route('login')}}">You already have a membership?</a></h5>
                                </div>
@@ -68,9 +68,9 @@
                    <div class="container">
                        <nav>
                            <ul>
-                               <li><a href="http://thememakker.com/contact/" target="_blank">Contact Us</a></li>
-                               <li><a href="http://thememakker.com/about/" target="_blank">About Us</a></li>
-                               <li><a href="javascript:void(0);">FAQ</a></li>
+                               <li><a href="{{route('contact')}}" target="_blank">Contact Us</a></li>
+                               <li><a href="{{route('about')}}" target="_blank">About Us</a></li>
+                               {{-- <li><a href="javascript:void(0);">FAQ</a></li> --}}
                            </ul>
                        </nav>
                        <div class="copyright">
