@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
         <!--=================================
                        Banner end-->
@@ -153,9 +153,9 @@
                                     <h4 class="pq-contact-title">+1 (212) 255-5511</h4>
                                 </div>
                             </div>
-        
+
                         </div>
-        
+
                     </div>
                 </div>
             </div>
@@ -195,7 +195,7 @@
                                         accomodate those who come from far needed our services but may not be
                                         to go back home soon after the services and yet would not be able to provide a suitable
                                         accomodation for themselves through out the period of hospitalization.</span></p>
-        
+
                             </div>
                         </div>
                     </div>
@@ -222,7 +222,7 @@
                                     surgical procedures and yet, with the standard best practices maintained. <br>
                                     These outreaches have been part of the hospital's routine for the past 3years and thousands
                                     of lives have been saved.</p>
-        
+
                             </div>
                         </div>
                     </div>
@@ -373,8 +373,8 @@
         </section>
         <!--=================================
                        counter end-->
-        
-        
+
+
         <!--=================================
                        our-blog start-->
         <section class="pq-blog  pq-pb-210">
