@@ -40,7 +40,7 @@
     <!--loading start-->
     <div id="pq-loading">
         <div id="pq-loading-center">
-            <img src="/assets/images/logo.png" class="img-fluid" style="width:300px; height:auto;" alt="loading">
+            <img src="/assets/images/logo.png" class="img-fluid" style="width:200px; height:auto;" alt="loading">
         </div>
     </div>
     <!--loading End-->
@@ -85,58 +85,60 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                       <nav class="navbar navbar-expand-lg navbar-light">
-                          <a class="navbar-brand" href="/assets/index.html">
-                             <img class="img-fluid logo" src="/assets/images/logo.png" alt="medicate">
-                          </a>
-                          <a class="navbar-brand" href="{{route('login')}}">ADMIN
-                             {{-- <img class="img-fluid logo" src="/assets/images/logo.png" alt="medicate"> --}}
-                          </a>
-                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                             <div id="pq-menu-contain" class="pq-menu-contain">
-                                <ul id="pq-main-menu" class="navbar-nav ml-auto">
-                                   <li class="menu-item current-menu-item">
-                                      <a href="{{route('welcome')}}">Home</a>
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand" href="/assets/index.html">
+                                <img class="img-fluid logo" src="/assets/images/logo.png" alt="medicate">
+                            </a>
+                            <a class="navbar-brand" href="{{ route('login') }}">ADMIN
+                                {{-- <img class="img-fluid logo" src="/assets/images/logo.png" alt="medicate"> --}}
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <div id="pq-menu-contain" class="pq-menu-contain">
+                                    <ul id="pq-main-menu" class="navbar-nav ml-auto">
+                                        <li class="menu-item current-menu-item">
+                                            <a href="{{ route('welcome') }}">Home</a>
 
-                                   </li>
-                                   <li class="menu-item ">
-                                      <a href="{{route('about')}}">About</a>
+                                        </li>
+                                        <li class="menu-item ">
+                                            <a href="{{ route('about') }}">About</a>
 
-                                   </li>
-                                   <li class="menu-item ">
-                                      <a href="{{route('services')}}">Services</a>
+                                        </li>
+                                        <li class="menu-item ">
+                                            <a href="{{ route('services') }}">Services</a>
 
-                                   </li>
-                                   <li class="menu-item ">
-                                      <a href="{{route('project')}}">Projects</a>
+                                        </li>
+                                        <li class="menu-item ">
+                                            <a href="{{ route('project') }}">Projects</a>
 
-                                   </li>
-                                   <li class="menu-item ">
-                                      <a href="{{route('blog')}}">Blog</a>
+                                        </li>
+                                        <li class="menu-item ">
+                                            <a href="{{ route('blog') }}">Blog</a>
 
-                                   </li>
-                                   <li class="menu-item ">
-                                      <a href="{{route('contact')}}">Contact
-                                      Us</a>
-                                   </li>
-                                </ul>
-                             </div>
-                          </div>
-                          <div class="pq-menu-search-block">
-                             <a href="javascript:void(0)" id="pq-seacrh-btn"><i class="ti-search"></i></a>
-                             <div class="pq-search-form">
-                                <form role="search" method="get" class="search-form" action="https://peacefulqode.com/themes/medicate/.html">
-                                   <label>
-                                      <span class="screen-reader-text">Search for:</span>
-                                      <input type="search" class="search-field" placeholder="Search …" value=""
-                                      name="s">
-                                   </label>
-                                   <button type="submit" class="search-submit"><span
-                                      class="screen-reader-text">Search</span></button>
-                                   </form>
+                                        </li>
+                                        <li class="menu-item ">
+                                            <a href="{{ route('contact') }}">Contact
+                                                Us</a>
+                                        </li>
+                                        
+                                    </ul>
                                 </div>
                             </div>
-                            <a href="{{route('appointment')}}" class="pq-button">
+                            <div class="pq-menu-search-block">
+                                <a href="javascript:void(0)" id="pq-seacrh-btn"><i class="ti-search"></i></a>
+                                <div class="pq-search-form">
+                                    <form role="search" method="get" class="search-form"
+                                        action="https://google.com/search">
+                                        <label>
+                                            <span class="screen-reader-text">Search for:</span>
+                                            <input type="search" class="search-field" placeholder="Search …"
+                                                value="" name="s">
+                                        </label>
+                                        <button type="submit" class="search-submit"><span
+                                                class="screen-reader-text">Search</span></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <a href="{{ route('appointment') }}" class="pq-button">
                                 <div class="pq-button-block">
                                     <span class="pq-button-text">Appointments</span>
                                     <i class="ion ion-plus-round"></i>
@@ -151,7 +153,7 @@
                     </div>
                 </div>
             </div>
-            @yield('content')
+
 
         </div>
 
@@ -160,7 +162,7 @@
         Header end
         =================-->
 
-
+        @yield('content')
 
 
 
@@ -188,8 +190,8 @@
                                         <div class="pq-subscribe-from">
                                             <form id="form" class="form">
                                                 <div class="form-fields">
-                                                    <input class="w-100 pq-bg-transparent" type="email" name="EMAIL"
-                                                        placeholder="Enter Your Email" required="">
+                                                    <input class="w-100 pq-bg-transparent" type="email"
+                                                        name="EMAIL" placeholder="Enter Your Email" required="">
                                                     <input class="" type="submit" value="Sign up">
                                                 </div>
                                             </form>
@@ -280,7 +282,8 @@
                                                 </a> </li>
                                             <li> <a
                                                     href="/assets/https://peacefulqode.com/cdn-cgi/l/email-protection#82ebece4edc2f2e7e3e1e7e4f7eef6eae7efe7f1ace1edef"><i
-                                                        class="fas fa-envelope"></i><span>inf<span class="__cf_email__"
+                                                        class="fas fa-envelope"></i><span>inf<span
+                                                            class="__cf_email__"
                                                             data-cfemail="4e210e3e2b2f2d2b283b223a262b232b3d602d2123">[email&#160;protected]</span></span></a>
                                             </li>
                                             <li> <i class="fas fa-map-marker"></i> <span>
@@ -337,8 +340,8 @@
 
 
     <script>
-        jQuery(window).on('load', function (e) {
-            jQuery(".pq-applyform .form-btn").click(function () {
+        jQuery(window).on('load', function(e) {
+            jQuery(".pq-applyform .form-btn").click(function() {
                 var first_name = jQuery('#first-name').val();
                 var doctor_name = jQuery('#doctor-name').val();
                 var disease_name = jQuery('#disease-name').val();
@@ -371,7 +374,8 @@
 
                 if (doctor_name == '' || doctor_name == undefined) {
                     jQuery(
-                            "<span class='pq-doctor-name-error-message pq-message'>Please fill the field</span>")
+                            "<span class='pq-doctor-name-error-message pq-message'>Please fill the field</span>"
+                            )
                         .insertAfter('.pq-applyform .doctor-name-field');
                     result = false;
                 } else {
@@ -381,7 +385,8 @@
 
                 if (disease_name == '' || disease_name == undefined) {
                     jQuery(
-                            "<span class='pq-disease-name-error-message pq-message'>Please fill the field</span>")
+                            "<span class='pq-disease-name-error-message pq-message'>Please fill the field</span>"
+                            )
                         .insertAfter('.pq-applyform #disease-name');
                     result = false;
                 } else {
@@ -398,16 +403,16 @@
                         data: {
                             'email': email
                         },
-                        success: function () {
+                        success: function() {
                             jQuery(
-                                    "<span class='pq-thank-you-message pq-text-white ms-5'> Thank You For Filling The form</span>")
+                                    "<span class='pq-thank-you-message pq-text-white ms-5'> Thank You For Filling The form</span>"
+                                    )
                                 .insertAfter('.pq-applyform .pq-button');
                         }
                     });
                 }
             });
         });
-
     </script>
 </body>
 

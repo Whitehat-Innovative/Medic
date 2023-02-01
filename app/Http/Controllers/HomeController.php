@@ -37,5 +37,10 @@ class HomeController extends Controller
     {
         return view('users.single_blog');
     }
+    // this is for the donate
+    public function donate()
+    {
+        return view('users.donate');
+    }
 
 }

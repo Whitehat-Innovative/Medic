@@ -113,7 +113,7 @@
             </div>
             <div class="col-xl-4 col-md-6 mt-xl-0 mt-md-0 mt-4">
                 <div class="pq-fancy-box pq-style-3">
-                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/services/2.jpg" class="img-fluid"
+                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/IMG-20230130-WA0019.jpg" class="img-fluid"
                             alt="Images"> </div>
                     <div class="pq-fancy-box-icon"><i class=" flaticon-first-aid-box"></i></div>
                     <div class="pq-fancy-box-info left">
@@ -140,7 +140,7 @@
             </div>
             <div class="col-xl-4 col-md-12 mt-4 mt-xl-0">
                 <div class="pq-fancy-box pq-style-3">
-                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/services/3.jpg" class="img-fluid"
+                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/IMG-20230130-WA0018.jpg" class="img-fluid"
                             alt="Images"> </div>
                     <div class="pq-fancy-box-icon"> <i class="flaticon-healthcare"></i> </div>
                     <div class="pq-fancy-box-info left">
@@ -160,7 +160,7 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </div>
 </section>

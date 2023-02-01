@@ -8,8 +8,8 @@
         <rs-slides>
             <rs-slide style="position: absolute;" data-key="rs-84" data-title="Slide"
                 data-thumb="rev/assets/1-51-50x100.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
-                <img src="/assets/images/IMG-20230130-WA0019.jpg" alt="" title="1-51.jpg" class="rev-slidebg tp-rs-img"
-                    data-no-retina>
+                <img src="/assets/images/IMG-20230130-WA0019.jpg" alt="" title="1-51.jpg"
+                    class="rev-slidebg tp-rs-img" data-no-retina>
                 <!--
                 -->
 
@@ -46,8 +46,8 @@
             </rs-slide>
             <rs-slide style="position: absolute;" data-key="rs-85" data-title="Slide"
                 data-thumb="rev/assets/2-51-50x100.jpg" data-in="o:0;" data-out="a:false;">
-                <img src="/assets/images/IMG-20230130-WA0016.jpg" alt="" title="2-51.jpg" class="rev-slidebg tp-rs-img"
-                    data-no-retina>
+                <img src="/assets/images/IMG-20230130-WA0016.jpg" alt="" title="2-51.jpg"
+                    class="rev-slidebg tp-rs-img" data-no-retina>
                 <!--
 
                 -->
@@ -82,7 +82,8 @@
             </rs-slide>
             <rs-slide style="position: absolute;" data-key="rs-86" data-title="Slide"
                 data-thumb="rev/assets/3-2-50x100.jpg" data-in="o:0;" data-out="a:false;">
-                <img src="/assets/rev/assets/3-2.jpg" alt="" title="3-2" class="rev-slidebg tp-rs-img" data-no-retina>
+                <img src="/assets/rev/assets/3-2.jpg" alt="" title="3-2" class="rev-slidebg tp-rs-img"
+                    data-no-retina>
                 <!--
 
                 -->
@@ -151,8 +152,9 @@
                     <div class="pq-info-box-right-icon"> <i class=" flaticon-doctor"></i> </div>
                     <div class="pq-info-box-icon"><i class=" flaticon-doctor"></i></div>
                     <h5 class="pq-info-title">Donate to Someone</h5>
-                    <p class="pq-infobox-description">Your donations can go a long way in helping someone get a medication, a treatment or a surgery. </p>
-                    <a class="pq-button pq-button-flat" href="{{route('donate')}}">
+                    <p class="pq-infobox-description">Your donations can go a long way in helping someone get a
+                        medication, a treatment or a surgery. </p>
+                    <a class="pq-button pq-button-flat" href="{{ route('donate') }}">
                         <div class="pq-button-block"> <span class="pq-button-text"> Make a Donation</span> <i
                                 class="ion ion-plus-round"></i> </div>
                     </a>
@@ -208,7 +210,8 @@
                             Services</span></li>
                     <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Medical And Surgical
                             Services</span></li>
-                    <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Outpatient Services</span></li>
+                    <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Outpatient Services</span>
+                    </li>
                     <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Medicine & instrument</span>
                     </li>
                     <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Specialised Support
@@ -216,7 +219,7 @@
                     <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Instant Operation &
                             Appointment</span></li>
                 </ul>
-                <a class="pq-button pq-button-flat mt-3" href="{{route('about')}}">
+                <a class="pq-button pq-button-flat mt-3" href="{{ route('about') }}">
                     <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
                             class="ion ion-plus-round"></i> </div>
                 </a>
@@ -305,7 +308,7 @@
                             relevant for the care of the patients.</p>
                     </div>
                 </div>
-                <a class="pq-button pq-button-flat mt-4" href="{{route('about')}}">
+                <a class="pq-button pq-button-flat mt-4" href="{{ route('about') }}">
                     <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
                             class="ion ion-plus-round"></i> </div>
                 </a>
@@ -313,7 +316,8 @@
             <div class="col-lg-6 col-md-12 col-xl-5 pe-lg-3 pq-img-none">
                 <img src="/assets/images/IMG-20230130-WA0015.jpg" class="img-fluid" alt="servicebox">
             </div>
-            <div class="col-xl-2 col-lg-12 col-md-12 py-xl-0 py-5 align-self-center pq-form-counter pq-bg-primary-dark">
+            <div
+                class="col-xl-2 col-lg-12 col-md-12 py-xl-0 py-5 align-self-center pq-form-counter pq-bg-primary-dark">
                 <div class="pq-counter pq-style-2">
                     <div class="pq-counter-contain">
                         <div class="pq-counter-info text-center">
@@ -364,25 +368,30 @@
     </div>
 </section>
 <!--Section about End-->
-<!--Section service start-->
 <section class="service">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="pq-section pq-style-1 text-center"> <span class="pq-section-sub-title">Our Services</span>
-                    <h5 class="pq-section-title">We provide various Directions</h5>
+                <div class="pq-section pq-style-1 text-center"> <span class="pq-section-sub-title">Our
+                        Services</span>
+                    <h5 class="pq-section-title">These are some of the services we provide</h5>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 pq-lg-border-bottom pq-lg-border-right">
+                <div class="pq-fancy-box pq-style-1 text-center">
+                    <div class="pq-fancy-box-icon"><i class=" flaticon-examination"></i></div>
+                    <div class="pq-fancy-box-info">
+                        <h5 class="pq-fancy-box-title">Medical Consultants</h5>
+
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 col-xl-3 pq-lg-border-bottom pq-lg-border-right">
                 <div class="pq-fancy-box pq-style-1 text-center">
                     <div class="pq-fancy-box-icon"><i class=" flaticon-doctor-1"></i></div>
                     <div class="pq-fancy-box-info">
-                        <h5 class="pq-fancy-box-title">Angioplasty</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab. </p>
-                        <a class="pq-button pq-button-link" href="/assets/angioplasty-services.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
+                        <h5 class="pq-fancy-box-title">Intensive Care Unit</h5>
+
                     </div>
                 </div>
             </div>
@@ -390,25 +399,9 @@
                 <div class="pq-fancy-box pq-style-1 text-center">
                     <div class="pq-fancy-box-icon"><i class=" flaticon-care"></i></div>
                     <div class="pq-fancy-box-info">
-                        <h5 class="pq-fancy-box-title">Cardiology</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab. </p>
-                        <a class="pq-button pq-button-link" href="/assets/cardiology-services.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 pq-lg-border-bottom pq-lg-border-right">
-                <div class="pq-fancy-box pq-style-1 text-center">
-                    <div class="pq-fancy-box-icon"><i class=" flaticon-examination"></i></div>
-                    <div class="pq-fancy-box-info">
-                        <h5 class="pq-fancy-box-title">Dental</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab. </p>
-                        <a class="pq-button pq-button-link" href="/assets/dental-services.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
+                        <h5 class="pq-fancy-box-title"> Gynecology</h5>
+                        <p class="pq-fancybox-description"></p>
+
                     </div>
                 </div>
             </div>
@@ -416,25 +409,20 @@
                 <div class="pq-fancy-box pq-style-1 text-center">
                     <div class="pq-fancy-box-icon"><i class=" flaticon-syringe"></i></div>
                     <div class="pq-fancy-box-info">
-                        <h5 class="pq-fancy-box-title">Endocrinology</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab. </p>
-                        <a class="pq-button pq-button-link" href="/assets/endocrinology-services.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
+                        <h5 class="pq-fancy-box-title">Surgery</h5>
+                        <p class="pq-fancybox-description"> </p>
+
                     </div>
                 </div>
             </div>
+
             <div class="col-md-6 col-lg-4 col-xl-3 pq-lg-border-right pq-lg-border-bottom">
                 <div class="pq-fancy-box pq-style-1 text-center">
                     <div class="pq-fancy-box-icon"><i class=" flaticon-medical"></i></div>
                     <div class="pq-fancy-box-info">
-                        <h5 class="pq-fancy-box-title">Eye Care</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab. </p>
-                        <a class="pq-button pq-button-link" href="/assets/eye-care-services.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
+                        <h5 class="pq-fancy-box-title">Maternity</h5>
+                        <p class="pq-fancybox-description">              </p>
+
                     </div>
                 </div>
             </div>
@@ -442,12 +430,10 @@
                 <div class="pq-fancy-box pq-style-1 text-center">
                     <div class="pq-fancy-box-icon"><i class=" flaticon-heartbeat"></i></div>
                     <div class="pq-fancy-box-info">
-                        <h5 class="pq-fancy-box-title">Neurology</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab. </p>
-                        <a class="pq-button pq-button-link" href="/assets/nurology-service.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
+                        <h5 class="pq-fancy-box-title">Pediatrics</h5>
+                        <p class="pq-fancybox-description">
+                        </p>
+
                     </div>
                 </div>
             </div>
@@ -455,12 +441,8 @@
                 <div class="pq-fancy-box pq-style-1 text-center">
                     <div class="pq-fancy-box-icon"><i class=" flaticon-x-ray"></i></div>
                     <div class="pq-fancy-box-info">
-                        <h5 class="pq-fancy-box-title">Orthopaedics</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab. </p>
-                        <a class="pq-button pq-button-link" href="/assets/orthopaedics-services.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
+                        <h5 class="pq-fancy-box-title">X-Ray</h5>
+
                     </div>
                 </div>
             </div>
@@ -468,19 +450,24 @@
                 <div class="pq-fancy-box pq-style-1 text-center">
                     <div class="pq-fancy-box-icon"><i class=" flaticon-drugs"></i></div>
                     <div class="pq-fancy-box-info">
-                        <h5 class="pq-fancy-box-title">RMI</h5>
-                        <p class="pq-fancybox-description">There are many variations of pas of Lorem Ipsum availab. </p>
-                        <a class="pq-button pq-button-link" href="/assets/rmi-services.html">
-                            <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                    class="ion ion-plus-round"></i> </div>
-                        </a>
+                        <h5 class="pq-fancy-box-title">ECG</h5>
+                        <p class="pq-fancybox-description">
+                        </p>
+
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center mt-4">
+                    <a class="pq-button pq-button-flat" href="{{route('services')}}">
+                        <div class="pq-button-block"> <span class="pq-button-text">See all Services</span> <i
+                                class="ion ion-plus-round"></i> </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--Section service End-->
 {{-- <!--Section portfolio start-->
 <section class="pq-bg-primary pb-lg-0 pq-bg-img-1 ">
     <div class="container">
@@ -738,7 +725,8 @@
                                     <ul>
                                         <li>
                                             <a class="facebook" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i> </a>
+                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i>
+                                            </a>
                                         </li>
                                         <li>
                                             <a class="twitter" href="/assets/#" target="_blank"> <span
@@ -768,7 +756,8 @@
                                     <ul>
                                         <li>
                                             <a class="facebook" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i> </a>
+                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i>
+                                            </a>
                                         </li>
                                         <li>
                                             <a class="twitter" href="/assets/#" target="_blank"> <span
@@ -798,7 +787,8 @@
                                     <ul>
                                         <li>
                                             <a class="facebook" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i> </a>
+                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i>
+                                            </a>
                                         </li>
                                         <li>
                                             <a class="twitter" href="/assets/#" target="_blank"> <span
@@ -828,7 +818,8 @@
                                     <ul>
                                         <li>
                                             <a class="facebook" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i> </a>
+                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i>
+                                            </a>
                                         </li>
                                         <li>
                                             <a class="twitter" href="/assets/#" target="_blank"> <span
@@ -858,7 +849,8 @@
                                     <ul>
                                         <li>
                                             <a class="facebook" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i> </a>
+                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i>
+                                            </a>
                                         </li>
                                         <li>
                                             <a class="twitter" href="/assets/#" target="_blank"> <span
@@ -896,27 +888,28 @@
                 <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title">Appointment</span>
                     <h5 class="pq-section-title pq-text-white">Apply for treatments</h5>
                 </div>
-                <form action="{{route('make.appointment')}}" method="POST" class="pq-applyform mt-5" novalidate> @csrf
+                <form action="{{ route('make.appointment') }}" method="POST" class="pq-applyform mt-5" novalidate>
+                    @csrf
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="text" name="your-name" id="first-name" class="pq-bg-transparent name-field"
-                                placeholder="Your Name" required>
+                            <input type="text" name="your-name" id="first-name"
+                                class="pq-bg-transparent name-field" placeholder="Your Name" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" name="your-email" id="e-mail" class="pq-bg-transparent e-mail-field"
-                                placeholder="Your Email" required>
+                            <input type="email" name="your-email" id="e-mail"
+                                class="pq-bg-transparent e-mail-field" placeholder="Your Email" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="your-phone" id="phone" class="pq-bg-transparent phone-field"
-                                placeholder="Your Phone Number" required>
+                            <input type="text" name="your-phone" id="phone"
+                                class="pq-bg-transparent phone-field" placeholder="Your Phone Number" required>
                         </div>
 
                         <div class="col-md-12">
                             {{-- <input type="text" name="your-disease" id="disease-name"
                     class="pq-bg-transparent disease-name-field" placeholder="Your Disease Name"
                     required> --}}
-                            <textarea name="appointment_name" class="form-control" id="" placeholder="Appointment Note"
-                                cols="30" rows="10"></textarea>
+                            <textarea name="appointment_name" class="form-control" id="" placeholder="Appointment Note" cols="30"
+                                rows="10"></textarea>
                         </div>
                         <div class="col-md-12">
                             <button class="pq-button pq-button-bg-white form-btn" type="button">
@@ -943,9 +936,9 @@
                 </div>
             </div>
             <div class="col-lg-12">
-                <div class="owl-carousel owl-theme" data-dots="true" data-nav="false" data-desk_num="2" data-lap_num="2"
-                    data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true" data-loop="true"
-                    data-margin="30">
+                <div class="owl-carousel owl-theme" data-dots="true" data-nav="false" data-desk_num="2"
+                    data-lap_num="2" data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
+                    data-loop="true" data-margin="30">
                     <div class="item">
                         <div class="pq-testimonial-box pq-style-1">
                             <div class="pq-testimonial-info">
@@ -1206,7 +1199,8 @@
                                                 0 Comments</a> </li>
                                     </ul>
                                 </div>
-                                <h5 class="pq-blog-title"><a href="/assets/get-the-exercise-limited-mobility.html">What
+                                <h5 class="pq-blog-title"><a
+                                        href="/assets/get-the-exercise-limited-mobility.html">What
                                         is Future of Blood Pressure Monitoring?</a></h5>
                                 <div class="pq-blog-info">
                                     <p>It is a long established fact that a reader will be distracted by the readable
@@ -1239,7 +1233,8 @@
                                                 0 Comments</a> </li>
                                     </ul>
                                 </div>
-                                <h5 class="pq-blog-title"><a href="/assets/get-the-exercise-limited-mobility.html">Goals
+                                <h5 class="pq-blog-title"><a
+                                        href="/assets/get-the-exercise-limited-mobility.html">Goals
                                         Setting the people Heart is Healthy</a></h5>
                                 <div class="pq-blog-info">
                                     <p>It is a long established fact that a reader will be distracted by the readable
@@ -1305,7 +1300,8 @@
                                                 0 Comments</a> </li>
                                     </ul>
                                 </div>
-                                <h5 class="pq-blog-title"><a href="/assets/get-the-exercise-limited-mobility.html">Heart
+                                <h5 class="pq-blog-title"><a
+                                        href="/assets/get-the-exercise-limited-mobility.html">Heart
                                         Failure Treatment: High Blood Pressure</a></h5>
                                 <div class="pq-blog-info">
                                     <p>It is a long established fact that a reader will be distracted by the readable
@@ -1338,7 +1334,8 @@
                                                 0 Comments</a> </li>
                                     </ul>
                                 </div>
-                                <h5 class="pq-blog-title"><a href="/assets/get-the-exercise-limited-mobility.html">Hard
+                                <h5 class="pq-blog-title"><a
+                                        href="/assets/get-the-exercise-limited-mobility.html">Hard
                                         content we decide ourselves a intently</a></h5>
                                 <div class="pq-blog-info">
                                     <p>It is a long established fact that a reader will be distracted by the readable
@@ -1371,7 +1368,8 @@
                                                 0 Comments</a> </li>
                                     </ul>
                                 </div>
-                                <h5 class="pq-blog-title"><a href="/assets/get-the-exercise-limited-mobility.html">Is
+                                <h5 class="pq-blog-title"><a
+                                        href="/assets/get-the-exercise-limited-mobility.html">Is
                                         Running Really Good for the Heart?</a></h5>
                                 <div class="pq-blog-info">
                                     <p>It is a long established fact that a reader will be distracted by the readable
