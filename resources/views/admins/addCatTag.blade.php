@@ -33,8 +33,10 @@
                                         <input type="text" class="form-control" name="category"  placeholder="Enter New Category" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="tag"  placeholder="Enter New Tag" />
+                                        <textarea class="form-control" name="description" id="" cols="30" rows="10"  placeholder="Enter New Description" ></textarea>
+                                        {{-- <input type="text" class="form-control" name="description"  placeholder="Enter New Description" /> --}}
                                     </div>
+
 
                                     <button type="submit"
                                     class="btn btn-primary btn-round waves-effect m-t-20">Post</button>
@@ -43,23 +45,18 @@
 
 
                                 </div>
-                                <label for="image" class="header mt-2 mb-2"> ALL CATEGORIES AND TAGS ALREADY IN THE SYSTEM </label>
+                                <label for="image" class="header mt-2 mb-2"> ALL CATEGORIES ALREADY IN THE SYSTEM </label>
 
                                 <select name=""  class="mt-2">
-                                    <option selected disabled>All Category Available--</option>
-                                    @foreach ($ct as $cat)
-                                    <option disabled>{{$cat->category}}</option>
+                                    <option selected disabled>All Categories Available--</option>
+                                    @foreach ($cat as $category)
+                                    <option disabled>{{$category->category}}</option>
                                     @endforeach
 
                                 </select>
 
 
-                                <select name="" class=" mt-2 ">
-                                    <option selected disabled>All Tags Available --</option>
-                                    @foreach ($ct as $t)
-                                    <option disabled>{{$t->tag}}</option>
-                                    @endforeach
-                                </select>
+
                             </form>
                         </div>
                         {{-- <div class="card">

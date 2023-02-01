@@ -1,4 +1,7 @@
 @extends('layouts.users.app')
+@section('content')
+
+
  <!--=================================
          Banner start-->
          <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg');">
@@ -163,4 +166,8 @@
          </section>
          <!--=================================
                all services end-->
+<<<<<<< HEAD
+@endsection
+=======
 
+>>>>>>> 229f52a331ba77e553c52c9cf25932f51685d373

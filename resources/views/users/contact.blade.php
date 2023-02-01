@@ -1,4 +1,7 @@
 @extends('layouts.users.app')
+@section('content')
+
+
 <!--=================================
          Banner start-->
          <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg');">
@@ -128,3 +131,4 @@
          </div>
          <!--=================================
                map end-->
+@endsection

@@ -22,35 +22,37 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                            <form action="{{route('blog.add')}}"
+                            <form action="{{route('blog.edit', $blog)}}"
                                 method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="body">
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="title" placeholder="Enter Blog title" />
+                                        <input type="text" class="form-control" name="title" value="{{$blog->title}}" placeholder="Enter Blog title" />
                                     </div>
                                     <div class="form-group">
-                                        <textarea name="content" class="form-control"  id="" placeholder="Enter Blog Content " cols="20" rows="10"> </textarea>
+                                        <textarea name="content" class="form-control"  id="" placeholder="Enter Blog Content " value="{{$blog->content}}" cols="20" rows="10">{{$blog->content}} </textarea>
                                         {{-- <input type="text" class="form-control" name="content"  placeholder="Enter Blog title" /> --}}
                                     </div>
 
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="author"  placeholder="Enter Author name" />
+                                        <input type="text" class="form-control" name="author" value="{{$blog->author}}"  placeholder="Enter Author name" />
                                     </div>
-                                    <select name="category"  class="mt-2">
+                                    <select name="category" class="mt-2">
                                         <option selected disabled>Select Category --</option>
-                                       @foreach ($cat as $category)
-                                       <option value="{{$category->id}}" >{{$category->category}}</option>
-                                       @endforeach
-
-
+                                      
+                                       <option value="{{$blog->id}}" >{{$blog->category->category}}</option>
                                     </select>
 
                                     <div class="  mt-2">
-                                        <input name="image" type="file"  accept="image*/"  multiple />
+                                        <input name="image" type="file" value="{{$blog->images}}"  accept="image*/"  multiple />
                                     </div>
+                                    <div class="image mt-2"><a href="profile.html"><img src="/Blog-image/{{$blog->images}}"
+                                        alt="User"></a>
+                                    
+                                    <span>Old image</span></div>
+                                    
 
                                     <button type="submit"
                                     class="btn btn-primary btn-round waves-effect m-t-20">Post</button>

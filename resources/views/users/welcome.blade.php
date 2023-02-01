@@ -1,4 +1,5 @@
 @extends('layouts.users.app')
+@section('content')
 
 
 <p class="rs-p-wp-fix"></p>
@@ -1389,3 +1390,7 @@
     </div>
 </section>
 <!--Section blog End-->
+
+
+@endsection
+//
