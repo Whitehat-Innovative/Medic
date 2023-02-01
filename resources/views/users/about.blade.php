@@ -2,28 +2,6 @@
 @section('content')
 
 <!--=================================
-<<<<<<< HEAD
-         Banner start-->
-         <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg'); background-attachment: fixed;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <nav aria-label="breadcrumb">
-                            <div class="pq-breadcrumb-title">
-                                <h2>About Us</h2>
-                            </div>
-                            <div class="pq-breadcrumb-container mt-2">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home mr-2"></i>Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">About Us</li>
-                                </ol>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="pq-breadcrumb-img text-right wow fadeInRight"></div>
-=======
                our-service start-->
 <section class="service pq-bg-grey">
     <div class="container">
@@ -106,7 +84,6 @@
 (9) We associate freely with non-medically qualified bodies where necessary as long as it is relevant for the care of the patients. <br>
 (10) We believe and practice that a good Doctor is one who recognizes his abilities and limits.</p>
 
->>>>>>> 229f52a331ba77e553c52c9cf25932f51685d373
                     </div>
                 </div>
             </div>
@@ -153,9 +130,9 @@
                                     <h4 class="pq-contact-title">+1 (212) 255-5511</h4>
                                 </div>
                             </div>
-        
+
                         </div>
-        
+
                     </div>
                 </div>
             </div>
@@ -195,7 +172,7 @@
                                         accomodate those who come from far needed our services but may not be
                                         to go back home soon after the services and yet would not be able to provide a suitable
                                         accomodation for themselves through out the period of hospitalization.</span></p>
-        
+
                             </div>
                         </div>
                     </div>
@@ -222,7 +199,7 @@
                                     surgical procedures and yet, with the standard best practices maintained. <br>
                                     These outreaches have been part of the hospital's routine for the past 3years and thousands
                                     of lives have been saved.</p>
-        
+
                             </div>
                         </div>
                     </div>
@@ -373,8 +350,8 @@
         </section>
         <!--=================================
                        counter end-->
-        
-        
+
+
         <!--=================================
                        our-blog start-->
         <section class="pq-blog  pq-pb-210">
