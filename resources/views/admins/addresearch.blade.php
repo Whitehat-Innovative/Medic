@@ -47,11 +47,11 @@
 
                                     <select name="category"  class="mt-2">
                                         <option selected disabled>Select Category --</option>
-                                        <option>Web Design</option>
-                                        <option>Photography</option>
-                                        <option>Technology</option>
-                                        <option>Lifestyle</option>
-                                        <option>Sports</option>
+                                        @foreach ($cat as $category)
+                                        <option value="{{$category->id}}">{{$category->category}}</option>
+                                        @endforeach
+
+
                                     </select>
 
                                     <div class="  mt-4 mb-2">

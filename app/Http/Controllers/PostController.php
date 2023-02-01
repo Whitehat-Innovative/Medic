@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\Message as test;
 use App\Models\Blog;
-
-use App\Models\CatTag;
+use App\Models\Category;
 use App\Models\Message;
 use App\Models\Research;
 
@@ -20,12 +19,21 @@ class PostController extends Controller
 
     public function blog()
     {
-        return view('admins/addblog');
+        $ct =Category::all();
+        return view('admins/addblog', ['cat'=>$ct]);
+    }
+
+    public function cat_blog(Category $category)
+    {
+        $bl= Blog::where('category_id',$category->id);
+        return view('admins/cat-blog', ['blo'=>$bl]);
     }
 
     public function research()
     {
-        return view('admins/addresearch');
+        $ct =Category::all();
+
+        return view('admins/addresearch', ['cat'=>$ct]);
     }
 
     public function addpost(Request $request, Blog $blog){
@@ -38,7 +46,7 @@ class PostController extends Controller
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->content = $request->content;
-        $blog->tags = $request->tags;
+        $blog->category_id = $request->category;
         $blog->author = $request->author;
         $blog->user_id = Auth::user()->id;
         $blog->images = $filename;
@@ -48,10 +56,7 @@ class PostController extends Controller
 
     }
 
-
-
     public function addresearch(Request $request){
-
 
         $ext= $request->file('image')->getClientOriginalExtension();
         $filename = \Str::slug($request->title).time().'.'.$ext;
@@ -63,7 +68,7 @@ class PostController extends Controller
         $research->title =$request->title;
         $research->content =$request->content;
         $research->reference =$request->reference;
-        $research->category =$request->category;
+        $research->category_id =$request->category;
         $research->author =$request->author;
         $research->user_id = Auth::user()->id;
 
@@ -73,24 +78,62 @@ class PostController extends Controller
     }
 
 
+    public function addCat(Request $request){
 
-
-
-    public function addCatTag(Request $request){
-
-        $ct =new CatTag();
+        $ct =new Category();
         $ct ->category =$request->category;
-        $ct ->tag =$request->tag;
+        $ct ->description =$request->description;
         $ct->save();
         return back();
 
     }
-    public function CatTag(){
+    public function cat(){
 
-        $ct = CatTag::all();
+        $cat = Category::all();
 
-        return view('/admins/addCatTag', ['ct'=>$ct]);
+        return view('/admins/addCatTag', ['cat'=>$cat]);
 
+    }
+
+
+
+
+
+    public function allpost(){
+
+        $bl= Blog::all();
+        $ct = Category::all();
+        return view('/admins/allblogs',['blo'=>$bl,'cat'=>$ct]);
+    }
+
+        public function editpostview(Blog $blog){
+
+            $bl= Blog::with('category')->find($blog)->first();
+            
+            return view('/admins/editblog', ['blog'=>$bl]);
+            
+
+
+        }
+
+
+
+
+    public function editpost( Blog $blog, Request $request){
+
+        $ext=$request->file('image')->getClientOriginalExtension();
+        $filename= \Str::slug($request->title).time().'.'.$ext;
+        $request->image->move(public_path('Blog-image'), $filename);
+
+        $blog->title =$request->title;
+        $blog->user_id =Auth::user()->id;
+        $blog->content =$request->content;
+        $blog->author =$request->author;
+        $blog->category_id =$request->category;
+        $blog->image =$filename;
+
+        $blog->save();
+        return back();
     }
 
 
@@ -102,11 +145,23 @@ class PostController extends Controller
     //    $store->save();
 
 
-    //             return view('/messagetest', ['s'=>$email]);
+    //             return view('/messagetest', ['s'=>$store]);
 
+    //             $b= User::all();
 
+    //             $b->each(function ($name) {
+            
+    //                 $name->name = $name->email;
+    //                 Mail::to($name)->send(new MailableClass);
+                    
+    //             });
 
 
     // }
+
+
+    
+
+    
 
 }

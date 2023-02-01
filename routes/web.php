@@ -48,7 +48,7 @@ Route::get('/appointment', [HomeController::class, 'appointment'])->name('appoin
 
 
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
-Route::get('/single_blog', [HomeController::class, 'single_blog'])->name('single_blog');
+Route::get('/single_blog/{blog}', [HomeController::class, 'single_blog'])->name('single_blog');
 
 Route::get('/project', [HomeController::class, 'project'])->name('project');
 Route::get('/single_project', [HomeController::class, 'single_project'])->name('single_project');
@@ -62,14 +62,17 @@ Route::post('/make_appointment', [AppointmentController::class, 'appointment'])-
 Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     /*Blogs Route  */
-    Route::get('/addpost/view', [PostController::class,'blog'])->name('blog');
-    Route::get('/editpost/{}/view', [PostController::class, 'editpostview'])->name('blog.edit.view');
+    Route::get('/addpost/view', [PostController::class,'blog'])->name('blog.view');
+    Route::get('/editpost/{blog}/view', [PostC65ontroller::class, 'editpostview'])->name('blog.edit.view');
 
     Route::post('/addpost', [PostController::class,'addpost'])->name('blog.add');
-    Route::post('/editpost', [PostController::class, 'editpost'])->name('blog.edit');
+    Route::post('/editpost/{blog}', [PostController::class, 'editpost'])->name('blog.edit');
+
     Route::post('/deletepost/{}', [PostController::class, 'destroypost'])->name('blog.delete');
 
-    Route::get('/postlist', [PostController::class, 'allpost'])->name('blog.list');
+    Route::get('/postlist', [PostController::class, 'allpost'])->name('all.blog');
+    Route::get('/cat/blog/{category}', [PostController::class, 'cat_blog'])->name('cat.blog');
+    
 
 
     /* Research/Blog route */
@@ -92,8 +95,8 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     /* Category/Tags */
 
-    Route::get('/cat-tag', [PostController::class, 'CatTag'])->name('cat.tag.view');
-    Route::post('/add/cat-tag', [PostController::class, 'addCatTag'])->name('cat.tag.add');
+    Route::get('/cat-tag', [PostController::class, 'cat'])->name('cat.tag.view');
+    Route::post('/add/cat-tag', [PostController::class, 'addCat'])->name('cat.tag.add');
 
     /* Send a Message  */
 

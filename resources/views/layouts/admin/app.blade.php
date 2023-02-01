@@ -181,10 +181,10 @@
                                     class="zmdi zmdi-blogger"></i><span>Blog</span></a>
                             <ul class="ml-menu">
 
-                                <li><a href="{{route('blog')}}">New Post</a></li>
-                                <li><a href="blog-post.html">Edit Blog post</a></li>
+                                <li><a href="{{route('blog.view')}}">New Post</a></li>
+                                {{-- <li><a href="blog-post.html">Edit Blog post</a></li> --}}
                                 <li><a href="{{route('cat.tag.view')}}">Add Category/Tags</a></li>
-                                <li><a href="blog-list.html">Blog list</a></li>
+                                <li><a href="{{route('all.blog')}}">Blog list</a></li>
 
                             </ul>
                         </li>

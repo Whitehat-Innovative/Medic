@@ -1,5 +1,7 @@
 @extends('layouts.users.app')
 
+@section('content')
+
 <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg');">
     <div class="container">
           <div class="row align-items-center">
@@ -86,3 +88,5 @@
     </div>
 </section>
 <!--=================================
+
+@endsection
