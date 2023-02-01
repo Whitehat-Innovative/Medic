@@ -41,7 +41,9 @@
                            <h4 class="pq-contact-box-title">
                                     Our Location
                                  </h4>
-                           <p class="pq-contact-box-description"> The Queen's Walk, Bishop's, London SE1 7PB, United Kingdom. </p>
+                           <p class="pq-contact-box-description"> 9 Rumuolukwu, Eneka, Rivers State </p>
+                           <p class="pq-contact-box-description"> 58 Airport Road, Rumuodomaya, Rivers State </p>
+
                         </div>
                      </div>
                   </div>
@@ -54,8 +56,8 @@
                            <h4 class="pq-contact-box-title">
                                     Our Contact
                                  </h4>
-                           <p class="pq-contact-box-description"> + (567) 1234-567-8900
-                              <br>+ (567) 1234-567-8901 </p>
+                           <p class="pq-contact-box-description"> + (234) 816-492-4608
+                              <br>+ (234) 903-033-7346 </p>
                         </div>
                      </div>
                   </div>
@@ -68,8 +70,7 @@
                            <h4 class="pq-contact-box-title">
                                     Mail Us
                                  </h4>
-                           <p class="pq-contact-box-description"> <a href="https://peacefulqode.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abc2c5cdc4ebdbcecac8cecddec7dfc3cec6ced885c8c4c6">[email&#160;protected]</a>
-                              <br><a href="https://peacefulqode.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="573e3931386517273236343231223b233f323a32247934383a">[email&#160;protected]</a> </p>
+                           <p class="pq-contact-box-description"> <a href="www.gmail.com/egbuchulemo" class="__cf_email__" data-cfemail="abc2c5cdc4ebdbcecac8cecddec7dfc3cec6ced885c8c4c6">egbuchulemo@gmail.com</a>
                         </div>
                      </div>
                   </div>
@@ -86,7 +87,7 @@
                   <div class="col-lg-8 col-md-8  pq-form-box">
                      <div class="form-container">
                         <div class="pq-section pq-style-1 text-center p-0"> <span class="pq-section-sub-title">contact us</span>
-                           <h5 class="pq-section-title">Get in touch with us</h5> </div>
+                           <h5 class="pq-section-title">is there something we you want to tell us?</h5> </div>
                      </div>
                      <div class="pq-applyform-whitebg text-start">
                         <form action="#" class="pq-applyform">
@@ -126,8 +127,7 @@
                map start-->
          <div class="map pt-0">
             <div class="pq-bg-map">
-               <iframe src="/assets/https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d317893.19730324426!2d-0.1195537!3d51.5032973!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x487604b900d26973%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye%20Riverside%20Building%2C%20County%20Hall%20London%20SE1%207PB%20United%20Kingdom!3m2!1d51.5032973!2d-0.1195537!5e0!3m2!1sen!2sin!4v1652772883319!5m2!1sen!2sin" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=zolive%20hospital&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123 movies</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}</style><a href="https://www.embedgooglemap.net">how to embed google maps into html</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%px;}</style></div></div>            </div>
          </div>
          <!--=================================
                map end-->

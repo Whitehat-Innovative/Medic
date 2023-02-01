@@ -10,7 +10,7 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-        <title>:: Oreo Hospital :: </title>
+        <title>:: Zolive Hospital :: </title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <!-- Custom Css -->
@@ -27,7 +27,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-transparent">
         <div class="container">
             <div class="navbar-translate n_logo">
-                <a class="navbar-brand" href="javascript:void(0);" title="" target="_blank">Zolive</a>
+                <a class="navbar-brand" href="{{route('welcome')}}" title="" target="_blank">Zolive</a>
                 <button class="navbar-toggler" type="button">
                     <span class="navbar-toggler-bar bar1"></span>
                     <span class="navbar-toggler-bar bar2"></span>

@@ -42,7 +42,7 @@
                            <div class="price"> <span class="pq-amount"></span>  </div>
                         </div>
 
-                        <a class="pq-button pq-button-flat page-2" href="our-plan.html">
+                        <a class="pq-button pq-button-flat page-2" href="#">
                            <div class="pq-button-block"> <span class="pq-button-text">Purchace Now</span> <i class="ion ion-plus-round"></i> </div>
                         </a>
                      </div>
@@ -51,18 +51,10 @@
                      <div class="pq-pricing-plan pq-style-1 active ">
                         <div class="pq-pricing-head"> <span class="pq-title">Pay With Card </span>
                            {{-- <div class="pq-service-media"> <i class=" flaticon-doctor"></i> </div> --}}
-                           <div class="price"> <span class="pq-amount">$ 50</span> <span class="price-month">/ Monthly</span> </div>
+                           <div class="price"> <span class="pq-amount"></span> <span class="price-month"></span> </div>
                         </div>
-                        {{-- <ul class="pq-pricing-list">
-                           <li class=""> <i aria-hidden="true" class="ion ion-checkmark-round"></i> <span> Access to Employers Hotline</span> </li>
-                           <li class="active"> <i aria-hidden="true" class="ion ion-checkmark-round"></i> <span> Binding Arbitration and Class</span> </li>
-                           <li class=""> <i aria-hidden="true" class="ion ion-close"></i> <span> State and Federal Postings</span> </li>
-                           <li class=""> <i aria-hidden="true" class="ion ion-checkmark-round"></i> <span>  24/7 Customer Support</span> </li>
-                           <li class="active"> <i aria-hidden="true" class="ion ion-close"></i> <span> Safety Training Topics</span> </li>
-                           <li class=""> <i aria-hidden="true" class="ion ion-checkmark-round"></i> <span> Free Equipment Use</span> </li>
-                        </ul> --}}
-                        <a class="pq-button pq-button-flat page-2" href="our-plan.html">
-                           <div class="pq-button-block"> <span class="pq-button-text">Purchace Now</span> <i class="ion ion-plus-round"></i> </div>
+                        <a class="pq-button pq-button-flat page-2" href="#">
+                           <div class="pq-button-block"> <span class="pq-button-text">Pay Now</span> <i class="ion ion-plus-round"></i> </div>
                         </a>
                      </div>
                   </div>

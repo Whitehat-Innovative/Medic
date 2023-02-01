@@ -2,28 +2,6 @@
 @section('content')
 
 <!--=================================
-<<<<<<< HEAD
-         Banner start-->
-         <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg'); background-attachment: fixed;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <nav aria-label="breadcrumb">
-                            <div class="pq-breadcrumb-title">
-                                <h2>About Us</h2>
-                            </div>
-                            <div class="pq-breadcrumb-container mt-2">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home mr-2"></i>Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">About Us</li>
-                                </ol>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="pq-breadcrumb-img text-right wow fadeInRight"></div>
-=======
                our-service start-->
 <section class="service pq-bg-grey">
     <div class="container">
@@ -62,7 +40,7 @@
             </div>
             <div class="col-xl-4 col-md-6 mt-xl-0 mt-md-0 mt-4">
                 <div class="pq-fancy-box pq-style-3">
-                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/services/2.jpg" class="img-fluid"
+                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/IMG-20230130-WA0019.jpg" class="img-fluid"
                             alt="Images"> </div>
                     <div class="pq-fancy-box-icon"><i class=" flaticon-first-aid-box"></i></div>
                     <div class="pq-fancy-box-info left">
@@ -89,7 +67,7 @@
             </div>
             <div class="col-xl-4 col-md-12 mt-4 mt-xl-0">
                 <div class="pq-fancy-box pq-style-3">
-                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/services/3.jpg" class="img-fluid"
+                    <div class="pq-fancy-box-hoverbg"> <img src="/assets/images/IMG-20230130-WA0018.jpg" class="img-fluid"
                             alt="Images"> </div>
                     <div class="pq-fancy-box-icon"> <i class="flaticon-healthcare"></i> </div>
                     <div class="pq-fancy-box-info left">
@@ -106,7 +84,6 @@
 (9) We associate freely with non-medically qualified bodies where necessary as long as it is relevant for the care of the patients. <br>
 (10) We believe and practice that a good Doctor is one who recognizes his abilities and limits.</p>
 
->>>>>>> 229f52a331ba77e553c52c9cf25932f51685d373
                     </div>
                 </div>
             </div>

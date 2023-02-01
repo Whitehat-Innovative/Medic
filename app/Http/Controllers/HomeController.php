@@ -43,5 +43,10 @@ class HomeController extends Controller
         $bl= Blog::find($blog)->first();
         return view('users.single_blog',['blog'=>$bl]);
     }
+    // this is for the donate
+    public function donate()
+    {
+        return view('users.donate');
+    }
 
 }
