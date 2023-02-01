@@ -127,7 +127,9 @@
                             </div>
                             <div class="col-lg-6 col-md-6 mt-md-5">
                                 <div class="pq-contact-box1">
-                                    <h4 class="pq-contact-title">+1 (212) 255-5511</h4>
+                                    <h4 class="pq-contact-title">+234 (081) 649-24-608</h4>
+                                    <h4 class="pq-contact-title">+234 (081) 649-24-608</h4>
+
                                 </div>
                             </div>
 

@@ -63,7 +63,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     /*Blogs Route  */
     Route::get('/addpost/view', [PostController::class,'blog'])->name('blog.view');
-    Route::get('/editpost/{blog}/view', [PostC65ontroller::class, 'editpostview'])->name('blog.edit.view');
+    Route::get('/editpost/{blog}/view', [PostController::class, 'editpostview'])->name('blog.edit.view');
 
     Route::post('/addpost', [PostController::class,'addpost'])->name('blog.add');
     Route::post('/editpost/{blog}', [PostController::class, 'editpost'])->name('blog.edit');
@@ -72,7 +72,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     Route::get('/postlist', [PostController::class, 'allpost'])->name('all.blog');
     Route::get('/cat/blog/{category}', [PostController::class, 'cat_blog'])->name('cat.blog');
-    
+
 
 
     /* Research/Blog route */
