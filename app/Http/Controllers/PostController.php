@@ -51,6 +51,8 @@ class PostController extends Controller
         $blog->user_id = Auth::user()->id;
         $blog->images = $filename;
         $blog->save();
+
+        
         return back();
 
 
@@ -109,9 +111,9 @@ class PostController extends Controller
         public function editpostview(Blog $blog){
 
             $bl= Blog::with('category')->find($blog)->first();
-            
+
             return view('/admins/editblog', ['blog'=>$bl]);
-            
+
 
 
         }
@@ -150,18 +152,18 @@ class PostController extends Controller
     //             $b= User::all();
 
     //             $b->each(function ($name) {
-            
+
     //                 $name->name = $name->email;
     //                 Mail::to($name)->send(new MailableClass);
-                    
+
     //             });
 
 
     // }
 
 
-    
 
-    
+
+
 
 }
