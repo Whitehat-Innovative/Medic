@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg');">
+<div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg'); background-attachment: fixed;">
     <div class="container">
           <div class="row align-items-center">
                 <div class="col-lg-12">

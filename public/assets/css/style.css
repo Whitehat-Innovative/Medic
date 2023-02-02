@@ -5393,6 +5393,7 @@ Process Step
 .pq-process-step.pq-process-style-2 .pq-process-media .pq-process-img img {
   border-radius: 100%;
   width: 200px;
+  height: auto;
 }
 
 .pq-process-step.pq-process-style-2 .pq-process-media .pq-process-number {

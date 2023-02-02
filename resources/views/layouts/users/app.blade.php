@@ -53,27 +53,32 @@
                 <div class="row flex-row-reverse">
                     <div class="col-md-6 text-right">
                         <div class="pq-header-social text-right">
-                            <ul>
+                            {{-- <ul>
                                 <li><a href="/assets/#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="/assets/#"><i class="fab fa-google-plus-g"></i></a></li>
                                 <li><a href="/assets/#"><i class="fab fa-instagram"></i></a></li>
                                 <li><a href="/assets/#"><i class="fab fa-pinterest"></i></a></li>
-                            </ul>
+                            </ul> --}}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="pq-header-contact ">
                             <ul>
                                 <li>
-                                    <a href="/assets/tel:+1800001658"><i class="fas fa-phone"></i>
-                                        <span> +1800-001-658</span>
+                                    <a href="tel:+23408164924608"><i class="fas fa-phone"></i>
+                                        <span> +23408164924608</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+09030337346"><i class="fas fa-phone"></i>
+                                        <span> +09030337346</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a
-                                        href="/assets/https://peacefulqode.com/cdn-cgi/l/email-protection#4b22252d240b3b2e2a282e2d3e273f232e262e3865282426"><i
+                                        href="https://egbuchulemo@gmail.com"><i
                                             class="fas fa-envelope"></i><span><span class="__cf_email__"
-                                                data-cfemail="066f68606946766367656360736a726e636b63752865696b">[email&#160;protected]</span></span></a>
+                                                data-cfemail="066f68606946766367656360736a726e636b63752865696b">egbuchulemo@gmail.com</span></span></a>
                                 </li>
                             </ul>
                         </div>
@@ -119,7 +124,7 @@
                                             <a href="{{ route('contact') }}">Contact
                                                 Us</a>
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
                             </div>

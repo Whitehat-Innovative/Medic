@@ -5,7 +5,7 @@
 
 <!--=================================
          Banner start-->
-<div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg');">
+<div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg'); background-attachment: fixed;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12">
@@ -173,7 +173,7 @@
             </div>
             <div class="col-lg-4 mt-lg-0 mt-5">
                 <div class="Sidebar-style-2">
-                    
+
                     <div class="pq-widget pq-widget_media_image">
                         <div class="pq-block-group">
                             <div class="pq-block-group__inner-container">

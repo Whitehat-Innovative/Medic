@@ -9,7 +9,7 @@
         <rs-slides>
             <rs-slide style="position: absolute;" data-key="rs-84" data-title="Slide"
                 data-thumb="rev/assets/1-51-50x100.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
-                <img src="/assets/images/IMG-20230130-WA0019.jpg" alt="" title="1-51.jpg"
+                <img src="/assets/images/breadcrumb-2.jpg"  alt="" title="1-51.jpg"
                     class="rev-slidebg tp-rs-img" data-no-retina>
                 <!--
                 -->
@@ -21,7 +21,7 @@
                     data-text="w:normal;s:14,14,14,13;l:22,22,26,21;fw:600;" data-dim="w:auto,auto,auto,144px;"
                     data-frame_0="x:50,39,29,17;" data-frame_1="st:600;sp:1000;sR:600;"
                     data-frame_999="o:0;st:w;sR:7400;"
-                    style="z-index:9;font-family:'Quicksand';text-transform:uppercase;">Passion for caring
+                    style="z-index:9;font-family:'Quicksand';text-transform:uppercase;">Support
                 </rs-layer>
                 <!--
                 -->
@@ -30,8 +30,8 @@
                     data-text="w:normal;s:64,48,42,22;l:72,56,50,30;fw:600;"
                     data-border="boc:#14457b;bow:1px,1px,1px,1px;" data-frame_0="x:50,39,29,17;"
                     data-frame_1="st:900;sp:1000;sR:900;" data-frame_999="o:0;st:w;sR:7100;"
-                    style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">Genuine commitment<br>
-                    to your health
+                    style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">We support access to <br> medical care for all people.
+
                 </rs-layer>
                 <!--
                 -->
@@ -47,7 +47,7 @@
             </rs-slide>
             <rs-slide style="position: absolute;" data-key="rs-85" data-title="Slide"
                 data-thumb="rev/assets/2-51-50x100.jpg" data-in="o:0;" data-out="a:false;">
-                <img src="/assets/images/IMG-20230130-WA0016.jpg" alt="" title="2-51.jpg"
+                <img src="/assets/images/IMG_20230130_142733_690.jpg" alt="" title="2-51.jpg"
                     class="rev-slidebg tp-rs-img" data-no-retina>
                 <!--
 
@@ -56,7 +56,7 @@
                     data-xy="xo:41px,38px,38px,37px;y:m;yo:-197px,-154px,-121px,-75px;"
                     data-text="w:normal;s:14,14,14,13;l:22,22,26,21;fw:600;" data-frame_0="x:50,39,29,17;"
                     data-frame_1="st:1100;sp:1000;sR:1100;" data-frame_999="o:0;st:w;sR:6900;"
-                    style="z-index:9;font-family:'Quicksand';text-transform:uppercase;">Great Experience In Bulding
+                    style="z-index:9;font-family:'Quicksand';text-transform:uppercase;"> Accountability
                 </rs-layer>
                 <!--
                 -->
@@ -65,7 +65,7 @@
                     data-text="w:normal;s:64,48,42,22;l:72,56,50,30;fw:600;"
                     data-border="boc:#14457b;bow:1px,1px,1px,1px;" data-frame_0="x:50,39,29,17;"
                     data-frame_1="st:1400;sp:1000;sR:1400;" data-frame_999="o:0;st:w;sR:6600;"
-                    style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">Orthopedic Treatment
+                    style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">We are ready to responsibilty <br> for our actions
                     <br>
                     Accute Pain
                 </rs-layer>
@@ -141,10 +141,12 @@
                     <div class="pq-info-box-right-icon"> <i class=" flaticon-medical-doctor"></i> </div>
                     <div class="pq-info-box-icon"><i class=" flaticon-medical-doctor"></i></div>
                     <h5 class="pq-info-title">Emergency Cases</h5>
-                    <p class="pq-infobox-description">There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form </p>
-                    <div class="pq-info-call"> <i class="fas fa-phone-alt"></i>
-                        <h4 class="cpq-call-number">987 654 321</h4>
+                    <p class="pq-infobox-description"> </p>
+                    <div class="pq-info-call m-4"> <i class="fas fa-phone-alt"></i>
+                        <h4 class="cpq-call-number"> <a href="tel:+23408164924608">08164924608</a> </h4>
+                    </div>
+                    <div class="pq-info-call m-4"> <i class="fas fa-phone-alt"></i>
+                        <h4 class="cpq-call-number"> <a href="tel:+23408164924608">08164924608</a> </h4>
                     </div>
                 </div>
             </div>
@@ -245,9 +247,9 @@
                         <div class="pq-service-img"><img src="/assets/images/services/1.jpg" class="img-fluid"
                                 alt="servicebox"></div>
                         <div class="pq-service-box-info">
-                            <div class="pq-info-text"> <span class="pq-service-sub-title">Medical Surgery </span>
-                                <a href="/assets/eye-care-services.html">
-                                    <h5 class="pq-service-title">Eye Care Services</h5>
+                            <div class="pq-info-text"> <span class="pq-service-sub-title">  </span>
+                                <a href="{{route('services')}}">
+                                    <h5 class="pq-service-title">Surgery</h5>
                                 </a>
                             </div>
                             <div class="pq-service-icon"> <i class=" flaticon-laboratory"></i> </div>
@@ -261,9 +263,9 @@
                         <div class="pq-service-img"><img src="/assets/images/services/2.jpg" class="img-fluid"
                                 alt="servicebox"></div>
                         <div class="pq-service-box-info">
-                            <div class="pq-info-text"> <span class="pq-service-sub-title">Medical Therapy </span>
-                                <a href="/assets/cardiology-services.html">
-                                    <h5 class="pq-service-title">Cardiology Services</h5>
+                            <div class="pq-info-text"> <span class="pq-service-sub-title"> </span>
+                                <a href="{{route('welcome')}}">
+                                    <h5 class="pq-service-title">Ultrasound</h5>
                                 </a>
                             </div>
                             <div class="pq-service-icon"><i class=" flaticon-doctor-1"></i> </div>
@@ -277,9 +279,9 @@
                         <div class="pq-service-img"><img src="/assets/images/services/3.jpg" class="img-fluid"
                                 alt="servicebox"></div>
                         <div class="pq-service-box-info">
-                            <div class="pq-info-text"> <span class="pq-service-sub-title">Medical Pediatrics</span>
-                                <a href="/assets/dental-services.html">
-                                    <h5 class="pq-service-title">Dental Services</h5>
+                            <div class="pq-info-text"> <span class="pq-service-sub-title"></span>
+                                <a href="{{route('services')}}">
+                                    <h5 class="pq-service-title">Intensive Care Unit</h5>
                                 </a>
                             </div>
                             <div class="pq-service-icon"><i class=" flaticon-medical-prescription"></i> </div>
@@ -315,7 +317,7 @@
                 </a>
             </div>
             <div class="col-lg-6 col-md-12 col-xl-5 pe-lg-3 pq-img-none">
-                <img src="/assets/images/IMG-20230130-WA0015.jpg" class="img-fluid" alt="servicebox">
+                <img src="/assets/images/IMG_20230131_165123_636.jpg" class="img-fluid" alt="servicebox">
             </div>
             <div
                 class="col-xl-2 col-lg-12 col-md-12 py-xl-0 py-5 align-self-center pq-form-counter pq-bg-primary-dark">
@@ -360,7 +362,7 @@
                                 <h5 class="timer" data-to="59" data-speed="5000">59</h5> <span
                                     class="pq-counter-prefix">+</span>
                             </div>
-                            <p class="pq-counter-description">EXPERT DOCTORS</p>
+                            <p class="pq-counter-description">EXPERT HEALTH PRACTICIONERS</p>
                         </div>
                     </div>
                 </div>
@@ -624,8 +626,8 @@
     <div class="container  ">
         <div class="row ">
             <div class="col-lg-12">
-                <div class="pq-section pq-style-1 text-center"> <span class="pq-section-sub-title">OUR STEP</span>
-                    <h5 class="pq-section-title">Our Codes of Ethics</h5>
+                <div class="pq-section pq-style-1 text-center"> <span class="pq-section-sub-title">OUR VALUES</span>
+                    <h5 class="pq-section-title">Our Core Values</h5>
                 </div>
             </div>
         </div>
@@ -633,15 +635,14 @@
             <div class="col-xl-3 col-md-6">
                 <div class="pq-process-step pq-process-style-2 ">
                     <div class="pq-process-media">
-                        <div class="pq-process-img"><img src="/assets/images/process/1.png" class="img-fluid"
+                        <div class="pq-process-img"><img src="/assets/images/breadcrumb-1.jpg" class="img-fluid"
                                 alt="medicate"> </div>
                         <div class="pq-process-number"> <span>01</span> </div>
                     </div>
                     <div class="pq-process-step-info">
-                        <h5 class="pq-process-title">Dedication</h5> <span class="pq-process-sub-title"></span>
+                        <h5 class="pq-process-title">Discipline</h5> <span class="pq-process-sub-title"></span>
                         <div class="pq-process-description">
-                            <p>We are dedicated to providing competent medical care with compassion and respect for
-                                human right and dignity.</p>
+                            <p>All members (full and part-time) must be well disciplined and must be ready to be disciplined should the need arises.</p>
                         </div>
                     </div>
                 </div>
@@ -654,10 +655,9 @@
                         <div class="pq-process-number"> <span>02</span> </div>
                     </div>
                     <div class="pq-process-step-info">
-                        <h5 class="pq-process-title">Professionalism</h5> <span class="pq-process-sub-title"></span>
+                        <h5 class="pq-process-title">Courage</h5> <span class="pq-process-sub-title"></span>
                         <div class="pq-process-description">
-                            <p>We uphold the standards professionalism, with honesty in professional interactions devoid
-                                of any form of fraud or deception.</p>
+                            <p>Courage must be part of all members of our organization as we may sometimes face patients whose own challenges may appear unsurmountable.</p>
                         </div>
                     </div>
                 </div>
@@ -670,10 +670,9 @@
                         <div class="pq-process-number"> <span>03</span> </div>
                     </div>
                     <div class="pq-process-step-info">
-                        <h5 class="pq-process-title"> Responsible</h5> <span class="pq-process-sub-title"></span>
+                        <h5 class="pq-process-title"> Punctuality</h5> <span class="pq-process-sub-title"></span>
                         <div class="pq-process-description">
-                            <p>We recognize the responsiblity to participate in activities contributing to the
-                                improvement of the health of the community and the betterment of the public health.</p>
+                            <p>Early to work, early to return is our charge.</p>
                         </div>
                     </div>
                 </div>
@@ -686,9 +685,9 @@
                         <div class="pq-process-number"> <span>04</span> </div>
                     </div>
                     <div class="pq-process-step-info">
-                        <h5 class="pq-process-title">Support</h5> <span class="pq-process-sub-title"></span>
+                        <h5 class="pq-process-title">Accountability</h5> <span class="pq-process-sub-title"></span>
                         <div class="pq-process-description">
-                            <p>We support access to medical care for all people.</p>
+                            <p>We all are ready to take responsibility for our actions.</p>
                         </div>
                     </div>
                 </div>
@@ -893,15 +892,15 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="text" name="your-name" id="first-name"
+                            <input type="text" name="name" id="first-name"
                                 class="pq-bg-transparent name-field" placeholder="Your Name" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" name="your-email" id="e-mail"
+                            <input type="email" name="email" id="e-mail"
                                 class="pq-bg-transparent e-mail-field" placeholder="Your Email" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="your-phone" id="phone"
+                            <input type="text" name="phone" id="phone"
                                 class="pq-bg-transparent phone-field" placeholder="Your Phone Number" required>
                         </div>
 
@@ -913,7 +912,7 @@
                                 rows="10"></textarea>
                         </div>
                         <div class="col-md-12">
-                            <button class="pq-button pq-button-bg-white form-btn" type="button">
+                            <button class="pq-button pq-button-bg-white form-btn" type="submit" >
                                 <div class="pq-button-block">
                                     <span class="pq-button-text-dark me-0">send message</span>
                                 </div>
