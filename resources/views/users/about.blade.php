@@ -1,8 +1,7 @@
 @extends('layouts.users.app')
 @section('content')
 
-<!--=================================
-         Banner start-->
+<!--=================================  Banner start-->
 <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg'); background-attachment: fixed;">
     <div class="container">
         <div class="row align-items-center">
@@ -26,8 +25,7 @@
         </div>
     </div>
 </div>
-<!--=================================
-               Banner end-->
+<!--================================= Banner end-->
 <!--=================================
                our-service start-->
 <section class="service pq-bg-grey">
@@ -131,7 +129,6 @@
 <!--=================================
                        about-us start-->
 <section class="about-us">
-
 </section>
 <!--=================================
                        about-us end-->

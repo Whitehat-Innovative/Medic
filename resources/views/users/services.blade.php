@@ -81,7 +81,7 @@
                               <div class="pq-section-title-box pq-section-title-style-2 pt-4">
                                  <h4 class="pq-section-title">Health Tips & Info</h4>
                                  <div class="pq-section-description">
-                                    <p> Happiness is very contributory to longetivity....always be happy no minding the day's challenges. </p>
+                                    <p> Happiness is very contributory to longetivity....always be happy not minding the day's challenges. </p>
                                  </div>
                               </div>
 
@@ -89,12 +89,12 @@
                                  <div class="pq-accordion-box  1">
                                     <div class="pq-ad-title">
                                        <h6 class="ad-title-text">
-                                             Where can I go to provide a sample for testing?
+                                             What kind of common foods are unhealthy for me?
                                              <i aria-hidden="true" class="ion ion-ios-arrow-down active"></i><i
                                                 aria-hidden="true" class="ion ion-ios-arrow-up inactive"></i>
                                           </h6> </div>
                                     <div class="pq-accordion-details" style="display: none;">
-                                       <p class="pq-detail-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+                                       <p class="pq-detail-text"> Salt   </p>
                                     </div>
                                  </div>
                                  <div class="pq-accordion-box   2">
