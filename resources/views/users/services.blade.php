@@ -65,7 +65,7 @@
                   </div>
                   <div class="col-lg-8 ps-3 mt-4 mt-lg-0">
                      <div class="pq-menu-content">
-                        <div class="pq-rhs-img text-center"> <img src="/assets/images/pexels-jozemara-friorili-lemes-3470004.jpg" alt="" class="rounded img-fluid"> </div>
+                        <div class="pq-rhs-img text-center"> <img src="/assets/images/IMG_20230130_142832_146.jpg" alt="" class="rounded img-fluid"> </div>
                         <div class="pq-section-title-box pq-section-title-style-2 pt-4">
 
                         </div>
@@ -94,7 +94,8 @@
                                                 aria-hidden="true" class="ion ion-ios-arrow-up inactive"></i>
                                           </h6> </div>
                                     <div class="pq-accordion-details" style="display: none;">
-                                       <p class="pq-detail-text"> Salt   </p>
+                                       <p class="pq-detail-text"> Salt. <br>
+                                        Eating plenty of salt worsens blood pressure so all hypertensive patients should avoid plenty salt consumption.  </p>
                                     </div>
                                  </div>
                                  <div class="pq-accordion-box   2">
@@ -119,17 +120,7 @@
                                        <p class="pq-detail-text"> It cost can be as low as ₦500.00. <br> Generally the cost depends on the type and kind of the test needed to be done. </p>
                                     </div>
                                  </div>
-                                 <div class="pq-accordion-box   4 ">
-                                    <div class="pq-ad-title">
-                                       <h6 class="ad-title-text">
-                                             Using Innovative Technology
-                                             <i aria-hidden="true" class="ion ion-ios-arrow-down active"></i><i
-                                                aria-hidden="true" class="ion ion-ios-arrow-up inactive"></i>
-                                          </h6> </div>
-                                    <div class="pq-accordion-details" style="display: block;">
-                                       <p class="pq-detail-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
-                                    </div>
-                                 </div>
+
                               </div>
                            </div>
                         </div>
