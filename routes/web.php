@@ -45,14 +45,15 @@ Route::get('/dashboard', function () {
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/make_contact', [HomeController::class, 'make_contact'])->name('make.contact');
 Route::get('/appointment', [HomeController::class, 'appointment'])->name('appointment');
 
 
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/single_blog/{blog}', [HomeController::class, 'single_blog'])->name('single_blog');
 
-Route::get('/project', [HomeController::class, 'project'])->name('project');
-Route::get('/single_project', [HomeController::class, 'single_project'])->name('single_project');
+Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
+// Route::get('/single_project', [HomeController::class, 'single_project'])->name('single_project');
 
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/donate', [HomeController::class, 'donate'])->name('donate');

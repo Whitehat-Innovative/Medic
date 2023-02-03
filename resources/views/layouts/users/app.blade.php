@@ -53,27 +53,32 @@
                 <div class="row flex-row-reverse">
                     <div class="col-md-6 text-right">
                         <div class="pq-header-social text-right">
-                            <ul>
+                            {{-- <ul>
                                 <li><a href="/assets/#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="/assets/#"><i class="fab fa-google-plus-g"></i></a></li>
                                 <li><a href="/assets/#"><i class="fab fa-instagram"></i></a></li>
                                 <li><a href="/assets/#"><i class="fab fa-pinterest"></i></a></li>
-                            </ul>
+                            </ul> --}}
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="pq-header-contact ">
                             <ul>
                                 <li>
-                                    <a href="/assets/tel:+1800001658"><i class="fas fa-phone"></i>
-                                        <span> +1800-001-658</span>
+                                    <a href="tel:+23408164924608"><i class="fas fa-phone"></i>
+                                        <span> 0816 492 4608</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+23409030337346"><i class="fas fa-phone"></i>
+                                        <span> 0903 033 7346</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a
-                                        href="/assets/https://peacefulqode.com/cdn-cgi/l/email-protection#4b22252d240b3b2e2a282e2d3e273f232e262e3865282426"><i
+                                        href="https://egbuchulemo@gmail.com"><i
                                             class="fas fa-envelope"></i><span><span class="__cf_email__"
-                                                data-cfemail="066f68606946766367656360736a726e636b63752865696b">[email&#160;protected]</span></span></a>
+                                                data-cfemail="066f68606946766367656360736a726e636b63752865696b">egbuchulemo@gmail.com</span></span></a>
                                 </li>
                             </ul>
                         </div>
@@ -108,7 +113,7 @@
 
                                         </li>
                                         <li class="menu-item ">
-                                            <a href="{{ route('project') }}">Projects</a>
+                                            <a href="{{ route('gallery') }}">Our Gallery</a>
 
                                         </li>
                                         <li class="menu-item ">
@@ -119,7 +124,7 @@
                                             <a href="{{ route('contact') }}">Contact
                                                 Us</a>
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
                             </div>
@@ -210,8 +215,9 @@
                             <div class="pq-footer-block">
                                 <img src="/assets/images/logo.png" class="pq-footer-logo img-fluid"
                                     alt="medicate-footer-logo">
-                                <p>It helps designers plan out where the content will sit, the content to be written and
-                                    approved.</p>
+                                <p>Happiness is very contributory to longetivity....always be happy not minding the day's challenges.
+                                    Always remember to keep drugs out the reach of children.
+                                </p>
 
                                 <div class="pq-footer-social">
                                     <ul>
@@ -228,16 +234,13 @@
                                 <h4 class="footer-title">Our Courses</h4>
                                 <div class="menu-useful-links-container">
                                     <ul id="menu-useful-links" class="menu">
-                                        <li><a href="/assets/about-us.html">About Us</a></li>
-                                        <li><a href="/assets/contact-us.html">Contact Us</a></li>
-                                        <li><a href="/assets/our-services.html">Our Services</a></li>
-                                        <li><a href="/assets/our-process.html">Our Process</a></li>
-                                        <li><a href="/assets/doctor-1.html">Doctors 1</a></li>
-                                        <li><a href="/assets/faq.html">FAQ</a></li>
-                                        <li><a href="/assets/our-doctor.html">Doctors 2</a></li>
-                                        <li><a href="/assets/home-visit.html">Departments</a></li>
-                                        <li><a href="/assets/make-appoinment.html">Events</a></li>
-                                        <li><a href="/assets/our-plan.html">Member</a></li>
+                                        <li><a href="{{route('about')}}">About Us</a></li>
+                                        <li><a href="{{route('contact')}}">Contact Us</a></li>
+                                        <li><a href="{{route('services')}}">Our Services</a></li>
+                                        <li><a href="{{route('blog')}}">Our Blog</a></li>
+                                        <li><a href="{{route('gallery')}}">Gallery</a></li>
+                                        <li><a href="{{route('donate')}}">Donate</a></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -277,17 +280,17 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <ul class="pq-contact">
-                                            <li> <a href="/assets/tel:+1800001658"><i class="fas fa-phone"></i>
-                                                    <span> +1800-001-658</span>
+                                            <li> <a href="tel:+23408164924608"><i class="fas fa-phone"></i>
+                                                    <span> +234 0816-492-4608</span>
                                                 </a> </li>
                                             <li> <a
-                                                    href="/assets/https://peacefulqode.com/cdn-cgi/l/email-protection#82ebece4edc2f2e7e3e1e7e4f7eef6eae7efe7f1ace1edef"><i
+                                                    href="https://egbuchulemo@gmail.com"><i
                                                         class="fas fa-envelope"></i><span>inf<span
                                                             class="__cf_email__"
-                                                            data-cfemail="4e210e3e2b2f2d2b283b223a262b232b3d602d2123">[email&#160;protected]</span></span></a>
+                                                            data-cfemail="4e210e3e2b2f2d2b283b223a262b232b3d602d2123">egbuchulemo@gmail.com</span></span></a>
                                             </li>
                                             <li> <i class="fas fa-map-marker"></i> <span>
-                                                    Themeforest, Envato HQ 24 Fifth st., Los Angeles, USA </span> </li>
+                                                    9 Rumuolukwu, Eneka, Rivers State. <br> 58 Airport Road, Rumuodomaya, Rivers State. </span> </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -296,14 +299,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pq-copyright-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center "> <span class="pq-copyright"> Copyright 2022 medicate All
-                                Rights Reserved</span> </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </footer>
     <!--Footer End-->

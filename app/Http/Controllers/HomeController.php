@@ -20,6 +20,11 @@ class HomeController extends Controller
     {
         return view ('users.contact');
     }
+
+    public function gallery()
+    {
+        return view('users.gallery');
+    }
     public function appointment()
     {
         return view ('users.appointment');

@@ -3,7 +3,7 @@
 @section('content')
  <!--=================================
          Banner start-->
-         <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg');">
+         <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg'); background-attachment: fixed;">
             <div class="container">
                <div class="row align-items-center">
                   <div class="col-lg-12">
@@ -12,7 +12,7 @@
                            <h2 class="pq-section-title">All Blog Post </h2> </div>
                         <div class="pq-breadcrumb-container mt-2">
                            <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home mr-2"></i>Home</a></li>
+                              <li class="breadcrumb-item"><a href="{{route('welcome')}}"><i class="fas fa-home mr-2"></i>Home</a></li>
                               <li class="breadcrumb-item active">Blog</li>
                            </ol>
                         </div>

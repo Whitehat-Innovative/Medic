@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg');">
+<div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg'); background-attachment: fixed;">
     <div class="container">
           <div class="row align-items-center">
                 <div class="col-lg-12">
@@ -65,7 +65,7 @@
                       </div>
                 </div>
                 <div class="col-xl-6">
-                      <div class="appointment-img text-center"> <img src="/assets/images/appoinment.png" alt="" class="img-a img-fluid"> </div>
+                      <div class="appointment-img text-center"> <img src="/assets/images/calendar.jpg" alt="" class="img-a img-fluid"> </div>
                 </div>
           </div>
     </div>

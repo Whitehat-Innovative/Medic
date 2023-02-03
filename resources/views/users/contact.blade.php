@@ -4,7 +4,7 @@
 
 <!--=================================
          Banner start-->
-         <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg');">
+         <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg'); background-attachment: fixed;">
             <div class="container">
                <div class="row align-items-center">
                   <div class="col-lg-12">
@@ -13,7 +13,7 @@
                            <h2>Contact Us</h2> </div>
                         <div class="pq-breadcrumb-container mt-2">
                            <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home mr-2"></i>Home</a></li>
+                              <li class="breadcrumb-item"><a href="{{route('welcome')}}"><i class="fas fa-home mr-2"></i>Home</a></li>
                               <li class="breadcrumb-item active">Contact Us</li>
                            </ol>
                         </div>
@@ -90,22 +90,22 @@
                            <h5 class="pq-section-title">is there something we you want to tell us?</h5> </div>
                      </div>
                      <div class="pq-applyform-whitebg text-start">
-                        <form action="#" class="pq-applyform">
+                        <form action="{{route('make.contact')}}" method="POST" class="pq-applyform"> @csrf
                            <div class="row">
                               <div class="col-lg-6 col-md-6">
-                                 <input type="text" id="first-name" name="your-name" class="name-field" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Name">
+                                 <input type="text" id="first-name" name="name" class="name-field" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Name">
                               </div>
                               <div class="col-lg-6 col-md-6">
-                                 <input type="email" id="e-mail" name="your-email" class="e-mail-field" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Email">
+                                 <input type="email" id="e-mail" name="email" class="e-mail-field" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Email">
                               </div>
                               <div class="col-lg-6 col-md-6">
-                                 <input type="text" id="phone-number" name="phone-number" class="phone-number-field" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Phone Number">
+                                 <input type="text" id="phone-number" name="phone" class="phone-number-field" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Phone Number">
                               </div>
                               <div class="col-lg-6 col-md-6">
-                                 <input type="text" id="subject" name="your-Subject" class="subject-field" size="40" aria-required="true" aria-invalid="false" placeholder="Subject">
+                                 <input type="text" id="subject" name="subject" class="subject-field" size="40" aria-required="true" aria-invalid="false" placeholder="Subject">
                               </div>
                               <div class="col-lg-12 col-md-12">
-                                 <textarea name="your-message" id="message" cols="40" rows="10" aria-required="true" aria-invalid="false" placeholder="Write Your Message"></textarea>
+                                 <textarea name="message" id="message" cols="40" rows="10" aria-required="true" aria-invalid="false" placeholder="Write Your Message"></textarea>
                               </div>
                               <div class="col-lg-12 col-md-12">
                                  <a class="pq-button form-btn">
