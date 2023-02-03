@@ -9,7 +9,7 @@
         <rs-slides>
             <rs-slide style="position: absolute;" data-key="rs-84" data-title="Slide"
                 data-thumb="rev/assets/1-51-50x100.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
-                <img src="/assets/images/breadcrumb-2.jpg"  alt="" title="1-51.jpg"
+                <img src="/assets/images/breadcrumb.jpg"  alt="" title="1-51.jpg"
                     class="rev-slidebg tp-rs-img" data-no-retina>
                 <!--
                 -->
@@ -47,7 +47,7 @@
             </rs-slide>
             <rs-slide style="position: absolute;" data-key="rs-85" data-title="Slide"
                 data-thumb="rev/assets/2-51-50x100.jpg" data-in="o:0;" data-out="a:false;">
-                <img src="/assets/images/IMG_20230130_142733_690.jpg" alt="" title="2-51.jpg"
+                <img src="/assets/images/IMG_20230130_142810_287.jpg" alt="" title="2-51.jpg"
                     class="rev-slidebg tp-rs-img" data-no-retina>
                 <!--
 
@@ -83,7 +83,7 @@
             </rs-slide>
             <rs-slide style="position: absolute;" data-key="rs-86" data-title="Slide"
                 data-thumb="rev/assets/3-2-50x100.jpg" data-in="o:0;" data-out="a:false;">
-                <img src="/assets/rev/assets/3-2.jpg" alt="" title="3-2" class="rev-slidebg tp-rs-img"
+                <img src="/assets/images/IMG-20230130-WA0001.jpg" alt="" title="3-2" class="rev-slidebg tp-rs-img"
                     data-no-retina>
                 <!--
 
@@ -201,7 +201,7 @@
 <section class="pq-bg-grey">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6"> <img src="/assets/images/About-us/1.jpg" class="img-fluid pe-xl-5 wow fadeInLeft"
+            <div class="col-lg-6"> <img src="/assets/images/pexels-chokniti-khongchum-2280547.jpg" class="img-fluid pe-xl-5 wow fadeInLeft"
                     alt="home"> </div>
             <div class="col-lg-6 align-self-center mt-lg-0 mt-4">
                 <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title">What About Us</span>
@@ -244,7 +244,7 @@
             <div class="col-lg-6 col-md-6 col-xl-4">
                 <div class="pq-service-box pq-style-1">
                     <div class="pq-service-block">
-                        <div class="pq-service-img"><img src="/assets/images/services/1.jpg" class="img-fluid"
+                        <div class="pq-service-img"><img src="/assets/images/surgery.jpg" class="img-fluid"
                                 alt="servicebox"></div>
                         <div class="pq-service-box-info">
                             <div class="pq-info-text"> <span class="pq-service-sub-title">  </span>
@@ -252,7 +252,6 @@
                                     <h5 class="pq-service-title">Surgery</h5>
                                 </a>
                             </div>
-                            <div class="pq-service-icon"> <i class=" flaticon-laboratory"></i> </div>
                         </div>
                     </div>
                 </div>
@@ -260,7 +259,7 @@
             <div class="col-lg-6 col-md-6 col-xl-4 pt-md-0 pt-4">
                 <div class="pq-service-box pq-style-1">
                     <div class="pq-service-block">
-                        <div class="pq-service-img"><img src="/assets/images/services/2.jpg" class="img-fluid"
+                        <div class="pq-service-img"><img src="/assets/images/ultrasound.jpg" class="img-fluid"
                                 alt="servicebox"></div>
                         <div class="pq-service-box-info">
                             <div class="pq-info-text"> <span class="pq-service-sub-title"> </span>
@@ -268,7 +267,6 @@
                                     <h5 class="pq-service-title">Ultrasound</h5>
                                 </a>
                             </div>
-                            <div class="pq-service-icon"><i class=" flaticon-doctor-1"></i> </div>
                         </div>
                     </div>
                 </div>
@@ -276,7 +274,7 @@
             <div class="col-lg-6 col-md-6 col-xl-4 pt-4 pt-xl-0">
                 <div class="pq-service-box pq-style-1">
                     <div class="pq-service-block">
-                        <div class="pq-service-img"><img src="/assets/images/services/3.jpg" class="img-fluid"
+                        <div class="pq-service-img"><img src="/assets/images/intensive.jpg" class="img-fluid"
                                 alt="servicebox"></div>
                         <div class="pq-service-box-info">
                             <div class="pq-info-text"> <span class="pq-service-sub-title"></span>
@@ -284,7 +282,6 @@
                                     <h5 class="pq-service-title">Intensive Care Unit</h5>
                                 </a>
                             </div>
-                            <div class="pq-service-icon"><i class=" flaticon-medical-prescription"></i> </div>
                         </div>
                     </div>
                 </div>
@@ -650,7 +647,7 @@
             <div class="col-xl-3 col-md-6">
                 <div class="pq-process-step pq-process-style-2 ">
                     <div class="pq-process-media">
-                        <div class="pq-process-img"><img src="/assets/images/process/2.png" class="img-fluid"
+                        <div class="pq-process-img"><img src="/assets/images/IMG_20230131_165133_626.jpg" class="img-fluid"
                                 alt="medicate"> </div>
                         <div class="pq-process-number"> <span>02</span> </div>
                     </div>
@@ -665,7 +662,7 @@
             <div class="col-xl-3 col-md-6">
                 <div class="pq-process-step pq-process-style-2 ">
                     <div class="pq-process-media">
-                        <div class="pq-process-img"><img src="/assets/images/process/3.png" class="img-fluid"
+                        <div class="pq-process-img"><img src="/assets/images/IMG-20230130-WA0003.jpg" class="img-fluid"
                                 alt="medicate"> </div>
                         <div class="pq-process-number"> <span>03</span> </div>
                     </div>
@@ -680,7 +677,7 @@
             <div class="col-xl-3 col-md-6">
                 <div class="pq-process-step pq-process-style-2 ">
                     <div class="pq-process-media">
-                        <div class="pq-process-img"><img src="/assets/images/process/4.png" class="img-fluid"
+                        <div class="pq-process-img"><img src="/assets/images/IMG-20230131-WA0032.jpg" class="img-fluid"
                                 alt="medicate"> </div>
                         <div class="pq-process-number"> <span>04</span> </div>
                     </div>
@@ -695,7 +692,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center mt-4">
-                <a class="pq-button pq-button-flat" href="/assets/make-appoinment.html">
+                <a class="pq-button pq-button-flat" href="{{route('appointment')}}">
                     <div class="pq-button-block"> <span class="pq-button-text">Get Appointment</span> <i
                             class="ion ion-plus-round"></i> </div>
                 </a>
@@ -706,184 +703,14 @@
 <!--Section process-step End-->
 <!--Section team start-->
 <section class="team pq-bg-grey pq-team-pb">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="pq-section pq-style-1 text-center"> <span class="pq-section-sub-title">Our Team</span>
-                    <h5 class="pq-section-title">Meet Our Heart Specialists</h5>
-                </div>
-            </div>
-            <div class="col-lg-12 pb-dot-mt-0">
-                <div class="owl-carousel owl-theme " data-dots="true" data-nav="false" data-desk_num="3"
-                    data-lap_num="3" data-tab_num="2" data-mob_num="2" data-mob_sm="1" data-autoplay="false"
-                    data-loop="false" data-margin="30">
-                    <div class="item">
-                        <div class="pq-team-box pq-style-1">
-                            <div class="pq-team-img"> <img src="/assets/images/team/1.jpg" class="img-fluid"
-                                    alt="team-image">
-                                <div class="pq-team-social">
-                                    <ul>
-                                        <li>
-                                            <a class="facebook" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="twitter" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Twitter</span> <i class="fab fa-twitter"></i> </a>
-                                        </li>
-                                        <li>
-                                            <a class="google-plus" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Google-plus</span> <i
-                                                    class="fab fa-google-plus"></i> </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pq-team-info">
-                                <h5 class="pq-member-name">
-                                    <a href="/assets/doctor-1.html">
-                                        Naidan Smith </a>
-                                </h5> <span class="pq-team-designation">Outpatient Surgery</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-team-box pq-style-1">
-                            <div class="pq-team-img"> <img src="/assets/images/team/2.jpg" class="img-fluid"
-                                    alt="team-image">
-                                <div class="pq-team-social">
-                                    <ul>
-                                        <li>
-                                            <a class="facebook" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="twitter" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Twitter</span> <i class="fab fa-twitter"></i> </a>
-                                        </li>
-                                        <li>
-                                            <a class="google-plus" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Google-plus</span> <i
-                                                    class="fab fa-google-plus"></i> </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pq-team-info">
-                                <h5 class="pq-member-name">
-                                    <a href="/assets/doctor-1.html">
-                                        Danial Frankie </a>
-                                </h5> <span class="pq-team-designation">Outpatient Surgery</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-team-box pq-style-1">
-                            <div class="pq-team-img"> <img src="/assets/images/team/3.jpg" class="img-fluid"
-                                    alt="team-image">
-                                <div class="pq-team-social">
-                                    <ul>
-                                        <li>
-                                            <a class="facebook" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="twitter" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Twitter</span> <i class="fab fa-twitter"></i> </a>
-                                        </li>
-                                        <li>
-                                            <a class="google-plus" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Google-plus</span> <i
-                                                    class="fab fa-google-plus"></i> </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pq-team-info">
-                                <h5 class="pq-member-name">
-                                    <a href="/assets/doctor-1.html">
-                                        Alex Jhon </a>
-                                </h5> <span class="pq-team-designation">Outpatient Surgery</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-team-box pq-style-1">
-                            <div class="pq-team-img"> <img src="/assets/images/team/4.jpg" class="img-fluid"
-                                    alt="team-image">
-                                <div class="pq-team-social">
-                                    <ul>
-                                        <li>
-                                            <a class="facebook" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="twitter" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Twitter</span> <i class="fab fa-twitter"></i> </a>
-                                        </li>
-                                        <li>
-                                            <a class="google-plus" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Google-plus</span> <i
-                                                    class="fab fa-google-plus"></i> </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pq-team-info">
-                                <h5 class="pq-member-name">
-                                    <a href="/assets/doctor-1.html">
-                                        Rihana Roy </a>
-                                </h5> <span class="pq-team-designation">Outpatient Surgery</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-team-box pq-style-1">
-                            <div class="pq-team-img"> <img src="/assets/images/team/5.jpg" class="ig-fluid"
-                                    alt="team-image">
-                                <div class="pq-team-social">
-                                    <ul>
-                                        <li>
-                                            <a class="facebook" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Facebook</span> <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="twitter" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Twitter</span> <i class="fab fa-twitter"></i> </a>
-                                        </li>
-                                        <li>
-                                            <a class="google-plus" href="/assets/#" target="_blank"> <span
-                                                    class="sr-only">Google-plus</span> <i
-                                                    class="fab fa-google-plus"></i> </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pq-team-info">
-                                <h5 class="pq-member-name">
-                                    <a href="/assets/doctor-1.html">
-                                        Jason Roy </a>
-                                </h5> <span class="pq-team-designation">Outpatient Surgery</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </section>
 <!--Section team End-->
 <!--Section form start-->
 <section class="pq-form">
     <div class="container">
         <div class="row align-items-center pq-bg-primary pq-reveser flex-md-column-reverse flex-lg-row">
-            <div class="col-lg-4 text-center"> <img src="/assets/images/2.png" class="img-fluid pq-form-img-overflow"
-                    alt="..."> </div>
+            <div class="col-lg-4 text-center">  </div>
             <div class="col-lg-8 mt-5 mt-lg-0 pq-form-pad pq-blue-section-side-right">
                 <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title">Appointment</span>
                     <h5 class="pq-section-title pq-text-white">Apply for treatments</h5>

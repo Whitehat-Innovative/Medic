@@ -113,7 +113,7 @@
 
                                         </li>
                                         <li class="menu-item ">
-                                            <a href="{{ route('project') }}">Projects</a>
+                                            <a href="{{ route('gallery') }}">Our Gallery</a>
 
                                         </li>
                                         <li class="menu-item ">
@@ -215,8 +215,9 @@
                             <div class="pq-footer-block">
                                 <img src="/assets/images/logo.png" class="pq-footer-logo img-fluid"
                                     alt="medicate-footer-logo">
-                                <p>It helps designers plan out where the content will sit, the content to be written and
-                                    approved.</p>
+                                <p>Happiness is very contributory to longetivity....always be happy no minding the day's challenges.
+                                    Always remember to keep drugs out the reach of children.
+                                </p>
 
                                 <div class="pq-footer-social">
                                     <ul>

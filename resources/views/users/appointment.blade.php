@@ -65,7 +65,7 @@
                       </div>
                 </div>
                 <div class="col-xl-6">
-                      <div class="appointment-img text-center"> <img src="/assets/images/appoinment.png" alt="" class="img-a img-fluid"> </div>
+                      <div class="appointment-img text-center"> <img src="/assets/images/calendar.jpg" alt="" class="img-a img-fluid"> </div>
                 </div>
           </div>
     </div>

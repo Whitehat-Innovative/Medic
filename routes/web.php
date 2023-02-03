@@ -51,8 +51,8 @@ Route::get('/appointment', [HomeController::class, 'appointment'])->name('appoin
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/single_blog/{blog}', [HomeController::class, 'single_blog'])->name('single_blog');
 
-Route::get('/project', [HomeController::class, 'project'])->name('project');
-Route::get('/single_project', [HomeController::class, 'single_project'])->name('single_project');
+Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
+// Route::get('/single_project', [HomeController::class, 'single_project'])->name('single_project');
 
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/donate', [HomeController::class, 'donate'])->name('donate');
