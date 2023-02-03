@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\DonationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
@@ -56,6 +57,11 @@ Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/donate', [HomeController::class, 'donate'])->name('donate');
+Route::get('/pay', function () {
+
+    return view('users.pay');
+
+});
 
 Route::post('/make_appointment', [AppointmentController::class, 'appointment'])->name('make.appointment');
 
@@ -95,15 +101,16 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::post('/edit/{users}', [UserController::class, 'edit'])->name('edit.user');
 
     /* Category/Tags */
-
     Route::get('/cat-tag', [PostController::class, 'cat'])->name('cat.tag.view');
     Route::post('/add/cat-tag', [PostController::class, 'addCat'])->name('cat.tag.add');
 
     /* Send a Message  */
 
 
-
-
 });
+
+    Route::post('/payFor', [DonationController::class, 'fund'])->name('fund');
+
+    Route::get('/payment/callback', [DonationController::class, 'fundCallback'])->name('transaction.callback');
 
 require __DIR__.'/auth.php';

@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Donation;
+use App\Models\Patient;
 use App\Models\User;
 use App\Models\User as ModelsUser;
 use Illuminate\Foundation\Auth\User as AuthUser;
@@ -59,6 +60,29 @@ class UserController extends Controller
         }
             return back();
 
+    }
+
+
+    public function patientdata(Request $request){
+
+        $ext=$request->file('image')->getClientOriginalExtension();
+        $filename= \Str::slug($request->name).time().'.'.$ext;
+        $request->image->move(public_path('Pateint-image'), $filename);
+
+
+        $patient= new Patient();
+        $patient->name =$request->name;
+        $patient->illness_description =$request->illness_description;
+        $patient->illness_name =$request->illness_name;
+        $patient->email =$request->email;
+        $patient->sex =$request->sex;
+        $patient->age =$request->age;
+        $patient->target_fund =$request->target_fund;
+        $patient->image =$filename;
+
+        $patient->save();
+
+        return back();
     }
 
 

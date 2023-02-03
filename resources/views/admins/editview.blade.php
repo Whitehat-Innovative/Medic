@@ -2,8 +2,6 @@
 
 <x-app-layout>
     <x-slot name="slot">
-
-
         <section class="content">
             <div class="block-header">
                 <div class="row">
@@ -25,16 +23,14 @@
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <form action="{{route('edit.user', $u)}}" method="POST" enctype="multipart/form-data" >
-                            @csrf 
+                            @csrf
                             <div class="card">
                                 <div class="header">
-
                                     <span>
 
                                         <p>User Details</p>
 
                                     </span>
-
                                 </div>
                                 <div class="body">
                                     <div class="row clearfix">
@@ -88,8 +84,6 @@
 
             </div>
         </section>
-
-
     </x-slot>
 </x-app-layout>
 
