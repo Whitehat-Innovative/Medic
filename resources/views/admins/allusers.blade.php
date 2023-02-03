@@ -149,9 +149,7 @@
 
                                                                     </form>
                                                                     <button class="btn btn-icon btn-neutral btn-icon-mini" >
-                                                                        <a href="{{route('edit.view', $users)}}"><i class="zmdi zmdi-edit" ></i></a>
-
-                                                             </button>
+                                                                        <a href="{{route('edit.view', $users)}}"><i class="zmdi zmdi-edit" ></i></a></button>
 
 
                                                         </td>

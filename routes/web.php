@@ -69,7 +69,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     /*Blogs Route  */
     Route::get('/addpost/view', [PostController::class,'blog'])->name('blog.view');
-    Route::get('/editpost/{blog}/view', [PostC65ontroller::class, 'editpostview'])->name('blog.edit.view');
+    Route::get('/editpost/{blog}/view', [PostController::class, 'editpostview'])->name('blog.edit.view');
 
     Route::post('/addpost', [PostController::class,'addpost'])->name('blog.add');
     Route::post('/editpost/{blog}', [PostController::class, 'editpost'])->name('blog.edit');
@@ -100,19 +100,16 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::post('/edit/{users}', [UserController::class, 'edit'])->name('edit.user');
 
     /* Category/Tags */
-
     Route::get('/cat-tag', [PostController::class, 'cat'])->name('cat.tag.view');
     Route::post('/add/cat-tag', [PostController::class, 'addCat'])->name('cat.tag.add');
 
     /* Send a Message  */
 
 
-
-
 });
 
-Route::post('/payFor', [DonationController::class, 'fund'])->name('fund');
-// Route::get('/payment/{id}', [DonationController::class, 'pay'])->name('payment');
-Route::get('/payment/callback', [DonationController::class, 'fundCallback'])->name('transaction.callback');
+    Route::post('/payFor', [DonationController::class, 'fund'])->name('fund');
+
+    Route::get('/payment/callback', [DonationController::class, 'fundCallback'])->name('transaction.callback');
 
 require __DIR__.'/auth.php';
