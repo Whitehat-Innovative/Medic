@@ -57,11 +57,7 @@ Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/donate', [HomeController::class, 'donate'])->name('donate');
-Route::get('/pay', function () {
-
-    return view('users.pay');
-
-});
+Route::get('/pay', [HomeController::class, 'pay'])->name('pay');
 
 Route::post('/make_appointment', [AppointmentController::class, 'appointment'])->name('make.appointment');
 

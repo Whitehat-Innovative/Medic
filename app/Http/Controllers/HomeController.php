@@ -53,5 +53,9 @@ class HomeController extends Controller
     {
         return view('users.donate');
     }
+    public function pay()
+    {
+        return view('users.pay');
+    }
 
 }

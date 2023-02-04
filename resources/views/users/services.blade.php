@@ -94,8 +94,8 @@
                                                 aria-hidden="true" class="ion ion-ios-arrow-up inactive"></i>
                                           </h6> </div>
                                     <div class="pq-accordion-details" style="display: none;">
-                                       <p class="pq-detail-text"> Salt. <br>
-                                        Eating plenty of salt worsens blood pressure so all hypertensive patients should avoid plenty salt consumption.  </p>
+                                       <p class="pq-detail-text"> One of them is Salt. <br>
+                                        Eating plenty of Salt worsens blood pressure so all hypertensive patients should avoid plenty salt consumption.  </p>
                                     </div>
                                  </div>
                                  <div class="pq-accordion-box   2">

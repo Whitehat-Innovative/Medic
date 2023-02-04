@@ -136,6 +136,8 @@ return [
 
     'providers' => [
 
+        Unicodeveloper\Paystack\PaystackServiceProvider::class,
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -190,6 +192,8 @@ return [
     */
 
     'aliases' => [
+
+        'Paystack' => Unicodeveloper\Paystack\Facades\Paystack::class,
 
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
