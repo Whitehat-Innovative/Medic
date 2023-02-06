@@ -889,6 +889,9 @@
                     <h5 class="pq-section-title">See Our Latest Blog</h5>
                 </div>
             </div>
+            @foreach ( $blo as $blog )
+
+
             <div class="col-lg-12">
                 <div class="owl-carousel owl-theme" data-dots="false" data-nav="false" data-desk_num="3"
                     data-lap_num="2" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
@@ -898,14 +901,14 @@
                             <div class="pq-post-media"> <img src="/assets/images/blog/9.jpg" class="img-fluid"
                                     alt="images">
                                 <div class="pq-post-date">
-                                    <a href="/assets/get-the-exercise-limited-mobility.html"> <span>December 5,
-                                            2021</span></a>
+                                    <a href="#"> <span> {{$blo->created_at}}
+                                            </span></a>
                                 </div>
                             </div>
                             <div class="pq-blog-contain">
                                 <div class="pq-post-meta">
                                     <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
+                                        <li class="pq-post-author"><i class="fa fa-user"></i>{{$blo->author}}</li>
                                         <li class="pq-post-comment"> <a
                                                 href="/assets/get-the-exercise-limited-mobility.html"><i
                                                     class="fa fa-comments"></i>
@@ -919,7 +922,7 @@
                                     <p>It is a long established fact that a reader will be distracted by the readable
                                         content of a page when looking at its layout.</p>
                                 </div>
-                                <a href="/assets/get-the-exercise-limited-mobility.html"
+                                <a href="{{route('blog.view', $blo)}}"
                                     class="pq-button pq-button-link">
                                     <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
                                             class="ion ion-plus-round"></i> </div>
@@ -929,6 +932,7 @@
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
 </section>
