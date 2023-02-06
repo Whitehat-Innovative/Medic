@@ -78,7 +78,7 @@
     <div class="container">
           <div class="row ">
                 <div class="col-xl-7">
-                      <h6 class="pq-title">A great place of medical hospital center &amp; health care</h6> </div>
+                      <h6 class="pq-title">A place of great medical care</h6> </div>
                 <div class="col-xl-5 d-xl-flex justify-content-xl-end align-items-center text-left mt-xl-0 mt-4">
                       <a class="pq-button pq-button-flat" href="{{route('contact')}}">
                             <div class="pq-button-block"> <span class="pq-button-text">Contact Us</span> <i class="ion ion-plus-round"></i> </div>

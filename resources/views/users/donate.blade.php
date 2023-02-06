@@ -53,7 +53,7 @@
                            {{-- <div class="pq-service-media"> <i class=" flaticon-doctor"></i> </div> --}}
                            <div class="price"> <span class="pq-amount"></span> <span class="price-month"></span> </div>
                         </div>
-                        <a class="pq-button pq-button-flat page-2" href="#">
+                        <a class="pq-button pq-button-flat page-2" href="{{route('pay')}}">
                            <div class="pq-button-block"> <span class="pq-button-text">Pay Now</span> <i class="ion ion-plus-round"></i> </div>
                         </a>
                      </div>

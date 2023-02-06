@@ -10,6 +10,12 @@ class AppointmentController extends Controller
 {
     //
     public function appointment(Request $request, Appointment $appointment){
+        $request->validate([
+            'name' => 'string|required',
+            'email' => 'string|nullable',
+            'phone' => 'string|required',
+            'appointment_note' => 'string|required'
+        ]);
         $appointment = new Appointment();
         $appointment->name = $request->name;
         $appointment->email = $request->email;

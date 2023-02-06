@@ -45,7 +45,7 @@ Route::get('/dashboard', function () {
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/make_contact', [HomeController::class, 'make_contact'])->name('make.contact');
+Route::post('/make_contact', [HomeController::class, 'make_contact'])->name('make.contact');
 Route::get('/appointment', [HomeController::class, 'appointment'])->name('appointment');
 
 

@@ -201,7 +201,7 @@
 <section class="pq-bg-grey">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6"> <img src="/assets/images/pexels-chokniti-khongchum-2280547.jpg" class="img-fluid pe-xl-5 wow fadeInLeft"
+            <div class="col-lg-6"> <img src="/assets/images/workout.jpg" class="img-fluid pe-xl-5 wow fadeInLeft"
                     alt="home"> </div>
             <div class="col-lg-6 align-self-center mt-lg-0 mt-4">
                 <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title">Health Tip</span>

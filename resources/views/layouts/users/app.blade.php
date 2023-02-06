@@ -221,7 +221,8 @@
 
                                 <div class="pq-footer-social">
                                     <ul>
-                                        <li><a href="/assets/#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"> <i class="fab fa-google" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
