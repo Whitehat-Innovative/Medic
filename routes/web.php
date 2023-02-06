@@ -100,6 +100,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     Route::get('/postlist', [PostController::class, 'allpost'])->name('all.blog');
     Route::get('/cat/blog/{category}', [PostController::class, 'cat_blog'])->name('cat.blog');
+    Route::get('/singleblog/{blog}', [PostController::class, 'singleblog'])->name('single.blog.view');
 
     /*Comment And Replies  */
     Route::get('/allcomment', [PostController::class, 'allcomment'])->name('all.comment');

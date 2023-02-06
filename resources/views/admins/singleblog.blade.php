@@ -30,8 +30,8 @@
                                     <h3 class="m-t-0 m-b-5"><a href="blog-details.html">{{$blog->title}}</a></h3>
                                     <ul class="meta">
                                         <li><a href="#"><i class="zmdi zmdi-account col-blue"></i>Posted By: {{$blog->author}}</a></li>
-                                        <li><a href="#"><i class="zmdi zmdi-label col-green"></i>Web Design</a></li>
-                                        <li><a href="#"><i class="zmdi zmdi-comment-text col-blue"></i>Comments: 3</a></li>
+                                        
+                                        <li><a href="#"><i class="zmdi zmdi-comment-text col-blue"></i>Comments: {{$blog->comments->count()}}</a></li>
                                     </ul>
                                 </div>
                                 <div class="body">
@@ -54,59 +54,42 @@
 
 
                     </div>
-                    <div class="col-lg-4 col-md-12 right-box">
-                        <div class="card">
-                            <div class="body search">
-                                <div class="input-group m-b-0">
-                                    <input type="text" class="form-control" placeholder="Search...">
-                                    <span class="input-group-addon">
-                                        <i class="zmdi zmdi-search"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="header">
-                                <h2><strong>Popular</strong> Posts</h2>
-                            </div>
-                            <div class="body widget popular-post">
-                                <div class="row">
-                                    <div class="col-xl-12 col-lg-12">
-                                        <div class="border single_post">
-                                            <div class="img-post m-b-5">
-                                                <img src="/adminassets/images/blog/blog-page-2.jpg" alt="Awesome Image">
-                                            </div>
-                                            <p class="m-b-0">Post with the most comments</p>
-                                            <small>Dec 20, 2017</small>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {{-- <div class="card">
-                            <div class="header">
-                                <h2><strong>Category</strong> Clouds</h2>
-                            </div>
-                            <div class="body widget tag-clouds">
-                                <ul class="list-unstyled m-b-0">
-                                    @foreach ($cat as $category)
-                                    <li><a href="{{route('cat.blog',$category)}}" class="tag badge badge-success">{{$category->category}}</a></li>
-                                    @endforeach
-
-
-                                </ul>
-                            </div>
-                        </div> --}}
-
-
-                    </div>
+                   
                 </div>
             </div>
         </section>
 
 
 
+    </x-slot>
+
+    <x-slot name="script">
+
+        <script>
+        function confirmation(ev) {
+          ev.preventDefault();
+          var urlToRedirect = ev.currentTarget.getAttribute('href');  
+          console.log(urlToRedirect); 
+          swal({
+              title: "Are you sure to cancel this product",
+              text: "You will not be able to revert this!",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willCancel) => {
+              if (willCancel) {
+                   
+                  window.location.href = urlToRedirect;
+                 
+              }  
+  
+  
+          });
+  
+          
+      }
+  </script>
     </x-slot>
 
     </x-app-layout>

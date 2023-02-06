@@ -26,6 +26,12 @@ class PostController extends Controller
         $ct =Category::all();
         return view('admins/addblog', ['cat'=>$ct]);
     }
+    public function singleblog(Blog $blog)
+    {
+        $blo =Blog::with('comments')->find($blog->id);
+
+        return view('admins/singleblog', ['blog'=>$blo]);
+    }
 
     public function cat_blog(Category $category)
     {
@@ -123,9 +129,10 @@ class PostController extends Controller
 
   public function allpost(){
 
-        $bl= Blog::paginate(2);
+        $bl= Blog::with('comments')->paginate(3);
+        $popblog= Blog::with('comments')->paginate(2);
         $ct = Category::all();
-        return view('/admins/allblogs',['blo'=>$bl,'cat'=>$ct]);
+        return view('/admins/allblogs',['blo'=>$bl, 'p'=>$popblog , 'cat'=>$ct]);
     }
 
  public function editpostview(Blog $blog){
@@ -135,8 +142,6 @@ class PostController extends Controller
             return view('/admins/editblog', ['blog'=>$bl]);
 
         }
-
-
 
 
     public function editpost( Blog $blog, Request $request){
@@ -177,7 +182,7 @@ class PostController extends Controller
     public function allcomment(){
 
 
-        $comment =Comment::with('replies')->latest()->get();
+        $comment =Comment::with('replies')->latest()->paginate('2');
         return view('admins.allcomments', ['com'=>$comment]);
 
     }

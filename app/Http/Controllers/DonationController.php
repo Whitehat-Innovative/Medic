@@ -101,7 +101,7 @@ class DonationController extends Controller
 
 
         //credit user wallet
-        $balance = Donation::where('status','success')->sum('amount');
+        $balance = Donation::where('status','success')->where('patient_id',)->sum('amount');
 
         $donation = $donation->increment('current_fund', $balance);
 

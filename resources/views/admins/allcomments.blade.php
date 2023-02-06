@@ -4,16 +4,16 @@
             <div class="block-header">
                 <div class="row">
                     <div class="col-lg-7 col-md-5 col-sm-12">
-                        <h2>All users
+                        <h2>All Comments
                             <small>Welcome to Zolive</small>
                         </h2>
                     </div>
                     <div class="col-lg-5 col-md-7 col-sm-12">
                         <ul class="breadcrumb float-md-right">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Zolive</a>
+                            <li class="breadcrumb-item"><a href="{{route('welcome')}}"><i class="zmdi zmdi-home"></i> Zolive</a>
                             </li>
-                            <li class="breadcrumb-item"><a href="javascript:void(0);">Patient Donation Account</a></li>
-                            <li class="breadcrumb-item active">All Patients </li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Blog</a></li>
+                            <li class="breadcrumb-item active">All Comments  </li>
                         </ul>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                             <div class="body">
                                 <ul class="nav nav-tabs padding-0">
                                     <li class="nav-item"><a class="nav-link active" data-toggle="tab"
-                                            href="#Doctors">Doctors</a></li>
+                                            href="#Doctors">Comments</a></li>
 
                                 </ul>
                             </div>
@@ -60,43 +60,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-5 col-3 text-right">
-                                        <div class="btn-group d-none d-md-inline-block" role="group">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn col-black btn-neutral dropdown-toggle"
-                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="zmdi zmdi-label"></i>
-                                                    <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu dropdown-menu-right pullDown">
-                                                    <li>
-                                                        <a href="javascript:void(0);">Family</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Work</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Google</a>
-                                                    </li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li>
-                                                        <a href="javascript:void(0);">Create a Label</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <button type="button"
-                                            class="btn col-black btn-neutral d-none d-md-inline-block">
-                                            <i class="zmdi zmdi-plus-circle"></i>
-                                        </button>
-                                        <button type="button"
-                                            class="btn col-black btn-neutral d-none d-md-inline-block">
-                                            <i class="zmdi zmdi-archive"></i>
-                                        </button>
-                                        <button type="button" class="btn col-black btn-neutral">
-                                            <i class="zmdi zmdi-delete"></i>
-                                        </button>
-                                    </div>
+                                 
                                 </div>
                             </div>
                         </div>
@@ -169,7 +133,7 @@
                                                                         @csrf
 
                                                                         <button class="btn btn-icon btn-neutral btn-icon-mini" type="submit" data-toggle="modal" data-target="#defaultModal"><i
-                                                                            class="zmdi zmdi-good"></i>A</button>
+                                                                            class="zmdi zmdi-assignment-check"></i></button>
                                                                     </form>
                                                                     <button class="btn btn-icon btn-neutral btn-icon-mini" >
                                                                         <a href="{{route('comment.edit.view', $c)}}"><i class="zmdi zmdi-edit" ></i></a></button>
@@ -185,8 +149,7 @@
                                             </table>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn-default waves-effect m-r-20"
-                                        data-toggle="modal" data-target="#defaultModal">MODAL - DEFAULT SIZE</button>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -196,14 +159,7 @@
                         <div class="card">
                             <div class="body">
                                 <ul class="pagination pagination-primary m-b-0">
-                                    <li class="page-item"><a class="page-link" href="#"><i
-                                                class="zmdi zmdi-arrow-left"></i></a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                    <li class="page-item"><a class="page-link" href="#"><i
-                                                class="zmdi zmdi-arrow-right"></i></a></li>
+                                   {{$com->links()}}
                                 </ul>
                             </div>
                         </div>

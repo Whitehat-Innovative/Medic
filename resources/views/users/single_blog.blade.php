@@ -149,15 +149,15 @@
                             <p class="comment-notes"><span>Your email address will not be published.</span> 
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <input id="author" class="name-field" name="name" type="text"
+                                    <input  class="name-field" name="name" type="text"
                                         placeholder=" Enter Name" >
                                 </div>
                                 <div class="col-lg-4">
-                                    <input id="author" class="name-field" name="blog_id" type="hidden"
+                                    <input  class="name-field" name="blog_id" type="hidden"
                                        value="{{$blog->id}}" >
                                 </div>
                                 <div class="col-lg-4">
-                                    <input id="author" class="name-field" name="email" type="email"
+                                    <input  class="name-field" name="email" type="email"
                                         placeholder=" Enter Email" >
                                 </div>
 

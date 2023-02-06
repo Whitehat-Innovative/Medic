@@ -29,14 +29,14 @@
                                 <div class="body">
                                     <h3 class="m-t-0 m-b-5"><a href="blog-details.html">{{$patient->name}}</a></h3>
                                     <ul class="meta">
-                                        <li><a href="#"><i class="zmdi zmdi-account col-blue"></i>Posted By: {{$patient->sex}}</a></li>
+                                        <li><a href="#"><i class="zmdi zmdi-account col-blue"></i>Sex: {{$patient->sex}}</a></li>
                                         <li><a href="#"><i class="zmdi zmdi-label col-green"></i>{{$patient->email}}</a></li>
-                                        <li><a href="#"><i class="zmdi zmdi-comment-text col-blue"></i>Comments: 3</a></li>
+                                        {{-- <li><a href="#"><i class="zmdi zmdi-comment-text col-blue"></i>Comments: 3</a></li> --}}
                                     </ul>
                                 </div>
                                 <div class="body">
                                     <div class="img-post m-b-15">
-                                        <img src="/Patient-image/{{$patient->images}}" alt="Awesome Image">
+                                        <img src="/Patient-image/{{$patient->image}}" alt="Awesome Image">
                                         <div class="social_share">
                                             <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-facebook"></i></button>
                                             {{-- <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-twitter"></i></button>
@@ -45,8 +45,8 @@
                                     </div>
                                     <p>{{$patient->illness_description}}</p>
                                     {{-- <a href="{{route('blog.edit.view', $blog)}}" title="read more" class="btn btn-round btn-info">Read More</a> --}}
-                                    <a href="{{route('patient.edit.view', $patient)}}"  title="read more" class="btn btn-round btn-info">Edit</a>
-                                    <a href="{{route('patient.delete', $patient)}}" title="read more" class="btn btn-round btn-info">Delete</a>
+                                    <a href="{{route('edit.patient.view', $patient)}}"  title="read more" class="btn btn-round btn-info">Edit</a>
+                                    <a href="{{route('delete.patient', $patient)}}" title="read more" class="btn btn-round btn-info">Delete</a>
                                 </div>
                             </div>
                            
@@ -55,7 +55,7 @@
                        
 
                     </div>
-                    <div class="col-lg-4 col-md-12 right-box">
+                    {{-- <div class="col-lg-4 col-md-12 right-box">
                         <div class="card">
                             <div class="body search">
                                 <div class="input-group m-b-0">
@@ -98,16 +98,45 @@
 
                                 </ul>
                             </div>
-                        </div> --}}
+                        </div> 
 
 
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </section>
 
 
 
+    </x-slot>
+
+    <x-slot name="script">
+
+        <script>
+        function confirmation(ev) {
+          ev.preventDefault();
+          var urlToRedirect = ev.currentTarget.getAttribute('href');  
+          console.log(urlToRedirect); 
+          swal({
+              title: "Are you sure to cancel this product",
+              text: "You will not be able to revert this!",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willCancel) => {
+              if (willCancel) {
+                   
+                  window.location.href = urlToRedirect;
+                 
+              }  
+  
+  
+          });
+  
+          
+      }
+  </script>
     </x-slot>
 
     </x-app-layout>

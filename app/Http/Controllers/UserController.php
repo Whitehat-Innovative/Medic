@@ -111,9 +111,9 @@ class UserController extends Controller
 
     public function singlepatient(Patient $patient){
 
-        $p = Patient::findone($patient);
+        $p = Patient::find($patient->id);
 
-        dd($p);
+        
 
         return view('admins/singlepatient',['patient'=>$p]);
     }
