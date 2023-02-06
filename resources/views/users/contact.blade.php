@@ -108,11 +108,11 @@
                                  <textarea name="message" id="message" cols="40" rows="10" aria-required="true" aria-invalid="false" placeholder="Write Your Message"></textarea>
                               </div>
                               <div class="col-lg-12 col-md-12">
-                                 <a class="pq-button form-btn">
+                                 <button class="pq-button form-btn" type="submit">
                                     <div class="pq-button-block">
                                        <span class="pq-button-text me-0">send message</span>
                                     </div>
-                                 </a>
+                                </button>
                               </div>
                            </div>
                         </form>

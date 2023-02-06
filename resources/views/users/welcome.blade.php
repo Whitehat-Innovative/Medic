@@ -102,7 +102,7 @@
                     data-border="boc:#14457b;bow:1px,1px,1px,1px;" data-frame_0="x:50,39,29,17;"
                     data-frame_1="st:1400;sp:1000;sR:1400;" data-frame_999="o:0;st:w;sR:6600;"
                     style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">Setting standards<br>
-                    in physiotherapy
+                    in the medical field.
                 </rs-layer>
                 <!--
                 -->
@@ -201,28 +201,15 @@
 <section class="pq-bg-grey">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6"> <img src="/assets/images/pexels-chokniti-khongchum-2280547.jpg" class="img-fluid pe-xl-5 wow fadeInLeft"
+            <div class="col-lg-6"> <img src="/assets/images/workout.jpg" class="img-fluid pe-xl-5 wow fadeInLeft"
                     alt="home"> </div>
             <div class="col-lg-6 align-self-center mt-lg-0 mt-4">
-                <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title">What About Us</span>
-                    <h5 class="pq-section-title">The Heart and Science of Medicate test</h5>
+                <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title">Health Tip</span>
+                    <h5 class="pq-section-title">The Heart and Exercise</h5>
 
                 </div>
-                <ul class="pq-list-check pq-text-dark mt-3 mb-4">
-                    <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Comprehensive Inpatient
-                            Services</span></li>
-                    <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Medical And Surgical
-                            Services</span></li>
-                    <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Outpatient Services</span>
-                    </li>
-                    <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Medicine & instrument</span>
-                    </li>
-                    <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Specialised Support
-                            Service</span></li>
-                    <li><i aria-hidden="true" class="ion ion-checkmark-round"></i><span>Instant Operation &
-                            Appointment</span></li>
-                </ul>
-                <a class="pq-button pq-button-flat mt-3" href="{{ route('about') }}">
+                <p>Regular Exercise is not only for fat/obessed individuals...it is recommended for all...it keeps the heart healthy. </p>
+                <a class="pq-button pq-button-flat mt-3" href="{{ route('services') }}">
                     <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
                             class="ion ion-plus-round"></i> </div>
                 </a>
@@ -238,7 +225,7 @@
             <div class="col-lg-12">
                 <div class="pq-section pq-style-1 text-center"> <span class="pq-section-sub-title">FACILITIES WE
                         HAVE</span>
-                    <h5 class="pq-section-title">What Facilities We Provided</h5>
+                    <h5 class="pq-section-title">What Facilities We Provide</h5>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-xl-4">
@@ -710,7 +697,7 @@
 <section class="pq-form">
     <div class="container">
         <div class="row align-items-center pq-bg-primary pq-reveser flex-md-column-reverse flex-lg-row">
-            <div class="col-lg-4 text-center">  </div>
+            <div class="col-lg-4 text-center"> <img src="/assets/images/calendar.jpg"  alt="...">  </div>
             <div class="col-lg-8 mt-5 mt-lg-0 pq-form-pad pq-blue-section-side-right">
                 <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title">Appointment</span>
                     <h5 class="pq-section-title pq-text-white">Apply for treatments</h5>
@@ -906,276 +893,6 @@
                 <div class="owl-carousel owl-theme" data-dots="false" data-nav="false" data-desk_num="3"
                     data-lap_num="2" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
                     data-loop="true" data-margin="30">
-                    <div class="item">
-                        <div class="pq-blog-post pq-style-1">
-                            <div class="pq-post-media"> <img src="/assets/images/blog/1.jpg" class="img-fluid"
-                                    alt="images">
-                                <div class="pq-post-date">
-                                    <a href="/assets/get-the-exercise-limited-mobility.html"> <span>December 5,
-                                            2021</span></a>
-                                </div>
-                            </div>
-                            <div class="pq-blog-contain">
-                                <div class="pq-post-meta">
-                                    <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-                                        <li class="pq-post-comment"> <a
-                                                href="/assets/get-the-exercise-limited-mobility.html"><i
-                                                    class="fa fa-comments"></i>
-                                                0 Comments</a> </li>
-                                    </ul>
-                                </div>
-                                <h5 class="pq-blog-title"><a href="/assets/get-the-exercise-limited-mobility.html">Get
-                                        the Exercise Limited Mobility</a></h5>
-                                <div class="pq-blog-info">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                </div>
-                                <a href="/assets/get-the-exercise-limited-mobility.html"
-                                    class="pq-button pq-button-link">
-                                    <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                            class="ion ion-plus-round"></i> </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-blog-post pq-style-1">
-                            <div class="pq-post-media"> <img src="/assets/images/blog/2.jpg" class="img-fluid"
-                                    alt="images">
-                                <div class="pq-post-date">
-                                    <a href="/assets/get-the-exercise-limited-mobility.html"> <span>December 5,
-                                            2021</span></a>
-                                </div>
-                            </div>
-                            <div class="pq-blog-contain">
-                                <div class="pq-post-meta">
-                                    <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-                                        <li class="pq-post-comment"> <a
-                                                href="/assets/get-the-exercise-limited-mobility.html"><i
-                                                    class="fa fa-comments"></i>
-                                                0 Comments</a> </li>
-                                    </ul>
-                                </div>
-                                <h5 class="pq-blog-title"><a
-                                        href="/assets/get-the-exercise-limited-mobility.html">Transfusion strategy and
-                                        heart surgery</a></h5>
-                                <div class="pq-blog-info">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                </div>
-                                <a href="/assets/get-the-exercise-limited-mobility.html"
-                                    class="pq-button pq-button-link">
-                                    <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                            class="ion ion-plus-round"></i> </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-blog-post pq-style-1">
-                            <div class="pq-post-media"> <img src="/assets/images/blog/3.jpg" class="img-fluid"
-                                    alt="images">
-                                <div class="pq-post-date">
-                                    <a href="/assets/get-the-exercise-limited-mobility.html"> <span>December 5,
-                                            2021</span></a>
-                                </div>
-                            </div>
-                            <div class="pq-blog-contain">
-                                <div class="pq-post-meta">
-                                    <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-                                        <li class="pq-post-comment"> <a
-                                                href="/assets/get-the-exercise-limited-mobility.html"><i
-                                                    class="fa fa-comments"></i>
-                                                0 Comments</a> </li>
-                                    </ul>
-                                </div>
-                                <h5 class="pq-blog-title"><a
-                                        href="/assets/get-the-exercise-limited-mobility.html">Latest Equipment for the
-                                        Heart Treatment</a></h5>
-                                <div class="pq-blog-info">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                </div>
-                                <a href="/assets/get-the-exercise-limited-mobility.html"
-                                    class="pq-button pq-button-link">
-                                    <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                            class="ion ion-plus-round"></i> </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-blog-post pq-style-1">
-                            <div class="pq-post-media"> <img src="/assets/images/blog/4.jpg" class="img-fluid"
-                                    alt="images">
-                                <div class="pq-post-date">
-                                    <a href="/assets/get-the-exercise-limited-mobility.html"> <span>December 5,
-                                            2021</span></a>
-                                </div>
-                            </div>
-                            <div class="pq-blog-contain">
-                                <div class="pq-post-meta">
-                                    <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-                                        <li class="pq-post-comment"> <a
-                                                href="/assets/get-the-exercise-limited-mobility.html"><i
-                                                    class="fa fa-comments"></i>
-                                                0 Comments</a> </li>
-                                    </ul>
-                                </div>
-                                <h5 class="pq-blog-title"><a
-                                        href="/assets/get-the-exercise-limited-mobility.html">What
-                                        is Future of Blood Pressure Monitoring?</a></h5>
-                                <div class="pq-blog-info">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                </div>
-                                <a href="/assets/get-the-exercise-limited-mobility.html"
-                                    class="pq-button pq-button-link">
-                                    <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                            class="ion ion-plus-round"></i> </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-blog-post pq-style-1">
-                            <div class="pq-post-media"> <img src="/assets/images/blog/5.jpg" class="img-fluid"
-                                    alt="images">
-                                <div class="pq-post-date">
-                                    <a href="/assets/get-the-exercise-limited-mobility.html"> <span>December 5,
-                                            2021</span></a>
-                                </div>
-                            </div>
-                            <div class="pq-blog-contain">
-                                <div class="pq-post-meta">
-                                    <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-                                        <li class="pq-post-comment"> <a
-                                                href="/assets/get-the-exercise-limited-mobility.html"><i
-                                                    class="fa fa-comments"></i>
-                                                0 Comments</a> </li>
-                                    </ul>
-                                </div>
-                                <h5 class="pq-blog-title"><a
-                                        href="/assets/get-the-exercise-limited-mobility.html">Goals
-                                        Setting the people Heart is Healthy</a></h5>
-                                <div class="pq-blog-info">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                </div>
-                                <a href="/assets/get-the-exercise-limited-mobility.html"
-                                    class="pq-button pq-button-link">
-                                    <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                            class="ion ion-plus-round"></i> </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-blog-post pq-style-1">
-                            <div class="pq-post-media"> <img src="/assets/images/blog/6.jpg" class="img-fluid"
-                                    alt="images">
-                                <div class="pq-post-date">
-                                    <a href="/assets/get-the-exercise-limited-mobility.html"> <span>December 5,
-                                            2021</span></a>
-                                </div>
-                            </div>
-                            <div class="pq-blog-contain">
-                                <div class="pq-post-meta">
-                                    <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-                                        <li class="pq-post-comment"> <a
-                                                href="/assets/get-the-exercise-limited-mobility.html"><i
-                                                    class="fa fa-comments"></i>
-                                                0 Comments</a> </li>
-                                    </ul>
-                                </div>
-                                <h5 class="pq-blog-title"><a href="/assets/get-the-exercise-limited-mobility.html">For
-                                        Examination of kids get Special offers</a></h5>
-                                <div class="pq-blog-info">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                </div>
-                                <a href="/assets/get-the-exercise-limited-mobility.html"
-                                    class="pq-button pq-button-link">
-                                    <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                            class="ion ion-plus-round"></i> </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-blog-post pq-style-1">
-                            <div class="pq-post-media"> <img src="/assets/images/blog/7.jpg" class="img-fluid"
-                                    alt="images">
-                                <div class="pq-post-date">
-                                    <a href="/assets/get-the-exercise-limited-mobility.html"> <span>December 5,
-                                            2021</span></a>
-                                </div>
-                            </div>
-                            <div class="pq-blog-contain">
-                                <div class="pq-post-meta">
-                                    <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-                                        <li class="pq-post-comment"> <a
-                                                href="/assets/get-the-exercise-limited-mobility.html"><i
-                                                    class="fa fa-comments"></i>
-                                                0 Comments</a> </li>
-                                    </ul>
-                                </div>
-                                <h5 class="pq-blog-title"><a
-                                        href="/assets/get-the-exercise-limited-mobility.html">Heart
-                                        Failure Treatment: High Blood Pressure</a></h5>
-                                <div class="pq-blog-info">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                </div>
-                                <a href="/assets/get-the-exercise-limited-mobility.html"
-                                    class="pq-button pq-button-link">
-                                    <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                            class="ion ion-plus-round"></i> </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-blog-post pq-style-1">
-                            <div class="pq-post-media"> <img src="/assets/images/blog/8.jpg" class="img-fluid"
-                                    alt="images">
-                                <div class="pq-post-date">
-                                    <a href="/assets/get-the-exercise-limited-mobility.html"> <span>December 5,
-                                            2021</span></a>
-                                </div>
-                            </div>
-                            <div class="pq-blog-contain">
-                                <div class="pq-post-meta">
-                                    <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-                                        <li class="pq-post-comment"> <a
-                                                href="/assets/get-the-exercise-limited-mobility.html"><i
-                                                    class="fa fa-comments"></i>
-                                                0 Comments</a> </li>
-                                    </ul>
-                                </div>
-                                <h5 class="pq-blog-title"><a
-                                        href="/assets/get-the-exercise-limited-mobility.html">Hard
-                                        content we decide ourselves a intently</a></h5>
-                                <div class="pq-blog-info">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
-                                </div>
-                                <a href="/assets/get-the-exercise-limited-mobility.html"
-                                    class="pq-button pq-button-link">
-                                    <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                            class="ion ion-plus-round"></i> </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="item">
                         <div class="pq-blog-post pq-style-1">
                             <div class="pq-post-media"> <img src="/assets/images/blog/9.jpg" class="img-fluid"

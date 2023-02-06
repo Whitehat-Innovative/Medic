@@ -60,7 +60,7 @@ Route::get('/dashboard', function () {
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/make_contact', [HomeController::class, 'make_contact'])->name('make.contact');
+Route::post('/make_contact', [HomeController::class, 'make_contact'])->name('make.contact');
 Route::get('/appointment', [HomeController::class, 'appointment'])->name('appointment');
 
 
@@ -77,11 +77,12 @@ Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/donate', [HomeController::class, 'donate'])->name('donate');
 
 
-Route::get('/pay', function () {
+// Route::get('/pay', function () {
 
-    return view('users.pay');
+//     return view('users.pay');
 
-});
+// });
+Route::get('/pay', [HomeController::class, 'pay'])->name('pay');
 
 Route::post('/make_appointment', [AppointmentController::class, 'appointment'])->name('make.appointment');
 
