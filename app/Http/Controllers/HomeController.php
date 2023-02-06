@@ -11,7 +11,8 @@ class HomeController extends Controller
     //
     public function index()
     {
-        return view('users.welcome');
+        $blo = Blog::latest()->take(5);
+        return view('users.welcome', ['blo'=>$blo]);
     }
     public function about()
     {

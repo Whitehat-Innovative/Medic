@@ -221,8 +221,8 @@
 
                                 <div class="pq-footer-social">
                                     <ul>
-                                        <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"> <i class="fab fa-google" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://wa.me/23408039207136"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://"> <i class="fab fa-google" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
