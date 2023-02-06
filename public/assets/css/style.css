@@ -2588,6 +2588,18 @@ Breadcrumb
   background-size: cover;
   background-position: top center;
 }
+.pq-blog-img {
+  background: var(--white-color);
+  color: var(--white-color);
+  padding: 130px 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  -webkit-box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
+  -moz-box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
+  box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
+}
 
 .pq-breadcrumb nav {
   position: relative;

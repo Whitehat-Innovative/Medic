@@ -38,7 +38,7 @@ class HomeController extends Controller
     public function blog()
     {
 
-        $bl = Blog::latest()->paginate(5);
+        $bl = Blog::latest()->paginate(10);
 
         return view ('users.blog', ['blo'=>$bl]);
     }

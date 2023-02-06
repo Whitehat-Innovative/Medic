@@ -1,10 +1,16 @@
 <?php
 
+use RealRashid\SweetAlert\Facades\Alert;
+
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Models\Appointment;
+use App\Models\Blog;
+use App\Models\Donation;
+use App\Models\Patient;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,15 +35,24 @@ Route::get('/test');
 
 Route::get('/dashboard', function () {
 
+    // Alert::info('Warning Title', "Success Message","info");
+
+
+    $p= Patient::all()->take(5);
+    $a=Appointment::latest();
+    $d=Donation::all();
+    $b=Blog::all();
+
+
     if (Auth::user()->code=='007') {
-        return view('admins/dashboard');
+        return view('admins/dashboard', ['p'=>$p, 'a'=>$a, 'd'=>$d, 'b'=>$b]);
     }
     if (Auth::user()->code=='008') {
-        return view ('staff-dashboard');
+        return view ('staff-dashboard', ['p'=>$p, 'a'=>$a, 'd'=>$d, 'b'=>$b]);
     }
     if(Auth::user()->code =='009')
     {
-        return view('patient');
+        return view('patient', ['p'=>$p, 'a'=>$a, 'd'=>$d, 'b'=>$b]);
     }
 
 })->middleware(['auth'])->name('dashboard');
@@ -51,12 +66,17 @@ Route::get('/appointment', [HomeController::class, 'appointment'])->name('appoin
 
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/single_blog/{blog}', [HomeController::class, 'single_blog'])->name('single_blog');
+Route::post('/addcomment', [PostController::class, 'addcomment'])->name('add.comment');
+Route::post('/addreply', [PostController::class, 'addreply'])->name('add.reply');
+
 
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 // Route::get('/single_project', [HomeController::class, 'single_project'])->name('single_project');
 
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/donate', [HomeController::class, 'donate'])->name('donate');
+
+
 Route::get('/pay', function () {
 
     return view('users.pay');
@@ -75,11 +95,17 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::post('/addpost', [PostController::class,'addpost'])->name('blog.add');
     Route::post('/editpost/{blog}', [PostController::class, 'editpost'])->name('blog.edit');
 
-    Route::post('/deletepost/{}', [PostController::class, 'destroypost'])->name('blog.delete');
+    Route::get('/deletepost/{blog}', [PostController::class, 'deleteblog'])->name('blog.delete');
 
     Route::get('/postlist', [PostController::class, 'allpost'])->name('all.blog');
     Route::get('/cat/blog/{category}', [PostController::class, 'cat_blog'])->name('cat.blog');
 
+    /*Comment And Replies  */
+    Route::get('/allcomment', [PostController::class, 'allcomment'])->name('all.comment');
+    Route::post('/editcomment/{c}', [PostController::class, 'editcomment'])->name('comment.edit.approve');
+    Route::post('/approvecomment/{c}', [PostController::class, 'approvecomment'])->name('comment.approve');
+    Route::get('/editcomment/{c}/view', [PostController::class, 'editcommentview'])->name('comment.edit.view');
+    Route::post('/deletecomment/{c}', [PostController::class, 'deletecomment'])->name('comment.delete');
 
 
     /* Research/Blog route */
@@ -95,6 +121,23 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     /* All Users Route */
     Route::get('/allusers', [UserController::class, 'allusers'])->name('view.user');
+
+
+    Route::get('/addpatient/view', [UserController::class, 'addpatient'])->name('add.patient');
+    Route::post('/addpatient', [UserController::class, 'makepatient'])->name('make.patient');
+
+    Route::get('/allpatient', [UserController::class, 'allpatient'])->name('all.patients');
+    Route::get('/singlepatient/{patient}', [UserController::class, 'singlepatient'])->name('single.patient.view');
+    Route::get('/all', [UserController::class, 'search'])->name('search');
+
+    Route::get('/editpatient/{patient}/view', [UserController::class, 'editpatientview'])->name('edit.patient.view');
+    Route::post('/editpatient/{patient}', [UserController::class, 'editpatient'])->name('edit.patient');
+    Route::get('/deletepatient/{patient}', [UserController::class, 'deletepatient'])->name('delete.patient');
+
+    Route::post('/deletedonation/{donation}', [UserController::class, 'deletedonation'])->name('delete.donation');
+    Route::get('/alldonation', [UserController::class, 'alldonation'])->name('all.donation');
+
+
 
     Route::post('/delete/{users}', [UserController::class, 'destroy'])->name('delete');
     Route::get('/edit/{users}/view', [UserController::class, 'edituserview'])->name('edit.view');

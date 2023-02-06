@@ -170,7 +170,7 @@
                          </div> --}}
                      </li>
                      <li class="header"></li>
-                     <li class="active open"><a href="index.html"><i
+                     <li class="active open"><a href="{{route('dashboard')}}"><i
                                  class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
                      {{-- <li><a href="book-appointment.html"><i
                                  class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a></li> --}}
@@ -185,6 +185,7 @@
                                 {{-- <li><a href="blog-post.html">Edit Blog post</a></li> --}}
                                 <li><a href="{{route('cat.tag.view')}}">Add Category/Tags</a></li>
                                 <li><a href="{{route('all.blog')}}">Blog list</a></li>
+                                <li><a href="{{route('all.comment')}}">Comment list</a></li>
 
                             </ul>
                         </li>
@@ -201,11 +202,33 @@
                             </ul>
                         </li>
 
-                         <li>
 
-                            <a href="{{route('view.user')}}"><i class="zmdi zmdi-account-add"></i><span>All Users</span> </a>
+                        <li><a href="javascript:void(0);" class="menu-toggle"><i
+                            class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
+                    <ul class="ml-menu">
 
-                        </li>
+                        <li><a href="{{route('add.patient')}}">Add Patient</a></li>
+                <li><a href="{{route('all.patients')}}">All Patients</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="javascript:void(0);" class="menu-toggle"><i
+                    class="zmdi zmdi-balance-wallet"></i><span>Patient | Donation </span> </a>
+            <ul class="ml-menu">
+
+                <li><a href="{{route('add.patient')}}">Add Patient</a></li>
+                <li><a href="{{route('all.patients')}}">All Patients</a></li>
+                <li><a href="{{route('all.donation')}}">All Donations</a></li>
+
+                {{-- <li><a href="invoice.html">Invoice</a></li> --}}
+            </ul>
+        </li>
+
+            <li>
+
+            <a href="{{route('view.user')}}"><i class="zmdi zmdi-account-add"></i><span>All Users</span> </a>
+
+        </li>
 
                         {{-- <li><a href="javascript:void(0);" class="menu-toggle"><i
                             class="zmdi zmdi-account-add"></i><span>Users</span> </a>
@@ -225,23 +248,8 @@
                              <li><a href="events.html">Doctor Schedule</a></li>
                          </ul>
                      </li>
-                     <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                 class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
-                         <ul class="ml-menu">
-                             <li><a href="patients.html">All Patients</a></li>
-                             <li><a href="add-patient.html">Add Patient</a></li>
-                             <li><a href="patient-profile.html">Patient Profile</a></li>
-                             <li><a href="patient-invoice.html">Invoice</a></li>
-                         </ul>
-                     </li>
-                     <li><a href="javascript:void(0);" class="menu-toggle"><i
-                                 class="zmdi zmdi-balance-wallet"></i><span>Payments</span> </a>
-                         <ul class="ml-menu">
-                             <li><a href="payments.html">Payments</a></li>
-                             <li><a href="add-payments.html">Add Payment</a></li>
-                             <li><a href="invoice.html">Invoice</a></li>
-                         </ul>
-                     </li>
+
+
                      <li><a href="javascript:void(0);" class="menu-toggle"><i
                                  class="zmdi zmdi-label-alt"></i><span>Departments</span> </a>
                          <ul class="ml-menu">
@@ -609,6 +617,8 @@
     </div>
 </div>
 
+{{$script}}
+
 <!-- Jquery Core Js -->
 <script src="/adminassets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
 <script src="/adminassets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->
@@ -644,6 +654,9 @@
 </script>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+@include('sweetalert::alert')
 </body>
 
 <!-- Mirrored from thememakker.com/templates/oreo/hospital/html/light/file-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Jan 2023 16:13:20 GMT -->

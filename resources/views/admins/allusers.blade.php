@@ -135,21 +135,31 @@
 
 
 
+                                                            @if ($users->code==007)
 
 
-                                                                    <form  class="btn btn-icon btn-neutral btn-icon-mini" action="{{route('delete', $users)}} " method="POST">
+                                                            <form class="btn btn-icon btn-neutral btn-icon-mini"
+                                                                action="{{route('delete', $users)}} " method="POST">
 
 
-                                                                        @csrf
+                                                                @csrf
 
-                                                                        <button class="btn btn-icon btn-neutral btn-icon-mini" type="submit" data-toggle="modal" data-target="#defaultModal"><i
-                                                                            class="zmdi zmdi-delete"></i></button>
+                                                                <button class="btn btn-icon btn-neutral btn-icon-mini"
+                                                                    type="submit" data-toggle="modal"
+                                                                    data-target="#defaultModal"><i
+                                                                        class="zmdi zmdi-delete"></i></button>
 
 
 
-                                                                    </form>
-                                                                    <button class="btn btn-icon btn-neutral btn-icon-mini" >
-                                                                        <a href="{{route('edit.view', $users)}}"><i class="zmdi zmdi-edit" ></i></a></button>
+                                                            </form>
+                                                            <button class="btn btn-icon btn-neutral btn-icon-mini">
+                                                                <a href="{{route('edit.view', $users)}}"><i
+                                                                        class="zmdi zmdi-edit"></i></a></button>
+
+
+                                                            @endif
+
+
 
 
                                                         </td>

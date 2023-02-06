@@ -12,11 +12,11 @@ class Patient extends Model
 
 
     /**
-     * Get all of the donation for the Patient
+     * Get all of the donations for the Patient
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function donation(): HasMany
+    public function donations(): HasMany
     {
         return $this->hasMany(Donation::class, 'patient_id', 'id');
     }

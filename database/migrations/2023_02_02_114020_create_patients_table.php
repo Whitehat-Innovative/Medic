@@ -16,10 +16,10 @@ class CreatePatientsTable extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->enum('sex', ['female','male','nil'])->default('nil');
+            $table->string('sex')->nullable();
             $table->string('email')->nullable();
             $table->string('image')->nullable();
-            $table->string('illness_description')->nullable();
+            $table->longText('illness_description')->nullable();//
             $table->string('illness_name')->nullable();
             $table->integer('target_fund')->nullable();
             $table->integer('age')->nullable();

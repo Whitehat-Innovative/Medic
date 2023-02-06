@@ -39,19 +39,19 @@
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="author" value="{{$blog->author}}"  placeholder="Enter Author name" />
                                     </div>
-                                    <select name="category" class="mt-2">
+                                    <select name="category" class="mt-4">
 
                                         <option selected disabled>Select Category --</option>
                                        <option value="{{$blog->id}}" >{{$blog->category->category}}</option>
 
                                     </select>
 
-                                    <div class="  mt-2">
+                                    <div class="  mt-4">
 
                                          <input name="image" type="file" value="{{$blog->images}}"  accept="image*/"  multiple />
 
                                     </div>
-                                    <div class="image mt-2"><a href="profile.html"><img src="/Blog-image/{{$blog->images}}"
+                                    <div class="image mt-4"><a href="profile.html"><img src="/Blog-image/{{$blog->images}}"
                                         alt="User"></a>
 
                                     <span>Old image</span></div>
@@ -59,6 +59,8 @@
 
                                     <button type="submit"
                                     class="btn btn-primary btn-round waves-effect m-t-20">Post</button>
+
+                                    <a href="{{route('blog.delete', $blog)}}" title="read more" class="btn btn-round btn-info mt-3">Delete</a>
 
                                 </div>
                             </form>

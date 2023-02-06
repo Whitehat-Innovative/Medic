@@ -143,29 +143,32 @@
                     </ol>
                     <!-- .commentlist -->
                     <div class="comment-respond">
-                        <h3 id="reply-title" class="comment-reply-title mt-4">Write a Reply or Comment </h3>
-                        <form method="post" class="comment-form pq-applyform" novalidate>
-                            <p class="comment-notes"><span>Your email address will not be published.</span> <span
-                                    class="required-field-message" aria-hidden="true">Required fields are marked <span
-                                        class="required" aria-hidden="true">*</span></span></p>
+                        <h3 id="reply-title" class="comment-reply-title mt-4">Write a Comment a reply will be sent shortly </h3>
+                        <form method="POST" action="{{route('add.comment')}}" class="comment-form pq-applyform" novalidate>
+                            @csrf
+                            <p class="comment-notes"><span>Your email address will not be published.</span> 
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <input id="author" class="name-field" name="author" type="text"
-                                        placeholder=" Enter Name" required>
+                                    <input id="author" class="name-field" name="name" type="text"
+                                        placeholder=" Enter Name" >
                                 </div>
                                 <div class="col-lg-4">
-                                    <input id="e-mail" class="e-mail-field" name="email" type="text"
-                                        placeholder=" Enter Email" required>
+                                    <input id="author" class="name-field" name="blog_id" type="hidden"
+                                       value="{{$blog->id}}" >
                                 </div>
                                 <div class="col-lg-4">
-                                    <input id="url" name="url" type="text" placeholder="Enter Url">
+                                    <input id="author" class="name-field" name="email" type="email"
+                                        placeholder=" Enter Email" >
                                 </div>
+
+
                                 <div class="col-lg-12">
                                     <textarea id="message" name="comment" cols="60" rows="6"
                                         placeholder=" Enter Your Comment"></textarea>
                                 </div>
                             </div>
-                            <a class="pq-button mb-0 form-btn">Post comment</a>
+                            <button class="btn pq-button mb-0 form-btn" type="submit">Post Comment</button>
+
                         </form>
                     </div>
                     <!-- #respond -->

@@ -23,7 +23,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-8 col-md-12 left-box">
-                        
+
                             @foreach ($blo as $blog)
                             <div class="card single_post">
                                 <div class="body">
@@ -36,16 +36,17 @@
                                 </div>
                                 <div class="body">
                                     <div class="img-post m-b-15">
-                                        <img src="/adminassets/images/blog/blog-page-4.jpg" alt="Awesome Image">
+                                        <img src="/Blog-image/{{$blog->images}}" alt="Awesome Image">
                                         <div class="social_share">
                                             <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-facebook"></i></button>
-                                            <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-twitter"></i></button>
+                                            {{-- <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-twitter"></i></button>
                                             <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-instagram"></i></button>
-                                        </div>
+                                       --}} </div> 
                                     </div>
                                     <p>{{$blog->content}}</p>
                                     <a href="{{route('blog.edit.view', $blog)}}" title="read more" class="btn btn-round btn-info">Read More</a>
-                                    <a href="{{route('blog.edit.view', $blog)}}" title="read more" class="btn btn-round btn-info">Edit</a>
+                                    <a href="{{route('blog.edit.view', $blog)}}"  title="read more" class="btn btn-round btn-info">Edit</a>
+                                    <a href="{{route('blog.delete', $blog)}}" title="read more" class="btn btn-round btn-info">Delete</a>
                                 </div>
                             </div>
                             @endforeach
@@ -104,8 +105,8 @@
                                 </ul>
                             </div>
                         </div>
-                      
-                       
+
+
                     </div>
                 </div>
             </div>
