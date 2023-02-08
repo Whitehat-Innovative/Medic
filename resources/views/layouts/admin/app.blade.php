@@ -67,7 +67,7 @@
                             <li>
                                 <a href="javascript:void(0);">
                                     <div class="media">
-                                        <img class="media-object" src="/adminassets/images/xs/avatar6.jpg" alt="">
+                                        {{-- <img class="media-object" src="/adminassets/images/xs/avatar6.jpg" alt=""> --}}
                                         <div class="media-body">
                                             <span class="name">{{$a->name}}<span
                                                     class="time">{{$a->created_at->diffForHumans()}}</span></span>
@@ -97,15 +97,8 @@
 
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-
-                    {{-- <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i
-                            class="zmdi zmdi-settings zmdi-hc-spin"></i></a> --}}
-
-
-                        <button  class="mega-menu m-3" type="submit" data-close="true"><i class="zmdi zmdi-power"></i></button>
-
-
-
+                    <button class="btn btn danger" type="submit"><span><i class="mr-2 mt-2 zmdi zmdi-power"></i></span></button>
+                        {{-- <a href="#" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i> --}}
 
                 </form>
 
@@ -199,15 +192,8 @@
 
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
-
-
-
-                                <a href="#" type="submit" ><i class="zmdi zmdi-power"></i><button class="mr-5" type="submit"><span>Logout</span></button></a>
+                            <button class="btn btn danger" type="submit"><span><i class="mr-2 zmdi zmdi-power">__Logout</i></span></button>
                                 {{-- <a href="#" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i> --}}
-
-
-
 
                         </form>
 
