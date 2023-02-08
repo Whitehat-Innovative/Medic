@@ -123,7 +123,7 @@
                                             alt="User"></a></div>
                                 <div class="detail">
                                     <h4>Dr. {{$u->name}}</h4>
-                                    <small>Neurologist</small>
+                                    <small>{{$u->title}}</small>
                                 </div>
                             </div>
                         </li>
@@ -338,7 +338,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="tab-pane stretchLeft" id="user">
+            {{-- <div class="tab-pane stretchLeft" id="user">
                 <div class="menu">
                     <ul class="list">
                         <li>
@@ -420,7 +420,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </aside>
 
