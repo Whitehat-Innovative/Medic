@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-12 left-box">
 
-                            
+
                             <div class="card single_post">
                                 <div class="body">
                                     <h3 class="m-t-0 m-b-5"><a href="blog-details.html">{{$patient->name}}</a></h3>
@@ -41,18 +41,19 @@
                                             <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-facebook"></i></button>
                                             {{-- <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-twitter"></i></button>
                                             <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-instagram"></i></button>
-                                       --}} </div> 
+                                       --}} </div>
                                     </div>
                                     <p>{{$patient->illness_description}}</p>
+                                    <p><span>Current Amount Generated for this user</span> N {{$donation}}</p>
                                     {{-- <a href="{{route('blog.edit.view', $blog)}}" title="read more" class="btn btn-round btn-info">Read More</a> --}}
                                     <a href="{{route('edit.patient.view', $patient)}}"  title="read more" class="btn btn-round btn-info">Edit</a>
                                     <a href="{{route('delete.patient', $patient)}}" title="read more" class="btn btn-round btn-info">Delete</a>
                                 </div>
                             </div>
-                           
 
 
-                       
+
+
 
                     </div>
                     {{-- <div class="col-lg-4 col-md-12 right-box">
@@ -98,7 +99,7 @@
 
                                 </ul>
                             </div>
-                        </div> 
+                        </div>
 
 
                     </div> --}}
@@ -115,8 +116,8 @@
         <script>
         function confirmation(ev) {
           ev.preventDefault();
-          var urlToRedirect = ev.currentTarget.getAttribute('href');  
-          console.log(urlToRedirect); 
+          var urlToRedirect = ev.currentTarget.getAttribute('href');
+          console.log(urlToRedirect);
           swal({
               title: "Are you sure to cancel this product",
               text: "You will not be able to revert this!",
@@ -126,15 +127,15 @@
           })
           .then((willCancel) => {
               if (willCancel) {
-                   
+
                   window.location.href = urlToRedirect;
-                 
-              }  
-  
-  
+
+              }
+
+
           });
-  
-          
+
+
       }
   </script>
     </x-slot>

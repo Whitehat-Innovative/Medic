@@ -20,17 +20,17 @@ class CreateDonationsTable extends Migration
             $table->string('email')->nullable();
             $table->string('anonimous_donor')->nullable();
 
-            $table->string('patient_id');
+            $table->string('patient_id')->default('0');
 
             $table->integer('target_fund')->nullable();
             $table->integer('current_fund')->default('0');
 
 
 
-            $table->integer('amount');
+            $table->integer('amount')->default('0');
             $table->enum('status', ['pending','success','failed'])->default('pending');
-            $table->boolean('is_credit');
-            $table->string('reference')->unique();
+            $table->boolean('is_credit')->nullable();
+            $table->string('reference')->unique()->nullable();
 
             $table->timestamps();
         });

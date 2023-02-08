@@ -103,8 +103,14 @@ class HomeController extends Controller
         return view('users.donate', ['p'=>$p]);
     }
     public function pay(Patient $p)
+
+
     {
-        return view('users.pay' , ['p'=>$p]);
+
+        $pat= Patient::find($p->id);
+
+
+        return view('users.pay' , ['p'=>$pat]);
     }
 
 }

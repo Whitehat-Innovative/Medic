@@ -157,6 +157,6 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     Route::post('/payFor', [DonationController::class, 'fund'])->name('fund');
 
-    Route::get('/payment/callback', [DonationController::class, 'fundCallback'])->name('transaction.callback');
+    Route::get('/payment/callback/{p}', [DonationController::class, 'fundCallback'])->name('transaction.callback');
 
 require __DIR__.'/auth.php';

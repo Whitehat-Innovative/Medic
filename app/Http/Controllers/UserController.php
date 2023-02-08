@@ -42,7 +42,7 @@ class UserController extends Controller
     public function edit( User $users, Request $request){
 
         if ($request->hasFile('image')) {
-           
+
         $ext=$request->file('image')->getClientOriginalExtension();
         $filename= \Str::slug($request->title).time().'.'.$ext;
         $request->image->move(public_path('User-image'), $filename);
@@ -57,12 +57,12 @@ class UserController extends Controller
         return back();
         }
 
-        
+
 
         $users->name =$request->name;
         $users->code =$request->code;
         $users->email =$request->email;
-        
+
 
         $users->save($request->except(['password']));
         Alert::success('Edited', 'Edited user');
@@ -82,7 +82,7 @@ class UserController extends Controller
             $users->delete();
             Alert::success('Delteted', 'Deleted user');
             return back();
-           
+
         }
 
         Alert::info('Fail', 'Your are not an admin');
@@ -137,7 +137,9 @@ class UserController extends Controller
     public function singlepatient(Patient $patient){
 
         $p = Patient::find($patient->id);
-        return view('admins/singlepatient',['patient'=>$p]);
+        $d = Donation::where('patient_id',$patient->id)->where('status','success')->latest()->first();
+        $dd = $d->current_fund;
+        return view('admins/singlepatient',['patient'=>$p, 'donation'=>$dd]);
     }
 
 
@@ -154,7 +156,7 @@ class UserController extends Controller
             $ext=$request->file('image')->getClientOriginalExtension();
             $filename= \Str::slug($request->name).time().'.'.$ext;
             $request->image->move(public_path('Patient-image'), $filename);
-    
+
             $patient->name =$request->name;
             $patient->sex =$request->sex;
             $patient->email =$request->email;
@@ -163,11 +165,11 @@ class UserController extends Controller
             $patient->age =$request->age;
             $patient->target_fund =$request->target_fund;
             $patient->image =$filename;
-    
+
             $patient->save();
 
             Alert::success('Edited', 'Patient Edited' );
-    
+
             return back();
 
 
@@ -181,7 +183,7 @@ class UserController extends Controller
         $patient->illness_name =$request->illness_name;
         $patient->age =$request->age;
         $patient->target_fund =$request->target_fund;
-       
+
         $patient->save();
         Alert::success('Edited', 'Patient Edited' );
 
@@ -212,7 +214,7 @@ class UserController extends Controller
     public function makepatient(Request $request){
 
         if ($request->hasFile('image')){
-            
+
         $ext=$request->file('image')->getClientOriginalExtension();
         $filename= \Str::slug($request->name).time().'.'.$ext;
         $request->image->move(public_path('Patient-image'), $filename);
@@ -232,7 +234,7 @@ class UserController extends Controller
 
 
         }
-       
+
         $patient = new Patient();
         $patient->name =$request->name;
         $patient->sex =$request->sex;

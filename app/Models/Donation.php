@@ -10,6 +10,15 @@ class Donation extends Model
 {
     use HasFactory;
 
+     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'donor_name', 'reference', 'email', 'anonimous_donor', 'patient_id', 'target_fund', 'current_fund','status','is_credit', 'amount'
+    ];
+
     // protected $guarded = [];{{$pat->links()}}
 
     /**
