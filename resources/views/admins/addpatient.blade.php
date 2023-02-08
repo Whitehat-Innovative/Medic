@@ -59,7 +59,7 @@
                                        <option value="Female" >Female</option>
                                        <option value="Male" >Male</option>
                                        <option value="Nil" >Nil</option>
-                                       
+
 
 
                                     </select>
@@ -91,21 +91,29 @@
     <x-slot name="script">
 
         <script>
+        function confirmation(ev) {
+          ev.preventDefault();
+          var urlToRedirect = ev.currentTarget.getAttribute('href');
+          console.log(urlToRedirect);
+          swal({
+              title: "Are you sure to cancel this product",
+              text: "You will not be able to revert this!",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willCancel) => {
+              if (willCancel) {
 
-            $(document).ready(function(){
-                $('.deleteCategorybtn').click(function (e) {
-                    e.preventDefault();
-                    var patient_id = $(this).val();
+                  window.location.href = urlToRedirect;
 
-                    $('#patient_id').val('patient_id');
-                    $('#deleteModal').modal('show');
+              }
 
 
-                });
-            });
+          });
 
 
-        </script>
-
+      }
+  </script>
     </x-slot>
 </x-app-layout>

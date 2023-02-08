@@ -4,7 +4,7 @@
             <div class="block-header">
                 <div class="row">
                     <div class="col-lg-7 col-md-5 col-sm-12">
-                        <h2>New Post
+                        <h2>Edit Comment
                             <small>Welcome to Zolive</small>
                         </h2>
                     </div>
@@ -16,6 +16,8 @@
                             <li class="breadcrumb-item active">Edit Comment/Approve </li>
                         </ul>
                     </div>
+
+
                 </div>
             </div>
             <div class="container-fluid">
@@ -76,5 +78,34 @@
             </div>
         </section>
 
+    </x-slot>
+
+    <x-slot name="script">
+
+        <script>
+        function confirmation(ev) {
+          ev.preventDefault();
+          var urlToRedirect = ev.currentTarget.getAttribute('href');
+          console.log(urlToRedirect);
+          swal({
+              title: "Are you sure to cancel this product",
+              text: "You will not be able to revert this!",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willCancel) => {
+              if (willCancel) {
+
+                  window.location.href = urlToRedirect;
+
+              }
+
+
+          });
+
+
+      }
+  </script>
     </x-slot>
 </x-app-layout>

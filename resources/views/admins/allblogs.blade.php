@@ -46,7 +46,7 @@
                                     <p>{{$blog->content}}</p>
                                     <a href="{{route('single.blog.view', $blog)}}" title="read more" class="btn btn-round btn-info">Read More</a>
                                     <a href="{{route('blog.edit.view', $blog)}}"  title="read more" class="btn btn-round btn-info">Edit</a>
-                                    <a href="{{route('blog.delete', $blog)}}" title="read more" class="btn btn-round btn-info">Delete</a>
+                                    <a href="{{route('blog.delete', $blog)}}" onclick="confirmation(event)" title="read more" class="btn btn-round btn-info">Delete</a>
                                 </div>
                             </div>
                             @endforeach
@@ -127,7 +127,7 @@
           var urlToRedirect = ev.currentTarget.getAttribute('href');  
           console.log(urlToRedirect); 
           swal({
-              title: "Are you sure to cancel this product",
+              title: "Are you sure to Delete this blog",
               text: "You will not be able to revert this!",
               icon: "warning",
               buttons: true,

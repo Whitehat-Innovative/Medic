@@ -25,8 +25,8 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="card">
                             <div class="body">
-                                <h3 class="number count-to m-b-0" data-from="0" data-to="{{$p->count()}}" data-speed="2500"
-                                    data-fresh-interval="700">{{$p->count()}}<i class="zmdi zmdi-trending-up float-right"></i>
+                                <h3 class="number count-to m-b-0" data-from="0" data-to="{{$pa->count()}}" data-speed="2500"
+                                    data-fresh-interval="700">{{$pa->count()}}<i class="zmdi zmdi-trending-up float-right"></i>
                                 </h3>
                                 <p class="text-muted">Patients</p>
                                 {{-- <div class="progress">
@@ -74,7 +74,7 @@
                     <div class="col-lg-4  col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h2><strong>Dr.</strong> Timeline</h2>
+                                <h2><strong>Appointment</strong> Timeline</h2>
                                 <ul class="header-dropdown">
                                     <li class="remove">
                                         <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
@@ -103,6 +103,16 @@
                     </div>
 
                     @endforeach
+
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="body">
+                                <ul class="pagination pagination-primary m-b-0">
+                                   {{$a->links()}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
 
                     {{-- <div class="col-lg-8 col-md-12">
@@ -342,13 +352,52 @@
 
                                     </table>
                                 </div>
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="body">
+                                            <ul class="pagination pagination-primary m-b-0">
+                                               {{$p->links()}}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </section>
     </x-slot>
+    <x-slot name="script">
 
+        <script>
+        function confirmation(ev) {
+          ev.preventDefault();
+          var urlToRedirect = ev.currentTarget.getAttribute('href');
+          console.log(urlToRedirect);
+          swal({
+              title: "Are you sure to cancel this product",
+              text: "You will not be able to revert this!",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willCancel) => {
+              if (willCancel) {
+
+                  window.location.href = urlToRedirect;
+
+              }
+
+
+          });
+
+
+      }
+  </script>
+    </x-slot>
 
 </x-app-layout>

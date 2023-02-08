@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-xl-8 col-lg-8 col-md-12">
                 <div class="pq-blog-post">
-                    <div class="pq-post-media"> <img src="/Blog-image/{{$blog->image}}" class="img-fluid"
+                    <div class="pq-post-media"> <img src="/Blog-image/{{$blog->images}}" class="img-fluid"
                             alt="medicate">
                         <div class="pq-post-date">
                             <a href="#"> <span>{{$blog->created_at->diffForHumans()}}</span> </a>
@@ -48,7 +48,7 @@
                         <div class="pq-post-meta">
                             <ul>
                                 <li class="pq-post-author"><i class="fa fa-user"></i>{{$blog->author}}</li>
-                                <li class="pq-post-tag"><a href="#"><i class="fa fa-comments"></i>2 Comments</a></li>
+                                <li class="pq-post-tag"><a href="#"><i class="fa fa-comments"></i>{{$blog->comments->count()}} {{Str::plural('Comment',$blog->comments->count())}}</a></li>
                             </ul>
                         </div>
                         <p> {{$blog->content}}</p>
@@ -75,89 +75,83 @@
                 </div>
 
                 <div id="comments" class="pq-comment-area">
-                    <h3 class="comments-title">2 Comment </h3>
+                     {{-- <h3 class="comments-title">{{$blog->commets->count()}} Comment </h3> --}}
+                    @foreach ($c as $ca)
+
                     <ol class="commentlist">
                         <li class="comment even thread-even depth-1">
                             <div class="comment-body">
                                 <div class="pq-comment-info">
                                     <div class="pq-comment-wrap">
-                                        <div class="pq-comment-avatar"> <img src="/assets/images/blog/user.png" class=""
-                                                alt=""> </div>
+
                                         <div class="pq-comment-box">
-                                            <h5 class="title">Admin</h5>
+                                            <h5 class="title">{{$ca->name}}</h5>
                                             <div class="pq-comment-metadata"> </div>
                                             <!-- .comment-metadata -->
                                             <div class="comment-content">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                <p>{{$ca->comment}}</p>
                                             </div>
                                             <!-- .comment-content -->
                                         </div>
                                         <!-- .comment-author -->
-                                        <div class="reply"> <a rel="nofollow" class="comment-reply-link" href="#"
-                                                data-commentid="2" data-postid="7401" data-belowelement="div-comment-2"
-                                                data-respondelement="respond" data-replyto="Reply to Thomas Luis"
-                                                aria-label="Reply to Thomas Luis">Reply</a> </div>
-                                        <!-- .reply -->
+
                                     </div>
                                 </div>
                             </div>
-                            <!-- .comment-body -->
-                            <ol class="children">
-                                <li class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
-                                    <div class="comment-body">
-                                        <div class="pq-comment-info">
-                                            <div class="pq-comment-wrap">
-                                                <div class="pq-comment-avatar"> <img src="/assets/images/blog/user.png"
-                                                        class="" alt=""> </div>
-                                                <div class="pq-comment-box">
-                                                    <h5 class="title">
-                                                        <a href="index.html" rel="external nofollow ugc"
-                                                            class="url">admin</a>
-                                                    </h5>
-                                                    <div class="pq-comment-metadata"> </div>
-                                                    <!-- .comment-metadata -->
-                                                    <div class="comment-content">
-                                                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                                    </div>
-                                                    <!-- .comment-content -->
-                                                </div>
-                                                <!-- .comment-author -->
-                                                <div class="reply"> <a rel="nofollow" class="comment-reply-link" href="#"
-                                                        data-commentid="3" data-postid="7401"
-                                                        data-belowelement="div-comment-3" data-respondelement="respond"
-                                                        data-replyto="Reply to admin" aria-label="Reply to admin">Reply</a>
-                                                </div>
-                                                <!-- .reply -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- .comment-body -->
-                                </li>
-                                <!-- #comment-## -->
-                            </ol>
-                            <!-- .children -->
                         </li>
                         <!-- #comment-## -->
                     </ol>
+                  
+
+                    @endforeach
+
+                      <ol class="commentlist">
+                        <li class="comment even thread-even depth-1">
+                            <div class="comment-body">
+                                <div class="pq-comment-info">
+                                    <div class="pq-comment-wrap">
+
+                                        <div class="pq-comment-box">
+                                            
+                                            <!-- .comment-metadata -->
+                                            <div class="comment-content">
+                                               {{$c->links()}}
+                                            </div>
+                                            <!-- .comment-content -->
+                                        </div>
+                                        <!-- .comment-author -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- #comment-## -->
+                    </ol>
+
+                    @guest
                     <!-- .commentlist -->
-                    <div class="comment-respond">
-                        <h3 id="reply-title" class="comment-reply-title mt-4">Write a Comment a reply will be sent shortly </h3>
+                    <div class="comment-respond ">
+                        <h3 id="reply-title" class="comment-reply-title mt-4">Write a Comment  </h3>
                         <form method="POST" action="{{route('add.comment')}}" class="comment-form pq-applyform" novalidate>
                             @csrf
-                            <p class="comment-notes"><span>Your email address will not be published.</span> 
+                            <p class="comment-notes"><span>Your email address will not be published.</span>
                             <div class="row">
-                                <div class="col-lg-4">
-                                    <input  class="name-field" name="name" type="text"
-                                        placeholder=" Enter Name" >
+                                
+
+                               
+                                 <div class="col-lg-4">
+                                    <input  class="form-control" name="name" type="text"
+                                        placeholder=" Enter Guest name" >
                                 </div>
+                                    
+                               
+                               
                                 <div class="col-lg-4">
-                                    <input  class="name-field" name="blog_id" type="hidden"
+                                    <input  class="form-control" name="blog_id" type="hidden"
                                        value="{{$blog->id}}" >
                                 </div>
                                 <div class="col-lg-4">
-                                    <input  class="name-field" name="email" type="email"
+                                    <input  class="form-control" name="email" type="email"
                                         placeholder=" Enter Email" >
                                 </div>
 
@@ -170,8 +164,58 @@
                             <button class="btn pq-button mb-0 form-btn" type="submit">Post Comment</button>
 
                         </form>
+
+                        
+
+
+                    </div>
+
+                    @endguest
+                    <!-- #respond -->
+                    @auth
+                    <!-- .commentlist -->
+                    <div class="comment-respond ">
+                        <h3 id="reply-title" class="comment-reply-title mt-4">Reply a comment </h3>
+                        <form method="POST" action="{{route('add.comment')}}" class="comment-form pq-applyform" novalidate>
+                            @csrf
+                            {{-- <p class="comment-notes"><span>Your email address will not be published.</span>         --}}
+                            <div class="row">
+                                
+
+                               
+                                 <div class="col-lg-4">
+                                    <input  class="form-control" name="name" value="Admin" type="hidden"
+                                        placeholder=" Enter Guest name" >
+                                </div>
+                                    
+                               
+                               
+                                <div class="col-lg-4">
+                                    <input  class="form-control" name="blog_id" type="hidden"
+                                       value="{{$blog->id}}" >
+                                </div>
+                                <div class="col-lg-4">
+                                    <input  class="form-control" name="email" type="email"
+                                        placeholder=" Enter Email" >
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <textarea id="message" name="comment" cols="60" rows="6"
+                                        placeholder=" Enter Your Comment"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn pq-button mb-0 form-btn" type="submit">Post Comment</button>
+
+                        </form>
+
+                       
+
+
                     </div>
                     <!-- #respond -->
+
+                    @endguest
                 </div>
             </div>
             <div class="col-lg-4 mt-lg-0 mt-5">

@@ -34,7 +34,7 @@
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-12">
-                        <div class="card action_bar">
+                        {{-- <div class="card action_bar">
                             <div class="body">
                                 <div class="row clearfix">
                                     <div class="col-lg-1 col-md-2 col-3">
@@ -60,10 +60,10 @@
 
                                         </div>
                                     </div>
-                                 
+
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="card">
                             <div class="body">
                                 <div class="tab-content">
@@ -121,17 +121,14 @@
                                                         </td> --}}
                                                         <td class="flex">
 
-                                                                    <form  class="btn btn-icon btn-neutral btn-icon-mini " action="{{route('comment.delete', $c)}} " method="POST">
-
-                                                                        @csrf
-
-                                                                        <button class="btn btn-icon btn-neutral btn-icon-mini " type="submit" data-toggle="modal" data-target="#defaultModal"><i
-                                                                            class="zmdi zmdi-delete"></i></button>
-                                                                    </form>
+            
+                                                                    <a onclick="confirmation(event)" class="btn btn-icon btn-neutral btn-icon-mini "
+                                                                         href="{{route('comment.delete', $c->id)}}"><i
+                                                                            class="zmdi zmdi-delete mt-1"></i></a>
+                                                                    
+                                                                    
                                                                     <form  class="btn btn-icon btn-neutral btn-icon-mini" action="{{route('comment.approve', $c)}} " method="POST">
-
                                                                         @csrf
-
                                                                         <button class="btn btn-icon btn-neutral btn-icon-mini" type="submit" data-toggle="modal" data-target="#defaultModal"><i
                                                                             class="zmdi zmdi-assignment-check"></i></button>
                                                                     </form>
@@ -149,7 +146,7 @@
                                             </table>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -181,10 +178,10 @@
         <script>
         function confirmation(ev) {
           ev.preventDefault();
-          var urlToRedirect = ev.currentTarget.getAttribute('href');  
-          console.log(urlToRedirect); 
+          var urlToRedirect = ev.currentTarget.getAttribute('href');
+          console.log(urlToRedirect);
           swal({
-              title: "Are you sure to cancel this product",
+              title: "Are you sure you want to Delete this comment ",
               text: "You will not be able to revert this!",
               icon: "warning",
               buttons: true,
@@ -192,16 +189,15 @@
           })
           .then((willCancel) => {
               if (willCancel) {
-                   
+
                   window.location.href = urlToRedirect;
-                 
-              }  
-  
-  
+
+              }
+
+
           });
-  
-          
-      }
-  </script>
+        }
+      
+         </script>
     </x-slot>
 </x-app-layout>

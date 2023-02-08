@@ -147,7 +147,7 @@
                                                         </td>
                                                         <td>
                                                             <span class="phone"><i
-                                                                    class="zmdi zmdi-pin  m-r-10"></i>{{$donation->patient->target_fund}}</span>
+                                                                    class="zmdi zmdi-pin  m-r-10"></i>{{$donation->patient->target_fund}}</span> 
                                                         </td>
                                                         <td>
                                                             <span class="phone"><i
@@ -164,7 +164,7 @@
 
 
 
-
+{{-- 
 
                                                                     <form  class="btn btn-icon btn-neutral btn-icon-mini" action="{{route('delete.donation', $donation)}} " method="POST">
 
@@ -176,9 +176,13 @@
 
 
 
-                                                                    </form>
-                                                                    {{-- <button class="btn btn-icon btn-neutral btn-icon-mini" >
-                                                                        <a href="{{route('edit.dview', $donation)}}"><i class="zmdi zmdi-edit" ></i></a></button> --}}
+                                                                    </form> --}}
+
+                                                                    <a onclick="confirmation(event)" class="btn btn-icon btn-neutral btn-icon-mini "
+                                                                         href="{{route('delete.donation', $donation->id)}}"><i
+                                                                            class="zmdi zmdi-delete mt-1"></i></a>
+                                                                     {{-- <button class="btn btn-icon btn-neutral btn-icon-mini" >
+                                                                        <a href="{{route('edit.dview', $donation)}}"><i class="zmdi zmdi-edit" ></i></a></button>  --}}
 
 
                                                         </td>
@@ -191,8 +195,7 @@
                                             </table>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn-default waves-effect m-r-20"
-                                        data-toggle="modal" data-target="#defaultModal">MODAL - DEFAULT SIZE</button>
+
                                 </div>
                             </div>
                         </div>
@@ -202,14 +205,7 @@
                         <div class="card">
                             <div class="body">
                                 <ul class="pagination pagination-primary m-b-0">
-                                    <li class="page-item"><a class="page-link" href="#"><i
-                                                class="zmdi zmdi-arrow-left"></i></a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                    <li class="page-item"><a class="page-link" href="#"><i
-                                                class="zmdi zmdi-arrow-right"></i></a></li>
+                                   {{$don->links()}}
                                 </ul>
                             </div>
                         </div>
@@ -224,5 +220,34 @@
         </section>
 
 
+    </x-slot>
+
+    <x-slot name="script">
+
+        <script>
+        function confirmation(ev) {
+          ev.preventDefault();
+          var urlToRedirect = ev.currentTarget.getAttribute('href');
+          console.log(urlToRedirect);
+          swal({
+              title: "Are you sure you want to DELETE this donation ",
+              text: "You will not be able to revert this!",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willCancel) => {
+              if (willCancel) {
+
+                  window.location.href = urlToRedirect;
+
+              }
+
+
+          });
+
+
+      }
+  </script>
     </x-slot>
 </x-app-layout>

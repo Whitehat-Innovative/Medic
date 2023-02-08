@@ -51,7 +51,7 @@
                                 <li class="pq-post-author"><i class="fa fa-user"></i>{{$blog->author}}</li>
                                 <li class="pq-post-comment"> <a href="get-the-exercise-limited-mobility.html"><i
                                             class="fa fa-comments"></i>
-                                        2 Comments</a> </li>
+                                        {{$blog->comments->count()}} {{Str::plural('Comment',$blog->comments->count())}} </a> </li>
                             </ul>
                         </div>
                         <h5 class="pq-blog-title"><a href="get-the-exercise-limited-mobility.html">{{$blog->tilte}}</a>
@@ -60,7 +60,7 @@
                             <p>{{$blog->content}}</p>
                         </div>
                         <div class="pq-btn-container">
-                            <a href="{{route('single_blog', $blog->id)}}" class="pq-button pq-button-flat">
+                            <a href="{{route('single_blog', $blog)}}" class="pq-button pq-button-flat">
                                 <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
                                         class="ion ion-plus-round"></i> </div>
                             </a>

@@ -114,7 +114,7 @@
                                                         <th>Email</th>
                                                         <th>Age</th>
                                                         <th>Target Fund</th>
-                                                        
+
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
@@ -144,18 +144,19 @@
                                                             <span class="phone"><i
                                                                     class="zmdi  m-r-10"></i>{{$patient->target_fund}}</span>
                                                         </td>
-                                                        
+
                                                         {{-- <td>
                                                             <address><i class="zmdi zmdi-pin"></i>123 6th St. Melbourne, FL 32904</address>
                                                         </td> --}}
                                                         <td class="flex">
 
-                                                                   
+
 
                                                                         <a onclick="confirmation(event)" class="btn btn-icon btn-neutral btn-icon-mini "
                                                                          href="{{route('delete.patient', $patient->id)}}"><i
                                                                             class="zmdi zmdi-delete mt-1"></i></a>
 
+                                            
                                                                     <button class="btn btn-icon btn-neutral btn-icon-mini" >
                                                                         <a href="{{route('edit.patient.view', $patient)}}"><i class="zmdi zmdi-edit" ></i></a></button>
 
@@ -206,10 +207,10 @@
         <script>
         function confirmation(ev) {
           ev.preventDefault();
-          var urlToRedirect = ev.currentTarget.getAttribute('href');  
-          console.log(urlToRedirect); 
+          var urlToRedirect = ev.currentTarget.getAttribute('href');
+          console.log(urlToRedirect);
           swal({
-              title: "Are you sure to cancel this product",
+              title: "Are you sure to DELETE this patient",
               text: "You will not be able to revert this!",
               icon: "warning",
               buttons: true,
@@ -217,15 +218,16 @@
           })
           .then((willCancel) => {
               if (willCancel) {
-                   
+
                   window.location.href = urlToRedirect;
-                 
-              }  
-  
-  
+
+              }
+
+
           });
-  
-          
+
+      
+
       }
   </script>
     </x-slot>
