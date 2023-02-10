@@ -21,8 +21,8 @@ class CreatePatientsTable extends Migration
             $table->string('phone');
             $table->longText('address');
             $table->string('date_of_birth');
-            $table->enum('religion', ['christianity','islam','african_traditional_religion','others']);
-            $table->string('occupation');
+            $table->enum('religion', ['christianity','islam','african_traditional_religion','others'])->nullable();
+            $table->string('occupation')->nullable();
             $table->string('LGA');
             $table->string('state_of_origin');
             $table->enum('sex', ['female','male','nil'])->default('nil');
