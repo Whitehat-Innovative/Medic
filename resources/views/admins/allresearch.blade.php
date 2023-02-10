@@ -7,15 +7,15 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-5 col-sm-12">
-                    <h2>Blog List
-                        <small>Welcome to Oreo</small>
+                    <h2>Research List
+                        <small>Welcome to Zolive</small>
                     </h2>
                 </div>
                 <div class="col-lg-5 col-md-7 col-sm-12">
                     <ul class="breadcrumb float-md-right">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Oreo</a></li>
-                        <li class="breadcrumb-item"><a href="blog-dashboard.html">Blog</a></li>
-                        <li class="breadcrumb-item active">Blog List</li>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Zolive</a></li>
+                        <li class="breadcrumb-item"><a href="blog-dashboard.html">Research</a></li>
+                        <li class="breadcrumb-item active">Research List</li>
                     </ul>
                 </div>
             </div>
@@ -65,81 +65,12 @@
                             <a href="blog-details.html" title="read more" class="btn btn-round btn-info">Read More</a>
                         </div>
                     </div>
-                    <div class="card single_post">
-                        <div class="body">
-                            <h3 class="m-t-0 m-b-5"><a href="blog-details.html">Apple Introduces Search Ads Basic</a></h3>
-                            <ul class="meta">
-                                <li><a href="#"><i class="zmdi zmdi-account col-blue"></i>Posted By: John Smith</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-label col-amber"></i>Technology</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-comment-text col-blue"></i>Comments: 3</a></li>
-                            </ul>
-                        </div>
-                        <div class="body">
-                            <div class="img-post m-b-15">
-                                <img src="/assets/images/blog/blog-page-2.jpg" alt="Awesome Image">
-                                <div class="social_share">
-                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-facebook"></i></button>
-                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-twitter"></i></button>
-                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-instagram"></i></button>
-                                </div>
-                            </div>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal</p>
-                            <a href="blog-details.html" title="read more" class="btn btn-round btn-info">Read More</a>
-                        </div>
-                    </div>
-                    <div class="card single_post">
-                        <div class="body">
-                            <h3 class="m-t-0 m-b-5"><a href="blog-details.html">WTCR from 2018: new rules, more cars, more races</a></h3>
-                            <ul class="meta">
-                                <li><a href="#"><i class="zmdi zmdi-account col-blue"></i>Posted By: John Smith</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-label col-lime"></i>Sports</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-comment-text col-blue"></i>Comments: 3</a></li>
-                            </ul>
-                        </div>
-                        <div class="body">
-                            <div class="img-post m-b-15">
-                                <img src="/assets/images/blog/blog-page-3.jpg" alt="Awesome Image">
-                                <div class="social_share">
-                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-facebook"></i></button>
-                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-twitter"></i></button>
-                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-instagram"></i></button>
-                                </div>
-                            </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
-                            <a href="blog-details.html" title="read more" class="btn btn-round btn-info">Read More</a>
-                        </div>
-                    </div>
-                    <div class="card single_post">
-                        <div class="body">
-                            <h3 class="m-t-0 m-b-5"><a href="blog-details.html">CSS Timeline Examples from CodePen</a></h3>
-                            <ul class="meta">
-                                <li><a href="#"><i class="zmdi zmdi-account col-blue"></i>Posted By: John Smith</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-label col-green"></i>Web Design</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-comment-text col-blue"></i>Comments: 3</a></li>
-                            </ul>
-                        </div>
-                        <div class="body">
-                            <div class="img-post m-b-15">
-                                <img src="/assets/images/blog/blog-page-4.jpg" alt="Awesome Image">
-                                <div class="social_share">
-                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-facebook"></i></button>
-                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-twitter"></i></button>
-                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-instagram"></i></button>
-                                </div>
-                            </div>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
-                            <a href="blog-details.html" title="read more" class="btn btn-round btn-info">Read More</a>
-                        </div>
-                    </div>
+
                     <ul class="pagination pagination-primary">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                       {{links()}}
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-12 right-box">
+                {{-- <div class="col-lg-4 col-md-12 right-box">
                     <div class="card">
                         <div class="body search">
                             <div class="input-group m-b-0">
@@ -220,13 +151,40 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
 
+</x-slot>
+
+<x-slot name="script">
+
+    <script>
+    function confirmation(ev) {
+      ev.preventDefault();
+      var urlToRedirect = ev.currentTarget.getAttribute('href');
+      console.log(urlToRedirect);
+      swal({
+          title: "Are you sure to cancel this product",
+          text: "You will not be able to revert this!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+      })
+      .then((willCancel) => {
+          if (willCancel) {
+
+              window.location.href = urlToRedirect;
+
+          }
 
 
+      });
+
+
+  }
+</script>
 </x-slot>
 
 </x-layouts-app>

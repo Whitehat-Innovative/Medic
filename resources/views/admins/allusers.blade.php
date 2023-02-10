@@ -25,7 +25,7 @@
                             <div class="body">
                                 <ul class="nav nav-tabs padding-0">
                                     <li class="nav-item"><a class="nav-link active" data-toggle="tab"
-                                            href="#Doctors">Doctors</a></li>
+                                            href="#Doctors">All Admin</a></li>
 
                                 </ul>
                             </div>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-12">
-                        <div class="card action_bar">
+                        {{-- <div class="card action_bar">
                             <div class="body">
                                 <div class="row clearfix">
                                     <div class="col-lg-1 col-md-2 col-3">
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="card">
                             <div class="body">
                                 <div class="tab-content">
@@ -136,20 +136,23 @@
 
 
 
+                                                            
+                                                            @if ($users->code==007)
 
-                                                                    <form  class="btn btn-icon btn-neutral btn-icon-mini" action="{{route('delete', $users)}} " method="POST">
-
-
-                                                                        @csrf
-
-                                                                        <button class="btn btn-icon btn-neutral btn-icon-mini" type="submit" data-toggle="modal" data-target="#defaultModal"><i
-                                                                            class="zmdi zmdi-delete"></i></button>
+                                                            <a onclick="confirmation(event)" class="btn btn-icon btn-neutral btn-icon-mini "
+                                                                         href="{{route('delete', $users->id)}}"><i
+                                                                            class="zmdi zmdi-delete mt-1"></i></a>
 
 
+                                                          
+                                                            <button class="btn btn-icon btn-neutral btn-icon-mini">
+                                                                <a href="{{route('edit.view', $users)}}"><i
+                                                                        class="zmdi zmdi-edit"></i></a></button>
 
-                                                                    </form>
-                                                                    <button class="btn btn-icon btn-neutral btn-icon-mini" >
-                                                                        <a href="{{route('edit.view', $users)}}"><i class="zmdi zmdi-edit" ></i></a></button>
+
+                                                            @endif
+
+
 
 
                                                         </td>
@@ -162,8 +165,7 @@
                                             </table>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn-default waves-effect m-r-20"
-                                        data-toggle="modal" data-target="#defaultModal">MODAL - DEFAULT SIZE</button>
+
                                 </div>
                             </div>
                         </div>
@@ -173,14 +175,7 @@
                         <div class="card">
                             <div class="body">
                                 <ul class="pagination pagination-primary m-b-0">
-                                    <li class="page-item"><a class="page-link" href="#"><i
-                                                class="zmdi zmdi-arrow-left"></i></a></li>
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                    <li class="page-item"><a class="page-link" href="#"><i
-                                                class="zmdi zmdi-arrow-right"></i></a></li>
+                                   {{$u->links()}}>
                                 </ul>
                             </div>
                         </div>
@@ -195,5 +190,34 @@
         </section>
 
 
+    </x-slot>
+
+    <x-slot name="script">
+
+        <script>
+        function confirmation(ev) {
+          ev.preventDefault();
+          var urlToRedirect = ev.currentTarget.getAttribute('href');
+          console.log(urlToRedirect);
+          swal({
+              title: "Are you sure to DELETE this user",
+              text: "You will not be able to revert this!",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+          })
+          .then((willCancel) => {
+              if (willCancel) {
+
+                  window.location.href = urlToRedirect;
+
+              }
+
+
+          });
+
+
+      }
+  </script>
     </x-slot>
 </x-app-layout>

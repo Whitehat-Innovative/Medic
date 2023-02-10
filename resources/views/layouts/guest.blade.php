@@ -89,6 +89,7 @@
     $("html").toggleClass("nav-open");
 });
 </script>
+@include('sweetalert::alert')
 </body>
 
 <!-- Mirrored from thememakker.com/templates/oreo/hospital/html/light/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Jan 2023 16:12:25 GMT -->

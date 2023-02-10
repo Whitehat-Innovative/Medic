@@ -66,7 +66,7 @@ class DonationController extends Controller
     }
 
 
-    public function fundCallback()
+    public function fundCallback(Patient $p)
     {
         //  get payment details from paystack
         $paymentDetails = \Paystack::getPaymentData();
@@ -76,6 +76,7 @@ class DonationController extends Controller
         $reference = $paymentDetails['data']['reference'];
         // get transaction from db
         $donation = Donation::where('reference', $reference)->first();
+
         // check if txn has been paid
         if ($donation->status == 'success') {
             return back()->with(['error' => 'invalid transaction']);
@@ -101,7 +102,7 @@ class DonationController extends Controller
 
 
         //credit user wallet
-        $balance = Donation::where('status','success')->sum('amount');
+        $balance = Donation::where('status','success')->where('patient_id',$p->id)->sum('amount');
 
         $donation = $donation->increment('current_fund', $balance);
 

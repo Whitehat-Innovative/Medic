@@ -35,25 +35,31 @@
                      <div class="pq-section pq-style-1 text-center"> <span class="pq-section-sub-title">DONATE</span>
                         <h5 class="pq-section-title">You can also donate to us</h5> </div>
                   </div>
+
+                  @foreach ($p as $p)
+
                   <div class="col-xl-6 col-md-6">
                      <div class="pq-pricing-plan pq-style-1 ">
-                        <div class="pq-pricing-head"> <span class="pq-title"> Donate by USSD or Transfer </span>
+                        <div class="pq-pricing-head"> <span class="pq-title"><img src="/Patient-image/{{$p->image}}" alt="alt"> </span>
                            {{-- <div class="pq-service-media"> <i class=" flaticon-medical-doctor"></i> </div> --}}
                            <div class="price"> <span class="pq-amount"></span>  </div>
                         </div>
 
-                        <a class="pq-button pq-button-flat page-2" href="#">
-                           <div class="pq-button-block"> <span class="pq-button-text">Purchace Now</span> <i class="ion ion-plus-round"></i> </div>
+                        <a class="pq-button pq-button-flat page-2" href="{{route('pay', $p)}}">
+                           <div class="pq-button-block"> <span class="pq-button-text">Donate Now</span> <i class="ion ion-plus-round"></i> </div>
                         </a>
                      </div>
                   </div>
+                      
+                  @endforeach
+                  
                   <div class="col-xl-6 col-md-6 mt-4 mt-lg-0 mt-md-0">
                      <div class="pq-pricing-plan pq-style-1 active ">
                         <div class="pq-pricing-head"> <span class="pq-title">Pay With Card </span>
                            {{-- <div class="pq-service-media"> <i class=" flaticon-doctor"></i> </div> --}}
                            <div class="price"> <span class="pq-amount"></span> <span class="price-month"></span> </div>
                         </div>
-                        <a class="pq-button pq-button-flat page-2" href="{{route('pay')}}">
+                        <a class="pq-button pq-button-flat page-2" href="">
                            <div class="pq-button-block"> <span class="pq-button-text">Pay Now</span> <i class="ion ion-plus-round"></i> </div>
                         </a>
                      </div>

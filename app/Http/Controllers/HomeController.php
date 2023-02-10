@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Comment;
 use App\Models\Contact;
+use App\Models\Patient;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -58,24 +60,57 @@ class HomeController extends Controller
     public function blog()
     {
 
-        $bl = Blog::latest()->paginate(5);
+        $bl = Blog::with('comments')->latest()->paginate(10);
 
         return view ('users.blog', ['blo'=>$bl]);
     }
     public function single_blog(Blog $blog)
     {
+        // dd($blog);
 
-        $bl= Blog::find($blog)->first();
-        return view('users.single_blog',['blog'=>$bl]);
+        // $bl= Blog::with('comments','replies')->find($blog)->first();
+        $bl= Blog::with('comments')->find($blog->id);
+        // dd($bl->reply);
+        $c =Comment::with('replies')->where('blog_id',$bl->id)->paginate(2);
+
+        // $r=Reply::where('comment_id',$c);
+
+        // $c =$bl->comments->all();
+
+
+// foreach($c as $b){
+
+//     $d = $b->replies;
+// }
+
+        // $c->each(function($c, $bl){
+        //     $c->blue=$bl->reply->all();
+        // });
+
+        // dd($c->blue);
+
+
+        // dd($c);
+
+        // $c= $bl->replies->where('id',$blog);
+
+        return view('users.single_blog',['blog'=>$bl,'c'=>$c ]);
     }
     // this is for the donate
     public function donate()
     {
-        return view('users.donate');
+        $p=Patient::all();
+        return view('users.donate', ['p'=>$p]);
     }
-    public function pay()
+    public function pay(Patient $p)
+
+
     {
-        return view('users.pay');
+
+        $pat= Patient::find($p->id);
+
+
+        return view('users.pay' , ['p'=>$pat]);
     }
 
 }

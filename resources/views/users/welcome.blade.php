@@ -733,7 +733,7 @@
                         <div class="col-md-12">
                             <button class="pq-button pq-button-bg-white form-btn" type="submit" >
                                 <div class="pq-button-block">
-                                    <span class="pq-button-text-dark me-0">send message</span>
+                                    <span class="pq-button-text-dark me-0">Send</span>
                                 </div>
                             </button>
                         </div>
