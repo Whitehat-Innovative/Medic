@@ -229,7 +229,7 @@
                         </div>
                         <div class="col-xl-3  col-md-6">
                             <div class="pq-footer-block">
-                                <h4 class="footer-title">Our Courses</h4>
+                                <h4 class="footer-title">Our Tags</h4>
                                 <div class="menu-useful-links-container">
                                     <ul id="menu-useful-links" class="menu">
                                         <li><a href="{{route('about')}}">About Us</a></li>
@@ -258,18 +258,7 @@
                                                 Limited Mobility</a></h6>
                                     </div>
                                 </div>
-                                <div class="pq-footer-recent-post">
-                                    <div class="pq-footer-recent-post-media">
-                                        <a href="/assets/get-the-exercise-limited-mobility.html"> <img
-                                                src="/assets/images/footer-image/2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="pq-footer-recent-post-info">
-                                        <a href="/assets/get-the-exercise-limited-mobility.html" class="pq-post-date">
-                                            <i class="far fa-calendar-alt"></i>December <span>12</span>, 2021 </a>
-                                        <h6><a href="/assets/get-the-exercise-limited-mobility.html">Transfusion
-                                                strategy and heart surgery</a></h6>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-xl-3  col-md-6">
