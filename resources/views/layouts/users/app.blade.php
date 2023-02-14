@@ -91,7 +91,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="/assets/index.html">
+                            <a class="navbar-brand" href="{{route('welcome')}}">
                                 <img class="img-fluid logo" src="/assets/images/logo.png" alt="medicate">
                             </a>
                             <a class="navbar-brand" href="{{ route('login') }}">ADMIN

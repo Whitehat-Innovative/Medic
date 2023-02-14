@@ -758,63 +758,25 @@
                 <div class="owl-carousel owl-theme" data-dots="true" data-nav="false" data-desk_num="2"
                     data-lap_num="2" data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
                     data-loop="true" data-margin="30">
-                    <div class="item">
+                    @foreach ( $tes as $test )
+                    <div class="item" >
                         <div class="pq-testimonial-box pq-style-1">
                             <div class="pq-testimonial-info">
                                 <div class="pq-testimonial-content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                        have suffered alteration in some form, by injected humour, or randomized words
-                                        which don’t look even believable. There are many variations of passages.</p>
+                                    <p>{{$test->message}}</p>
                                 </div>
                             </div>
                             <div class="pq-testimonial-media">
                                 <div class="pq-testimonial-img"> <img src="/assets/images/testimonial/1.png"
                                         class="img-fluid" alt="testimonial-image"> </div>
                                 <div class="pq-testimonial-meta">
-                                    <h5>Dr. john Martin</h5> <span>Cancer Research </span>
+                                    <h5>{{$test->name}}</h5> <span> </span>
                                 </div>
                                 <div class="pq-testimonial-icon"> <i class="fas fa-quote-right"></i> </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="pq-testimonial-box pq-style-1">
-                            <div class="pq-testimonial-info">
-                                <div class="pq-testimonial-content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                        have suffered alteration in some form, by injected humour, or randomized words
-                                        which don’t look even believable. There are many variations of passages.</p>
-                                </div>
-                            </div>
-                            <div class="pq-testimonial-media">
-                                <div class="pq-testimonial-img"> <img src="/assets/images/testimonial/2.png"
-                                        class="img-fluid" alt="testimonial-image"> </div>
-                                <div class="pq-testimonial-meta">
-                                    <h5>Dr. john Martin</h5> <span>Cancer Research </span>
-                                </div>
-                                <div class="pq-testimonial-icon"> <i class="fas fa-quote-right"></i> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-testimonial-box pq-style-1">
-                            <div class="pq-testimonial-info">
-                                <div class="pq-testimonial-content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                        have suffered alteration in some form, by injected humour, or randomized words
-                                        which don’t look even believable. There are many variations of passages.</p>
-                                </div>
-                            </div>
-                            <div class="pq-testimonial-media">
-                                <div class="pq-testimonial-img"> <img src="/assets/images/testimonial/3.png"
-                                        class="img-fluid" alt="testimonial-image"> </div>
-                                <div class="pq-testimonial-meta">
-                                    <h5>Dr. john Martin</h5> <span>Cancer Research </span>
-                                </div>
-                                <div class="pq-testimonial-icon"> <i class="fas fa-quote-right"></i> </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

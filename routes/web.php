@@ -11,6 +11,7 @@ use App\Models\Appointment;
 use App\Models\Blog;
 use App\Models\Donation;
 use App\Models\Patient;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -63,6 +64,9 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/make_contact', [HomeController::class, 'make_contact'])->name('make.contact');
 Route::get('/appointment', [HomeController::class, 'appointment'])->name('appointment');
+
+Route::post('/make_testimonial', [HomeController::class, 'make_testimonial'])->name('make.testimonial');
+
 
 
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
