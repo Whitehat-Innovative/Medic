@@ -50,7 +50,7 @@
                                               </div>
                                               <div class="col-lg-12">
                                                 <input type="text" id="e-mail" name="location" class="form-control pq-bg-white e-mail-field"  aria-invalid="false" placeholder="Your Preferred Location" required>
-                                          </div>
+                                            </div>
 
                                               <div class="col-lg-12">
                                                     <textarea cols="40" id="message" rows="10"  name="appointment_note" aria-invalid="false" class="form-control pq-bg-white" placeholder="Type Appointment Note"></textarea>

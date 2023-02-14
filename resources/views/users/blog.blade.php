@@ -49,12 +49,12 @@
                         <div class="pq-post-meta">
                             <ul>
                                 <li class="pq-post-author"><i class="fa fa-user"></i>{{$blog->author}}</li>
-                                <li class="pq-post-comment"> <a href="get-the-exercise-limited-mobility.html"><i
+                                <li class="pq-post-comment"> <a href="#"><i
                                             class="fa fa-comments"></i>
                                         {{$blog->comments->count()}} {{Str::plural('Comment',$blog->comments->count())}} </a> </li>
                             </ul>
                         </div>
-                        <h5 class="pq-blog-title"><a href="get-the-exercise-limited-mobility.html">{{$blog->tilte}}</a>
+                        <h5 class="pq-blog-title"><a href="#">{{$blog->tilte}}</a>
                         </h5>
                         <div class="pq-blog-info">
                             <p>{{$blog->content}}</p>

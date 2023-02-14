@@ -47,6 +47,14 @@ class PostController extends Controller
     }
 
     public function addpost(Request $request, Blog $blog){
+        $request->validate([
+            'title' => 'string|required',
+            'content' => 'string|required',
+            'category_id' => 'integer|required',
+            'author' => 'string',
+            'user_id' => 'integer',
+            'images' => 'string|required'
+        ]);
 
         if ($request->hasFile('image')) {
 
@@ -95,6 +103,15 @@ class PostController extends Controller
 
 
     public function addresearch(Request $request){
+        $request->validate([
+            'image' => 'string|required',
+            'content' => 'string|required',
+            'title' => 'string|required',
+            'reference' => 'string',
+            'category_id' => 'integer',
+            'author' => 'string|required',
+            'user_id' => 'integer'
+        ]);
 
         if ($request->hasFile('image')) {
 
@@ -133,6 +150,10 @@ class PostController extends Controller
 
 
     public function addCat(Request $request){
+        $request->validate([
+            'category' => 'string',
+            'description' => 'string'
+        ]);
 
         $ct =new Category();
         $ct ->category =$request->category;
@@ -168,6 +189,9 @@ class PostController extends Controller
 
 
     public function editpost( Blog $blog, Request $request){
+        $request->validate([
+
+        ]);
 
        if ($request->hasFile('image')) {
 
@@ -202,6 +226,12 @@ class PostController extends Controller
 
 
     public function addcomment(Request $request){
+        $request->validate([
+            'name' => 'string|required',
+            'email' => 'string',
+            'blog_id' => 'integer',
+            'comment' => 'string|required'
+        ]);
 
             $check=Comment::where('name',$request->name && 'blog_id', $request->blog_id)->exists();
 
@@ -212,7 +242,7 @@ class PostController extends Controller
             $comment->blog_id =$request->blog_id;
             $comment->comment =$request->comment;
             $comment->save();
-            Alert::success('Success', 'Admin, your coment added successfully');
+            Alert::success('Success', 'Admin, your comment has been added successfully');
             return back();
             # code...
         }
@@ -229,7 +259,7 @@ class PostController extends Controller
 
         }
 
-        Alert::warning('Fail', 'You already added a comment');
+        Alert::warning('Failed', "You've already added a comment");
 
         return back();
 
@@ -265,6 +295,12 @@ class PostController extends Controller
 
 
     public function editcomment(Comment $c, Request $request){
+        $request->validate([
+            'name' => 'string|required',
+            'email' => 'string',
+            'blog_id' => 'integer',
+            'comment' => 'string|required'
+        ]);
 
         $c->name =$request->name;
         $c->email =$request->email;
@@ -296,6 +332,11 @@ class PostController extends Controller
 
 
     public function addreply(Request $request){
+        $request->validate([
+            'blog_id' => 'integer|required',
+            'comment_id' => 'integer|required',
+            'reply' => 'string|nullable'
+        ]);
 
 
         $reply = new Reply();

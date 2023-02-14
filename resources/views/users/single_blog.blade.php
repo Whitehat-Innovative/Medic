@@ -15,7 +15,7 @@
                     </div>
                     <div class="pq-breadcrumb-container mt-2">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home mr-2"></i>Home</a>
+                            <li class="breadcrumb-item"><a href="{{route('welcome')}}"><i class="fas fa-home mr-2"></i>Home</a>
                             </li>
                             <li class="breadcrumb-item active">Blog</li>
                             <li class="breadcrumb-item active">{{$blog->title}}</li>
@@ -101,7 +101,7 @@
                         </li>
                         <!-- #comment-## -->
                     </ol>
-                  
+
 
                     @endforeach
 
@@ -112,7 +112,7 @@
                                     <div class="pq-comment-wrap">
 
                                         <div class="pq-comment-box">
-                                            
+
                                             <!-- .comment-metadata -->
                                             <div class="comment-content">
                                                {{$c->links()}}
@@ -136,16 +136,16 @@
                             @csrf
                             <p class="comment-notes"><span>Your email address will not be published.</span>
                             <div class="row">
-                                
 
-                               
+
+
                                  <div class="col-lg-4">
                                     <input  class="form-control" name="name" type="text"
                                         placeholder=" Enter Guest name" >
                                 </div>
-                                    
-                               
-                               
+
+
+
                                 <div class="col-lg-4">
                                     <input  class="form-control" name="blog_id" type="hidden"
                                        value="{{$blog->id}}" >
@@ -165,7 +165,7 @@
 
                         </form>
 
-                        
+
 
 
                     </div>
@@ -175,21 +175,21 @@
                     @auth
                     <!-- .commentlist -->
                     <div class="comment-respond ">
-                        <h3 id="reply-title" class="comment-reply-title mt-4">Reply a comment </h3>
+                        <h3 id="reply-title" class="comment-reply-title mt-4">Leave a comment </h3>
                         <form method="POST" action="{{route('add.comment')}}" class="comment-form pq-applyform" novalidate>
                             @csrf
                             {{-- <p class="comment-notes"><span>Your email address will not be published.</span>         --}}
                             <div class="row">
-                                
 
-                               
+
+
                                  <div class="col-lg-4">
                                     <input  class="form-control" name="name" value="Admin" type="hidden"
                                         placeholder=" Enter Guest name" >
                                 </div>
-                                    
-                               
-                               
+
+
+
                                 <div class="col-lg-4">
                                     <input  class="form-control" name="blog_id" type="hidden"
                                        value="{{$blog->id}}" >
@@ -209,7 +209,7 @@
 
                         </form>
 
-                       
+
 
 
                     </div>
@@ -225,13 +225,13 @@
                         <div class="pq-block-group">
                             <div class="pq-block-group__inner-container">
                                 <figure class="pq-block-image size-full is-style-default"><img
-                                        src="/assets/images/call-img.jpg" alt="" class="img-fluid"></figure>
+                                        src="/assets/images/calendar.jpg" alt="" class="img-fluid"></figure>
                             </div>
                         </div>
                     </div>
                     <div class="pq-widget pq-widget_block">
                         <div class="pq-button-block">
-                            <a href="index.html" class="pq-button pq-button-flat"> <span class="text">Donate Now</span> </a>
+                            <a href="{{route('donate')}}" class="pq-button pq-button-flat"> <span class="text">Donate Now</span> </a>
                         </div>
                     </div>
                 </div>
