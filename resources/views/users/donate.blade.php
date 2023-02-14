@@ -50,16 +50,16 @@
                         </a>
                      </div>
                   </div>
-                      
+
                   @endforeach
-                  
+
                   <div class="col-xl-6 col-md-6 mt-4 mt-lg-0 mt-md-0">
                      <div class="pq-pricing-plan pq-style-1 active ">
                         <div class="pq-pricing-head"> <span class="pq-title">Pay With Card </span>
                            {{-- <div class="pq-service-media"> <i class=" flaticon-doctor"></i> </div> --}}
                            <div class="price"> <span class="pq-amount"></span> <span class="price-month"></span> </div>
                         </div>
-                        <a class="pq-button pq-button-flat page-2" href="">
+                        <a class="pq-button pq-button-flat page-2" href="{{route('payFor')}}">
                            <div class="pq-button-block"> <span class="pq-button-text">Pay Now</span> <i class="ion ion-plus-round"></i> </div>
                         </a>
                      </div>

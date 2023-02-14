@@ -729,7 +729,7 @@
                             <textarea name="appointment_name" class="form-control" id="" placeholder="Appointment Note" cols="30"
                                 rows="10"></textarea>
                         </div>
-                        <p class="text-white"> By booking an appointment you agree to our<a href="#" >  terms and condition</a> </p>
+                        {{-- <p class="text-white"> By booking an appointment you agree to our<a href="#" >  terms and condition</a> </p> --}}
                         <div class="col-md-12">
                             <button class="pq-button pq-button-bg-white form-btn" type="submit" >
                                 <div class="pq-button-block">
