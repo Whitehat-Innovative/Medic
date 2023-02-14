@@ -119,7 +119,7 @@
                     <ul class="list">
                         <li>
                             <div class="user-info">
-                                <div class="image"><a href="profile.html"><img src="/User-image/{{$u->image}}"
+                                <div class="image"><a href="{{route('view.user')}}"><img src="/User-image/{{$u->image}}"
                                             alt="User"></a></div>
                                 <div class="detail">
                                     <h4>Dr. {{$u->name}}</h4>
