@@ -153,7 +153,7 @@
                             <ul class="ml-menu">
 
                                 <li><a href="{{route('research')}}">New Research</a></li>
-                                <li><a href="blog-post.html">Edit Research</a></li>
+                                {{-- <li><a href="blog-post.html">Edit Research</a></li> --}}
                                 <li><a href="{{route('cat.tag.view')}}">Add Category/Tags</a></li>
                                 <li><a href="{{route('research.list')}}">Research List</a></li>
 
@@ -170,7 +170,7 @@
                             </ul>
                         </li>
 
-                        <li><a href="javascript:void(0);" class="menu-toggle"><i
+                        {{-- <li><a href="javascript:void(0);" class="menu-toggle"><i
                                     class="zmdi zmdi-balance-wallet"></i><span>Patient | Donation </span> </a>
                             <ul class="ml-menu">
 
@@ -178,8 +178,20 @@
                                 <li><a href="{{route('all.patients')}}">All Patients</a></li>
                                 <li><a href="{{route('all.donation')}}">All Donations</a></li>
 
-                                {{-- <li><a href="invoice.html">Invoice</a></li> --}}
+                                <li><a href="invoice.html">Invoice</a></li>
                             </ul>
+                        </li> --}}
+                        <li>
+
+                            <a href="{{route('all.donation')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Donations</span>
+                            </a>
+
+                        </li>
+                        <li>
+
+                            <a href="{{route('all.appointment')}}"><i class="zmdi zmdi-calendar-check"></i><span>Appointments</span>
+                            </a>
+
                         </li>
 
                         <li>
@@ -188,6 +200,7 @@
                             </a>
 
                         </li>
+
 
 
                         <form method="POST" action="{{ route('logout') }}">

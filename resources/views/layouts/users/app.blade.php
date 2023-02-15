@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
-
-
 <!-- Mirrored from peacefulqode.com/themes/medicate/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2023 06:26:52 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zolive Hospital</title>
+    <meta name="description"
+        content="@yield('description')  Hospital ">
+    <meta name="author" content="Zolive">
+    <title >@yield('title') Zolive Hospital</title>
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/assets/images/logo.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <!-- LOADING FONTS AND ICONS -->

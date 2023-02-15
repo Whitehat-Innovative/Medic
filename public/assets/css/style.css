@@ -283,6 +283,7 @@ input.form-control {
   border-radius: 3px;
 }
 
+
 input::placeholder {
   color: var(--dark-color);
 }

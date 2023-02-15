@@ -1,4 +1,6 @@
 @extends('layouts.users.app')
+@section('description')
+@section('title')
 
 @section('content')
 
@@ -48,10 +50,18 @@
                         <div class="pq-post-meta">
                             <ul>
                                 <li class="pq-post-author"><i class="fa fa-user"></i>{{$blog->author}}</li>
-                                <li class="pq-post-tag"><a href="#"><i class="fa fa-comments"></i>{{$blog->comments->count()}} {{Str::plural('Comment',$blog->comments->count())}}</a></li>
+                                <li class="pq-post-tag"><a href="#"><i
+                                            class="fa fa-comments"></i>{{$blog->comments->count()}}
+                                        {{Str::plural('Comment',$blog->comments->count())}}</a></li>
                             </ul>
+                            <div >
+
+                                <p> {{$blog->content}}</p>
+
+                                </div>
                         </div>
-                        <p> {{$blog->content}}</p>
+
+
                         {{-- <h4 class="pq-heading-title pq-size-default">Results Are Easy To Obtain</h4>
                            <p> Medicate is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                            <div class="row mt-4">
@@ -75,8 +85,8 @@
                 </div>
 
                 <div id="comments" class="pq-comment-area">
-                     {{-- <h3 class="comments-title">{{$blog->commets->count()}} Comment </h3> --}}
-                    @foreach ($c as $ca)
+                    {{-- <h3 class="comments-title">{{$blog->commets->count()}} Comment </h3> --}}
+                    @foreach ($c->paginate(2) as $ca)
 
                     <ol class="commentlist">
                         <li class="comment even thread-even depth-1">
@@ -85,87 +95,138 @@
                                     <div class="pq-comment-wrap">
 
                                         <div class="pq-comment-box">
-                                            <h5 class="title">{{$ca->name}}</h5>
-                                            <div class="pq-comment-metadata"> </div>
-                                            <!-- .comment-metadata -->
-                                            <div class="comment-content">
-                                                <p>{{$ca->comment}}</p>
+
+                                            <div class="row container">
+                                                <div class="col-lg-12 d-flex">
+                                                    <div class="col-lg-6">
+                                                     <h5 class="title mb-2">Author: {{$ca->name}}</h5>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                     <p class="comment-content">{{$ca->created_at->diffForHumans()}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class=" form-control comment-content">
+                                                    <p>{{$ca->comment}}</p>
+                                                </div>
                                             </div>
+
+                                            {{-- <div class="pq-comment-metadata"></div> --}}
+                                            <!-- .comment-metadata -->
+
                                             <!-- .comment-content -->
+
+
+
+                                            <label class="m-4" for="REPLIES"> <span> REPLIES</span> </label>
+
+                                            @foreach ($ca->replies as $reply)
+
+                                            <div class="row container">
+                                                <div class="col-lg-12 mt-2 d-flex">
+                                                    <div class="col-lg-6  ">
+                                                     <h5 class="title"> {{$reply->name}}</h5>
+                                                    </div>
+                                                    <div class="col-lg-3 ">
+
+                                                    </div>
+
+                                                    <div class="col-lg-3">
+                                                     <p class="comment-content">{{$reply->created_at->diffForHumans()}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class=" form-control comment-content">
+                                                    <p>{{$reply->reply}}</p>
+                                                </div>
+                                            </div>
+                                            @endforeach
+
+                                            <div class="col-lg-12 d-flex mt-2 ">
+
+                                                <form action="{{route('add.reply', $ca->id)}}" method="POST" class="col-lg-12 d-flex">
+
+                                                  @csrf
+                                                  <div class="row container d-flex">
+                                                    <div class="col-6 d-flex">
+
+                                                        <input class="form-control " name="name" type="text"
+                                                        placeholder=" Enter your name">
+                                                       <input class="form-control" name="reply" type="text"
+                                                        placeholder=" Enter your reply">
+
+
+                                                    </div>
+
+                                                    <div class="col-3"></div>
+
+                                                    <div class="col-3">
+                                                     <span class="text mt-1 ">  <x-button type="submit" class="btn btn- form-control">Reply</x-button></span>
+                                                    </div>
+
+                                                  </div>
+
+
+
+
+                                                </form>
+
+                                            </div>
+
                                         </div>
-                                        <!-- .comment-author -->
 
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <!-- #comment-## -->
+
+
+
                     </ol>
-                  
 
                     @endforeach
 
-                      <ol class="commentlist">
-                        <li class="comment even thread-even depth-1">
-                            <div class="comment-body">
-                                <div class="pq-comment-info">
-                                    <div class="pq-comment-wrap">
 
-                                        <div class="pq-comment-box">
-                                            
-                                            <!-- .comment-metadata -->
-                                            <div class="comment-content">
-                                               {{$c->links()}}
-                                            </div>
-                                            <!-- .comment-content -->
-                                        </div>
-                                        <!-- .comment-author -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- #comment-## -->
-                    </ol>
 
                     @guest
                     <!-- .commentlist -->
                     <div class="comment-respond ">
-                        <h3 id="reply-title" class="comment-reply-title mt-4">Write a Comment  </h3>
-                        <form method="POST" action="{{route('add.comment')}}" class="comment-form pq-applyform" novalidate>
+                        <h3 id="reply-title" class="comment-reply-title mt-4">Write a Comment </h3>
+                        <form method="POST" action="{{route('add.comment')}}" class="comment-form pq-applyform"
+                            novalidate>
                             @csrf
                             <p class="comment-notes"><span>Your email address will not be published.</span>
-                            <div class="row">
-                                
-
-                               
-                                 <div class="col-lg-4">
-                                    <input  class="form-control" name="name" type="text"
-                                        placeholder=" Enter Guest name" >
-                                </div>
-                                    
-                               
-                               
-                                <div class="col-lg-4">
-                                    <input  class="form-control" name="blog_id" type="hidden"
-                                       value="{{$blog->id}}" >
-                                </div>
-                                <div class="col-lg-4">
-                                    <input  class="form-control" name="email" type="email"
-                                        placeholder=" Enter Email" >
-                                </div>
+                                <div class="row">
 
 
-                                <div class="col-lg-12">
-                                    <textarea id="message" name="comment" cols="60" rows="6"
-                                        placeholder=" Enter Your Comment"></textarea>
+
+                                    <div class="col-lg-4">
+                                        <input class="form-control" name="name" type="text"
+                                            placeholder=" Enter Guest name">
+                                    </div>
+
+
+
+                                    <div class="col-lg-4">
+                                        <input class="form-control" name="blog_id" type="hidden" value="{{$blog->id}}">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <input class="form-control" name="email" type="email"
+                                            placeholder=" Enter Email">
+                                    </div>
+
+
+                                    <div class="col-lg-12">
+                                        <textarea id="message" name="comment" cols="60" rows="6"
+                                            placeholder=" Enter Your Comment"></textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <button class="btn pq-button mb-0 form-btn" type="submit">Post Comment</button>
+                                <button class="btn pq-button mb-0 form-btn" type="submit">Post Comment</button>
 
                         </form>
 
-                        
+
 
 
                     </div>
@@ -175,28 +236,27 @@
                     @auth
                     <!-- .commentlist -->
                     <div class="comment-respond ">
-                        <h3 id="reply-title" class="comment-reply-title mt-4">Reply a comment </h3>
-                        <form method="POST" action="{{route('add.comment')}}" class="comment-form pq-applyform" novalidate>
+                        <h3 id="reply-title" class="comment-reply-title mt-4">Write a Comment </h3>
+                        <form method="POST" action="{{route('add.comment')}}" class="comment-form pq-applyform"
+                            novalidate>
                             @csrf
                             {{-- <p class="comment-notes"><span>Your email address will not be published.</span>         --}}
                             <div class="row">
-                                
 
-                               
-                                 <div class="col-lg-4">
-                                    <input  class="form-control" name="name" value="Admin" type="hidden"
-                                        placeholder=" Enter Guest name" >
-                                </div>
-                                    
-                               
-                               
+
+
                                 <div class="col-lg-4">
-                                    <input  class="form-control" name="blog_id" type="hidden"
-                                       value="{{$blog->id}}" >
+                                    <input class="form-control" name="name" value="Admin" type="hidden"
+                                        placeholder=" Enter Guest name">
+                                </div>
+
+
+
+                                <div class="col-lg-4">
+                                    <input class="form-control" name="blog_id" type="hidden" value="{{$blog->id}}">
                                 </div>
                                 <div class="col-lg-4">
-                                    <input  class="form-control" name="email" type="email"
-                                        placeholder=" Enter Email" >
+                                    <input class="form-control" name="email" type="email" placeholder=" Enter Email">
                                 </div>
 
 
@@ -209,7 +269,7 @@
 
                         </form>
 
-                       
+
 
 
                     </div>
@@ -231,7 +291,8 @@
                     </div>
                     <div class="pq-widget pq-widget_block">
                         <div class="pq-button-block">
-                            <a href="index.html" class="pq-button pq-button-flat"> <span class="text">Donate Now</span> </a>
+                            <a href="index.html" class="pq-button pq-button-flat"> <span class="text">Donate Now</span>
+                            </a>
                         </div>
                     </div>
                 </div>
