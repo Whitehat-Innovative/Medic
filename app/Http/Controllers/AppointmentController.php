@@ -37,22 +37,12 @@ class AppointmentController extends Controller
     }
     public function appointment(Request $request){
 
-
-<<<<<<< HEAD
-        // $request->validate([
-        //     'name' => 'string|required',
-        //     'email' => 'string|nullable',
-        //     'phone' => 'string|required',
-        //     'appointment_note' => 'string|required'
-        // ]);
-=======
          $request->validate([
              'name' => 'string|required',
              'email' => 'string|nullable',
            'phone' => 'string|required',
             'appointment_note' => 'string|required'
          ]);
->>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
         $appointment = new Appointment();
         $appointment->name = $request->name;
         $appointment->email = $request->email;
@@ -60,12 +50,7 @@ class AppointmentController extends Controller
         $appointment->location = $request->location;
         $appointment->appointment_note = $request->appointment_name;
         $appointment->save();
-<<<<<<< HEAD
-
-        Alert::success('Success','Your appointment notice has being sent the Doctor, will get back to you soon');
-=======
         Alert::success('Success','Your appointment notice has been sent the Doctor will get back to you');
->>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
         return back();
     }
 }
