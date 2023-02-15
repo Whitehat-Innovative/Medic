@@ -90,13 +90,14 @@ class PostController extends Controller
     }
 
     public function addpost(Request $request, Blog $blog){
+
         $request->validate([
             'title' => 'string|required',
             'content' => 'string|required',
             'category_id' => 'integer|required',
             'author' => 'string',
             'user_id' => 'integer',
-            'images' => 'string|required'
+            // 'images' => 'string|required'
         ]);
 
         if ($request->hasFile('image')) {
