@@ -391,7 +391,7 @@ class PostController extends Controller
         $reply->comment_id =$comment->id;
         $reply->reply =$request->reply;
         $reply->save();
-        Alert::success('Success', 'Your reply has being sent');
+        Alert::success('Success', 'Your reply has been sent');
         return back();
 
     }

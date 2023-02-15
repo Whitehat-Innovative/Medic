@@ -117,21 +117,10 @@
 
                                             <!-- .comment-content -->
 
-<<<<<<< HEAD
-=======
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- #comment-## -->
-                    </ol>
-
->>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
 
 
                                             <label class="m-4" for="REPLIES"> <span> REPLIES</span> </label>
 
-<<<<<<< HEAD
                                             @foreach ($ca->replies as $reply)
 
                                             <div class="row container">
@@ -150,13 +139,6 @@
                                                 <div class=" form-control comment-content">
                                                     <p>{{$reply->reply}}</p>
                                                 </div>
-=======
-                                        <div class="pq-comment-box">
-
-                                            <!-- .comment-metadata -->
-                                            <div class="comment-content">
-                                               {{$c->links()}}
->>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
                                             </div>
                                             @endforeach
 
