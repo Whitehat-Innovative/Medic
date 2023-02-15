@@ -15,13 +15,19 @@ class CreatePatientsTable extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('sex')->nullable();
+            $table->string('reg_no');
+            $table->string('surname');
+            $table->string('first_name');
+            $table->string('phone');
+            $table->longText('address');
+            $table->string('date_of_birth');
+            $table->enum('religion', ['christianity','islam','african_traditional_religion','others'])->nullable();
+            $table->string('occupation')->nullable();
+            $table->string('LGA');
+            $table->string('state_of_origin');
+            $table->enum('sex', ['female','male','nil'])->default('nil');
             $table->string('email')->nullable();
             $table->string('image')->nullable();
-            $table->longText('illness_description')->nullable();//
-            $table->string('illness_name')->nullable();
-            $table->integer('target_fund')->nullable();
             $table->integer('age')->nullable();
             $table->timestamps();
         });

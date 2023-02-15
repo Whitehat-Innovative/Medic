@@ -20,4 +20,18 @@ class Patient extends Model
     {
         return $this->hasMany(Donation::class, 'patient_id', 'id');
     }
+
+    public function hospitalhistory(): HasMany
+    {
+        return $this->hasMany(HospitalHistory::class,);
+    }
+    public function diagnosis(): HasMany
+    {
+        return $this->hasMany(Diagnosis::class, );
+    }
+    public function operation(): HasMany
+    {
+        return $this->hasMany(Operation::class, );
+    }
+
 }

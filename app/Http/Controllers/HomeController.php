@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\Comment;
 use App\Models\Contact;
 use App\Models\Patient;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,7 +15,8 @@ class HomeController extends Controller
     public function index()
     {
         $blo = Blog::latest()->take(5);
-        return view('users.welcome', ['blo'=>$blo]);
+        $test = Testimonial::latest()->get();
+        return view('users.welcome', ['blo'=>$blo, 'tes'=>$test]);
     }
     public function about()
     {
@@ -43,6 +45,19 @@ class HomeController extends Controller
         return back();
     }
 
+    public function make_testimonial(Request $request, Testimonial $testimonial)
+    {
+        $request->validate([
+            'name' => 'string|required',
+            'message' => 'string|required'
+        ]);
+
+        $testimonial = new Testimonial();
+        $testimonial->name = $request->name;
+        $testimonial->message = $request->message;
+        $testimonial->save();
+        return back();
+    }
     public function gallery()
     {
         return view('users.gallery');

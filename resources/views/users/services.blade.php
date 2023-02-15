@@ -33,6 +33,7 @@
                Banner end-->
 <!--=================================
                all services start-->
+<<<<<<< HEAD
 <section class="all-services pq-pb-210">
     <div class="container">
         <div class="row">
@@ -57,6 +58,46 @@
                                 <li class=" current-menu-item"> <a href="#">Incubator Nursing</a> </li>
 
 
+=======
+         <section class="all-services pq-pb-210">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-4">
+                     <div class="pq-widget">
+                        <div class="pq-widget pq-widget-port p-0">
+                           <div class="menu-service-menu-container">
+                              <ul id="menu-service-menu" class="menu">
+                                 <li class=" current-menu-item"> <a href="#" aria-current="page">Medical Consultancy</a> </li>
+                                 <li class=" current-menu-item"><a href="#">Surgery </a> </li>
+                                 <li class=" current-menu-item"><a href="#">Gynecology</a> </li>
+                                 <li class=" current-menu-item"><a href="#">Maternity</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">Pediatrics</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">Intensive Care Unit</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">Medical Laboratory</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">Ultrasound</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">ECG</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">X-RAY</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">Mammography</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">Physiotherapy</a> </li>
+                                 <li class=" current-menu-item"> <a href="#">Incubator Nursing</a> </li>
+
+
+
+
+
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="media_image">
+                        <a href="{{route('contact')}}"> <img src="/assets/images/calendar-2.jpg" alt="" class="rounded img-fluid"> Contact Us </a>
+                     </div>
+                  </div>
+                  <div class="col-lg-8 ps-3 mt-4 mt-lg-0">
+                     <div class="pq-menu-content">
+                        <div class="pq-rhs-img text-center"> <img src="/assets/images/IMG_20230130_142832_146.jpg" alt="" class="rounded img-fluid"> </div>
+                        <div class="pq-section-title-box pq-section-title-style-2 pt-4">
+>>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
 
 
 
@@ -78,6 +119,10 @@
                     </div>
                     <div class="row">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
 
                         <div class="row mt-4">
                             <div class="col-lg-6 col-md-12"> <img src="/assets/images/services/1.jpg" class="img-fluid"
@@ -151,4 +196,45 @@
 </section>
 <!--=================================
                all services end-->
+<<<<<<< HEAD
 @endsection
+=======
+                <div class="container mb-5">
+                    <div class="row align-items-center pq-bg-primary pq-reveser flex-md-column-reverse flex-lg-row">
+                        <div class="col-lg-4 text-center"> <img src="/assets/images/calendar.jpg"  alt="...">  </div>
+                        <div class="col-lg-8 mt-5 mt-lg-0 pq-form-pad pq-blue-section-side-right">
+                            <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title">Tell Us How you Feel</span>
+                                <h5 class="pq-section-title pq-text-white">Did you enjoy our services</h5>
+                            </div>
+                            <form action="{{ route('make.testimonial') }}" method="POST" class="pq-applyform mt-5" novalidate>
+                                @csrf
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="text" name="name" id="first-name"
+                                            class="pq-bg-transparent name-field" placeholder="Your Name" required>
+                                    </div>
+
+
+                                    <div class="col-md-12">
+                                        {{-- <input type="text" name="your-disease" id="disease-name"
+                                class="pq-bg-transparent disease-name-field" placeholder="Your Disease Name"
+                                required> --}}
+                                        <textarea name="message" class="form-control" id="" placeholder="Message" cols="30"
+                                            rows="10"></textarea>
+                                    </div>
+                                    <div class="col-md-12 mb-5">
+                                        <button class="pq-button pq-button-bg-white form-btn " type="submit" >
+                                            <div class="pq-button-block">
+                                                <span class="pq-button-text-dark me-0">Send</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+        @endsection
+>>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d

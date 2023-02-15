@@ -17,7 +17,7 @@
                     </div>
                     <div class="pq-breadcrumb-container mt-2">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home mr-2"></i>Home</a>
+                            <li class="breadcrumb-item"><a href="{{route('welcome')}}"><i class="fas fa-home mr-2"></i>Home</a>
                             </li>
                             <li class="breadcrumb-item active">Blog</li>
                             <li class="breadcrumb-item active">{{$blog->title}}</li>
@@ -117,10 +117,21 @@
 
                                             <!-- .comment-content -->
 
+<<<<<<< HEAD
+=======
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- #comment-## -->
+                    </ol>
+
+>>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
 
 
                                             <label class="m-4" for="REPLIES"> <span> REPLIES</span> </label>
 
+<<<<<<< HEAD
                                             @foreach ($ca->replies as $reply)
 
                                             <div class="row container">
@@ -139,6 +150,13 @@
                                                 <div class=" form-control comment-content">
                                                     <p>{{$reply->reply}}</p>
                                                 </div>
+=======
+                                        <div class="pq-comment-box">
+
+                                            <!-- .comment-metadata -->
+                                            <div class="comment-content">
+                                               {{$c->links()}}
+>>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
                                             </div>
                                             @endforeach
 
@@ -197,8 +215,30 @@
                             novalidate>
                             @csrf
                             <p class="comment-notes"><span>Your email address will not be published.</span>
+<<<<<<< HEAD
                                 <div class="row">
 
+=======
+                            <div class="row">
+
+
+
+                                 <div class="col-lg-4">
+                                    <input  class="form-control" name="name" type="text"
+                                        placeholder=" Enter Guest name" >
+                                </div>
+
+
+
+                                <div class="col-lg-4">
+                                    <input  class="form-control" name="blog_id" type="hidden"
+                                       value="{{$blog->id}}" >
+                                </div>
+                                <div class="col-lg-4">
+                                    <input  class="form-control" name="email" type="email"
+                                        placeholder=" Enter Email" >
+                                </div>
+>>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
 
 
                                     <div class="col-lg-4">
@@ -236,18 +276,29 @@
                     @auth
                     <!-- .commentlist -->
                     <div class="comment-respond ">
+<<<<<<< HEAD
                         <h3 id="reply-title" class="comment-reply-title mt-4">Write a Comment </h3>
                         <form method="POST" action="{{route('add.comment')}}" class="comment-form pq-applyform"
                             novalidate>
+=======
+                        <h3 id="reply-title" class="comment-reply-title mt-4">Leave a comment </h3>
+                        <form method="POST" action="{{route('add.comment')}}" class="comment-form pq-applyform" novalidate>
+>>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
                             @csrf
                             {{-- <p class="comment-notes"><span>Your email address will not be published.</span>         --}}
                             <div class="row">
 
 
 
+<<<<<<< HEAD
                                 <div class="col-lg-4">
                                     <input class="form-control" name="name" value="Admin" type="hidden"
                                         placeholder=" Enter Guest name">
+=======
+                                 <div class="col-lg-4">
+                                    <input  class="form-control" name="name" value="Admin" type="hidden"
+                                        placeholder=" Enter Guest name" >
+>>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
                                 </div>
 
 
@@ -285,14 +336,18 @@
                         <div class="pq-block-group">
                             <div class="pq-block-group__inner-container">
                                 <figure class="pq-block-image size-full is-style-default"><img
-                                        src="/assets/images/call-img.jpg" alt="" class="img-fluid"></figure>
+                                        src="/assets/images/calendar.jpg" alt="" class="img-fluid"></figure>
                             </div>
                         </div>
                     </div>
                     <div class="pq-widget pq-widget_block">
                         <div class="pq-button-block">
+<<<<<<< HEAD
                             <a href="index.html" class="pq-button pq-button-flat"> <span class="text">Donate Now</span>
                             </a>
+=======
+                            <a href="{{route('donate')}}" class="pq-button pq-button-flat"> <span class="text">Donate Now</span> </a>
+>>>>>>> f0d109a6d4472cb1b70df64512179e655bf3e37d
                         </div>
                     </div>
                 </div>

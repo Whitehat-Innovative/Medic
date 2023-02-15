@@ -67,7 +67,7 @@
                     data-text="w:normal;s:64,48,42,22;l:72,56,50,30;fw:600;"
                     data-border="boc:#14457b;bow:1px,1px,1px,1px;" data-frame_0="x:50,39,29,17;"
                     data-frame_1="st:1400;sp:1000;sR:1400;" data-frame_999="o:0;st:w;sR:6600;"
-                    style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">We are ready to responsibilty <br> for our actions
+                    style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">We are ready to take responsibilty <br> for our actions
                     <br>
                     Accute Pain
                 </rs-layer>
@@ -719,6 +719,10 @@
                             <input type="text" name="phone" id="phone"
                                 class="pq-bg-transparent phone-field" placeholder="Your Phone Number" required>
                         </div>
+                        <div class="col-md-12">
+                            <input type="text" name="location" id="phone"
+                                class="pq-bg-transparent phone-field" placeholder="Your Preffered Location" required>
+                        </div>
 
                         <div class="col-md-12">
                             {{-- <input type="text" name="your-disease" id="disease-name"
@@ -727,6 +731,7 @@
                             <textarea name="appointment_name" class="form-control" id="" placeholder="Appointment Note" cols="30"
                                 rows="10"></textarea>
                         </div>
+                        {{-- <p class="text-white"> By booking an appointment you agree to our<a href="#" >  terms and condition</a> </p> --}}
                         <div class="col-md-12">
                             <button class="pq-button pq-button-bg-white form-btn" type="submit" >
                                 <div class="pq-button-block">
@@ -755,63 +760,25 @@
                 <div class="owl-carousel owl-theme" data-dots="true" data-nav="false" data-desk_num="2"
                     data-lap_num="2" data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
                     data-loop="true" data-margin="30">
-                    <div class="item">
+                    @foreach ( $tes as $test )
+                    <div class="item" >
                         <div class="pq-testimonial-box pq-style-1">
                             <div class="pq-testimonial-info">
                                 <div class="pq-testimonial-content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                        have suffered alteration in some form, by injected humour, or randomized words
-                                        which don’t look even believable. There are many variations of passages.</p>
+                                    <p>{{$test->message}}</p>
                                 </div>
                             </div>
                             <div class="pq-testimonial-media">
                                 <div class="pq-testimonial-img"> <img src="/assets/images/testimonial/1.png"
                                         class="img-fluid" alt="testimonial-image"> </div>
                                 <div class="pq-testimonial-meta">
-                                    <h5>Dr. john Martin</h5> <span>Cancer Research </span>
+                                    <h5>{{$test->name}}</h5> <span> </span>
                                 </div>
                                 <div class="pq-testimonial-icon"> <i class="fas fa-quote-right"></i> </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="pq-testimonial-box pq-style-1">
-                            <div class="pq-testimonial-info">
-                                <div class="pq-testimonial-content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                        have suffered alteration in some form, by injected humour, or randomized words
-                                        which don’t look even believable. There are many variations of passages.</p>
-                                </div>
-                            </div>
-                            <div class="pq-testimonial-media">
-                                <div class="pq-testimonial-img"> <img src="/assets/images/testimonial/2.png"
-                                        class="img-fluid" alt="testimonial-image"> </div>
-                                <div class="pq-testimonial-meta">
-                                    <h5>Dr. john Martin</h5> <span>Cancer Research </span>
-                                </div>
-                                <div class="pq-testimonial-icon"> <i class="fas fa-quote-right"></i> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-testimonial-box pq-style-1">
-                            <div class="pq-testimonial-info">
-                                <div class="pq-testimonial-content">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority
-                                        have suffered alteration in some form, by injected humour, or randomized words
-                                        which don’t look even believable. There are many variations of passages.</p>
-                                </div>
-                            </div>
-                            <div class="pq-testimonial-media">
-                                <div class="pq-testimonial-img"> <img src="/assets/images/testimonial/3.png"
-                                        class="img-fluid" alt="testimonial-image"> </div>
-                                <div class="pq-testimonial-meta">
-                                    <h5>Dr. john Martin</h5> <span>Cancer Research </span>
-                                </div>
-                                <div class="pq-testimonial-icon"> <i class="fas fa-quote-right"></i> </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -831,48 +798,6 @@
                         <div class="pq-clientbox pq-style-1">
                             <a href="/assets/#"> <img src="/assets/images/client/1.png" alt="pq-client-img"
                                     class="pq-client-img img-fluid"> <img src="/assets/images/client/1.png"
-                                    alt="pq-client-img" class="pq-client-hover-img img-fluid"> </a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-clientbox pq-style-1">
-                            <a href="/assets/#"> <img src="/assets/images/client/2.png" alt="pq-client-img"
-                                    class="pq-client-img img-fluid"> <img src="/assets/images/client/2.png"
-                                    alt="pq-client-img" class="pq-client-hover-img img-fluid"> </a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-clientbox pq-style-1">
-                            <a href="/assets/#"> <img src="/assets/images/client/3.png" alt="pq-client-img"
-                                    class="pq-client-img img-fluid"> <img src="/assets/images/client/3.png"
-                                    alt="pq-client-img" class="pq-client-hover-img img-fluid"> </a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-clientbox pq-style-1">
-                            <a href="/assets/#"> <img src="/assets/images/client/4.png" alt="pq-client-img"
-                                    class="pq-client-img img-fluid"> <img src="/assets/images/client/4.png"
-                                    alt="pq-client-img" class="pq-client-hover-img img-fluid"> </a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-clientbox pq-style-1">
-                            <a href="/assets/#"> <img src="/assets/images/client/5.png" alt="pq-client-img"
-                                    class="pq-client-img img-fluid"> <img src="/assets/images/client/5.png"
-                                    alt="pq-client-img" class="pq-client-hover-img img-fluid"> </a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-clientbox pq-style-1">
-                            <a href="/assets/#"> <img src="/assets/images/client/1.png" alt="pq-client-img"
-                                    class="pq-client-img img-fluid"> <img src="/assets/images/client/1.png"
-                                    alt="pq-client-img" class="pq-client-hover-img img-fluid"> </a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pq-clientbox pq-style-1">
-                            <a href="/assets/#"> <img src="/assets/images/client/2.png" alt="pq-client-img"
-                                    class="pq-client-img img-fluid"> <img src="/assets/images/client/2.png"
                                     alt="pq-client-img" class="pq-client-hover-img img-fluid"> </a>
                         </div>
                     </div>
