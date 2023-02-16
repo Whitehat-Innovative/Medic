@@ -128,7 +128,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            {{-- <div class="pq-menu-search-block">
+                            <div class="pq-menu-search-block">
                                 <a href="javascript:void(0)" id="pq-seacrh-btn"><i class="ti-search"></i></a>
                                 <div class="pq-search-form">
                                     <form role="search" method="get" class="search-form"
@@ -142,7 +142,7 @@
                                                 class="screen-reader-text">Search</span></button>
                                     </form>
                                 </div>
-                            </div> --}}
+                            </div>
 
                             <a href="{{ route('appointment') }}" class="pq-button">
                                 <div class="pq-button-block">
