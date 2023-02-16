@@ -78,10 +78,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="media_image">
-                    <a href="{{route('contact')}}"> <img src="/assets/images/call-img.jpg" alt=""
-                            class="rounded img-fluid"> </a>
-                </div>
+
             </div>
             <div class="col-lg-8 ps-3 mt-4 mt-lg-0">
                 <div class="pq-menu-content">
@@ -93,12 +90,7 @@
                     <div class="row">
 
 
-                        <div class="row mt-4">
-                            <div class="col-lg-6 col-md-12"> <img src="/assets/images/services/1.jpg" class="img-fluid"
-                                    alt=""> </div>
-                            <div class="col-lg-6 col-md-12 mt-lg-0 mt-4"> <img src="/assets/images/services/2.jpg"
-                                    class="img-fluid" alt=""> </div>
-                        </div>
+                       
 
                         <div class="row">
                             <div class="pq-section-title-box pq-section-title-style-2 pt-4">
