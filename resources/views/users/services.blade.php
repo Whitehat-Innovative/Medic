@@ -164,6 +164,9 @@
                                             rows="10"></textarea>
                                     </div>
                                     <div class="col-md-12 mb-5">
+                                        <button class="pq-button pq-button-bg-white form-btn" type="submit">
+                                            <div class="pq-button-block">
+                                                <span class="pq-button-text-dark me-0">Send</span>
                                             </div>
                                         </button>
                                     </div>
