@@ -66,6 +66,10 @@ class HomeController extends Controller
     {
         return view ('users.appointment');
     }
+    public function research()
+    {
+        return view ('users.research');
+    }
     public function services()
     {
         return view ('users.services');

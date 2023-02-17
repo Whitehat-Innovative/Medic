@@ -117,7 +117,7 @@
 
                                         </li>
                                         <li class="menu-item ">
-                                            <a href="{{ route('blog') }}">Blog</a>
+                                            <a href="{{ route('user.research') }}">Research</a>
 
                                         </li>
                                         <li class="menu-item ">
