@@ -1,4 +1,6 @@
 @extends('layouts.users.app')
+@section('description')
+@section('title')
 
 @section('content')
 <!--=================================
@@ -51,16 +53,16 @@
                                 <li class="pq-post-author"><i class="fa fa-user"></i>{{$blog->author}}</li>
                                 <li class="pq-post-comment"> <a href="#"><i
                                             class="fa fa-comments"></i>
-                                        {{$blog->comments->count()}} {{Str::plural('Comment',$blog->comments->count())}} </a> </li>
+                                        {{number_format($blog->comments->count())}} {{Str::plural('Comment',$blog->comments->count())}} </a> </li>
                             </ul>
                         </div>
                         <h5 class="pq-blog-title"><a href="#">{{$blog->tilte}}</a>
                         </h5>
                         <div class="pq-blog-info">
-                            <p>{{$blog->content}}</p>
+                            <p>{{Str::substr($blog->content, 0,15)}}</p>
                         </div>
                         <div class="pq-btn-container">
-                            <a href="{{route('single_blog', $blog)}}" class="pq-button pq-button-flat">
+                            <a href="{{route('single_blog', [$blog, Str::slug($blog->title)])}}" class="pq-button pq-button-flat">
                                 <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
                                         class="ion ion-plus-round"></i> </div>
                             </a>

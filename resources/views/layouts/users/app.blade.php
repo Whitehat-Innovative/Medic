@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
-
-
 <!-- Mirrored from peacefulqode.com/themes/medicate/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2023 06:26:52 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zolive Hospital</title>
+    <meta name="description"
+        content="@yield('description')  Hospital ">
+    <meta name="author" content="Zolive">
+    <title >@yield('title') - {{ env('APP_NAME') }}</title>
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/assets/images/logo.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <!-- LOADING FONTS AND ICONS -->
@@ -38,11 +38,11 @@
 
 <body>
     <!--loading start-->
-    <div id="pq-loading">
+    {{-- <div id="pq-loading">
         <div id="pq-loading-center">
             <img src="/assets/images/logo.png" class="img-fluid" style="width:200px; height:auto;" alt="loading">
         </div>
-    </div>
+    </div> --}}
     <!--loading End-->
 
     <!--=================================
@@ -100,19 +100,19 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <div id="pq-menu-contain" class="pq-menu-contain">
                                     <ul id="pq-main-menu" class="navbar-nav ml-auto">
-                                        <li class="menu-item current-menu-item">
+                                        <li class="menu-item {{ Route::currentRouteName() == 'welcome' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('welcome') }}">Home</a>
 
                                         </li>
-                                        <li class="menu-item ">
+                                        <li class="menu-item{{ Route::currentRouteName() == 'about' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('about') }}">About</a>
 
                                         </li>
-                                        <li class="menu-item ">
+                                        <li class="menu-item {{ Route::currentRouteName() == 'services' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('services') }}">Services</a>
 
                                         </li>
-                                        <li class="menu-item ">
+                                        <li class="menu-item {{ Route::currentRouteName() == 'gallery' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('gallery') }}">Our Gallery</a>
 
                                         </li>
@@ -120,7 +120,7 @@
                                             <a href="{{ route('user.research') }}">Research</a>
 
                                         </li>
-                                        <li class="menu-item ">
+                                        <li class="menu-item {{ Route::currentRouteName() == 'contact' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('contact') }}">Contact
                                                 Us</a>
                                         </li>
@@ -143,6 +143,7 @@
                                     </form>
                                 </div>
                             </div>
+
                             <a href="{{ route('appointment') }}" class="pq-button">
                                 <div class="pq-button-block">
                                     <span class="pq-button-text">Appointments</span>

@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class UserController extends Controller
+class   UserController extends Controller
 {
 
 
@@ -26,11 +26,10 @@ class UserController extends Controller
 
     public function search(Request $request){
 
-        $s = Patient::where('name','like','%'.$request->search.'%');
+        $s = Patient::where('name','like','%'.$request->search.'%')->paginate(10);
 
-        return back();
+        return view('admins.patientsearch', ['search'=>$s]);
     }
-
 
 
     public function edituserview( User $users){

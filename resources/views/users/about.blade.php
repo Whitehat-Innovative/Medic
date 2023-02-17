@@ -1,5 +1,8 @@
 @extends('layouts.users.app')
+@section('description')
+@section('title')
 @section('content')
+
 
 <!--=================================  Banner start-->
 <div class="pq-breadcrumb" style="background-image:url('/assets/images/breadcrumb.jpg'); background-attachment: fixed;">

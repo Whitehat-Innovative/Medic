@@ -1,4 +1,6 @@
 @extends('layouts.users.app')
+@section('description')
+@section('title')
 @section('content')
 
 <div class="appoinment-form  appointment-page pq-pt-130 pb-0" >
@@ -35,9 +37,9 @@
                             {{-- For other necessary things you want to add to your payload. it is optional though --}}
                             <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}">
                             {{-- required --}}
-                            <input type="hidden" name="callback_url" value="{{route('transaction.callback', $p)}}">
-                            <input type="hidden" name="patient_id" value="{{$p->id}}">
-                            <input type="hidden" name="target_fund" value="{{$p->target_fund}}">
+                            <input type="hidden" name="callback_url" value="{{route('transaction.callback')}}">
+                            <input type="hidden" name="patient_id" value="1">
+                            <input type="hidden" name="target_fund" value="{{number_format(0000)}}">
 
                             <button type="" class="btn btn-primary">Pay</button>
 

@@ -1,4 +1,6 @@
 @extends('layouts.users.app')
+@section('description')
+@section('title')
 
 @section('content')
  <!--=================================

@@ -20,6 +20,49 @@ use Illuminate\Support\Facades\Mail;
 class PostController extends Controller
 {
 
+    public function search(Request $request){
+
+        $q= Blog::where('title','like', '%'.$request->search.'%')->paginate(10);
+        $popblog= Blog::with('comments')->paginate(2);
+
+
+        return view('admins.allblogsearch',['search'=>$q, 'p'=>$popblog ]);
+    }
+
+
+    public function allresearch()
+    {
+
+            $r= Research::paginate(5);
+            return view('admins.allresearch', ['rea'=>$r]);
+
+
+
+    }
+    public function singleresearch(Research $re)
+    {
+
+            $rea= Research::find($re->id);
+            return view('admins.singleresearch', ['re'=>$rea]);
+
+
+
+    }
+
+    public function destroyresearch(Research $re){
+
+
+        $check =Auth::user()->code;
+        if ($check == 007) {
+
+            $re->delete();
+            return view('admins.allresearch');
+            Alert::success('Success', 'Research Deleted');
+        }
+            return back();
+            Alert::info('Fail', 'You are not an admin');
+
+    }
 
     public function blog()
     {
@@ -47,18 +90,19 @@ class PostController extends Controller
     }
 
     public function addpost(Request $request, Blog $blog){
+
         $request->validate([
             'title' => 'string|required',
             'content' => 'string|required',
             'category_id' => 'integer|required',
             'author' => 'string',
             'user_id' => 'integer',
-            'images' => 'string|required'
+            // 'images' => 'string|required'
         ]);
 
         if ($request->hasFile('image')) {
 
-            $ext =$request->file('image')->getClientOriginalExtension();
+        $ext =$request->file('image')->getClientOriginalExtension();
         $filename= \Str::slug($request->title).time().'.'.$ext;
         $request->image->move(public_path('Blog-image'), $filename);
 
@@ -73,6 +117,8 @@ class PostController extends Controller
         $blog->save();
         Alert::success('Success', 'Blog Added successfully');
         }
+
+
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->content = $request->content;
@@ -288,8 +334,9 @@ class PostController extends Controller
     }
 
     public function editcommentview(Comment $c){
+        $com= Comment::with('blog')->find($c->id);
 
-        return view('admins.editcommentview', ['comment'=>$c]);
+        return view('admins.editcommentview', ['comment'=>$com]);
 
     }
 
@@ -331,7 +378,7 @@ class PostController extends Controller
     }
 
 
-    public function addreply(Request $request){
+    public function addreply(Request $request, Comment $comment){
         $request->validate([
             'blog_id' => 'integer|required',
             'comment_id' => 'integer|required',
@@ -340,13 +387,12 @@ class PostController extends Controller
 
 
         $reply = new Reply();
-
-        $reply->code =$request->code;
-        $reply->blog_id =$request->blog_id;
-        $reply->comment_id =$request->comment_id;
+        $reply->code ='007';
+        $reply->blog_id =$comment->blog_id;
+        $reply->comment_id =$comment->id;
         $reply->reply =$request->reply;
         $reply->save();
-        Alert::success('Success', 'Your reply has being sent');
+        Alert::success('Success', 'Your reply has been sent');
         return back();
 
     }

@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-12 left-box">
 
-                            @foreach ($blo as $blog)
+                            @foreach ($search as $blog)
                             <div class="card single_post">
                                 <div class="body">
                                     <h3 class="m-t-0 m-b-5"><a href="blog-details.html">{{$blog->title}}</a></h3>
@@ -54,69 +54,70 @@
 
                         <ul class="pagination pagination-primary">
 
-                            {{$blo->links()}}
+                            {{$search->links()}}
                         </ul>
-
-                    </div>
-                    <div class="col-lg-4 col-md-12 right-box">
-                        <div class="card">
-                            <div class="body search">
-                                <form action="{{route('search.blog')}}" method="POST">
-                                    @csrf
-                                <div class="input-group m-b-0">
-                                    <input type="text" class="form-control" name="search" placeholder="Search...">
-                                    <button type="submit">
-                                        <span class="input-group-addon">
-                                            <i class="zmdi zmdi-search"></i>
-                                        </span>
-                                    </button>
-
-                                </div>
-                            </form>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="header">
-                                <h2><strong>Popular</strong> Posts</h2>
-                            </div>
-
-                            @foreach ($p as $popblog)
-
-                            <div class="body widget popular-post">
-                                <div class="row">
-                                    <div class="col-xl-12 col-lg-12">
-                                        <div class="border single_post">
-                                            <div class="img-post m-b-5">
-                                                <img src="/Blog-image/{{$popblog->images}}" alt="Awesome Image">
-                                            </div>
-                                            <p class="m-b-0">{{$popblog->title}}</p>
-                                            <small>{{$popblog->created_at->diffForHumans()}}</small>
-                                        </div>
+                        <div class="col-lg-4 col-md-12 right-box">
+                            <div class="card">
+                                <div class="body search">
+                                    <form action="{{route('search.blog')}}" method="POST">
+                                        @csrf
+                                    <div class="input-group m-b-0">
+                                        <input type="text" class="form-control" name="search" placeholder="Search...">
+                                        <button type="submit">
+                                            <span class="input-group-addon">
+                                                <i class="zmdi zmdi-search"></i>
+                                            </span>
+                                        </button>
 
                                     </div>
+                                </form>
                                 </div>
                             </div>
+                            <div class="card">
+                                <div class="header">
+                                    <h2><strong>Popular</strong> Posts</h2>
+                                </div>
 
-                            @endforeach
+                                @foreach ($p as $popblog)
+
+                                <div class="body widget popular-post">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-lg-12">
+                                            <div class="border single_post">
+                                                <div class="img-post m-b-5">
+                                                    <img src="/Blog-image/{{$popblog->images}}" alt="Awesome Image">
+                                                </div>
+                                                <p class="m-b-0">{{$popblog->title}}</p>
+                                                <small>{{$popblog->created_at->diffForHumans()}}</small>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @endforeach
+
+                            </div>
+                            {{-- <div class="card">
+                                <div class="header">
+                                    <h2><strong>Category</strong> Clouds</h2>
+                                </div>
+                                <div class="body widget tag-clouds">
+                                    <ul class="list-unstyled m-b-0">
+                                        @foreach ($cat as $category)
+                                        <li><a href="{{route('cat.blog',$category)}}" class="tag badge badge-success">{{$category->category}}</a></li>
+                                        @endforeach
+
+
+                                    </ul>
+                                </div>
+                            </div> --}}
+
 
                         </div>
-                        {{-- <div class="card">
-                            <div class="header">
-                                <h2><strong>Category</strong> Clouds</h2>
-                            </div>
-                            <div class="body widget tag-clouds">
-                                <ul class="list-unstyled m-b-0">
-                                    @foreach ($cat as $category)
-                                    <li><a href="{{route('cat.blog',$category)}}" class="tag badge badge-success">{{$category->category}}</a></li>
-                                    @endforeach
-
-
-                                </ul>
-                            </div>
-                        </div> --}}
-
 
                     </div>
+
                 </div>
             </div>
         </section>

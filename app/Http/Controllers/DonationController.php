@@ -66,7 +66,7 @@ class DonationController extends Controller
     }
 
 
-    public function fundCallback(Patient $p)
+    public function fundCallback()
     {
         //  get payment details from paystack
         $paymentDetails = \Paystack::getPaymentData();
@@ -102,7 +102,7 @@ class DonationController extends Controller
 
 
         //credit user wallet
-        $balance = Donation::where('status','success')->where('patient_id',$p->id)->sum('amount');
+        $balance = Donation::where('status','success')->where('patient_id', 1)->sum('amount');
 
         $donation = $donation->increment('current_fund', $balance);
 

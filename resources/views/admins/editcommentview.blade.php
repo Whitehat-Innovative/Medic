@@ -45,7 +45,7 @@
                                     <select name="blog_id" class="mt-2">
 
                                         <option selected disabled>Select Blog linked to Comment --</option>
-                                       <option value="{{$comment->blog_id}}" >{{$comment->blog_id}}</option>
+                                       <option value="{{$comment->blog_id}}" >{{$comment->blog->title}}</option>
 
                                     </select>
                                     <select name="status" class="mt-2">
@@ -88,7 +88,7 @@
           var urlToRedirect = ev.currentTarget.getAttribute('href');
           console.log(urlToRedirect);
           swal({
-              title: "Are you sure to cancel this product",
+              title: "Are you sure to delete this comment",
               text: "You will not be able to revert this!",
               icon: "warning",
               buttons: true,

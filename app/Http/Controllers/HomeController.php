@@ -85,33 +85,13 @@ class HomeController extends Controller
     }
     public function single_blog(Blog $blog)
     {
-        // dd($blog);
 
-        // $bl= Blog::with('comments','replies')->find($blog)->first();
+
+
         $bl= Blog::with('comments')->find($blog->id);
         // dd($bl->reply);
-        $c =Comment::with('replies')->where('blog_id',$bl->id)->paginate(2);
+        $c =Comment::with('replies')->where('blog_id',$bl->id)->latest();
 
-        // $r=Reply::where('comment_id',$c);
-
-        // $c =$bl->comments->all();
-
-
-// foreach($c as $b){
-
-//     $d = $b->replies;
-// }
-
-        // $c->each(function($c, $bl){
-        //     $c->blue=$bl->reply->all();
-        // });
-
-        // dd($c->blue);
-
-
-        // dd($c);
-
-        // $c= $bl->replies->where('id',$blog);
 
         return view('users.single_blog',['blog'=>$bl,'c'=>$c ]);
     }
@@ -121,15 +101,15 @@ class HomeController extends Controller
         $p=Patient::all();
         return view('users.donate', ['p'=>$p]);
     }
-    public function pay(Patient $p)
+    public function pay()
 
 
     {
 
-        $pat= Patient::find($p->id);
+        // $pat= Patient::find($p->id);
 
 
-        return view('users.pay' , ['p'=>$pat]);
+        return view('users.pay' );
     }
 
 }

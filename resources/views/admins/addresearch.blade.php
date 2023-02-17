@@ -86,7 +86,7 @@
           var urlToRedirect = ev.currentTarget.getAttribute('href');
           console.log(urlToRedirect);
           swal({
-              title: "Are you sure to cancel this product",
+              title: "Are you sure to cancel this Research",
               text: "You will not be able to revert this!",
               icon: "warning",
               buttons: true,

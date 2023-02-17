@@ -71,9 +71,9 @@ Route::post('/make_testimonial', [HomeController::class, 'make_testimonial'])->n
 
 
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
-Route::get('/single_blog/{blog}', [HomeController::class, 'single_blog'])->name('single_blog');
+Route::get('/{blog}/single_blog', [HomeController::class, 'single_blog'])->name('single_blog');
 Route::post('/addcomment', [PostController::class, 'addcomment'])->name('add.comment');
-Route::post('/addreply', [PostController::class, 'addreply'])->name('add.reply');
+Route::post('/addreply/{comment}', [PostController::class, 'addreply'])->name('add.reply');
 
 
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
@@ -88,12 +88,17 @@ Route::get('/donate', [HomeController::class, 'donate'])->name('donate');
 //     return view('users.pay');
 
 // });
-Route::get('/pay/{p}', [HomeController::class, 'pay'])->name('pay');
+Route::get('/pay', [HomeController::class, 'pay'])->name('pay');
 
 Route::post('/make_appointment', [AppointmentController::class, 'appointment'])->name('make.appointment');
 
 
 Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
+// 
+
+    Route::get('/allappointments', [AppointmentController::class,'allappointment'])->name('all.appointment');
+    Route::get('/single_appointment/{a}/view', [AppointmentController::class,'singleappointment'])->name('single.appointment');
+    Route::get('/deleteappointment/{a}', [AppointmentController::class,'deleteappointment'])->name('delete.appointment');
 
     /*Blogs Route  */
     Route::get('/addpost/view', [PostController::class,'blog'])->name('blog.view');
@@ -107,6 +112,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/postlist', [PostController::class, 'allpost'])->name('all.blog');
     Route::get('/cat/blog/{category}', [PostController::class, 'cat_blog'])->name('cat.blog');
     Route::get('/singleblog/{blog}', [PostController::class, 'singleblog'])->name('single.blog.view');
+    Route::get('/bloglist', [PostController::class, 'allblog'])->name('blog.list');
 
     /*Comment And Replies  */
     Route::get('/allcomment', [PostController::class, 'allcomment'])->name('all.comment');
@@ -122,10 +128,11 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     Route::post('/addresearch', [PostController::class,'addresearch'])->name('research.add');
     Route::post('/editresearch', [PostController::class, 'editresearch'])->name('research.edit');
-    Route::post('/deleteresearch/{}', [PostController::class, 'destroyresearch'])->name('research.delete');
+    Route::get('/deleteresearch/{re}', [PostController::class, 'destroyresearch'])->name('delete.research');
 
     Route::get('/researchlist', [PostController::class, 'allresearch'])->name('research.list');
-    Route::get('/bloglist', [PostController::class, 'allblog'])->name('blog.list');
+    Route::get('/singleresearch/{re}', [PostController::class, 'singleresearch'])->name('single.research');
+    Route::post('/searchblog', [PostController::class, 'search'])->name('search.blog');
 
     /* All Users Route */
     Route::get('/allusers', [UserController::class, 'allusers'])->name('view.user');
@@ -136,7 +143,8 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     Route::get('/allpatient', [UserController::class, 'allpatient'])->name('all.patients');
     Route::get('/singlepatient/{patient}', [UserController::class, 'singlepatient'])->name('single.patient.view');
-    Route::get('/all', [UserController::class, 'search'])->name('search');
+    Route::post('/search', [UserController::class, 'search'])->name('search');
+
 
     Route::get('/editpatient/{patient}/view', [UserController::class, 'editpatientview'])->name('edit.patient.view');
     Route::post('/editpatient/{patient}', [UserController::class, 'editpatient'])->name('edit.patient');
@@ -162,6 +170,6 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     Route::post('/payFor', [DonationController::class, 'fund'])->name('fund');
 
-    Route::get('/payment/callback/{p}', [DonationController::class, 'fundCallback'])->name('transaction.callback');
+    Route::get('/payment/callback', [DonationController::class, 'fundCallback'])->name('transaction.callback');
 
 require __DIR__.'/auth.php';
