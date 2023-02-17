@@ -7,7 +7,7 @@
     <meta name="description"
         content="@yield('description')  Hospital ">
     <meta name="author" content="Zolive">
-    <title >@yield('title') Zolive Hospital</title>
+    <title >@yield('title') - {{ env('APP_NAME') }}</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" href="/assets/images/logo.png">
     <!-- Bootstrap CSS -->
@@ -100,27 +100,27 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <div id="pq-menu-contain" class="pq-menu-contain">
                                     <ul id="pq-main-menu" class="navbar-nav ml-auto">
-                                        <li class="menu-item current-menu-item">
+                                        <li class="menu-item {{ Route::currentRouteName() == 'welcome' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('welcome') }}">Home</a>
 
                                         </li>
-                                        <li class="menu-item ">
+                                        <li class="menu-item{{ Route::currentRouteName() == 'about' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('about') }}">About</a>
 
                                         </li>
-                                        <li class="menu-item ">
+                                        <li class="menu-item {{ Route::currentRouteName() == 'services' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('services') }}">Services</a>
 
                                         </li>
-                                        <li class="menu-item ">
+                                        <li class="menu-item {{ Route::currentRouteName() == 'gallery' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('gallery') }}">Our Gallery</a>
 
                                         </li>
-                                        <li class="menu-item ">
+                                        <li class="menu-item  {{ Route::currentRouteName() == 'blog' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('blog') }}">Blog</a>
 
                                         </li>
-                                        <li class="menu-item ">
+                                        <li class="menu-item {{ Route::currentRouteName() == 'contact' ? 'current-menu-item' : '' }} ">
                                             <a href="{{ route('contact') }}">Contact
                                                 Us</a>
                                         </li>

@@ -48,7 +48,7 @@
             <li>
                 <div class="navbar-header">
                     <a href="javascript:void(0);" class="bars"></a>
-                    <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png" width="30"
+                    <a class="navbar-brand" href="{{route('welcome')}}"><img src="/assets/images/logo.png" width="30"
                             alt="Oreo"><span class="m-l-10">Zolive</span></a>
                 </div>
             </li>
@@ -128,14 +128,20 @@
                             </div>
                         </li>
                         <li class="header"></li>
-                        <li class="active open"><a href="{{route('dashboard')}}"><i
+                        <li class=" {{ Route::currentRouteName() == 'dashboard' ? 'active open' : '' }}"><a href="{{route('dashboard')}}"><i
                                     class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
                         {{-- <li><a href="book-appointment.html"><i
                                  class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a></li> --}}
 
 
 
-                        <li><a href="javascript:void(0);" class="menu-toggle"><i
+                         <li 
+                        class="{{Route::currentRouteName() == 'blog.view' ?  'active open' : '' }}">
+
+
+
+
+                            <a href="javascript:void(0);" class=" menu-toggle "><i
                                     class="zmdi zmdi-blogger"></i><span>Blog</span></a>
                             <ul class="ml-menu">
 
@@ -148,7 +154,7 @@
                             </ul>
                         </li>
 
-                        <li><a href="javascript:void(0);" class="menu-toggle"><i
+                        <li class="{{Route::currentRouteName() == 'research' ?  'active open' : '' }}" ><a href="javascript:void(0);" class="menu-toggle"><i
                                     class="zmdi zmdi-copy"></i><span>Research</span></a>
                             <ul class="ml-menu">
 
@@ -161,7 +167,7 @@
                         </li>
 
 
-                        <li><a href="javascript:void(0);" class="menu-toggle"><i
+                        <li class="{{Route::currentRouteName() == 'add.patient' ?  'active open' : '' }}"><a href="javascript:void(0);" class="menu-toggle"><i
                                     class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                             <ul class="ml-menu">
 
@@ -181,20 +187,20 @@
                                 <li><a href="invoice.html">Invoice</a></li>
                             </ul>
                         </li> --}}
-                        <li>
+                        <li class="{{Route::currentRouteName() == 'all.donation' ?  'active open' : '' }}">
 
                             <a href="{{route('all.donation')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Donations</span>
                             </a>
 
                         </li>
-                        <li>
+                        <li class="{{Route::currentRouteName() == 'all.appointment' ?  'active open' : '' }}">
 
                             <a href="{{route('all.appointment')}}"><i class="zmdi zmdi-calendar-check"></i><span>Appointments</span>
                             </a>
 
                         </li>
 
-                        <li>
+                        <li class="{{Route::currentRouteName() == 'view.user' ?  'active open' : '' }}">
 
                             <a href="{{route('view.user')}}"><i class="zmdi zmdi-account-add"></i><span>All Users</span>
                             </a>

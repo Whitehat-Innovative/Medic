@@ -70,7 +70,7 @@ Route::post('/make_testimonial', [HomeController::class, 'make_testimonial'])->n
 
 
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
-Route::get('/single_blog/{blog}', [HomeController::class, 'single_blog'])->name('single_blog');
+Route::get('/{blog}/single_blog', [HomeController::class, 'single_blog'])->name('single_blog');
 Route::post('/addcomment', [PostController::class, 'addcomment'])->name('add.comment');
 Route::post('/addreply/{comment}', [PostController::class, 'addreply'])->name('add.reply');
 

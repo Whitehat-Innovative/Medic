@@ -62,7 +62,7 @@
                             <p>{{Str::substr($blog->content, 0,15)}}</p>
                         </div>
                         <div class="pq-btn-container">
-                            <a href="{{route('single_blog', $blog)}}" class="pq-button pq-button-flat">
+                            <a href="{{route('single_blog', [$blog, Str::slug($blog->title)])}}" class="pq-button pq-button-flat">
                                 <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
                                         class="ion ion-plus-round"></i> </div>
                             </a>
