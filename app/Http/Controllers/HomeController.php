@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\Comment;
 use App\Models\Contact;
 use App\Models\Patient;
+use App\Models\Research;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
@@ -68,7 +69,8 @@ class HomeController extends Controller
     }
     public function research()
     {
-        return view ('users.research');
+        $r= Research::latest()->get();
+        return view ('users.research', ['rea'=>$r]);
     }
     public function services()
     {

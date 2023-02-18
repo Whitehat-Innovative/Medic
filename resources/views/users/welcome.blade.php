@@ -69,7 +69,6 @@
                     data-frame_1="st:1400;sp:1000;sR:1400;" data-frame_999="o:0;st:w;sR:6600;"
                     style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">We are ready to take responsibilty <br> for our actions
                     <br>
-                    Accute Pain
                 </rs-layer>
                 <!--
                 -->
