@@ -260,7 +260,7 @@ table th {
 }
 
 /*============ Input Textarea =================*/
-input, textarea,
+input, textarea, select,
 input.form-control {
   background: var(--grey-color);
   border: 1px solid var(--grey-color);

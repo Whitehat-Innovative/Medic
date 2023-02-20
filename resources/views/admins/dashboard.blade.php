@@ -89,7 +89,7 @@
                                             <div class="date-right">
                                                 <div class="day-name">{{$appointment->name}}</div>
                                                 <div class="month">{{$appointment->email}}</div>
-                                            </div>
+                                            {{-- </div class="location"> {{$loc->name}} </div> --}}
                                         </div>
                                     </div>
 

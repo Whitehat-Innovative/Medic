@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Comment;
 use App\Models\Contact;
+use App\Models\Gallery;
+use App\Models\Location;
 use App\Models\Patient;
 use App\Models\Research;
 use App\Models\Testimonial;
@@ -15,13 +17,15 @@ class HomeController extends Controller
     //
     public function index()
     {
+        $loc = Location::all();
         $blo = Blog::latest()->take(5);
         $test = Testimonial::latest()->get();
-        return view('users.welcome', ['blo'=>$blo, 'tes'=>$test]);
+        return view('users.welcome', ['blo'=>$blo, 'tes'=>$test, 'loc'=>$loc]);
     }
     public function about()
     {
-        return view('users.about');
+        $blo = Blog::latest()->take(5);
+        return view('users.about', ['blo'=>$blo]);
     }
     public function contact()
     {
@@ -61,16 +65,20 @@ class HomeController extends Controller
     }
     public function gallery()
     {
-        return view('users.gallery');
+        $gallery = Gallery::latest()->get();
+
+        return view('users.gallery',
+         ['gal'=> $gallery]);
     }
     public function appointment()
     {
-        return view ('users.appointment');
+        $loc = Location::all();
+        return view ('users.appointment',['loc'=>$loc]);
     }
     public function research()
     {
-        $r= Research::latest()->get();
-        return view ('users.research', ['rea'=>$r]);
+        $rea= Research::latest()->get();
+        return view ('users.research', ['rea'=>$rea]);
     }
     public function services()
     {

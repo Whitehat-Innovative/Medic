@@ -719,15 +719,19 @@
                                 class="pq-bg-transparent phone-field" placeholder="Your Phone Number" required>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" name="location" id="phone"
-                                class="pq-bg-transparent phone-field" placeholder="Your Preffered Location" required>
+                            <select name="location"  class="pq-bg-transparent " id="">
+                                <option disabled selected value=""> Select your preffered location </option>
+                                        @foreach ($loc as  $loc)
+                                      <option value="{{$loc->id}}">{{$loc->name}}</option>
+                                    @endforeach
+                            </select>
                         </div>
 
                         <div class="col-md-12">
                             {{-- <input type="text" name="your-disease" id="disease-name"
                     class="pq-bg-transparent disease-name-field" placeholder="Your Disease Name"
                     required> --}}
-                            <textarea name="appointment_name" class="form-control" id="" placeholder="Appointment Note" cols="30"
+                            <textarea name="appointment_name" class="form-control pq-bg-transparent" id="" placeholder="Appointment Note" cols="30"
                                 rows="10"></textarea>
                         </div>
                         {{-- <p class="text-white"> By booking an appointment you agree to our<a href="#" >  terms and condition</a> </p> --}}

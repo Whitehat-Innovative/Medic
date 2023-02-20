@@ -4,12 +4,14 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Models\Appointment;
 use App\Models\Blog;
 use App\Models\Donation;
+use App\Models\Location;
 use App\Models\Patient;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -42,12 +44,13 @@ Route::get('/dashboard', function () {
     $pa= Patient::all();
     $p= Patient::paginate(5);
     $a=Appointment::latest()->paginate(3);
+    // $loc = Location::where('id', $a->location);
     $d=Donation::all();
     $b=Blog::all();
 
 
     if (Auth::user()->code=='007') {
-        return view('admins/dashboard', ['p'=>$p, 'pa'=>$pa, 'a'=>$a, 'd'=>$d, 'b'=>$b]);
+        return view('admins/dashboard', ['p'=>$p, 'pa'=>$pa, 'a'=>$a, 'd'=>$d, 'b'=>$b, ]);
     }
     if (Auth::user()->code=='008') {
         return view ('staff-dashboard', ['p'=>$p, 'a'=>$a, 'd'=>$d, 'b'=>$b]);
@@ -94,7 +97,7 @@ Route::post('/make_appointment', [AppointmentController::class, 'appointment'])-
 
 
 Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
-// 
+//
 
     Route::get('/allappointments', [AppointmentController::class,'allappointment'])->name('all.appointment');
     Route::get('/single_appointment/{a}/view', [AppointmentController::class,'singleappointment'])->name('single.appointment');
@@ -159,6 +162,9 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/edit/{users}/view', [UserController::class, 'edituserview'])->name('edit.view');
     Route::post('/edit/{users}', [UserController::class, 'edit'])->name('edit.user');
 
+    /* Gallery Controller*/
+    // Route::get();
+    Route::post('photos.post', [GalleryController::class, 'photos'])->name('photos.add');
     /* Category/Tags */
     Route::get('/cat-tag', [PostController::class, 'cat'])->name('cat.tag.view');
     Route::post('/add/cat-tag', [PostController::class, 'addCat'])->name('cat.tag.add');

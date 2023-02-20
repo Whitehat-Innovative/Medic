@@ -56,6 +56,7 @@
                                 <button class="btn  btn-round btn-block  waves-effect waves-light" type="submit"> Sign In</button>
                                 {{-- <a href="{{route('register')}}" class="btn btn-primary btn-round btn-block  waves-effect waves-light">SIGN UP</a> --}}
                                 <h5><a class="link" href="{{route('register')}}">You dont have membership?</a></h5>
+                                <h5><a href="{{route('password.request')}}" class="link">Forgot Password</a></h5>
                             </div>
                         </form>
                     </div>
@@ -65,9 +66,8 @@
                 <div class="container">
                     <nav>
                         <ul>
-                            <li><a href="http://thememakker.com/contact/" target="_blank">Contact Us</a></li>
-                            <li><a href="http://thememakker.com/about/" target="_blank">About Us</a></li>
-                            <li><a href="javascript:void(0);">FAQ</a></li>
+                            <li><a href="{{route('contact')}}" target="_blank">Contact Us</a></li>
+                            <li><a href="{{route('about')}}" target="_blank">About Us</a></li>
                         </ul>
                     </nav>
                     <div class="copyright">
@@ -75,7 +75,7 @@
                         <script>
                             document.write(new Date().getFullYear())
                         </script>,
-                        <span>Designed by <a href="http://thememakker.com/" target="_blank">Whitehat Innovatives</a></span>
+                        <span>Designed by <a href="http://whitehatng.com" target="_blank">Whitehat Innovatives</a></span>
                     </div>
                 </div>
             </footer>

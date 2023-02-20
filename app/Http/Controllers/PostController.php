@@ -158,7 +158,7 @@ class PostController extends Controller
             'author' => 'string|required',
             'user_id' => 'integer'
         ]);
-
+dd($request->all());
         if ($request->hasFile('image')) {
 
             $ext= $request->file('image')->getClientOriginalExtension();
