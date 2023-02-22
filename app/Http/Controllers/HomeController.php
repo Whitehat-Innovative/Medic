@@ -82,8 +82,6 @@ class HomeController extends Controller
     public function single_blog(Blog $blog)
     {
 
-
-
         $bl= Blog::with('comments')->find($blog->id);
         // dd($bl->reply);
         $c =Comment::with('replies')->where('blog_id',$bl->id)->latest();

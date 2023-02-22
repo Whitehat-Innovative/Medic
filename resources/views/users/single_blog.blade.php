@@ -180,11 +180,7 @@
                             </div>
                         </li>
                         <!-- #comment-## -->
-
-
-
                     </ol>
-
                     @endforeach
 
 
@@ -200,22 +196,6 @@
                             <div class="row">
 
 
-
-                                 <div class="col-lg-4">
-                                    <input  class="form-control" name="name" type="text"
-                                        placeholder=" Enter Guest name" >
-                                </div>
-
-
-
-                                <div class="col-lg-4">
-                                    <input  class="form-control" name="blog_id" type="hidden"
-                                       value="{{$blog->id}}" >
-                                </div>
-                                <div class="col-lg-4">
-                                    <input  class="form-control" name="email" type="email"
-                                        placeholder=" Enter Email" >
-                                </div>
 
 
                                     <div class="col-lg-4">
@@ -272,7 +252,7 @@
                                     <input class="form-control" name="blog_id" type="hidden" value="{{$blog->id}}">
                                 </div>
                                 <div class="col-lg-4">
-                                    <input class="form-control" name="email" type="email" placeholder=" Enter Email">
+                                    <input class="form-control" name="email" value="{{Auth::user()->email}}" type="hidden" placeholder=" Enter Email">
                                 </div>
 
 
