@@ -51,7 +51,13 @@
                                                     <input type="email" id="e-mail" name="email" class="form-control pq-bg-white e-mail-field"  aria-invalid="false" placeholder="your-email" required>
                                               </div>
                                               <div class="col-lg-12">
-                                                <input type="text" id="e-mail" name="location" class="form-control pq-bg-white e-mail-field"  aria-invalid="false" placeholder="Your Preferred Location" required>
+                                                <select name="location" class="form-control pq-bg-white email-field" id="">
+                                                    <option disabled selected value=""> Select your preffered location </option>
+                                                    @foreach ($loc as  $loc)
+                                                    <option value="{{$loc->id}}">{{$loc->name}}</option>
+                                                    @endforeach
+
+                                                </select>
                                             </div>
 
                                               <div class="col-lg-12">

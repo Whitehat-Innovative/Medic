@@ -44,22 +44,31 @@
                                  <li class="pq-filter-btn" data-filter=".32">Laboratory</li>
                                  <li class="pq-filter-btn" data-filter=".33">Pediatrics</li>
                                  <li class="pq-filter-btn" data-filter=".34">Therapy</li>
+                                 <li class="pq-filter-btn" data-filter=".37">Surgery</li>
+
                               </ul>
                            </div>
                         </div>
                         <div class="pq-masonry " data-next_items="3" data-initial_items="6">
                            <div class="grid-sizer pq-col-3"></div>
+                           @foreach ($gal as $gal)
+                            @if ($gal->tags == 'clinic')
+
                            <div class="pq-masonry-item pq-filter-items  ipq-lg-6 30 ">
                               <div class="pq-portfoliobox pq-style-1">
-                                 <div class="pq-portfolio-img"> <img src="images/portfolio/slider/1.jpg" class="img-fluid" alt="">
+                                 <div class="pq-portfolio-img"> <img src="/images/IMG-20230131-WA0029.jpg" class="img-fluid" alt="">
                                     <a href="home-visit.html">
                                        <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i></div>
                                     </a>
                                  </div>
-                                 <div class="pq-portfolio-info"> <span>Clinic</span>
-                                    <h5><a href="home-visit.html">Home Visit</a></h5> </div>
+                                </div>
                               </div>
                            </div>
+
+                           @endif
+
+                           @if ($gal->tags == 'laboratory')
+
                            <div class="pq-masonry-item pq-filter-items  ipq-lg-3 36 ">
                               <div class="pq-portfoliobox pq-style-1">
                                  <div class="pq-portfolio-img"> <img src="images/portfolio/slider/2.jpg" class="img-fluid" alt="">
@@ -71,7 +80,11 @@
                                     <h5><a href="home-visit.html">Investigations</a></h5> </div>
                               </div>
                            </div>
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-3 33 ">
+                           @endif
+
+                           @if ($gal->tags == 'pediatrics')
+
+                           <div class="pq-masonry-item pq-filter-items  ipq-lg-3 32 ">
                               <div class="pq-portfoliobox pq-style-1">
                                  <div class="pq-portfolio-img"> <img src="images/portfolio/slider/3.jpg" class="img-fluid" alt="">
                                     <a href="home-visit.html">
@@ -82,7 +95,11 @@
                                     <h5><a href="home-visit.html">Surgical</a></h5> </div>
                               </div>
                            </div>
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-6 30  36  32  33  34 ">
+                           @endif
+
+                           @if ($gal->tags == 'therapy')
+
+                           <div class="pq-masonry-item pq-filter-items  ipq-lg-6  33 ">
                               <div class="pq-portfoliobox pq-style-1">
                                  <div class="pq-portfolio-img"> <img src="images/portfolio/slider/4.jpg" class="img-fluid" alt="">
                                     <a href="home-visit.html">
@@ -93,7 +110,11 @@
                                     <h5><a href="home-visit.html">Pediatrics Care</a></h5> </div>
                               </div>
                            </div>
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-3 30  36  33 ">
+                           @endif
+
+                           @if ($gal->tags == 'surgery')
+
+                           <div class="pq-masonry-item pq-filter-items  37 ">
                               <div class="pq-portfoliobox pq-style-1">
                                  <div class="pq-portfolio-img"> <img src="images/portfolio/slider/5.jpg" class="img-fluid" alt="">
                                     <a href="home-visit.html">
@@ -104,50 +125,10 @@
                                     <h5><a href="home-visit.html">Cardiology</a></h5> </div>
                               </div>
                            </div>
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-3 33  34 ">
-                              <div class="pq-portfoliobox pq-style-1">
-                                 <div class="pq-portfolio-img"><img src="images/portfolio/slider/6.jpg" class="img-fluid" alt="">
-                                    <a href="home-visit.html">
-                                       <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i></div>
-                                    </a>
-                                 </div>
-                                 <div class="pq-portfolio-info"> <span>Pediatrics</span>
-                                    <h5><a href="home-visit.html">Treatments</a></h5> </div>
-                              </div>
-                           </div>
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-6 36  32  34 ">
-                              <div class="pq-portfoliobox pq-style-1">
-                                 <div class="pq-portfolio-img"><img src="images/portfolio/slider/7.jpg" class="img-fluid" alt="">
-                                    <a href="home-visit.html">
-                                       <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i></div>
-                                    </a>
-                                 </div>
-                                 <div class="pq-portfolio-info"> <span>Family</span>
-                                    <h5><a href="home-visit.html">Quality Therapy</a></h5> </div>
-                              </div>
-                           </div>
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-3 32  33  34 ">
-                              <div class="pq-portfoliobox pq-style-1">
-                                 <div class="pq-portfolio-img"> <img src="images/portfolio/slider/8.jpg" class="img-fluid" alt="">
-                                    <a href="home-visit.html">
-                                       <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i></div>
-                                    </a>
-                                 </div>
-                                 <div class="pq-portfolio-info"> <span>Laboratory</span>
-                                    <h5><a href="home-visit.html">Orthodontics</a></h5> </div>
-                              </div>
-                           </div>
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-3 30  36  33  34 ">
-                              <div class="pq-portfoliobox pq-style-1">
-                                 <div class="pq-portfolio-img"><img src="images/portfolio/slider/9.jpg" class="img-fluid" alt="">
-                                    <a href="home-visit.html">
-                                       <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i></div>
-                                    </a>
-                                 </div>
-                                 <div class="pq-portfolio-info"> <span>Clinic</span>
-                                    <h5><a href="home-visit.html">Management</a></h5> </div>
-                              </div>
-                           </div>
+                           @endif
+
+
+                           @endforeach
                         </div>
                      </div>
                      <div class="pq-btn-load-container text-center">

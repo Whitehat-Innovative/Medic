@@ -76,7 +76,7 @@
                                 </li>
                                 <li>
                                     <a
-                                        href="https://egbuchulemo@gmail.com"><i
+                                        href="mailto: egbuchulemo@gmail.com"><i
                                             class="fas fa-envelope"></i><span><span class="__cf_email__"
                                                 data-cfemail="066f68606946766367656360736a726e636b63752865696b">egbuchulemo@gmail.com</span></span></a>
                                 </li>
@@ -116,8 +116,8 @@
                                             <a href="{{ route('gallery') }}">Our Gallery</a>
 
                                         </li>
-                                        <li class="menu-item  {{ Route::currentRouteName() == 'blog' ? 'current-menu-item' : '' }} ">
-                                            <a href="{{ route('blog') }}">Blog</a>
+                                        <li class="menu-item ">
+                                            <a href="{{ route('user.research') }}">Research</a>
 
                                         </li>
                                         <li class="menu-item {{ Route::currentRouteName() == 'contact' ? 'current-menu-item' : '' }} ">
@@ -272,7 +272,7 @@
                                                     <span> +234 0816-492-4608</span>
                                                 </a> </li>
                                             <li> <a
-                                                    href="https://egbuchulemo@gmail.com"><i
+                                                    href="mailto: egbuchulemo@gmail.com"><i
                                                         class="fas fa-envelope"></i><span>inf<span
                                                             class="__cf_email__"
                                                             data-cfemail="4e210e3e2b2f2d2b283b223a262b232b3d602d2123">egbuchulemo@gmail.com</span></span></a>

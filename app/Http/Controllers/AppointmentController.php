@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Appointment as MailAppointment;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AppointmentController extends Controller
@@ -50,7 +52,8 @@ class AppointmentController extends Controller
         $appointment->location = $request->location;
         $appointment->appointment_note = $request->appointment_name;
         $appointment->save();
-        Alert::success('Success','Your appointment notice has been sent the Doctor will get back to you');
+        Mail::to(Auth::email())->send(new MailAppointment($appointment));
+        Alert::success('Success','Your appointment notice has been sent, the Doctor will get back to you');
         return back();
     }
 }

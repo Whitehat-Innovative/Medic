@@ -230,40 +230,38 @@
                 <div class="owl-carousel owl-theme" data-dots="false" data-nav="false" data-desk_num="3"
                     data-lap_num="3" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
                     data-loop="true" data-margin="30">
+                    @foreach ($blo as $blo )
+
+
                     <div class="item" >
                         <div class="pq-blog-post pq-style-1 pq-bg-grey">
-                            <div class="pq-post-media"> <img src="/assets/images/blog/1.jpg" class="img-fluid"
+                            <div class="pq-post-media"> <img src="/storage/images/blog/1.jpg" class="img-fluid"
                                     alt="images">
                                 <div class="pq-post-date">
-                                    <a href="get-the-exercise-limited-mobility.html"> <span>December 5,
-                                            2021</span></a>
+                                    <a href="{{route('single_blog', [$blog, Str::slug($blog->title)])}}"> <span>December 5, 2021</span></a>
                                 </div>
                             </div>
                             <div class="pq-blog-contain">
                                 <div class="pq-post-meta">
                                     <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-                                        <li class="pq-post-comment"> <a href="get-the-exercise-limited-mobility.html"><i
+                                        <li class="pq-post-author"><i class="fa fa-user"></i>{{$blo->author}}</li>
+                                        <li class="pq-post-comment"> <a href="{{route('single_blog', [$blog, Str::slug($blog->title)])}}"><i
                                                     class="fa fa-comments"></i>
                                                 0 Comments</a> </li>
                                     </ul>
                                 </div>
-                                <h5 class="pq-blog-title"><a href="get-the-exercise-limited-mobility.html">Get
-                                        the
-                                        Exercise Limited Mobility</a></h5>
+                                <h5 class="pq-blog-title"><a href="{{route('single_blog', [$blog, Str::slug($blog->title)])}}">{{$blo->title}}</a></h5>
                                 <div class="pq-blog-info">
-                                    <p>It is a long established fact that a reader will be distracted by the
-                                        readable
-                                        content of a page when looking at its layout.</p>
+                                    <p>{{$blog->content,0,15}}</p>
                                 </div>
-                                <a href="get-the-exercise-limited-mobility.html" class="pq-button pq-button-link">
+                                <a href="{{route('single_blog', [$blog, Str::slug($blog->title)])}}" class="pq-button pq-button-link">
                                     <div class="pq-button-block"> <span class="pq-button-text">Read More</span>
                                         <i class="ion ion-plus-round"></i> </div>
                                 </a>
                             </div>
                         </div>
                     </div>
-                  
+                    @endforeach
                 </div>
             </div>
         </div>
