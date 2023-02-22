@@ -150,7 +150,7 @@ class PostController extends Controller
 
     public function addresearch(Request $request){
         $request->validate([
-            'image' => 'string|required',
+            // 'image' => 'string|required',
             'content' => 'string|required',
             'title' => 'string|required',
             'reference' => 'string',
@@ -158,7 +158,7 @@ class PostController extends Controller
             'author' => 'string|required',
             'user_id' => 'integer'
         ]);
-dd($request->all());
+// dd($request->all());
         if ($request->hasFile('image')) {
 
             $ext= $request->file('image')->getClientOriginalExtension();
@@ -171,7 +171,7 @@ dd($request->all());
             $research->title =$request->title;
             $research->content =$request->content;
             $research->reference =$request->reference;
-            $research->category_id =$request->category;
+            $research->category =$request->category;
             $research->author =$request->author;
             $research->user_id = Auth::user()->id;
 
@@ -184,7 +184,7 @@ dd($request->all());
         $research->title =$request->title;
         $research->content =$request->content;
         $research->reference =$request->reference;
-        $research->category_id =$request->category;
+        $research->category =$request->category;
         $research->author =$request->author;
         $research->user_id = Auth::user()->id;
 
