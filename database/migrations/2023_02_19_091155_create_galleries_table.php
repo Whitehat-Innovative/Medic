@@ -15,9 +15,9 @@ class CreateGalleriesTable extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
+            $table->longText('image');
             $table->string('details');
-            $table->enum('tags', ['clinic','family','laboratory', 'pediatrics', 'therapy', 'surgery']);
+            $table->string('tags');
             $table->timestamps();
         });
     }

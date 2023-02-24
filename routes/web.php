@@ -156,20 +156,34 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/deletedonation/{donation}', [UserController::class, 'deletedonation'])->name('delete.donation');
     Route::get('/alldonation', [UserController::class, 'alldonation'])->name('all.donation');
 
-
-
     Route::get('/delete/{users}', [UserController::class, 'destroy'])->name('delete');
     Route::get('/edit/{users}/view', [UserController::class, 'edituserview'])->name('edit.view');
     Route::post('/edit/{users}', [UserController::class, 'edit'])->name('edit.user');
 
     /* Gallery Controller*/
-    // Route::get();
-    Route::post('photos.post', [GalleryController::class, 'photos'])->name('photos.add');
+    Route::get('/add/image/view', [GalleryController::class, 'addimageview'])->name('add.image.view');
+    Route::post('/add/image', [GalleryController::class, 'addimage'])->name('add.image');
+
+    Route::post('/delete/image/{image}', [GalleryController::class, 'deleteimage'])->name('delete.image');
+    Route::get('/edit/image/view', [GalleryController::class, 'editimageview'])->name('edit.image.view');
+    Route::get('/all/image/view', [GalleryController::class, 'allimageview'])->name('all.image.view');
+    Route::post('/edit/image/{image}', [GalleryController::class, 'editimage'])->name('edit.image');
+
     /* Category/Tags */
     Route::get('/cat-tag', [PostController::class, 'cat'])->name('cat.tag.view');
     Route::post('/add/cat-tag', [PostController::class, 'addCat'])->name('cat.tag.add');
 
-    /* Send a Message  */
+    /* Location  */
+    Route::post('/add/location', [PostController::class, 'addlocation'])->name('add.location');
+    Route::get('/add/location/view', [PostController::class, 'addlocationview'])->name('add.location.view');
+
+    Route::get('/all/location/view', [PostController::class, 'alllocationview'])->name('all.location');
+    Route::get('/deletelocation/{loction}', [PostController::class, 'deletelocation'])->name('delete.location');
+
+    Route::get('/edit/location/view/{location}', [PostController::class, 'editlocationview'])->name('edit.location.view');
+    Route::post('/edit/location/{location}', [PostController::class, 'editlocation'])->name('edit.location');
+
+
 
 
 });

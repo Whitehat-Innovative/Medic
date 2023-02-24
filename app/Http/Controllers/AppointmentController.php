@@ -52,7 +52,7 @@ class AppointmentController extends Controller
         $appointment->location = $request->location;
         $appointment->appointment_note = $request->appointment_name;
         $appointment->save();
-        Mail::to(Auth::email())->send(new MailAppointment($appointment));
+        Mail::to(Auth::user()->email)->send(new MailAppointment($appointment));
         Alert::success('Success','Your appointment notice has been sent, the Doctor will get back to you');
         return back();
     }

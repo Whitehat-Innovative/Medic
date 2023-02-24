@@ -8,6 +8,7 @@ use App\Mail\Message as test;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Comment;
+use App\Models\Location;
 use App\Models\Message;
 use App\Models\Reply;
 use App\Models\Research;
@@ -19,6 +20,53 @@ use Illuminate\Support\Facades\Mail;
 
 class PostController extends Controller
 {
+    public function addlocation(Request $request){
+
+        $location= new Location();
+        $location->name=$request->name;
+        $location->save();
+        Alert::success('Success', 'Location added');
+
+        return back();
+
+    }
+    public function editlocationview(Location $location){
+
+
+        return view('admins.editlocationview',['location'=>$location]);
+
+    }
+    public function editlocation(Request $request, Location $location){
+
+        $location->name=$request->name;
+        $location->save();
+        Alert::success('Success', 'Location Edited');
+
+        return back();
+
+    }
+
+    public function alllocationview(){
+
+        $locate=Location::all();
+
+        return view('admins.alllocation',['l'=>$locate]);
+
+    }
+
+    public function deletelocation(Location $location){
+
+       if (Auth::user()->code==007) {
+        $location->delete();
+        Alert::success('Deleted', 'Location deleted');
+        return back();
+
+
+       }
+        Alert::info('Warning', 'Your not an admin');
+        return back();
+
+    }
 
     public function search(Request $request){
 

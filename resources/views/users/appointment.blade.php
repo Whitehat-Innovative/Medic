@@ -53,8 +53,8 @@
                                               <div class="col-lg-12">
                                                 <select name="location" class="form-control pq-bg-white email-field" id="">
                                                     <option disabled selected value=""> Select your preffered location </option>
-                                                    @foreach ($loc as  $loc)
-                                                    <option value="{{$loc->id}}">{{$loc->name}}</option>
+                                                    @foreach ($loc as  $location)
+                                                    <option value="{{$location->id}}">{{$location->name}}</option>
                                                     @endforeach
 
                                                 </select>

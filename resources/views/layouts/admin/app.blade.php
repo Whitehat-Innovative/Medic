@@ -135,7 +135,7 @@
 
 
 
-                         <li 
+                         <li
                         class="{{Route::currentRouteName() == 'blog.view' ?  'active open' : '' }}">
 
 
@@ -175,6 +175,26 @@
                                 <li><a href="{{route('all.patients')}}">All Patients</a></li>
                             </ul>
                         </li>
+
+                        <li class="{{Route::currentRouteName() == 'add.location.view' ?  'active open' : '' }}"><a href="javascript:void(0);" class="menu-toggle"><i
+                                    class="zmdi zmdi-label-alt"></i><span>Location</span> </a>
+                            <ul class="ml-menu">
+
+                                <li><a href="{{route('add.location.view')}}">Add Location</a></li>
+                                <li><a href="{{route('all.location')}}">All Location</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="{{Route::currentRouteName() == 'add.image.view' ?  'active open' : '' }}"><a href="javascript:void(0);" class="menu-toggle"><i
+                                    class="zmdi zmdi-label-alt"></i><span>Gallery</span> </a>
+                            <ul class="ml-menu">
+
+                                <li><a href="{{route('add.image.view')}}">Add Image</a></li>
+                                {{-- <li><a href="{{route('all.location')}}">All Location</a></li> --}}
+                            </ul>
+
+                        </li>
+
 
                         {{-- <li><a href="javascript:void(0);" class="menu-toggle"><i
                                     class="zmdi zmdi-balance-wallet"></i><span>Patient | Donation </span> </a>

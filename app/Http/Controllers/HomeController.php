@@ -72,8 +72,8 @@ class HomeController extends Controller
     }
     public function appointment()
     {
-        $loc = Location::all();
-        return view ('users.appointment',['loc'=>$loc]);
+        $location = Location::all();
+        return view ('users.appointment',['loc'=>$location]);
     }
     public function research()
     {
