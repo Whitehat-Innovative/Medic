@@ -28,7 +28,7 @@
                                 <div class="header">
                                     <span>
 
-                                        <p>Patient Details</p>
+                                        <p>User Details</p>
 
                                     </span>
                                 </div>

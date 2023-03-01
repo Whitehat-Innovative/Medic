@@ -43,7 +43,7 @@ Route::get('/dashboard', function () {
 
     $pa= Patient::all();
     $p= Patient::paginate(5);
-    $a=Appointment::latest()->paginate(3);
+    $a=Appointment::latest()->paginate(1);
     // $loc = Location::where('id', $a->location);
     $d=Donation::all();
     $b=Blog::all();
@@ -164,10 +164,9 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/add/image/view', [GalleryController::class, 'addimageview'])->name('add.image.view');
     Route::post('/add/image', [GalleryController::class, 'addimage'])->name('add.image');
 
-    Route::post('/delete/image/{image}', [GalleryController::class, 'deleteimage'])->name('delete.image');
-    Route::get('/edit/image/view', [GalleryController::class, 'editimageview'])->name('edit.image.view');
+    Route::get('/delete/image/{image}', [GalleryController::class, 'deleteimage'])->name('delete.image');
+    Route::get('/view/image/{images}', [GalleryController::class, 'imageview'])->name('image.view');
     Route::get('/all/image/view', [GalleryController::class, 'allimageview'])->name('all.image.view');
-    Route::post('/edit/image/{image}', [GalleryController::class, 'editimage'])->name('edit.image');
 
     /* Category/Tags */
     Route::get('/cat-tag', [PostController::class, 'cat'])->name('cat.tag.view');

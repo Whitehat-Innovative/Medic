@@ -35,11 +35,11 @@
                                         <input type="file" class="form-control" name="image[]" multiple />
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" name="details"  placeholder="Detail" />
+                                        <input class="form-control" name="details"  placeholder=" Image Detail" />
                                         {{-- <input type="text" class="form-control" name="description"  placeholder="Enter New Description" /> --}}
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" name="tags"  placeholder="Enter New Location" />
+                                        <input class="form-control" name="tags"  placeholder="Enter tag" />
                                         {{-- <input type="text" class="form-control" name="description"  placeholder="Enter New Description" /> --}}
                                     </div>
 

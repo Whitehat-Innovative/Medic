@@ -30,10 +30,10 @@ class AppointmentController extends Controller
         if ($check == 007) {
 
             $a->delete();
-            return view('admins.allappointments');
+            return back();
             Alert::success('Deleted', 'Comment Deleted');
         }
-            return view('admins.allappointments');
+            return back();
             Alert::info('Fail', 'You are not an admin');
 
     }

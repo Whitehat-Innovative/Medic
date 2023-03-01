@@ -186,11 +186,11 @@
 
                         </li>
                         <li class="{{Route::currentRouteName() == 'add.image.view' ?  'active open' : '' }}"><a href="javascript:void(0);" class="menu-toggle"><i
-                                    class="zmdi zmdi-label-alt"></i><span>Gallery</span> </a>
+                                    class="zmdi zmdi-copy"></i><span>Gallery</span> </a>
                             <ul class="ml-menu">
 
                                 <li><a href="{{route('add.image.view')}}">Add Image</a></li>
-                                {{-- <li><a href="{{route('all.location')}}">All Location</a></li> --}}
+                                <li><a href="{{route('all.image.view')}}">All Images</a></li>
                             </ul>
 
                         </li>

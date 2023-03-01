@@ -4,7 +4,7 @@
             <div class="block-header">
                 <div class="row">
                     <div class="col-lg-7 col-md-5 col-sm-12">
-                        <h2>Contact
+                        <h2>All users
                             <small>Welcome to Zolive</small>
                         </h2>
                     </div>
@@ -12,8 +12,8 @@
                         <ul class="breadcrumb float-md-right">
                             <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Zolive</a>
                             </li>
-                            <li class="breadcrumb-item"><a href="javascript:void(0);">App</a></li>
-                            <li class="breadcrumb-item active">Contact</li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Users</a></li>
+                            <li class="breadcrumb-item active">All users</li>
                         </ul>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                             <div class="body">
                                 <ul class="nav nav-tabs padding-0">
                                     <li class="nav-item"><a class="nav-link active" data-toggle="tab"
-                                            href="#Doctors">All Admin</a></li>
+                                            href="#Doctors">All users</a></li>
 
                                 </ul>
                             </div>
@@ -136,7 +136,7 @@
 
 
 
-                                                            
+
                                                             @if ($users->code==007)
 
                                                             <a onclick="confirmation(event)" class="btn btn-icon btn-neutral btn-icon-mini "
@@ -144,7 +144,7 @@
                                                                             class="zmdi zmdi-delete mt-1"></i></a>
 
 
-                                                          
+
                                                             <button class="btn btn-icon btn-neutral btn-icon-mini">
                                                                 <a href="{{route('edit.view', $users)}}"><i
                                                                         class="zmdi zmdi-edit"></i></a></button>
