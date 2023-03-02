@@ -82,7 +82,7 @@ Route::post('/addcomment', [PostController::class, 'addcomment'])->name('add.com
 Route::post('/addreply/{comment}', [PostController::class, 'addreply'])->name('add.reply');
 
 
-Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/gallery/view', [HomeController::class, 'gallery'])->name('gallery.view');
 // Route::get('/single_project', [HomeController::class, 'single_project'])->name('single_project');
 
 Route::get('/services', [HomeController::class, 'services'])->name('services');
