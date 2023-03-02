@@ -70,7 +70,7 @@
                                                     <tr>
                                                         <th>#</th>
                                                         <th>Donor Name</th>
-                                                        <th>Anonimous Donor Name</th>
+                                                        <th>Anonymous Donor Name</th>
                                                         {{-- <th>Patient</th> --}}
                                                         <th>Email</th>
                                                         <th> Amount Paid </th>

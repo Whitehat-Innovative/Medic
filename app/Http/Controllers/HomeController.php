@@ -66,7 +66,6 @@ class HomeController extends Controller
     public function gallery()
     {
         $gallery = Gallery::latest()->get();
-
         return view('users.gallery',
          ['gal'=> $gallery]);
     }

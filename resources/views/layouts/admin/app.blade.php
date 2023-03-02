@@ -53,7 +53,7 @@
                 </div>
             </li>
 
-            <li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
+            <li><a href="{{route('outreaches')}}" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
                     role="button"><i class="zmdi zmdi-notifications"></i>
                     <div class="notify"><span class="heartbit"></span><span class="point"></span></div>

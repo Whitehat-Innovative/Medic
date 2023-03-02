@@ -10,12 +10,14 @@ use RealRashid\SweetAlert\Facades\Alert;
 class GalleryController extends Controller
 {
     public function addimageview(){
-        return view('admins.addimagetogalleryview');
+        $tags = Gallery::all('id','tags');
+        return view('admins.addimagetogalleryview',['tags'=>$tags]);
 
     }
     public function addimage(Request $request){
         $request->validate([
-            'details' => 'string|required'
+            'details' => 'string|required',
+            'tags' => 'integer|required'
         ]);
 
         $image=[];
@@ -26,8 +28,6 @@ class GalleryController extends Controller
             $photo->move(public_path('gallery'),$imagename);
             $image[]=$imagename;
         }
-
-
 
         $gallery = new Gallery();
         $gallery->details = $request->details;

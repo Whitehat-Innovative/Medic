@@ -37,11 +37,11 @@
                                 <div class="body">
                                     <h3 class="m-t-0 m-b-5"><a href="#">Research Content</a></h3>
 
-
+                                    <a href="/research/{{$re->image}}"><img src="/research/{{$re->image}}" alt="" srcset=""></a>
                                     <p>{{$re->content}}</p>
 
                                     <a href="{{route('delete.research', $re)}}" onclick="confirmation(event)"  class="btn btn-round btn-info">Delete</a>
-                                    <a href="{{route('edit.research', $re)}}" class="btn btn-round btn-info">Edit</a>
+                                    <a href="{{route('research.edit.view', $re)}}" class="btn btn-round btn-info">Edit</a>
                                 </div>
                             </div>
 

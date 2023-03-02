@@ -31,7 +31,7 @@
                                         <input type="text" class="form-control" name="title" placeholder="Enter Research title" />
                                     </div>
                                     <div class="form-group">
-                                        <textarea name="content" class="form-control"  id="" placeholder="Enter Research Content " cols="20" rows="10"> </textarea>
+                                        <textarea name="content" class="form-control"  id="" placeholder="Enter Research Content" cols="20" rows="10"> </textarea>
                                         {{-- <input type="text" class="form-control" name="content"  placeholder="Enter Blog title" /> --}}
                                     </div>
 
@@ -55,7 +55,7 @@
                                     </select>
 
                                     <div class="  mt-4 mb-2">
-                                        <label for="image" class="header"> INSERT AN IMAGE IN-LINE WITH YOUR RESEARCH</label>
+                                        <label for="image" class="header"> INSERT IMAGES OR DOCUMENTS IN-LINE WITH YOUR RESEARCH</label>
                                         <input name="image" type="file"  accept="image*/"  multiple />
                                     </div>
 

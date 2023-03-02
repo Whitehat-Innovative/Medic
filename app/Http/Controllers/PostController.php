@@ -30,6 +30,14 @@ class PostController extends Controller
         return back();
 
     }
+
+    public function addlocationview(){
+
+        $l = Location::all();
+        return view('admins.addlocationview', ['l'=>$l]);
+
+    }
+
     public function editlocationview(Location $location){
 
 
@@ -135,6 +143,10 @@ class PostController extends Controller
         $ct =Category::all();
 
         return view('admins/addresearch', ['cat'=>$ct]);
+    }
+    public function editresearchview()
+    {
+        return view('admins/editresearchview');
     }
 
     public function addpost(Request $request, Blog $blog){
