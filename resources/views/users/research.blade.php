@@ -51,18 +51,19 @@
                         <div class="pq-post-meta">
                             <ul>
                                 <li class="pq-post-author"><i class="fa fa-user"></i>{{$rea->author}}</li>
-                                <li class="pq-post-comment"> <a href="#"><i
-                                            class="fa fa-comments"></i>
-                                        {{number_format($rea->comments->count())}} {{Str::plural('Comment',$rea->comments->count())}} </a> </li>
+                                <li class="pq-post-comment"> <a href="#"><i class="fa fa-comments"></i>
+                                        {{number_format($rea->comments->count())}}
+                                        {{Str::plural('Comment',$rea->comments->count())}} </a> </li>
                             </ul>
                         </div>
-                        <h5 class="pq-blog-title"><a href="#">{{$rea->tilte}}</a>
+                        <h5 class="pq-blog-title"><a href="#">{{$rea->title}}</a>
                         </h5>
                         <div class="pq-blog-info">
                             <p>{{Str::substr($rea->content, 0,15)}}</p>
                         </div>
                         <div class="pq-btn-container">
-                            <a href="{{route('single_blog', [$rea, Str::slug($rea->title)])}}" class="pq-button pq-button-flat">
+                            <a href="{{route('single_blog', [$rea, Str::slug($rea->title)])}}"
+                                class="pq-button pq-button-flat">
                                 <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
                                         class="ion ion-plus-round"></i> </div>
                             </a>
@@ -70,9 +71,9 @@
                     </div>
                 </div>
             </div>
-                @endforeach
-            </div>
+            @endforeach
         </div>
+    </div>
     </div>
 </section>
 @endsection
