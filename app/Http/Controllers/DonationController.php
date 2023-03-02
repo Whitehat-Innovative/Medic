@@ -74,6 +74,7 @@ class DonationController extends Controller
 
         //  get reference from payment details gotten from paystack
         $reference = $paymentDetails['data']['reference'];
+
         // get transaction from db
         $donation = Donation::where('reference', $reference)->first();
 

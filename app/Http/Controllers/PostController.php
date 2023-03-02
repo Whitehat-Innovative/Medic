@@ -104,7 +104,7 @@ class PostController extends Controller
         if ($check == 007) {
 
             $re->delete();
-            return view('admins.allresearch');
+            return back();
             Alert::success('Success', 'Research Deleted');
         }
             return back();
@@ -206,7 +206,6 @@ class PostController extends Controller
             'author' => 'string|required',
             'user_id' => 'integer'
         ]);
-// dd($request->all());
         if ($request->hasFile('image')) {
 
             $ext= $request->file('image')->getClientOriginalExtension();
@@ -241,8 +240,57 @@ class PostController extends Controller
         return back();
 
     }
+    public function editresearch(Request $request, Research $research){
+
+        $request->validate([
+            // 'image' => 'string|required',
+            'content' => 'string|required',
+            'title' => 'string|required',
+            'reference' => 'string',
+            'category_id' => 'integer',
+            'author' => 'string|required',
+            'user_id' => 'integer'
+        ]);
+        if ($request->hasFile('image')) {
+
+            $ext= $request->file('image')->getClientOriginalExtension();
+            $filename = \Str::slug($request->title).time().'.'.$ext;
+            $request->image->move(public_path('Research-image') , $filename);
 
 
+            $research->image =$filename;
+            $research->title =$request->title;
+            $research->content =$request->content;
+            $research->reference =$request->reference;
+            $research->category =$request->category;
+            $research->author =$request->author;
+            $research->user_id = Auth::user()->id;
+
+            $research->save();
+            Alert::success('Research', 'Research edited successfully');
+            # code...
+        }
+
+        $research->title =$request->title;
+        $research->content =$request->content;
+        $research->reference =$request->reference;
+        $research->category =$request->category;
+        $research->author =$request->author;
+        $research->user_id = Auth::user()->id;
+
+        $research->save();
+        Alert::success('Research', 'Research Edited successfully');
+        return back();
+
+    }
+
+
+    public function editresearchview(Request $request, Research $re){
+
+        $rea=Research::find($re->id);
+        return view('admins.editresearchview', ['research'=>$rea]);
+
+    }
     public function addCat(Request $request){
         $request->validate([
             'category' => 'string',

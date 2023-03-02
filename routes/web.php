@@ -127,10 +127,10 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     /* Research/Blog route */
     Route::get('/addresearch/view', [PostController::class,'research'])->name('research');
-    Route::get('/editresearch/{}/view', [PostController::class, 'editresearchview'])->name('research.edit.view');
+    Route::get('/editresearch/{re}/view', [PostController::class, 'editresearchview'])->name('research.edit.view');
 
     Route::post('/addresearch', [PostController::class,'addresearch'])->name('research.add');
-    Route::post('/editresearch', [PostController::class, 'editresearch'])->name('research.edit');
+    Route::post('/editresearch/{research}', [PostController::class, 'editresearch'])->name('research.edit');
     Route::get('/deleteresearch/{re}', [PostController::class, 'destroyresearch'])->name('delete.research');
 
     Route::get('/researchlist', [PostController::class, 'allresearch'])->name('research.list');
