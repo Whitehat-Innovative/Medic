@@ -78,7 +78,7 @@ class HomeController extends Controller
     public function research()
     {
         $rea= Research::latest()->get();
-        return view ('users.research', ['rea'=>$rea]);
+        return view ('users.research', ['re'=>$rea]);
     }
     public function services()
     {
@@ -93,6 +93,14 @@ class HomeController extends Controller
 
         return view ('users.blog', ['blo'=>$bl]);
     }
+
+    public function single_research(Research $rea)
+    {
+        $re= Research::find($rea->id);
+        return view('users.single_research',['r'=>$re,]);
+    }
+
+
     public function single_blog(Blog $blog)
     {
 
@@ -103,6 +111,8 @@ class HomeController extends Controller
 
         return view('users.single_blog',['blog'=>$bl,'c'=>$c ]);
     }
+
+
     // this is for the donate
     public function donate()
     {
