@@ -39,14 +39,14 @@
                             <div class="img-post m-b-15">
                                 <div id="carouselExampleControls" class="" data-ride="carousel">
                                     <div class="carousel-inner" role="listbox">
-
+                                        <img src="/Research-image/{{$re->image}}" alt="">
                                     </div>
 
                                 </div>
                                 <div class="social_share">
                                 </div>
                             </div>
-                            <p>{{$re->content}}</p>
+                            <p>{{Str::substr($re->content, 0,15)}}</p>
                             <a href="{{route('single.research', $re)}}" title="read more" class="btn btn-round btn-info">Read More</a>
                             <a href="{{route('delete.research', $re)}}" onclick="confirmation(event)"  class="btn btn-round btn-info">Delete</a>
                         </div>
@@ -81,7 +81,7 @@
       var urlToRedirect = ev.currentTarget.getAttribute('href');
       console.log(urlToRedirect);
       swal({
-          title: "Are you sure to cancel this product",
+          title: "Are you sure to Delete this Research",
           text: "You will not be able to revert this!",
           icon: "warning",
           buttons: true,

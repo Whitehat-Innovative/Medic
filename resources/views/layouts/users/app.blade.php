@@ -112,8 +112,8 @@
                                             <a href="{{ route('services') }}">Services</a>
 
                                         </li>
-                                        <li class="menu-item {{ Route::currentRouteName() == 'gallery' ? 'current-menu-item' : '' }} ">
-                                            <a href="{{ route('gallery') }}">Our Gallery</a>
+                                        <li class="menu-item {{ Route::currentRouteName() == 'gallery.view' ? 'current-menu-item' : '' }} ">
+                                            <a href="{{ route('gallery.view') }}">Our Gallery</a>
 
                                         </li>
                                         <li class="menu-item ">
@@ -237,7 +237,7 @@
                                         <li><a href="{{route('contact')}}">Contact Us</a></li>
                                         <li><a href="{{route('services')}}">Our Services</a></li>
                                         <li><a href="{{route('blog')}}">Our Blog</a></li>
-                                        <li><a href="{{route('gallery')}}">Gallery</a></li>
+                                        <li><a href="{{route('gallery.view')}}">Gallery</a></li>
                                         <li><a href="{{route('donate')}}">Donate</a></li>
 
                                     </ul>

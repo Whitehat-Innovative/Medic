@@ -68,7 +68,10 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/make_contact', [HomeController::class, 'make_contact'])->name('make.contact');
 Route::get('/appointment', [HomeController::class, 'appointment'])->name('appointment');
+
+
 Route::get('/research', [HomeController::class, 'research'])->name('user.research');
+Route::get('/single_research/{rea}', [HomeController::class, 'single_research'])->name('single.research.view');
 
 Route::post('/make_testimonial', [HomeController::class, 'make_testimonial'])->name('make.testimonial');
 
@@ -80,7 +83,7 @@ Route::post('/addcomment', [PostController::class, 'addcomment'])->name('add.com
 Route::post('/addreply/{comment}', [PostController::class, 'addreply'])->name('add.reply');
 
 
-Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/gallery/view', [HomeController::class, 'gallery'])->name('gallery.view');
 // Route::get('/single_project', [HomeController::class, 'single_project'])->name('single_project');
 
 Route::get('/services', [HomeController::class, 'services'])->name('services');
@@ -128,10 +131,10 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
     /* Research/Blog route */
     Route::get('/addresearch/view', [PostController::class,'research'])->name('research');
-    Route::get('/editresearch/{}/view', [PostController::class, 'editresearchview'])->name('research.edit.view');
+    Route::get('/editresearch/{re}/view', [PostController::class, 'editresearchview'])->name('research.edit.view');
 
     Route::post('/addresearch', [PostController::class,'addresearch'])->name('research.add');
-    Route::post('/editresearch', [PostController::class, 'editresearch'])->name('research.edit');
+    Route::post('/editresearch/{research}', [PostController::class, 'editresearch'])->name('research.edit');
     Route::get('/deleteresearch/{re}', [PostController::class, 'destroyresearch'])->name('delete.research');
 
     Route::get('/researchlist', [PostController::class, 'allresearch'])->name('research.list');
