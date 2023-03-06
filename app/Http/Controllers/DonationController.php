@@ -6,6 +6,7 @@ use App\Models\Donation;
 use App\Models\Patient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DonationController extends Controller
 {
@@ -56,7 +57,8 @@ class DonationController extends Controller
 
             $donation->status='failed';
             $donation->save();
-return back();
+        Alert::info('Info', 'Donation Failed');
+        return back();
             // dd(\Paystack::getAuthorizationUrl());
             //     $transaction->status = 'failed';
             //     $transaction->save();
@@ -124,6 +126,8 @@ return back();
         //     $sub->save();
         // }
         // return success message
+        Alert::success('Success', 'Donation Successfull');
+
         return back();
         // return Inertia::render('Dashboard/Userdash/User_purchased_course');
         // return back()->with(['success' => 'Account credited successfully']);
