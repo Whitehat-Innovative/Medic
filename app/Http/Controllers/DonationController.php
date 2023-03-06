@@ -56,8 +56,8 @@ class DonationController extends Controller
 
             $donation->status='failed';
             $donation->save();
-
-            dd(\Paystack::getAuthorizationUrl());
+return back();
+            // dd(\Paystack::getAuthorizationUrl());
             //     $transaction->status = 'failed';
             //     $transaction->save();
             //     return back()->with(['error' => 'error while processing payments.']);
