@@ -18,7 +18,7 @@ class CreateDonationsTable extends Migration
 
             $table->string('donor_name')->nullable();
             $table->string('email')->nullable();
-            $table->string('anonymous_donor')->nullable();
+            $table->string('anonimous_donor')->nullable();
 
             $table->string('patient_id')->default('0');
 

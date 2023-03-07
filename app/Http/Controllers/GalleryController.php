@@ -9,60 +9,63 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class GalleryController extends Controller
 {
-    public function addimageview(){
-        return view('admins.addimagetogalleryview');
-
+    public function addimageview()
+    {
+        $tags = Gallery::all('id', 'tags_id');
+        return view('admins.addimagetogalleryview', ['tags' => $tags]);
     }
-    public function addimage(Request $request){
+    public function addimage(Request $request)
+    {
         $request->validate([
-            'details' => 'string|required'
+            'details' => 'string|required',
+            'tags_id' => 'integer|required'
         ]);
 
-        $image=[];
-        foreach($request->image as $photo){
+        $image = [];
+        foreach ($request->image as $photo) {
             $ext = $photo->getClientOriginalExtension();
-            $rand= \Str::random(2).uniqid();
-            $imagename = \Str::slug($request->tag).time().$rand.'.'.$ext;
-            $photo->move(public_path('gallery'),$imagename);
-            $image[]=$imagename;
+            $rand = \Str::random(2) . uniqid();
+            $imagename = \Str::slug($request->tags_id) . time() . $rand . '.' . $ext;
+            $photo->move(public_path('gallery'), $imagename);
+
+            $gallery = new Gallery();
+            $gallery->details = $request->details;
+            $gallery->tags_id = $request->tags_id;
+            $gallery->image = $imagename;
+            $gallery->save();
         }
 
 
-
-        $gallery = new Gallery();
-        $gallery->details = $request->details;
-        $gallery->tags = $request->tags;
-        $gallery->image = implode('|',$image );
-        $gallery->save();
         Alert::success('Photos', 'Photos added successfully');
 
         return back();
-
     }
-    public function deleteimage(Gallery $image){
+    public function deleteimage(Gallery $image)
+    {
 
-        if (Auth::user()->code==007) {
-          $image->delete();
-          Alert::info('Deleted','Image deleted');
-          return back();
+        if (Auth::user()->code == 007) {
+            $image->delete();
+            Alert::info('Deleted', 'Image deleted');
+            return back();
         }
-        Alert::warning('Failed','You are not an admin');
+        Alert::warning('Failed', 'You are not an admin');
         return back();
-
     }
 
-    public function allimageview(){
+    public function allimageview()
+    {
 
-        $images=Gallery::all();
-        return view('admins.allimagesaddedtogallery',['image'=>$images]);
+        $images = Gallery::all();
+        return view('admins.allimagesaddedtogallery', ['image' => $images]);
     }
-    public function imageview(Gallery $images){
+    public function imageview(Gallery $images)
+    {
 
-        $img=Gallery::find($images->id);
+        $img = Gallery::find($images->id);
 
-        $imagg =explode('|',$img->image);
+        $imagg = explode('|', $img->image);
 
-        return view('admins.imageview',['image'=>$img, 'ima'=>$imagg]);
+        return view('admins.imageview', ['image' => $img, 'ima' => $imagg]);
     }
 
     // public function editimage(Gallery $imag, Request $request){
@@ -87,8 +90,8 @@ class GalleryController extends Controller
 
     // }
 
-//     public function editimageview(Gallery $image){
-//         $img=Gallery::find($image->id);
-//         return view('admin.editimageview',['image'=>$img]);
-//     }
+    //     public function editimageview(Gallery $image){
+    //         $img=Gallery::find($image->id);
+    //         return view('admin.editimageview',['image'=>$img]);
+    //     }
 }

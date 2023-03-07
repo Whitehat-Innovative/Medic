@@ -39,8 +39,15 @@
                                         {{-- <input type="text" class="form-control" name="description"  placeholder="Enter New Description" /> --}}
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" name="tags"  placeholder="Enter tag" />
-                                        {{-- <input type="text" class="form-control" name="description"  placeholder="Enter New Description" /> --}}
+                                        <select name="tags_id" >
+                                            <option disabled selected value="">Select Tags</option>
+                                            <option value="30">Clinic</option>
+                                            <option value="36">Family</option>
+                                            <option value="32">Laboratory</option>
+                                            <option value="33">Pediatrics</option>
+                                            <option value="34">Therapy</option>
+                                            <option value="37">Surgery</option>
+                                        </select>
                                     </div>
 
 

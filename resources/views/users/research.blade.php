@@ -51,10 +51,10 @@
                         <div class="pq-post-meta">
                             <ul>
                                 <li class="pq-post-author"><i class="fa fa-user"></i>{{$rea->author}}</li>
-                               
+
                             </ul>
                         </div>
-                        <h5 class="pq-blog-title"><a href="#">{{$rea->tilte}}</a>
+                        <h5 class="pq-blog-title"><a href="#">{{$rea->title}}</a>
                         </h5>
                         <div class="pq-blog-info">
                             <p>{{Str::substr($rea->content, 0,15)}}</p>
@@ -68,9 +68,9 @@
                     </div>
                 </div>
             </div>
-                @endforeach
-            </div>
+            @endforeach
         </div>
+    </div>
     </div>
 </section>
 @endsection

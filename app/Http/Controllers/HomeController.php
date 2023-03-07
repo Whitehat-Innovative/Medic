@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index()
     {
         $loc = Location::all();
-        $blo = Blog::latest()->take(5);
+        $blo = Blog::latest()->get()->take(5);
         $test = Testimonial::latest()->get();
         return view('users.welcome', ['blo'=>$blo, 'tes'=>$test, 'loc'=>$loc]);
     }
@@ -29,7 +29,8 @@ class HomeController extends Controller
     }
     public function contact()
     {
-        return view ('users.contact');
+        $loc = Location::all();
+        return view ('users.contact', ['loc'=>$loc]);
     }
     public function make_contact(Contact $contact, Request $request){
         $request->validate([
@@ -66,7 +67,6 @@ class HomeController extends Controller
     public function gallery()
     {
         $gallery = Gallery::latest()->get();
-
         return view('users.gallery',
          ['gal'=> $gallery]);
     }

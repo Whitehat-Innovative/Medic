@@ -43,13 +43,14 @@ class AppointmentController extends Controller
              'name' => 'string|required',
              'email' => 'string|nullable',
            'phone' => 'string|required',
+           'location_id' => 'integer|required',
             'appointment_note' => 'string|required'
          ]);
         $appointment = new Appointment();
         $appointment->name = $request->name;
         $appointment->email = $request->email;
         $appointment->phone = $request->phone;
-        $appointment->location = $request->location;
+        $appointment->location_id = $request->location_id;
         $appointment->appointment_note = $request->appointment_name;
         $appointment->save();
         Mail::to(Auth::user()->email)->send(new MailAppointment($appointment));

@@ -10,7 +10,7 @@
                     </div>
                     <div class="col-lg-5 col-md-7 col-sm-12">
                         <ul class="breadcrumb float-md-right">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Zolive</a>
+                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}"><i class="zmdi zmdi-home"></i> Zolive</a>
                             </li>
                             <li class="breadcrumb-item"><a href="blog-dashboard.html">Blog</a></li>
                             <li class="breadcrumb-item active">New Post</li>
@@ -27,6 +27,12 @@
                                 @csrf
                                 <div class="body">
 
+                                    @foreach ($errors->all() as $err)
+                                    <p class="text-white alert alert-danger">
+                                        {{$err}}
+                                    </p>
+                                    @endforeach
+
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="title" placeholder="Enter Blog title" />
                                     </div>
@@ -39,8 +45,8 @@
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="author"  placeholder="Enter Author name" />
                                     </div>
-                                    <select name="category"  class="mt-2">
-                                        <option selected disabled>Select Category --</option>
+                                    <select name="category_id"  class="mt-2">
+                                        <option selected disabled>Select Category </option>
                                        @foreach ($cat as $category)
                                        <option value="{{$category->id}}" >{{$category->category}}</option>
                                        @endforeach

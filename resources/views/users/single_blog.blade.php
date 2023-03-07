@@ -38,10 +38,10 @@
 <div class="blog-single pq-pt-130 pq-pb-210">
     <div class="container">
         <div class="row">
-            <div class="col-xl-8 col-lg-8 col-md-12">
+            <div class="col-xl-6 col-lg-8 col-md-12">
                 <div class="pq-blog-post">
-                    <div class="pq-post-media"> <img src="/Blog-image/{{$blog->images}}" class="img-fluid"
-                            alt="medicate">
+                    <div class="pq-post-media"> <a href="/Blog-image/{{$blog->images}}"> <img src="/Blog-image/{{$blog->images}}" class="img-fluid"
+                            alt="medicate"> </a>
                         <div class="pq-post-date">
                             <a href="#"> <span>{{$blog->created_at->diffForHumans()}}</span> </a>
                         </div>
@@ -274,7 +274,7 @@
                     @endguest
                 </div>
             </div>
-            <div class="col-lg-4 mt-lg-0 mt-5">
+            <div class="col-lg-6 mt-lg-0 mt-5">
                 <div class="Sidebar-style-2">
 
                     <div class="pq-widget pq-widget_media_image">

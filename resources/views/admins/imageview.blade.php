@@ -21,7 +21,7 @@
             <div class="container-fluid">
                 <div class="row clearfix">
 
-                    
+
 
                     @foreach ($ima as $image)
                     <div class="col-lg-4 col-md-4 col-sm-6">
@@ -37,11 +37,13 @@
                             <div class="body">
 
                                 <div class="row clearfix container">
-                                    <img src="/gallery/{{$image}}" class="rounded-circle avatar" alt="">
+                                    <a href="/gallery/{{$image}}">
+                                    <img src="/gallery/{{$image}}" class="" alt="">
+                                </a>
                                 </div>
 
                             </div>
-                            <button type="submit" class="btn btn-primary btn-round"><a href="{{route('gallery')}}">Check
+                            <button type="submit" class="btn btn-primary btn-round"><a href="{{route('gallery.view')}}">Check
                                     these images out in your guest Gallery Page!!</a></button>
 
                         </div>

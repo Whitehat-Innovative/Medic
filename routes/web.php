@@ -7,6 +7,7 @@ use App\Http\Controllers\DonationController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SugicalOutreachController;
 use App\Http\Controllers\UserController;
 use App\Models\Appointment;
 use App\Models\Blog;
@@ -185,6 +186,8 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/edit/location/view/{location}', [PostController::class, 'editlocationview'])->name('edit.location.view');
     Route::post('/edit/location/{location}', [PostController::class, 'editlocation'])->name('edit.location');
 
+    Route::get('/addsurgicaloutreach', [SugicalOutreachController::class, 'surgeryadd'])->name('outreaches');
+    Route::post('/postsurgicaloutreach', [SugicalOutreachController::class, 'surgerypost'])->name('outreaches.post');
 
 
 

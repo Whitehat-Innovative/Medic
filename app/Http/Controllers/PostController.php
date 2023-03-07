@@ -30,6 +30,14 @@ class PostController extends Controller
         return back();
 
     }
+
+    public function addlocationview(){
+
+        $l = Location::all();
+        return view('admins.addlocationview', ['l'=>$l]);
+
+    }
+
     public function editlocationview(Location $location){
 
 
@@ -37,6 +45,9 @@ class PostController extends Controller
 
     }
     public function editlocation(Request $request, Location $location){
+        $request->validate([
+            'name' => 'string'
+        ]);
 
         $location->name=$request->name;
         $location->save();
@@ -134,10 +145,11 @@ class PostController extends Controller
 
     public function research()
     {
-        $ct =Category::all();
+        $cat =Category::all();
 
-        return view('admins/addresearch', ['cat'=>$ct]);
+        return view('admins/addresearch', ['cat'=>$cat]);
     }
+
 
     public function addpost(Request $request, Blog $blog){
 
@@ -160,10 +172,11 @@ class PostController extends Controller
         $request->image->move(public_path('Blog-image'), $filename);
 
 
+
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->content = $request->content;
-        $blog->category_id = $request->category;
+        $blog->category_id = $request->category_id;
         $blog->author = $request->author;
         $blog->user_id = Auth::user()->id;
         $blog->images = $filename;
@@ -199,7 +212,6 @@ class PostController extends Controller
             return back();
             Alert::success('Success', 'Blog deleted Successfully');
         }
-            return back();
             Alert::info('Fail', 'You are not an admin');
 
     }
@@ -233,8 +245,10 @@ class PostController extends Controller
 
             $research->save();
             Alert::success('Research', 'Research added successfully');
+        return back();
+
             # code...
-        }
+        }else
 
         $research =new Research();
         $research->title =$request->title;
@@ -271,7 +285,7 @@ class PostController extends Controller
             $research->title =$request->title;
             $research->content =$request->content;
             $research->reference =$request->reference;
-            $research->category =$request->category;
+            $research->category_id =$request->category_id;
             $research->author =$request->author;
             $research->user_id = Auth::user()->id;
 
@@ -283,7 +297,7 @@ class PostController extends Controller
         $research->title =$request->title;
         $research->content =$request->content;
         $research->reference =$request->reference;
-        $research->category =$request->category;
+        $research->category_id =$request->category_id;
         $research->author =$request->author;
         $research->user_id = Auth::user()->id;
 
@@ -297,7 +311,7 @@ class PostController extends Controller
     public function editresearchview(Request $request, Research $re){
 
         $rea=Research::find($re->id);
-        return view('admins.editresearchview', ['research'=>$rea]);
+        return view('admins.editresearchview', ['research'=>$re]);
 
     }
     public function addCat(Request $request){

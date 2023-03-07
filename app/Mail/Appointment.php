@@ -28,6 +28,6 @@ class Appointment extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.appointment');
+        return $this->markdown('emails.appointment', []);
     }
 }

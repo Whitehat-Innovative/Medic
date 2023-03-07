@@ -49,11 +49,11 @@
                 <div class="navbar-header">
                     <a href="javascript:void(0);" class="bars"></a>
                     <a class="navbar-brand" href="{{route('welcome')}}"><img src="/assets/images/logo.png" width="30"
-                            alt="Oreo"><span class="m-l-10">Zolive</span></a>
+                            alt="Zolive"><span class="m-l-10">Zolive</span></a>
                 </div>
             </li>
 
-            <li><a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a></li>
+            <li><a href="{{route('outreaches')}}" title="Surgical Outreaches"><i class="zmdi zmdi-account-box-phone"></i></a></li>
             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
                     role="button"><i class="zmdi zmdi-notifications"></i>
                     <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
@@ -119,7 +119,7 @@
                     <ul class="list">
                         <li>
                             <div class="user-info">
-                                <div class="image"><a href="{{route('view.user')}}"><img src="/User-image/{{$u->image}}"
+                                <div class="image"><a href="/User-image/{{$u->image}}"><img src="/User-image/{{$u->image}}"
                                             alt="User"></a></div>
                                 <div class="detail">
                                     <h4>Dr. {{$u->name}}</h4>
