@@ -27,6 +27,7 @@
 
                             <div class="card single_post">
                                 <div class="body">
+                                    <label for=""> Name of Sender</label>
                                     <h3 class="m-t-0 m-b-5"><a href="#">{{$app->name}}</a></h3>
                                     <ul class="meta">
                                         {{-- <li><a href="#"><i class="zmdi zmdi-account col-blue"></i>Sex: {{$->sex}}</a></li> --}}
