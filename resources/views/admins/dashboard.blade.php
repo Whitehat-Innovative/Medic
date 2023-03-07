@@ -69,12 +69,13 @@
                     </div>
                 </div>
 
-                <div class="row clearfix ">
+                <div class="row clearfix">
                     @foreach ($a as $appointment)
-                    <div class="col-lg-4  col-md-12">
+
+                    <div class="col-lg-4 col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h2><strong>Appointment</strong> Timeline</h2>
+                                <h2><strong>Dr's.</strong> Appointment</h2>
                                 <ul class="header-dropdown">
                                     <li class="remove">
                                         <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
@@ -85,29 +86,27 @@
                                 <div class="new_timeline">
                                     <div class="header">
                                         <div class="color-overlay">
-                                            <div class="day-number">{{$appointment->created_at->diffForHumans()}}</div>
+                                            <div class="day-number">{{$appointment->created_at->format('d')}}</div>
                                             <div class="date-right">
-                                                <div class="day-name">{{$appointment->name}}</div>
-                                                <div class="month">{{$appointment->email}}</div>
-                                            {{-- </div class="location"> {{$loc->name}} </div> --}}
+                                            <div class="day-name">{{$appointment->email}}</div>
+                                            <div class="month">{{$appointment->created_at->diffForHumans()}}</div>
+                                            </div>
                                         </div>
                                     </div>
 
                                 </div>
-
-
-
                             </div>
                         </div>
-
                     </div>
 
                     @endforeach
 
                 </div>
 
+              
+
             </div>
-            
+
 
 
         </section>

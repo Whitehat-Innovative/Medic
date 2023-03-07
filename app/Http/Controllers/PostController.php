@@ -128,6 +128,8 @@ class PostController extends Controller
         $ct =Category::all();
         return view('admins/addblog', ['cat'=>$ct]);
     }
+
+
     public function singleblog(Blog $blog)
     {
         $blo =Blog::with('comments')->find($blog->id);
@@ -154,11 +156,14 @@ class PostController extends Controller
         $request->validate([
             'title' => 'string|required',
             'content' => 'string|required',
-            'category_id' => 'integer|required',
+            // 'category_id' => 'integer|required',
+            'category' => 'integer|required',
             'author' => 'string',
-            'user_id' => 'integer',
+            // 'user_id' => 'integer',
             // 'images' => 'string|required'
         ]);
+
+        // dd($request->all());
 
         if ($request->hasFile('image')) {
 
@@ -176,22 +181,24 @@ class PostController extends Controller
         $blog->user_id = Auth::user()->id;
         $blog->images = $filename;
         $blog->save();
+        Alert::success('Success', 'Blog Added successfully');
+
         return back();
-
-        } else
-
-         $blog = new Blog();
-         $blog->title = $request->title;
-         $blog->content = $request->content;
-         $blog->category_id = $request->category_id;
-         $blog->author = $request->author;
-         $blog->user_id = Auth::user()->id;
-         $blog->save();
-
-
+        }else {
+            $blog = new Blog();
+        $blog->title = $request->title;
+        $blog->content = $request->content;
+        $blog->category_id = $request->category;
+        $blog->author = $request->author;
+        $blog->user_id = Auth::user()->id;
+        $blog->save();
 
         Alert::success('Success', 'Blog Added successfully');
         return back();
+        }
+
+
+
     }
 
 
