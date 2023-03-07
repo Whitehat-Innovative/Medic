@@ -285,7 +285,7 @@ class PostController extends Controller
             $research->title =$request->title;
             $research->content =$request->content;
             $research->reference =$request->reference;
-            $research->category =$request->category;
+            $research->category_id =$request->category_id;
             $research->author =$request->author;
             $research->user_id = Auth::user()->id;
 
@@ -297,7 +297,7 @@ class PostController extends Controller
         $research->title =$request->title;
         $research->content =$request->content;
         $research->reference =$request->reference;
-        $research->category =$request->category;
+        $research->category_id =$request->category_id;
         $research->author =$request->author;
         $research->user_id = Auth::user()->id;
 
