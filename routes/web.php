@@ -43,7 +43,7 @@ Route::get('/dashboard', function () {
 
     $pa= Patient::all();
     $p= Patient::paginate(5);
-    $a=Appointment::latest()->paginate(2);
+    $a=Appointment::latest()->paginate(3);
     // $loc = Location::where('id', $a->location);
     $d=Donation::all();
     $b=Blog::all();
