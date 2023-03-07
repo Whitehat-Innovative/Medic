@@ -51,24 +51,26 @@
                         </div>
                         <div class="pq-masonry " data-next_items="3" data-initial_items="6">
                            <div class="grid-sizer pq-col-3"></div>
+                           <div class="row">
 
                            @foreach ($gal as $gallery)
 
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-6 {{$gallery->tag_id}} ">
-                              <div class="pq-portfoliobox pq-style-1">
-                                <div class="pq-portfolio-img"> <img src="/gallery/{{$gallery->image}}" class="img-fluid" alt="">
-                                    <a href="/gallery/{{$gallery->image}}">
+                            <div class="pq-masonry-item pq-filter-items  col-md-4  {{$gallery->tag_id}} ">
+                                <div class="pq-portfoliobox pq-style-1">
+                                  <div class="pq-portfolio-img"> <img src="/gallery/{{$gallery->image}}" class="img-fluid" alt="">
+                                      <a href="/gallery/{{$gallery->image}}">
 
-                                    </a>
-                                 </div>
+                                      </a>
+                                   </div>
 
-                                <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i>{{$gallery->details}}</div>
+                                  <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i>{{$gallery->details}}</div>
+                                  </div>
                                 </div>
-                              </div>
-                           </div>
+                             </div>
 
 
                            @endforeach
+                        </div>
 
 
                         </div>

@@ -1,6 +1,7 @@
 @php
 $now = now();
-$events = \App\Models\SugicalOutreach::whereDate('end_date', '<=', $now)->latest()->get();
+$events = \App\Models\SugicalOutreach::where('end_date', '<=', $now)->latest()->get();
+// dd($now);
 @endphp
 
 <!doctype html>

@@ -46,7 +46,7 @@
                                         <input type="text" class="form-control" name="author"  placeholder="Enter Author name" />
                                     </div>
                                     <select name="category_id"  class="mt-2">
-                                        <option selected disabled>Select Category --</option>
+                                        <option selected disabled>Select Category </option>
                                        @foreach ($cat as $category)
                                        <option value="{{$category->id}}" >{{$category->category}}</option>
                                        @endforeach
