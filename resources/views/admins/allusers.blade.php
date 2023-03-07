@@ -212,12 +212,10 @@
                   window.location.href = urlToRedirect;
 
               }
-
-
           });
-
-
       }
+
+      
   </script>
     </x-slot>
 </x-app-layout>
