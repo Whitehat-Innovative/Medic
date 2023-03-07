@@ -39,7 +39,7 @@
                                         {{-- <input type="text" class="form-control" name="description"  placeholder="Enter New Description" /> --}}
                                     </div>
                                     <div class="form-group">
-                                        <select name="tags" id="tags">
+                                        <select name="tags_id" >
                                             <option disabled selected value="">Select Tags</option>
                                             <option value="30">Clinic</option>
                                             <option value="36">Family</option>

@@ -11,11 +11,11 @@
                   <div class="col-lg-12">
                      <nav aria-label="breadcrumb" >
                         <div class="pq-breadcrumb-title">
-                           <h2>Pricing Plan</h2> </div>
+                           <h2>Donate</h2> </div>
                         <div class="pq-breadcrumb-container mt-2">
                            <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home mr-2"></i>Home</a></li>
-                              <li class="breadcrumb-item active">Pricing Plan</li>
+                              <li class="breadcrumb-item"><a href="{{route('welcome')}}"><i class="fas fa-home mr-2"></i>Home</a></li>
+                              <li class="breadcrumb-item active">Donate</li>
                            </ol>
                         </div>
                      </nav>
@@ -35,7 +35,7 @@
                <div class="row justify-content-center">
                   <div class="col-lg-12">
                      <div class="pq-section pq-style-1 text-center"> <span class="pq-section-sub-title">DONATE</span>
-                        <h5 class="pq-section-title">You can also donate to us</h5> </div>
+                        <h5 class="pq-section-title">You can donate to us</h5> </div>
                   </div>
 
                   {{-- @foreach ($p as $p)

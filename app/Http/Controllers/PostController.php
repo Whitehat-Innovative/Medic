@@ -143,14 +143,11 @@ class PostController extends Controller
 
     public function research()
     {
-        $ct =Category::all();
+        $cat =Category::all();
 
-        return view('admins/addresearch', ['cat'=>$ct]);
+        return view('admins/addresearch', ['cat'=>$cat]);
     }
-    public function editresearchview()
-    {
-        return view('admins/editresearchview');
-    }
+
 
     public function addpost(Request $request, Blog $blog){
 
@@ -170,10 +167,11 @@ class PostController extends Controller
         $request->image->move(public_path('Blog-image'), $filename);
 
 
+
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->content = $request->content;
-        $blog->category_id = $request->category;
+        $blog->category_id = $request->category_id;
         $blog->author = $request->author;
         $blog->user_id = Auth::user()->id;
         $blog->images = $filename;
@@ -189,6 +187,8 @@ class PostController extends Controller
         $blog->author = $request->author;
         $blog->user_id = Auth::user()->id;
         $blog->save();
+
+
 
         Alert::success('Success', 'Blog Added successfully');
         return back();
@@ -239,8 +239,10 @@ class PostController extends Controller
 
             $research->save();
             Alert::success('Research', 'Research added successfully');
+        return back();
+
             # code...
-        }
+        }else
 
         $research =new Research();
         $research->title =$request->title;
@@ -303,7 +305,7 @@ class PostController extends Controller
     public function editresearchview(Request $request, Research $re){
 
         $rea=Research::find($re->id);
-        return view('admins.editresearchview', ['research'=>$rea]);
+        return view('admins.editresearchview', ['research'=>$re]);
 
     }
     public function addCat(Request $request){

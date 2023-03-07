@@ -181,31 +181,29 @@
             <div class="pq-subscribe align-items-center">
                 <div class="container">
                     <div class="row align-items-center">
+
+                        @foreach (\App\Models\SugicalOutreach::latest()->get() as $sug )
+
                         <div class="col-lg-12">
                             <div class="pq-subscribe-bg">
                                 <div class="row align-items-center">
-                                    <div class="col-lg-5">
-                                        <div class="pq-subscribe-block"> <img src="/assets/images/Subscribe.png"
+                                    <div class="col-lg-7">
+                                        <div class="pq-subscribe-block"> <img src="/SurgicalOutreach/{{$sug->image}}"
                                                 class="pq-subscribe-img img-fluid" alt="medicate-subscribe-image">
-                                            <div class="pq-subscribe-details">
-                                                <h5>Latest Updates Subscribe To Our Newsletter</h5>
-                                            </div>
+
                                         </div>
                                     </div>
-                                    <div class="col-lg-7 align-self-center">
-                                        <div class="pq-subscribe-from">
-                                            <form id="form" class="form">
-                                                <div class="form-fields">
-                                                    <input class="w-100 pq-bg-transparent" type="email"
-                                                        name="EMAIL" placeholder="Enter Your Email" required="">
-                                                    <input class="" type="submit" value="Sign up">
-                                                </div>
-                                            </form>
+                                    <div class="col-lg-5 align-self-center">
+                                        <div class="pq-subscribe-details">
+                                            <h5>From {{$sug->start_date}} to {{$sug->end_date}}</h5>
+                                            <p>{{$sug->details}}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
@@ -223,7 +221,6 @@
                                 <div class="pq-footer-social">
                                     <ul>
                                         <li><a href="https://wa.me/23408039207136"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://"> <i class="fab fa-google" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -247,18 +244,21 @@
                         <div class="col-xl-3  col-md-6">
                             <div class="pq-footer-block">
                                 <h4 class="footer-title">Recent Posts</h4>
+                                @foreach (\App\Models\Blog::latest()->get()->take(3) as $blog)
+
                                 <div class="pq-footer-recent-post">
                                     <div class="pq-footer-recent-post-media">
-                                        <a href="/assets/get-the-exercise-limited-mobility.html"> <img
-                                                src="/assets/images/footer-image/1.jpg" alt=""></a>
+                                        <a href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}"> <img
+                                                src="/Blog-image/{{$blog->images}}" alt=""></a>
                                     </div>
                                     <div class="pq-footer-recent-post-info">
-                                        <a href="/assets/get-the-exercise-limited-mobility.html" class="pq-post-date">
-                                            <i class="far fa-calendar-alt"></i>December <span>12</span>, 2021 </a>
-                                        <h6><a href="/assets/get-the-exercise-limited-mobility.html">Get the Exercise
-                                                Limited Mobility</a></h6>
+                                        <a href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}" class="pq-post-date">
+                                            <i class="far fa-calendar-alt"></i>{{$blog->created_at}} </a>
+                                        <h6><a href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}">{{$blog->details}}</a></h6>
                                     </div>
                                 </div>
+                                @endforeach
+
 
                             </div>
                         </div>
@@ -273,13 +273,18 @@
                                                 </a> </li>
                                             <li> <a
                                                     href="mailto: egbuchulemo@gmail.com"><i
-                                                        class="fas fa-envelope"></i><span>inf<span
+                                                        class="fas fa-envelope"></i><span><span
                                                             class="__cf_email__"
                                                             data-cfemail="4e210e3e2b2f2d2b283b223a262b232b3d602d2123">egbuchulemo@gmail.com</span></span></a>
                                             </li>
+
+                                            @foreach (\App\Models\Location::latest()->get() as $loc)
+
                                             <li> <i class="fas fa-map-marker"></i> <span>
-                                                    9 Rumuolukwu, Eneka, Rivers State. <br> 58 Airport Road, Rumuodomaya, Rivers State. </span> </li>
-                                        </ul>
+                                                  {{$loc->name}} </span> </li>
+
+                                        @endforeach
+                                            </ul>
                                     </div>
                                 </div>
                             </div>

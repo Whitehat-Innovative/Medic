@@ -719,7 +719,7 @@
                                 class="pq-bg-transparent phone-field" placeholder="Your Phone Number" required>
                         </div>
                         <div class="col-md-12">
-                            <select name="location"  class="pq-bg-transparent " id="">
+                            <select name="location_id"  class="pq-bg-transparent " id="">
                                 <option disabled selected value=""> Select your preffered location </option>
                                         @foreach ($loc as  $loc)
                                       <option value="{{$loc->id}}">{{$loc->name}}</option>
@@ -819,50 +819,52 @@
                     <h5 class="pq-section-title">See Our Latest Blog</h5>
                 </div>
             </div>
-            @foreach ( $blo as $blog )
 
 
             <div class="col-lg-12">
                 <div class="owl-carousel owl-theme" data-dots="false" data-nav="false" data-desk_num="3"
                     data-lap_num="2" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
                     data-loop="true" data-margin="30">
+
+                    @foreach ( $blo as $blog )
                     <div class="item">
+                        <a href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}">
                         <div class="pq-blog-post pq-style-1">
-                            <div class="pq-post-media"> <img src="/assets/images/blog/9.jpg" class="img-fluid"
+                            <div class="pq-post-media"> <img src="/Blog-image/{{$blog->images}}" class="img-fluid"
                                     alt="images">
                                 <div class="pq-post-date">
-                                    <a href="#"> <span> {{$blo->created_at}}
+                                    <a href="#"> <span> {{$blog->created_at}}
                                             </span></a>
                                 </div>
                             </div>
                             <div class="pq-blog-contain">
                                 <div class="pq-post-meta">
                                     <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>{{$blo->author}}</li>
+                                        <li class="pq-post-author"><i class="fa fa-user"></i>{{$blog->author}}</li>
                                         <li class="pq-post-comment"> <a
-                                                href="/assets/get-the-exercise-limited-mobility.html"><i
+                                                href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}"><i
                                                     class="fa fa-comments"></i>
                                                 0 Comments</a> </li>
                                     </ul>
                                 </div>
                                 <h5 class="pq-blog-title"><a
-                                        href="/assets/get-the-exercise-limited-mobility.html">Is
-                                        Running Really Good for the Heart?</a></h5>
+                                        href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}">{{$blog->title}}</a></h5>
                                 <div class="pq-blog-info">
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout.</p>
+                                    <p>{{$blog->content}}</p>
                                 </div>
-                                <a href="{{route('blog.view', $blo)}}"
+                                <a href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}"
                                     class="pq-button pq-button-link">
                                     <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
                                             class="ion ion-plus-round"></i> </div>
                                 </a>
                             </div>
                         </div>
+                        </a>
                     </div>
+                    @endforeach
+
                 </div>
             </div>
-            @endforeach
         </div>
     </div>
 </section>

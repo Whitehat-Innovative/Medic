@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                            <form action="{{route('research.add')}}"
+                            <form action="{{route('outreaches.post')}}"
                                 method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="body">
@@ -36,7 +36,10 @@
 
 
                                     <div class="form-group">
-                                        <input type="time" class="form-control" name="author"  placeholder="Enter Time Duration" />
+                                        <input type="date" class="form-control" name="start_date"  placeholder="Enter Time Duration" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="date" class="form-control" name="end_date"  placeholder="Enter Time Duration" />
                                     </div>
 
 

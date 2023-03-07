@@ -187,6 +187,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::post('/edit/location/{location}', [PostController::class, 'editlocation'])->name('edit.location');
 
     Route::get('/addsurgicaloutreach', [SugicalOutreachController::class, 'surgeryadd'])->name('outreaches');
+    Route::post('/postsurgicaloutreach', [SugicalOutreachController::class, 'surgerypost'])->name('outreaches.post');
 
 
 

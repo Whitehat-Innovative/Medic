@@ -17,7 +17,8 @@ class CreateSugicalOutreachesTable extends Migration
             $table->id();
             $table->longText('description');
             $table->string('image');
-            $table->time('duration');
+            $table->string('start_date');
+            $table->string('end_date');
             $table->timestamps();
         });
     }

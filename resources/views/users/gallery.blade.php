@@ -52,81 +52,23 @@
                         <div class="pq-masonry " data-next_items="3" data-initial_items="6">
                            <div class="grid-sizer pq-col-3"></div>
 
-                           @foreach ($image as $images)
+                           @foreach ($gal as $gallery)
 
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-6 30 ">
-                              <div class="">
-                                 <div class=""> <img src="/Gallery/{{$images->image}}" class="" alt="">
-                                    <a href="/Gallery/{{$images->image}}">
-                                       <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i>{{$images->details}}</div>
+                           <div class="pq-masonry-item pq-filter-items  ipq-lg-6 {{$gallery->tag_id}} ">
+                              <div class="pq-portfoliobox pq-style-1">
+                                <div class="pq-portfolio-img"> <img src="/gallery/{{$gallery->image}}" class="img-fluid" alt="">
+                                    <a href="/gallery/{{$gallery->image}}">
+
                                     </a>
                                  </div>
+
+                                <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i>{{$gallery->details}}</div>
                                 </div>
                               </div>
                            </div>
 
 
                            @endforeach
-
-                           {{-- @if ($gal->tags = '36')
-
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-3 36 ">
-                              <div class="pq-portfoliobox pq-style-1">
-                                 <div class="pq-portfolio-img"> <img src="/gallery/{{$gal->image}}" class="img-fluid" alt="">
-                                    <a href="home-visit.html">
-                                       <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i></div>
-                                    </a>
-                                 </div>
-                                 <div class="pq-portfolio-info"> <span>Family</span>
-                                    <h5><a href="home-visit.html">Investigations</a></h5> </div>
-                              </div>
-                           </div>
-                           @endif
-
-                           @if ($gal->tags = '32')
-
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-3 32 ">
-                              <div class="pq-portfoliobox pq-style-1">
-                                 <div class="pq-portfolio-img"> <img src="/gallery/{{$gal->image}}" class="img-fluid" alt="">
-                                    <a href="home-visit.html">
-                                       <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i></div>
-                                    </a>
-                                 </div>
-                                 <div class="pq-portfolio-info"> <span>Pediatrics</span>
-                                    <h5><a href="home-visit.html">Surgical</a></h5> </div>
-                              </div>
-                           </div>
-                           @endif
-
-                           @if ($gal->tags = '33')
-
-                           <div class="pq-masonry-item pq-filter-items  ipq-lg-6  33 ">
-                              <div class="pq-portfoliobox pq-style-1">
-                                 <div class="pq-portfolio-img"> <img src="/gallery/{{$gal->image}}" class="img-fluid" alt="">
-                                    <a href="home-visit.html">
-                                       <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i></div>
-                                    </a>
-                                 </div>
-                                 <div class="pq-portfolio-info"> <span>Clinic</span>
-                                    <h5><a href="home-visit.html">Pediatrics Care</a></h5> </div>
-                              </div>
-                           </div>
-                           @endif
-
-                           @if ($gal->tags = '37')
-
-                           <div class="pq-masonry-item pq-filter-items  37 ">
-                              <div class="pq-portfoliobox pq-style-1">
-                                 <div class="pq-portfolio-img"> <img src="/gallery/{{$gal->image}}" class="img-fluid" alt="">
-                                    <a href="home-visit.html">
-                                       <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i></div>
-                                    </a>
-                                 </div>
-                                 <div class="pq-portfolio-info"> <span>Clinic</span>
-                                    <h5><a href="home-visit.html">Cardiology</a></h5> </div>
-                              </div>
-                           </div>
-                           @endif --}}
 
 
                         </div>

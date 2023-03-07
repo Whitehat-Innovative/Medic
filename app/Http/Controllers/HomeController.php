@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index()
     {
         $loc = Location::all();
-        $blo = Blog::latest()->take(5);
+        $blo = Blog::latest()->get()->take(5);
         $test = Testimonial::latest()->get();
         return view('users.welcome', ['blo'=>$blo, 'tes'=>$test, 'loc'=>$loc]);
     }
