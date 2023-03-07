@@ -43,8 +43,10 @@
                            <h4 class="pq-contact-box-title">
                                     Our Location
                                  </h4>
-                           <p class="pq-contact-box-description"> 9 Rumuolukwu, Eneka, Rivers State </p>
-                           <p class="pq-contact-box-description"> 58 Airport Road, Rumuodomaya, Rivers State </p>
+                            @foreach ( $loc as $loc)
+                            <p class="pq-contact-box-description"> {{$loc->name}} </p>
+
+                            @endforeach
 
                         </div>
                      </div>

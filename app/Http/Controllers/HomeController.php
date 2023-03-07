@@ -29,7 +29,8 @@ class HomeController extends Controller
     }
     public function contact()
     {
-        return view ('users.contact');
+        $loc = Location::all();
+        return view ('users.contact', ['loc'=>$loc]);
     }
     public function make_contact(Contact $contact, Request $request){
         $request->validate([

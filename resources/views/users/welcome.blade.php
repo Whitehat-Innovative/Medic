@@ -844,7 +844,7 @@
                                         <li class="pq-post-comment"> <a
                                                 href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}"><i
                                                     class="fa fa-comments"></i>
-                                                0 Comments</a> </li>
+                                                {{$blog->comments}}</a> </li>
                                     </ul>
                                 </div>
                                 <h5 class="pq-blog-title"><a

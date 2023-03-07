@@ -1,3 +1,8 @@
+@php
+$now = now();
+$events = \App\Models\SugicalOutreach::whereDate('end_date', '<=', $now)->latest()->get();
+@endphp
+
 <!doctype html>
 <html lang="en">
 <!-- Mirrored from peacefulqode.com/themes/medicate/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jan 2023 06:26:52 GMT -->
@@ -182,15 +187,15 @@
                 <div class="container">
                     <div class="row align-items-center">
 
-                        @foreach (\App\Models\SugicalOutreach::latest()->get() as $sug )
+                        @foreach ($events as $sug)
+
 
                         <div class="col-lg-12">
                             <div class="pq-subscribe-bg">
                                 <div class="row align-items-center">
                                     <div class="col-lg-7">
                                         <div class="pq-subscribe-block"> <img src="/SurgicalOutreach/{{$sug->image}}"
-                                                class="pq-subscribe-img img-fluid" alt="medicate-subscribe-image">
-
+                                                class=" img img-fluid" alt="medicate-subscribe-image">
                                         </div>
                                     </div>
                                     <div class="col-lg-5 align-self-center">
@@ -202,6 +207,9 @@
                                 </div>
                             </div>
                         </div>
+
+
+
                         @endforeach
 
                     </div>

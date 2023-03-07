@@ -27,6 +27,11 @@
                                 method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="body">
+                                    @foreach ($errors->all() as $err)
+                                    <p class="text-white alert alert-danger">
+                                        {{$err}}
+                                    </p>
+                                    @endforeach
 
 
                                     <div class="form-group">

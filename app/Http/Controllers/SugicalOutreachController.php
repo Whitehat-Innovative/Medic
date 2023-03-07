@@ -12,21 +12,21 @@ class SugicalOutreachController extends Controller
     public function surgeryadd(){
         return view('admins.surgical');
     }
-    public function surgerypost(Request $request, SugicalOutreach $sugicalOutreach){
+    public function surgerypost(Request $request){
 
         $request->validate([
             'description' => 'string|nullable',
-            'image' => 'string|nullable',
             'start_date' => 'string|required',
             'end_date' => 'string|required',
         ]);
 
-        if ($request->hasFile('image')) {
+        if ($request->image) {
 
-            $ext= $request->file('image')->getClientOriginalExtension();
+            $ext= $request->image->getClientOriginalExtension();
             $filename = \Str::slug('surgical_image').time().'.'.$ext;
             $request->image->move(public_path('SurgicalOutreach') , $filename);
         }
+        
 
             $sugicalOutreach = new SugicalOutreach();
             $sugicalOutreach->description = $request->description;
@@ -34,7 +34,9 @@ class SugicalOutreachController extends Controller
             $sugicalOutreach->start_date = $request->start_date;
             $sugicalOutreach->end_date = $request->end_date;
             $sugicalOutreach->save();
-            Alert::success('New Surgical Outreach', 'New Surgical Outreach added successfully');
+
+            Alert::success('success', 'New Surgical Outreach added successfully');
+            return back();
 
 
     }

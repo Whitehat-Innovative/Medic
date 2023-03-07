@@ -176,17 +176,17 @@ class PostController extends Controller
         $blog->user_id = Auth::user()->id;
         $blog->images = $filename;
         $blog->save();
-        Alert::success('Success', 'Blog Added successfully');
-        }
+        return back();
 
+        } else
 
-        $blog = new Blog();
-        $blog->title = $request->title;
-        $blog->content = $request->content;
-        $blog->category_id = $request->category;
-        $blog->author = $request->author;
-        $blog->user_id = Auth::user()->id;
-        $blog->save();
+         $blog = new Blog();
+         $blog->title = $request->title;
+         $blog->content = $request->content;
+         $blog->category_id = $request->category_id;
+         $blog->author = $request->author;
+         $blog->user_id = Auth::user()->id;
+         $blog->save();
 
 
 
@@ -205,7 +205,6 @@ class PostController extends Controller
             return back();
             Alert::success('Success', 'Blog deleted Successfully');
         }
-            return back();
             Alert::info('Fail', 'You are not an admin');
 
     }
