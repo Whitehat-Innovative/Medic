@@ -43,6 +43,7 @@ class AppointmentController extends Controller
              'name' => 'string|required',
              'email' => 'string|nullable',
            'phone' => 'string|required',
+           'location' => 'integer|required',
             'appointment_note' => 'string|required'
          ]);
         $appointment = new Appointment();

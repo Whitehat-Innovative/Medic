@@ -45,6 +45,9 @@ class PostController extends Controller
 
     }
     public function editlocation(Request $request, Location $location){
+        $request->validate([
+            'name' => 'string'
+        ]);
 
         $location->name=$request->name;
         $location->save();

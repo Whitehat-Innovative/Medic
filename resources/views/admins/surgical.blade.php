@@ -36,7 +36,7 @@
 
 
                                     <div class="form-group">
-                                        <input type="time" class="form-control" name="author"  placeholder="Enter Author name" />
+                                        <input type="time" class="form-control" name="author"  placeholder="Enter Time Duration" />
                                     </div>
 
 
