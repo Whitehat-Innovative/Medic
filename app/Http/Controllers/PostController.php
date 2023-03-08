@@ -176,7 +176,7 @@ class PostController extends Controller
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->content = $request->content;
-        $blog->category_id = $request->category_id;
+        $blog->category_id = $request->category;
         $blog->author = $request->author;
         $blog->user_id = Auth::user()->id;
         $blog->images = $filename;
