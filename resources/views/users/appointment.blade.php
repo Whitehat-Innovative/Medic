@@ -38,6 +38,11 @@
                       <div class="appoinment-box">
                             <form action="{{route('make.appointment')}}" method="POST" class="pq-applyform" novalidate> @csrf
                                   <div class="pq-appointment">
+                                    @foreach ($errors->all() as $err)
+                                    <p class="text-white alert alert-danger">
+                                        {{$err}}
+                                    </p>
+                                    @endforeach
                                         <div class="row">
 
 

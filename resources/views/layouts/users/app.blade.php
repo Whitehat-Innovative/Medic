@@ -82,9 +82,11 @@ $events = \App\Models\SugicalOutreach::where('end_date', '<=', $now)->latest()->
                                 </li>
                                 <li>
                                     <a
-                                        href="mailto: egbuchulemo@gmail.com"><i
+                                        href="mailto: zolivehospital@gmail.com"><i
                                             class="fas fa-envelope"></i><span><span class="__cf_email__"
-                                                data-cfemail="066f68606946766367656360736a726e636b63752865696b">egbuchulemo@gmail.com</span></span></a>
+                                                data-cfemail="066f68606946766367656360736a726e636b63752865696b">zolivehospital@gmail.com</span></span></a>
+
+
                                 </li>
                             </ul>
                         </div>
@@ -281,10 +283,10 @@ $events = \App\Models\SugicalOutreach::where('end_date', '<=', $now)->latest()->
                                                     <span> +234 0816-492-4608</span>
                                                 </a> </li>
                                             <li> <a
-                                                    href="mailto: egbuchulemo@gmail.com"><i
+                                                    href="mailto: zolivehospital@gmail.com"><i
                                                         class="fas fa-envelope"></i><span><span
                                                             class="__cf_email__"
-                                                            data-cfemail="4e210e3e2b2f2d2b283b223a262b232b3d602d2123">egbuchulemo@gmail.com</span></span></a>
+                                                            data-cfemail="4e210e3e2b2f2d2b283b223a262b232b3d602d2123">zolivehospital@gmail.com</span></span></a>
                                             </li>
 
                                             @foreach (\App\Models\Location::latest()->get() as $loc)

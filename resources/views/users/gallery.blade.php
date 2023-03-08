@@ -55,7 +55,7 @@
 
                            @foreach ($gal as $gallery)
 
-                            <div class="pq-masonry-item pq-filter-items  col-md-4  {{$gallery->tag_id}} ">
+                            <div class="pq-masonry-item pq-filter-items  pq-col-3  {{$gallery->tag_id}} ">
                                 <div class="pq-portfoliobox pq-style-1">
                                   <div class="pq-portfolio-img"> <img src="/gallery/{{$gallery->image}}" class="img-fluid" alt="">
                                       <a href="/gallery/{{$gallery->image}}">
@@ -63,7 +63,7 @@
                                       </a>
                                    </div>
 
-                                  <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i>{{$gallery->details}}</div>
+                                  <div class="pq-portfolio-icon"><i class="ion ion-plus-round"></i></div>
                                   </div>
                                 </div>
                              </div>

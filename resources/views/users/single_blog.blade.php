@@ -58,7 +58,7 @@
 
                                 <p> {{$blog->content}}</p>
 
-                                </div>
+                            </div>
                         </div>
 
 
