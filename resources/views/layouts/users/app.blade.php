@@ -197,14 +197,14 @@ $events = \App\Models\SugicalOutreach::where('end_date', '<=', $now)->latest()->
                             <div class="pq-subscribe-bg">
                                 <div class="row align-items-center">
                                     <div class="col-lg-7">
-                                        <div class="pq-subscribe-block"> <img src="/SurgicalOutreach/{{$events->image}}"
+                                        <div class="pq-subscribe-block"> <img src="/storage/surgical/{{$events->image}}"
                                                 class=" img img-fluid" alt="medicate-subscribe-image">
                                         </div>
                                     </div>
                                     <div class="col-lg-5 align-self-center">
                                         <div class="pq-subscribe-details">
                                             <h5>From {{$events->start_date}} to {{$events->end_date}}</h5>
-                                            <p>{{$events->details}}</p>
+                                            <p>{{$events->description}}</p>
                                         </div>
                                     </div>
                                 </div>

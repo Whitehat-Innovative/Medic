@@ -53,7 +53,7 @@
                 </div>
             </li>
 
-            <li><a href="{{route('outreaches')}}" title="Surgical Outreaches"><i class="zmdi zmdi-account-box-phone"></i></a></li>
+            <li><a href="{{route('specialties')}}" title="Surgical Outreaches and Our Partners"><i class="zmdi zmdi-account-box-phone"></i></a></li>
             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
                     role="button"><i class="zmdi zmdi-notifications"></i>
                     <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
@@ -576,7 +576,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
         integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
+
 
     @include('sweetalert::alert')
 </body>
