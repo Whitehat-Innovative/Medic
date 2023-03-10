@@ -40,15 +40,12 @@ Route::get('/test');
 Route::get('/dashboard', function () {
 
     // Alert::info('Warning Title', "Success Message","info");
-
-
     $pa= Patient::all();
     $p= Patient::paginate(5);
     $a=Appointment::latest()->paginate(3);
     // $loc = Location::where('id', $a->location);
     $d=Donation::all();
     $b=Blog::all();
-
 
     if (Auth::user()->code=='007') {
         return view('admins/dashboard', ['p'=>$p, 'pa'=>$pa, 'a'=>$a, 'd'=>$d, 'b'=>$b, ]);

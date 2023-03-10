@@ -78,7 +78,7 @@ class HomeController extends Controller
     {
 
         $gallery = Gallery::all();
-
+        $im = '';
         foreach ($gallery as $g) {
            $im=explode('|',$g->image);
         }
