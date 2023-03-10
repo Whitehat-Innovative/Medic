@@ -167,12 +167,11 @@
                         </li>
 
 
-                        <li class="{{Route::currentRouteName() == 'add.patient' ?  'active open' : '' }}"><a href="javascript:void(0);" class="menu-toggle"><i
-                                    class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
+                        <li class="{{Route::currentRouteName() == 'add.testimonials' ?  'active open' : '' }}"><a href="javascript:void(0);" class="menu-toggle"><i
+                                    class="zmdi zmdi-account-o"></i><span>Tetimonials</span> </a>
                             <ul class="ml-menu">
 
-                                <li><a href="{{route('add.patient')}}">Add Patient</a></li>
-                                <li><a href="{{route('all.patients')}}">All Patients</a></li>
+                                <li><a href="{{route('all.testimonials')}}">All Testimonials</a></li>
                             </ul>
                         </li>
 

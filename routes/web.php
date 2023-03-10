@@ -203,6 +203,11 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/addpartners', [SugicalOutreachController::class, 'addpartners'])->name('addpartners');
     Route::get('/deletepartner/{id}', [SugicalOutreachController::class, 'deletepartner'])->name('delete.partner');
 
+    Route::get('/alltestimonial', [SugicalOutreachController::class, 'alltestimonials'])->name('all.testimonials');
+    Route::get('/deletetestimonial/{id}', [SugicalOutreachController::class, 'testimonial'])->name('delete.testimonial');
+    Route::get('/approvetestimonial/{id}', [SugicalOutreachController::class, 'approveTestimonial'])->name('approve.testimonial');
+
+
 
     Route::get('/addsurgicaloutreach', [SugicalOutreachController::class, 'surgeryadd'])->name('outreaches');
     Route::post('/postsurgicaloutreach', [SugicalOutreachController::class, 'surgerypost'])->name('outreaches.post');
