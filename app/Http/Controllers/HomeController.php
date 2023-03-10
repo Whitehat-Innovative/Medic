@@ -9,6 +9,7 @@ use App\Models\Gallery;
 use App\Models\Location;
 use App\Models\Patient;
 use App\Models\Research;
+use App\Models\Tag;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
@@ -64,11 +65,30 @@ class HomeController extends Controller
         $testimonial->save();
         return back();
     }
+
+
     public function gallery()
     {
-        $gallery = Gallery::latest()->get();
+
+        $gallery = Gallery::all();
+
+        foreach ($gallery as $g) {
+           $im=explode('|',$g->image);
+        }
+
+        $tagg=Tag::all();
+
         return view('users.gallery',
-         ['gal'=> $gallery]);
+         ['gal'=> $gallery, 'im1'=>$im, 'tag'=>$tagg]);
+    }
+
+    public function imageviewlayout(Tag $tag){
+
+
+        $tagg= Tag::all();
+        $img =Gallery::where('tag_id', $tag->id)->get();
+        return view('users.imageview', ['taggg'=>$tagg, 'gal'=>$img]);
+
     }
     public function appointment()
     {

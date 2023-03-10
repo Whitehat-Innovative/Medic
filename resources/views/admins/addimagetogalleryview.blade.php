@@ -22,37 +22,48 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
+                            <div style="display: flex; justify-content:center;" class="">
+                            <label for="image" class="header mt-2">ENTER IMAGES HERE TO YOU
+                                    GALLERY
 
-                            <label for="image" class="header mt-2 mb-2">ENTER NEW IMAGE</label>
-                            <form action="{{route('add.image')}}"
-                                method="POST" enctype="multipart/form-data" >
+                                </label>
+                            </div>
+
+                            <div style="display: flex; justify-content:center;" class="">
+                            <p class="text-danger">You can also add a new tag, if your preffered tag is not displayed below.</p>
+                                
+                                </div>
+
+
+
+                            <form action="{{route('add.image')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="body">
 
-                                <label for="image" class="header mt-2 mb-2"> Enter one or more image(s) here </label>
+                                    <label for="image" class="header  mb-2"> Enter one or more image(s) here
+                                    </label>
 
                                     <div class="form-group">
                                         <input type="file" class="form-control" name="image[]" multiple />
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" name="details"  placeholder=" Image Detail" />
+                                        <input class="form-control" name="details" placeholder=" Image Detail" />
                                         {{-- <input type="text" class="form-control" name="description"  placeholder="Enter New Description" /> --}}
                                     </div>
                                     <div class="form-group">
-                                        <select name="tags_id" >
-                                            <option disabled selected value="">Select Tags</option>
-                                            <option value="30">Clinic</option>
-                                            <option value="36">Family</option>
-                                            <option value="32">Laboratory</option>
-                                            <option value="33">Pediatrics</option>
-                                            <option value="34">Therapy</option>
-                                            <option value="37">Surgery</option>
+                                        <select name="tag_id">
+                                            <option disabled selected>Select Tags</option>
+
+                                            @foreach ($tagg as $tag)
+
+                                            <option value="{{$tag->id}}">{{$tag->tag}}</option>
+                                            @endforeach
+
                                         </select>
                                     </div>
 
-
-                                    <button type="submit"
-                                    class="btn btn-primary btn-round waves-effect m-t-20">Post Image</button>
+                                    <button type="submit" class="btn btn-primary btn-round waves-effect m-t-20">Post
+                                        Image</button>
                                 </div>
                             </form>
                         </div>
@@ -72,29 +83,30 @@
     <x-slot name="script">
 
         <script>
-        function confirmation(ev) {
-          ev.preventDefault();
-          var urlToRedirect = ev.currentTarget.getAttribute('href');
-          console.log(urlToRedirect);
-          swal({
-              title: "Are you sure to cancel this product",
-              text: "You will not be able to revert this!",
-              icon: "warning",
-              buttons: true,
-              dangerMode: true,
-          })
-          .then((willCancel) => {
-              if (willCancel) {
+            function confirmation(ev) {
+                ev.preventDefault();
+                var urlToRedirect = ev.currentTarget.getAttribute('href');
+                console.log(urlToRedirect);
+                swal({
+                        title: "Are you sure to cancel this product",
+                        text: "You will not be able to revert this!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willCancel) => {
+                        if (willCancel) {
 
-                  window.location.href = urlToRedirect;
+                            window.location.href = urlToRedirect;
 
-              }
-
-
-          });
+                        }
 
 
-      }
-  </script>
+                    });
+
+
+            }
+
+        </script>
     </x-slot>
 </x-app-layout>

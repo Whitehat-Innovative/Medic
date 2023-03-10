@@ -90,6 +90,9 @@ Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/donate', [HomeController::class, 'donate'])->name('donate');
 
 
+Route::get('/image/view/{tag}', [HomeController::class, 'imageviewlayout'])->name('users.image.view');
+
+
 // Route::get('/pay', function () {
 
 //     return view('users.pay');
@@ -168,9 +171,17 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/add/image/view', [GalleryController::class, 'addimageview'])->name('add.image.view');
     Route::post('/add/image', [GalleryController::class, 'addimage'])->name('add.image');
 
-    Route::get('/delete/image/{image}', [GalleryController::class, 'deleteimage'])->name('delete.image');
+    Route::get('/delete/image/{images}', [GalleryController::class, 'deleteimage'])->name('delete.image');
     Route::get('/view/image/{images}', [GalleryController::class, 'imageview'])->name('image.view');
+
+    Route::get('/view/image/{photo}/{images}', [GalleryController::class, 'editimageview'])->name('edit.image.view');
+
+    Route::post('/view/image/{photoo}/{imagess}', [GalleryController::class, 'editgalleryimage'])->name('edit.gallery.image');
+
     Route::get('/all/image/view', [GalleryController::class, 'allimageview'])->name('all.image.view');
+
+    Route::post('/add/tag', [GalleryController::class, 'addtagtogallery'])->name('add.gallery.tag');
+    Route::get('/add/tag/view', [GalleryController::class, 'addtagtogalleryview'])->name('add.gallery.tag.view');
 
     /* Category/Tags */
     Route::get('/cat-tag', [PostController::class, 'cat'])->name('cat.tag.view');

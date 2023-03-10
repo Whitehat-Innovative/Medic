@@ -191,6 +191,7 @@
 
                                 <li><a href="{{route('add.image.view')}}">Add Image</a></li>
                                 <li><a href="{{route('all.image.view')}}">All Images</a></li>
+                                <li><a href="{{route('add.gallery.tag.view')}}">Add a Tag </a></li>
                             </ul>
 
                         </li>
@@ -576,7 +577,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
         integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
+
 
     @include('sweetalert::alert')
 </body>
