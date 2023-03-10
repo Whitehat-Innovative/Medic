@@ -194,8 +194,17 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/edit/location/view/{location}', [PostController::class, 'editlocationview'])->name('edit.location.view');
     Route::post('/edit/location/{location}', [PostController::class, 'editlocation'])->name('edit.location');
 
+    Route::get('/specialties', [SugicalOutreachController::class, 'specialties'])->name('specialties');
+
+    Route::post('/postpartners', [SugicalOutreachController::class, 'partnerspost'])->name('partners.post');
+    Route::get('/addpartners', [SugicalOutreachController::class, 'addpartners'])->name('addpartners');
+    Route::get('/deletepartner/{id}', [SugicalOutreachController::class, 'deletepartner'])->name('delete.partner');
+
+
     Route::get('/addsurgicaloutreach', [SugicalOutreachController::class, 'surgeryadd'])->name('outreaches');
     Route::post('/postsurgicaloutreach', [SugicalOutreachController::class, 'surgerypost'])->name('outreaches.post');
+    Route::get('/deletesurgical/{id}', [SugicalOutreachController::class, 'deletesurgical'])->name('delete.surgical');
+
 
 
 

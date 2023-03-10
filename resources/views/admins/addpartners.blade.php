@@ -6,7 +6,7 @@
             <div class="block-header">
                 <div class="row">
                     <div class="col-lg-7 col-md-5 col-sm-12">
-                        <h2>Surgical Outreaches
+                        <h2>Our Medical Partners
                             <small>Welcome to ZOLIVE</small>
                         </h2>
                     </div>
@@ -14,7 +14,7 @@
                         <ul class="breadcrumb float-md-right">
                             <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> ZOLIVE</a>
                             </li>
-                            <li class="breadcrumb-item"><a href="blog-dashboard.html">Surgical Outreaches</a></li>
+                            <li class="breadcrumb-item"><a href="blog-dashboard.html">Our Medical Partners</a></li>
                         </ul>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                            <form action="{{route('outreaches.post')}}"
+                            <form action="{{route('partners.post')}}"
                                 method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="body">
@@ -33,24 +33,15 @@
                                     </p>
                                     @endforeach
 
-
                                     <div class="form-group">
-                                        <textarea name="description" class="form-control"  id="" placeholder="Enter Description Content" cols="20" rows="10"> </textarea>
-                                        {{-- <input type="text" class="form-control" name="content"  placeholder="Enter Blog title" /> --}}
+                                        <input type="text" class="form-control" name="name_of_firm"  placeholder="Enter name of Firm" />
                                     </div>
 
-
-                                    <div class="form-group">
-                                        <input type="date" class="form-control" name="start_date"  placeholder="Enter Time Duration" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="date" class="form-control" name="end_date"  placeholder="Enter Time Duration" />
-                                    </div>
 
 
                                     <div class="  mt-4 mb-2">
-                                        <label for="image" class="header"> INSERT IMAGE OR DOCUMENT FOR SURGICAL OUTREACH</label>
-                                        <input name="image" type="file"  accept="image*/"   />
+                                        <label for="logo" class="header"> INSERT LOGO OR IMAGE</label>
+                                        <input name="logo" type="file"  accept="image*/"   />
                                     </div>
 
                                     <button type="submit"
