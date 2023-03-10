@@ -1,6 +1,6 @@
 @extends('layouts.users.app')
 @section('description')
-@section('{{Str::slug($blog->title)}}')
+@section('{{Str::slug($r->title)}}')
 
 @section('content')
 

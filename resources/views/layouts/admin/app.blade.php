@@ -191,6 +191,7 @@
 
                                 <li><a href="{{route('add.image.view')}}">Add Image</a></li>
                                 <li><a href="{{route('all.image.view')}}">All Images</a></li>
+                                <li><a href="{{route('add.gallery.tag.view')}}">Add a Tag </a></li>
                             </ul>
 
                         </li>

@@ -440,8 +440,8 @@ Design and Developed by: PeacefulQode
 
    });
 
-   var initial_items = 5;
-   var next_items = 3;
+   var initial_items = 1;
+   var next_items = 1;
 
    if (jQuery('.pq-masonry').length > 0) {
       var initial_items = jQuery('.pq-masonry').data('initial_items');

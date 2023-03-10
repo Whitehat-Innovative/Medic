@@ -41,9 +41,9 @@
                     <div class="pq-filters b74eca6">
                         <div class="filters pq-filter-button-group">
                             <ul>
-                                <li class=" pq-filter-btn" data-filter="*">All</li>
-                                @foreach ($tag as $tags)
-                                <li class="pq-filter-btn" ><a class="text-muted" href="{{route('users.image.view', $tags->id)}}">{{$tags->tag}}</a> </li>
+
+                                @foreach ($taggg as $tags)
+                                <li class="pq-filter-btn" ><a class="text-dark" href="{{route('users.image.view', $tags->id)}}">{{$tags->tag}}</a> </li>
                                 @endforeach
 
                             </ul>
@@ -55,8 +55,8 @@
 
                         @foreach ($gal as $imgg)
                         <div class="pq-masonry-item pq-filter-items  ipq-lg-12">
-                            <div class="pq-portfoliobox pq-style-1 mb-4">
-                                <div class="pq-portfolio-img">
+                            <div class="pq-portfoliobox pq-style-1">
+                                <div class="pq-portfolio-img mb-4">
 
                                     @php
                                     $img= explode('|',$imgg->image);

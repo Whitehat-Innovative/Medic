@@ -46,6 +46,7 @@
 
                                                         <th>Tags</th>
                                                         {{-- <th>Address</th> --}}
+                                                        <th>Images</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
@@ -58,22 +59,38 @@
 
                                                         <td>
                                                             <span class="phone"><i
-                                                                    class="zmdi m-r-10"></i>{{$images->tags}}</span>
+                                                                    class="zmdi m-r-10"></i>{{$images->tag}}</span>
                                                         </td>
-                                                        {{-- <td>
-                                                            <address><i class="zmdi zmdi-pin"></i>123 6th St. Melbourne, FL 32904</address>
-                                                        </td> --}}
+                                                        <td>
+                                                            <div class="row d-flex">
+                                                                @php
+                                                                   $img= explode('|',$images->image); 
+                                                                @endphp
+                                                                @foreach ($img as $photo)
+                                                                <div style=" display:flex; margin-bottom:30px;" class="col-lg-2 col-md-3">
+                                                                    <a href="/gallery/{{$photo}}"><img style="height:40px; width:40px;" src="/gallery/{{$photo}}" alt=""></a>
+
+                                                                    <a class="btn btn-icon btn-neutral btn-icon-mini "
+                                                                         href="{{route('edit.image.view', [$photo,$images])}}"><i
+                                                                            class="zmdi zmdi-edit mt-2"></i></a>
+                                                                </div>
+                                                                  
+                                                                @endforeach
+                                    
+                                                            </div>
+                                                        </td>
                                                         <td class="flex">
 
-                                                            <a onclick="confirmation(event)" class="btn btn-icon btn-neutral btn-icon-mini "
+                                                                    <a onclick="confirmation(event)" class="btn btn-icon btn-neutral btn-icon-mini "
                                                                          href="{{route('delete.image', $images->id)}}"><i
-                                                                            class="zmdi zmdi-delete mt-1"></i></a>
+                                                                            class="zmdi zmdi-delete mt-2"></i></a>  
 
                                                             <button class="btn btn-icon btn-neutral btn-icon-mini">
                                                                 <a href="{{route('image.view', $images->id)}}"><i
                                                                         class="zmdi zmdi-eye"></i></a></button>
 
                                                         </td>
+
                                                     </tr>
 
 

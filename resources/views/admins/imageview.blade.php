@@ -43,7 +43,7 @@
                                 </div>
 
                             </div>
-                            <button type="submit" class="btn btn-primary btn-round"><a href="{{route('gallery.view')}}">Check
+                            <button type="submit" class="btn btn-dark btn-round"><a href="{{route('gallery.view')}}">Check
                                     these images out in your guest Gallery Page!!</a></button>
 
                         </div>
