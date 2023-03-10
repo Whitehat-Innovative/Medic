@@ -705,6 +705,11 @@
                 </div>
                 <form action="{{ route('make.appointment') }}" method="POST" class="pq-applyform mt-5" novalidate>
                     @csrf
+                    @foreach ($errors->all() as $err)
+                    <p class="text-white alert alert-danger">
+                        {{$err}}
+                    </p>
+                    @endforeach
                     <div class="row">
                         <div class="col-md-12">
                             <input type="text" name="name" id="first-name"
@@ -731,7 +736,7 @@
                             {{-- <input type="text" name="your-disease" id="disease-name"
                     class="pq-bg-transparent disease-name-field" placeholder="Your Disease Name"
                     required> --}}
-                            <textarea name="appointment_name" class="form-control pq-bg-transparent" id="" placeholder="Appointment Note" cols="30"
+                            <textarea name="appointment_note" class="form-control pq-bg-transparent" id="" placeholder="Appointment Note" cols="30"
                                 rows="10"></textarea>
                         </div>
                         {{-- <p class="text-white"> By booking an appointment you agree to our<a href="#" >  terms and condition</a> </p> --}}

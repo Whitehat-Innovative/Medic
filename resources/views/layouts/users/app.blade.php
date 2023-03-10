@@ -82,9 +82,11 @@ $events = \App\Models\SugicalOutreach::where('end_date', '<=', $now)->latest()->
                                 </li>
                                 <li>
                                     <a
-                                        href="mailto: egbuchulemo@gmail.com"><i
+                                        href="mailto: zolivehospital@gmail.com"><i
                                             class="fas fa-envelope"></i><span><span class="__cf_email__"
-                                                data-cfemail="066f68606946766367656360736a726e636b63752865696b">egbuchulemo@gmail.com</span></span></a>
+                                                data-cfemail="066f68606946766367656360736a726e636b63752865696b">zolivehospital@gmail.com</span></span></a>
+
+
                                 </li>
                             </ul>
                         </div>
@@ -188,21 +190,21 @@ $events = \App\Models\SugicalOutreach::where('end_date', '<=', $now)->latest()->
                 <div class="container">
                     <div class="row align-items-center">
 
-                        @foreach ($events as $sug)
+                        @foreach ($events as $events)
 
 
                         <div class="col-lg-12">
                             <div class="pq-subscribe-bg">
                                 <div class="row align-items-center">
                                     <div class="col-lg-7">
-                                        <div class="pq-subscribe-block"> <img src="/SurgicalOutreach/{{$sug->image}}"
+                                        <div class="pq-subscribe-block"> <img src="/SurgicalOutreach/{{$events->image}}"
                                                 class=" img img-fluid" alt="medicate-subscribe-image">
                                         </div>
                                     </div>
                                     <div class="col-lg-5 align-self-center">
                                         <div class="pq-subscribe-details">
-                                            <h5>From {{$sug->start_date}} to {{$sug->end_date}}</h5>
-                                            <p>{{$sug->details}}</p>
+                                            <h5>From {{$events->start_date}} to {{$events->end_date}}</h5>
+                                            <p>{{$events->details}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -281,10 +283,10 @@ $events = \App\Models\SugicalOutreach::where('end_date', '<=', $now)->latest()->
                                                     <span> +234 0816-492-4608</span>
                                                 </a> </li>
                                             <li> <a
-                                                    href="mailto: egbuchulemo@gmail.com"><i
+                                                    href="mailto: zolivehospital@gmail.com"><i
                                                         class="fas fa-envelope"></i><span><span
                                                             class="__cf_email__"
-                                                            data-cfemail="4e210e3e2b2f2d2b283b223a262b232b3d602d2123">egbuchulemo@gmail.com</span></span></a>
+                                                            data-cfemail="4e210e3e2b2f2d2b283b223a262b232b3d602d2123">zolivehospital@gmail.com</span></span></a>
                                             </li>
 
                                             @foreach (\App\Models\Location::latest()->get() as $loc)
@@ -292,7 +294,7 @@ $events = \App\Models\SugicalOutreach::where('end_date', '<=', $now)->latest()->
                                             <li> <i class="fas fa-map-marker"></i> <span>
                                                   {{$loc->name}} </span> </li>
 
-                                        @endforeach
+                                            @endforeach
                                             </ul>
                                     </div>
                                 </div>
