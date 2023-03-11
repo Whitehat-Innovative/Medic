@@ -499,8 +499,7 @@ class PostController extends Controller
 
     public function addreply(Request $request, Comment $comment){
         $request->validate([
-            'blog_id' => 'integer|required',
-            'comment_id' => 'integer|required',
+            
             'reply' => 'string|nullable'
         ]);
 

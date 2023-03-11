@@ -274,7 +274,7 @@
                     @endguest
                 </div>
             </div>
-            <div class="col-lg-6 mt-lg-0 mt-5">
+            <div class="col-lg-3 mt-lg-0 mt-5">
                 <div class="Sidebar-style-2">
 
                     <div class="pq-widget pq-widget_media_image">
