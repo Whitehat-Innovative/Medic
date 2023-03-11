@@ -11,8 +11,8 @@
         <rs-slides>
             <rs-slide style="position: absolute;" data-key="rs-84" data-title="Slide"
                 data-thumb="rev/assets/1-51-50x100.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
-                <img src="/assets/images/breadcrumb.jpg"  alt="" title="1-51.jpg"
-                    class="rev-slidebg tp-rs-img" data-no-retina>
+                <img src="/assets/images/breadcrumb.jpg" alt="" title="1-51.jpg" class="rev-slidebg tp-rs-img"
+                    data-no-retina>
                 <!--
                 -->
 
@@ -32,7 +32,8 @@
                     data-text="w:normal;s:64,48,42,22;l:72,56,50,30;fw:600;"
                     data-border="boc:#14457b;bow:1px,1px,1px,1px;" data-frame_0="x:50,39,29,17;"
                     data-frame_1="st:900;sp:1000;sR:900;" data-frame_999="o:0;st:w;sR:7100;"
-                    style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">We support access to <br> medical care for all people.
+                    style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">We support access to <br>
+                    medical care for all people.
 
                 </rs-layer>
                 <!--
@@ -67,7 +68,8 @@
                     data-text="w:normal;s:64,48,42,22;l:72,56,50,30;fw:600;"
                     data-border="boc:#14457b;bow:1px,1px,1px,1px;" data-frame_0="x:50,39,29,17;"
                     data-frame_1="st:1400;sp:1000;sR:1400;" data-frame_999="o:0;st:w;sR:6600;"
-                    style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">We are ready to take responsibilty <br> for our actions
+                    style="z-index:10;font-family:'Quicksand';text-transform:capitalize;">We are ready to take
+                    responsibilty <br> for our actions
                     <br>
                 </rs-layer>
                 <!--
@@ -209,7 +211,8 @@
                     <h5 class="pq-section-title">The Heart and Exercise</h5>
 
                 </div>
-                <p>Regular Exercise is not only for fat/obessed individuals...it is recommended for all...it keeps the heart healthy. </p>
+                <p>Regular Exercise is not only for fat/obessed individuals...it is recommended for all...it keeps the
+                    heart healthy. </p>
                 <a class="pq-button pq-button-flat mt-3" href="{{ route('services') }}">
                     <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
                             class="ion ion-plus-round"></i> </div>
@@ -235,7 +238,7 @@
                         <div class="pq-service-img"><img src="/assets/images/surgery.jpg" class="img-fluid"
                                 alt="servicebox"></div>
                         <div class="pq-service-box-info">
-                            <div class="pq-info-text"> <span class="pq-service-sub-title">  </span>
+                            <div class="pq-info-text"> <span class="pq-service-sub-title"> </span>
                                 <a href="{{route('services')}}">
                                     <h5 class="pq-service-title">Surgery</h5>
                                 </a>
@@ -304,8 +307,7 @@
             <div class="col-lg-6 col-md-12 col-xl-5 pe-lg-3 pq-img-none">
                 <img src="/assets/images/IMG_20230131_165123_636.jpg" class="img-fluid" alt="servicebox">
             </div>
-            <div
-                class="col-xl-2 col-lg-12 col-md-12 py-xl-0 py-5 align-self-center pq-form-counter pq-bg-primary-dark">
+            <div class="col-xl-2 col-lg-12 col-md-12 py-xl-0 py-5 align-self-center pq-form-counter pq-bg-primary-dark">
                 <div class="pq-counter pq-style-2">
                     <div class="pq-counter-contain">
                         <div class="pq-counter-info text-center">
@@ -409,7 +411,7 @@
                     <div class="pq-fancy-box-icon"><i class=" flaticon-medical"></i></div>
                     <div class="pq-fancy-box-info">
                         <h5 class="pq-fancy-box-title">Maternity</h5>
-                        <p class="pq-fancybox-description">              </p>
+                        <p class="pq-fancybox-description"> </p>
 
                     </div>
                 </div>
@@ -627,7 +629,8 @@
                     <div class="pq-process-step-info">
                         <h5 class="pq-process-title">Discipline</h5> <span class="pq-process-sub-title"></span>
                         <div class="pq-process-description">
-                            <p>All members (full and part-time) must be well disciplined and must be ready to be disciplined should the need arises.</p>
+                            <p>All members (full and part-time) must be well disciplined and must be ready to be
+                                disciplined should the need arises.</p>
                         </div>
                     </div>
                 </div>
@@ -635,14 +638,15 @@
             <div class="col-xl-3 col-md-6">
                 <div class="pq-process-step pq-process-style-2 ">
                     <div class="pq-process-media">
-                        <div class="pq-process-img"><img src="/assets/images/IMG_20230131_165133_626.jpg" class="img-fluid"
-                                alt="medicate"> </div>
+                        <div class="pq-process-img"><img src="/assets/images/IMG_20230131_165133_626.jpg"
+                                class="img-fluid" alt="medicate"> </div>
                         <div class="pq-process-number"> <span>02</span> </div>
                     </div>
                     <div class="pq-process-step-info">
                         <h5 class="pq-process-title">Courage</h5> <span class="pq-process-sub-title"></span>
                         <div class="pq-process-description">
-                            <p>Courage must be part of all members of our organization as we may sometimes face patients whose own challenges may appear unsurmountable.</p>
+                            <p>Courage must be part of all members of our organization as we may sometimes face patients
+                                whose own challenges may appear unsurmountable.</p>
                         </div>
                     </div>
                 </div>
@@ -698,7 +702,7 @@
 <section class="pq-form">
     <div class="container">
         <div class="row align-items-center pq-bg-primary pq-reveser flex-md-column-reverse flex-lg-row">
-            <div class="col-lg-4 text-center"> <img src="/assets/images/calendar.jpg"  alt="...">  </div>
+            <div class="col-lg-4 text-center"> <img src="/assets/images/calendar.jpg" alt="..."> </div>
             <div class="col-lg-8 mt-5 mt-lg-0 pq-form-pad pq-blue-section-side-right">
                 <div class="pq-section pq-style-1 text-left"> <span class="pq-section-sub-title">Appointment</span>
                     <h5 class="pq-section-title pq-text-white">Apply for treatments</h5>
@@ -712,23 +716,23 @@
                     @endforeach
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="text" name="name" id="first-name"
-                                class="pq-bg-transparent name-field" placeholder="Your Name" required>
+                            <input type="text" name="name" id="first-name" class="pq-bg-transparent name-field"
+                                placeholder="Your Name" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" name="email" id="e-mail"
-                                class="pq-bg-transparent e-mail-field" placeholder="Your Email" required>
+                            <input type="email" name="email" id="e-mail" class="pq-bg-transparent e-mail-field"
+                                placeholder="Your Email" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="phone" id="phone"
-                                class="pq-bg-transparent phone-field" placeholder="Your Phone Number" required>
+                            <input type="text" name="phone" id="phone" class="pq-bg-transparent phone-field"
+                                placeholder="Your Phone Number" required>
                         </div>
                         <div class="col-md-12">
-                            <select name="location_id"  class="pq-bg-transparent " id="">
+                            <select name="location_id" class="pq-bg-transparent " id="">
                                 <option disabled selected value=""> Select your preffered location </option>
-                                        @foreach ($loc as  $loc)
-                                      <option value="{{$loc->id}}">{{$loc->name}}</option>
-                                    @endforeach
+                                @foreach ($loc as $loc)
+                                <option value="{{$loc->id}}">{{$loc->name}}</option>
+                                @endforeach
                             </select>
                         </div>
 
@@ -736,12 +740,12 @@
                             {{-- <input type="text" name="your-disease" id="disease-name"
                     class="pq-bg-transparent disease-name-field" placeholder="Your Disease Name"
                     required> --}}
-                            <textarea name="appointment_note" class="form-control pq-bg-transparent" id="" placeholder="Appointment Note" cols="30"
-                                rows="10"></textarea>
+                            <textarea name="appointment_note" class="form-control pq-bg-transparent" id=""
+                                placeholder="Appointment Note" cols="30" rows="10"></textarea>
                         </div>
                         {{-- <p class="text-white"> By booking an appointment you agree to our<a href="#" >  terms and condition</a> </p> --}}
                         <div class="col-md-12">
-                            <button class="pq-button pq-button-bg-white form-btn" type="submit" >
+                            <button class="pq-button pq-button-bg-white form-btn" type="submit">
                                 <div class="pq-button-block">
                                     <span class="pq-button-text-dark me-0">Send</span>
                                 </div>
@@ -765,11 +769,11 @@
                 </div>
             </div>
             <div class="col-lg-12">
-                <div class="owl-carousel owl-theme" data-dots="true" data-nav="false" data-desk_num="2"
-                    data-lap_num="2" data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
-                    data-loop="true" data-margin="30">
+                <div class="owl-carousel owl-theme" data-dots="true" data-nav="false" data-desk_num="2" data-lap_num="2"
+                    data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true" data-loop="true"
+                    data-margin="30">
                     @foreach ( $tes as $test )
-                    <div class="item" >
+                    <div class="item">
                         <div class="pq-testimonial-box pq-style-1">
                             <div class="pq-testimonial-info">
                                 <div class="pq-testimonial-content">
@@ -777,8 +781,7 @@
                                 </div>
                             </div>
                             <div class="pq-testimonial-media">
-                                <div class="pq-testimonial-img"> <img src="/assets/images/testimonial/1.png"
-                                        class="img-fluid" alt="testimonial-image"> </div>
+                                <div class="pq-testimonial-img"> </div>
                                 <div class="pq-testimonial-meta">
                                     <h5>{{$test->name}}</h5> <span> </span>
                                 </div>
@@ -795,25 +798,39 @@
 <!--Section testimonial End-->
 
 <!--Section client Start-->
-<div class="pq-client">
+<section class="testimonial pg-border-bottom pq-testimonial-pt">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="owl-carousel owl-theme" data-dots="false" data-nav="false" data-desk_num="5"
-                    data-lap_num="3" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
-                    data-loop="true" data-margin="30">
-                    <div class="item">
-                        <div class="pq-clientbox pq-style-1">
-                            <a href="/assets/#"> <img src="/assets/images/client/1.png" alt="pq-client-img"
-                                    class="pq-client-img img-fluid"> <img src="/assets/images/client/1.png"
-                                    alt="pq-client-img" class="pq-client-hover-img img-fluid"> </a>
+                <div class="pq-section pq-style-1 text-center"> 
+                    <h5 class="pq-section-title">See all Our Partners</h5>
+                </div>
+            </div>
+            <div class="pq-client">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="owl-carousel owl-theme" data-dots="false" data-nav="false" data-desk_num="5"
+                                data-lap_num="3" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
+                                data-loop="true" data-margin="30">
+                                @foreach ($part as $part )
+
+                                <div class="item">
+                                    <div class="pq-clientbox pq-style-1">
+                                        <a href="#"> <img src="/storage/partner/{{$part->logo}}" alt="pq-client-img"
+                                                class="pq-client-img img-fluid" style="height: 130px; width:auto;"> </a>
+                                    </div>
+                                </div>
+                                @endforeach
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 <!--Section client End-->
 <!--Section blog Start-->
 <section class="pq-blog pq-bg-grey pq-pb-210">
@@ -834,36 +851,37 @@
                     @foreach ( $blo as $blog )
                     <div class="item">
                         <a href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}">
-                        <div class="pq-blog-post pq-style-1">
-                            <div class="pq-post-media"> <img src="/Blog-image/{{$blog->images}}" class="img-fluid"
-                                    alt="images">
-                                <div class="pq-post-date">
-                                    <a href="#"> <span> {{$blog->created_at}}
+                            <div class="pq-blog-post pq-style-1">
+                                <div class="pq-post-media"> <img src="/Blog-image/{{$blog->images}}" class="img-fluid"
+                                        alt="images">
+                                    <div class="pq-post-date">
+                                        <a href="#"> <span> {{$blog->created_at}}
                                             </span></a>
+                                    </div>
+                                </div>
+                                <div class="pq-blog-contain">
+                                    <div class="pq-post-meta">
+                                        <ul>
+                                            <li class="pq-post-author"><i class="fa fa-user"></i>{{$blog->author}}</li>
+                                            <li class="pq-post-comment"> <a
+                                                    href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}"><i
+                                                        class="fa fa-comments"></i>
+                                                    {{$blog->comments}}</a> </li>
+                                        </ul>
+                                    </div>
+                                    <h5 class="pq-blog-title"><a
+                                            href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}">{{$blog->title}}</a>
+                                    </h5>
+                                    <div class="pq-blog-info">
+                                        <p>{{$blog->content}}</p>
+                                    </div>
+                                    <a href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}"
+                                        class="pq-button pq-button-link">
+                                        <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
+                                                class="ion ion-plus-round"></i> </div>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="pq-blog-contain">
-                                <div class="pq-post-meta">
-                                    <ul>
-                                        <li class="pq-post-author"><i class="fa fa-user"></i>{{$blog->author}}</li>
-                                        <li class="pq-post-comment"> <a
-                                                href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}"><i
-                                                    class="fa fa-comments"></i>
-                                                {{$blog->comments}}</a> </li>
-                                    </ul>
-                                </div>
-                                <h5 class="pq-blog-title"><a
-                                        href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}">{{$blog->title}}</a></h5>
-                                <div class="pq-blog-info">
-                                    <p>{{$blog->content}}</p>
-                                </div>
-                                <a href="{{route('single_blog',[$blog, Str::slug('Zolive'.$blog->title)])}}"
-                                    class="pq-button pq-button-link">
-                                    <div class="pq-button-block"> <span class="pq-button-text">Read More</span> <i
-                                            class="ion ion-plus-round"></i> </div>
-                                </a>
-                            </div>
-                        </div>
                         </a>
                     </div>
                     @endforeach
@@ -877,4 +895,3 @@
 
 
 @endsection
-

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Partners;
 use App\Models\SugicalOutreach;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -85,6 +86,27 @@ class SugicalOutreachController extends Controller
         $sugicalOutreach = SugicalOutreach::find($id);
         $sugicalOutreach->delete();
         Alert::success('Deleted', 'Surgical Outreach');
+        return back();
+    }
+
+    public function alltestimonials(){
+        $tes = Testimonial::latest()->get();
+        return view('admins.alltestimonials', ['tes'=> $tes]);
+    }
+    public function approveTestimonial($id)
+    {
+        $testimonial = Testimonial::find($id);
+        $testimonial->action = 'approved';
+        $testimonial->save();
+        Alert::success('Approved', 'Testimonial Approved');
+        return back()->with(['Success' => 'Details uploaded Successfully']);
+    }
+    public function deletetestimonial($id){
+        $testimonial = Testimonial::find($id);
+        $testimonial->delete();
+        $testimonial->save();
+
+        Alert::success('Deleted', 'Testimonial Deleted');
         return back();
     }
 }

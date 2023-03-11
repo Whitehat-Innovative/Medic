@@ -7,11 +7,13 @@ use App\Models\Comment;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Location;
+use App\Models\Partners;
 use App\Models\Patient;
 use App\Models\Research;
 use App\Models\Tag;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
 {
@@ -19,9 +21,10 @@ class HomeController extends Controller
     public function index()
     {
         $loc = Location::all();
+        $part = Partners::latest()->get();
         $blo = Blog::latest()->get()->take(5);
-        $test = Testimonial::latest()->get();
-        return view('users.welcome', ['blo'=>$blo, 'tes'=>$test, 'loc'=>$loc]);
+        $test = Testimonial::where('action', 'approved')->latest()->get();
+        return view('users.welcome', ['blo'=>$blo, 'tes'=>$test, 'loc'=>$loc, 'part'=> $part]);
     }
     public function about()
     {
@@ -49,6 +52,8 @@ class HomeController extends Controller
         $contact->subject = $request->subject;
         $contact->message = $request->message;
         $contact->save();
+        Alert::success('Contact', 'Thank you for contacting us');
+
         return back();
     }
 
@@ -63,6 +68,8 @@ class HomeController extends Controller
         $testimonial->name = $request->name;
         $testimonial->message = $request->message;
         $testimonial->save();
+        Alert::success('Thank you for your Patronage');
+
         return back();
     }
 
@@ -71,7 +78,7 @@ class HomeController extends Controller
     {
 
         $gallery = Gallery::all();
-
+        $im = '';
         foreach ($gallery as $g) {
            $im=explode('|',$g->image);
         }
