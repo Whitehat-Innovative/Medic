@@ -29,7 +29,6 @@ class DonationController extends Controller
 
             'donor_name' =>$request->donor_name,
             'email' =>$request->email,
-            'anonimous_donor' =>$request->anonimous_donor,
             'patient_id' =>$request->patient_id,
             'target_fund' =>$request->target_fund,
             'amount' =>$request->amount,
