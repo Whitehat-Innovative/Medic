@@ -146,10 +146,10 @@
                     <h5 class="pq-info-title">Emergency Cases</h5>
                     <p class="pq-infobox-description"> </p>
                     <div class="pq-info-call m-4"> <i class="fas fa-phone-alt"></i>
-                        <h4 class="cpq-call-number"> <a href="tel:+23408164924608">08164924608</a> </h4>
+                        <h4 class="cpq-call-number"> <a href="tel:+23408164924608">0816 492 4608</a> </h4>
                     </div>
                     <div class="pq-info-call m-4"> <i class="fas fa-phone-alt"></i>
-                        <h4 class="cpq-call-number"> <a href="tel:+23408164924608">08164924608</a> </h4>
+                        <h4 class="cpq-call-number"> <a href="tel:+23408039207136">0803 920 7136</a> </h4>
                     </div>
                 </div>
             </div>
@@ -802,7 +802,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="pq-section pq-style-1 text-center"> 
+                <div class="pq-section pq-style-1 text-center">
                     <h5 class="pq-section-title">See all Our Partners</h5>
                 </div>
             </div>
