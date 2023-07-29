@@ -35,15 +35,18 @@
 
 
                                     <div class="form-group">
+                                        <label for=""> Description </label>
                                         <textarea name="description" class="form-control"  id="" placeholder="Enter Description Content" cols="20" rows="10"> </textarea>
                                         {{-- <input type="text" class="form-control" name="content"  placeholder="Enter Blog title" /> --}}
                                     </div>
 
 
                                     <div class="form-group">
+                                        <label for=""> Start Date</label>
                                         <input type="date" class="form-control" name="start_date"  placeholder="Enter Time Duration" />
                                     </div>
                                     <div class="form-group">
+                                        <label for=""> End Date</label>
                                         <input type="date" class="form-control" name="end_date"  placeholder="Enter Time Duration" />
                                     </div>
 

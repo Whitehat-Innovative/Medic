@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class SugicalOutreach extends Model
 {
     use HasFactory;
+    protected $fillable = ['description'];
 }
