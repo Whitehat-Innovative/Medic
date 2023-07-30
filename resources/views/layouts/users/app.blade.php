@@ -1,6 +1,20 @@
 @php
-$now = now();
-$events = \App\Models\SugicalOutreach::where('end_date', '<=', $now)->latest()->get();
+use Carbon\Carbon;
+// class SignaturePadController extends Controller;
+$now = strtotime('now');
+
+
+
+$myDate = \App\Models\SugicalOutreach::pluck('end_date');
+// $current = Carbon::now();
+// dd($current);
+//dd($myDate[0]);
+$date = strtotime($myDate);
+
+//  $date = Carbon::createFromFormat('m/d/Y', $myDate)->format('Y-m-d');
+// dd($date);
+$events = \App\Models\SugicalOutreach::whereDate('end_date', '>=', $now)->latest()->get()->take(1);
+// dd($events)
 // dd($now);
 @endphp
 
@@ -190,21 +204,21 @@ $events = \App\Models\SugicalOutreach::where('end_date', '<=', $now)->latest()->
                 <div class="container">
                     <div class="row align-items-center">
 
-                        @foreach ($events as $events)
+                        @foreach ($events as $event)
 
 
                         <div class="col-lg-12">
                             <div class="pq-subscribe-bg">
                                 <div class="row align-items-center">
                                     <div class="col-lg-7">
-                                        <div class="pq-subscribe-block"> <img src="/storage/surgical/{{$events->image}}"
+                                        <div class="pq-subscribe-block"> <img src="/storage/surgical/{{$event->image}}"
                                                 class=" img img-fluid" alt="medicate-subscribe-image">
                                         </div>
                                     </div>
                                     <div class="col-lg-5 align-self-center">
                                         <div class="pq-subscribe-details">
-                                            <h5>From {{$events->start_date}} to {{$events->end_date}}</h5>
-                                            <p>{{$events->description}}</p>
+                                            <h5>From {{$event->start_date}} to {{$event->end_date}}</h5>
+                                            <p>{{$event->description}}</p>
                                         </div>
                                     </div>
                                 </div>

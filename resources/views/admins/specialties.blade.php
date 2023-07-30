@@ -26,8 +26,9 @@
                         <div class="card">
                             <div class="body">
                                 <ul class="nav nav-tabs padding-0">
-                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab"
-                                            href="{{route('outreaches')}}">Add Surgical Outreach</a></li>
+                                    <li class="nav-item"><a class="nav-link active"
+                                            href="{{route('outreaches')}}">Add Surgical Outreach</a>
+                                    </li>
                                             <div class="row clearfix">
                                                 <div class="col-lg-12">
                                                     <div class="card action_bar">
@@ -104,14 +105,14 @@
 
                                 </ul>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="body">
                                 <ul class="nav nav-tabs padding-0">
-                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab"
+                                    <li class="nav-item"><a class="nav-link active"
                                             href="{{route('addpartners')}}">Add Partners</a></li>
                                             <div class="row clearfix">
                                                 <div class="col-lg-12">
