@@ -218,7 +218,10 @@ $events = \App\Models\SugicalOutreach::whereDate('end_date', '>=', $now)->latest
                                     <div class="col-lg-5 align-self-center">
                                         <div class="pq-subscribe-details">
                                             <h5>From {{$event->start_date}} to {{$event->end_date}}</h5>
-                                            <p>{{$event->description}}</p>
+                                             <a class="pq-button pq-button-flat" href="{{ route('event', $event->id) }}">
+                    <div class="pq-button-block"> <span class="pq-button-text"> See More </span> <i
+                            class="ion ion-plus-round"></i> </div>
+                </a>
                                         </div>
                                     </div>
                                 </div>
