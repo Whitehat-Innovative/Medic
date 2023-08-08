@@ -65,6 +65,7 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/make_contact', [HomeController::class, 'make_contact'])->name('make.contact');
 Route::get('/appointment', [HomeController::class, 'appointment'])->name('appointment');
+Route::get('/event/{id}', [HomeController::class, 'event'])->name('event');
 
 
 Route::get('/research', [HomeController::class, 'research'])->name('user.research');

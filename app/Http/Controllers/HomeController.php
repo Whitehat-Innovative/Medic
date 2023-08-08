@@ -10,6 +10,7 @@ use App\Models\Location;
 use App\Models\Partners;
 use App\Models\Patient;
 use App\Models\Research;
+use App\Models\SugicalOutreach;
 use App\Models\Tag;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -20,11 +21,20 @@ class HomeController extends Controller
     //
     public function index()
     {
+                // use Carbon\Carbon;
+        $now = strtotime('now');
+
+
+
+        $myDate = \App\Models\SugicalOutreach::pluck('end_date');
+
+        $date = strtotime($myDate);
+        $events = \App\Models\SugicalOutreach::whereDate('end_date', '>=', $now)->latest()->get()->take(1);
         $loc = Location::all();
         $part = Partners::latest()->get();
         $blo = Blog::latest()->get()->take(5);
         $test = Testimonial::where('action', 'approved')->latest()->get();
-        return view('users.welcome', ['blo'=>$blo, 'tes'=>$test, 'loc'=>$loc, 'part'=> $part]);
+        return view('users.welcome', [ 'events' => $events,'blo'=>$blo, 'tes'=>$test, 'loc'=>$loc, 'part'=> $part]);
     }
     public function about()
     {
@@ -139,6 +149,11 @@ class HomeController extends Controller
         return view('users.single_blog',['blog'=>$bl,'c'=>$c ]);
     }
 
+    function event($id) {
+        $surgical = SugicalOutreach::where('id',$id)->first();
+        //dd($surgical);
+        return view('users.event',with(['id' => $id,'surgical'=>$surgical]));
+    }
 
     // this is for the donate
     public function donate()

@@ -9,6 +9,49 @@
     style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
     <rs-module id="rev_slider_24_1" data-version="6.5.19">
         <rs-slides>
+            @foreach ($events as $event)
+            <rs-slide style="position: absolute;" data-key="rs-85" data-title="Slide"
+            data-thumb="rev/assets/2-51-50x100.jpg" data-in="o:0;" data-out="a:false;">
+            <img src="/storage/surgical/{{$event->image}}" alt="" title="2-51.jpg"
+                class="rev-slidebg tp-rs-img" data-no-retina>
+            <!--
+
+            -->
+            <rs-layer id="slider-24-slide-85-layer-1" data-type="text" data-color="#2490eb" data-rsp_ch="on"
+                data-xy="xo:41px,38px,38px,37px;y:m;yo:-197px,-154px,-121px,-75px;"
+                data-text="w:normal;s:14,14,14,13;l:22,22,26,21;fw:600;" data-frame_0="x:50,39,29,17;"
+                data-frame_1="st:1100;sp:1000;sR:1100;" data-frame_999="o:0;st:w;sR:6900;"
+                style="z-index:9;font-family:'Quicksand';text-transform:uppercase;"> Our Surgical Outreach
+            </rs-layer>
+            <!--
+            -->
+            <rs-layer id="slider-24-slide-85-layer-2" data-type="text" data-color="#18100f" data-rsp_ch="on"
+                data-xy="xo:30px,30px,30px,31px;y:m;yo:-105px,-75px,-50px,-30px;"
+                data-text="w:normal;s:64,48,42,22;l:72,56,50,30;fw:600;"
+                data-border="boc:#14457b;bow:1px,1px,1px,1px;" data-frame_0="x:50,39,29,17;"
+                data-frame_1="st:1400;sp:1000;sR:1400;" data-frame_999="o:0;st:w;sR:6600;"
+                style="z-index:10;font-family:'Quicksand';text-transform:capitalize;"><br>
+                from {{$event->start_date}} to {{$event->end_date}}
+                <br>
+                <a class="pq-button pq-button-flat" href="{{ route('event', $event->id) }}">
+                    <div class="pq-button-block"> <span class="pq-button-text"> See More </span> <i
+                            class="ion ion-plus-round"></i> </div>
+                </a>
+            </rs-layer>
+            <!--
+            -->
+            <rs-layer id="slider-24-slide-85-layer-4" data-type="shape" data-rsp_ch="on"
+                data-xy="xo:30px;yo:202px,155px,114px,86px;" data-text="w:normal;s:20,15,11,6;l:0,19,14,8;"
+                data-dim="w:233px,227px,227px,212px;h:30px,30px,30px,25px;" data-border="bor:3px,3px,3px,3px;"
+                data-frame_0="x:50,39,29,17;" data-frame_1="st:1100;sp:1000;" data-frame_999="o:0;st:w;"
+                style="z-index:8;background-color:#d3e9fb;">
+            </rs-layer>
+            <!--
+
+
+            -->
+        </rs-slide>
+            @endforeach
             <rs-slide style="position: absolute;" data-key="rs-84" data-title="Slide"
                 data-thumb="rev/assets/1-51-50x100.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
                 <img src="/assets/images/breadcrumb.jpg" alt="" title="1-51.jpg" class="rev-slidebg tp-rs-img"
